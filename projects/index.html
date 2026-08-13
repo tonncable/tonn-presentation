@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tonn Cable — Project References</title>
+  <link rel="icon" href="data:,">
+  <script>document.documentElement.classList.add('theme-light');</script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{background:#ffffff;color:#15151c;font-family:'Inter',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+    :root{--magenta:#CB0A7C;--fg:#15151c;--muted:#57525d;--hair:rgba(0,0,0,.10);--bg:#ffffff;--bg2:#ffffff}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* top nav */
+    .top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+    .top__in{max-width:1400px;margin:0 auto;padding:18px 6vw;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+    .top__logo{height:32px;width:auto}
+    .top__back{font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .2s}
+    .top__back:hover{color:var(--magenta)}
+    .top__title{font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-left:auto;color:var(--magenta)}
+
+    /* 1 · hero */
+    .hero{padding:80px 6vw 50px;max-width:1400px;margin:0 auto}
+    .hero__eyebrow{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:16px}
+    .hero__title{font-size:clamp(40px,5.5vw,80px);font-weight:900;line-height:1;letter-spacing:-.02em;margin-bottom:20px}
+    .hero__title em{color:var(--magenta);font-style:italic}
+    .hero__sub{font-size:clamp(17px,1.4vw,22px);color:var(--fg);font-weight:700;max-width:780px;line-height:1.5}
+    .hero__sub mark{background:transparent;color:var(--magenta);font-weight:800}
+
+    /* 2 · reach — stats + sector chips */
+    .reach{max-width:1400px;margin:0 auto 40px;padding:0 6vw}
+    .reach__stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--hair);border-radius:16px;overflow:hidden;margin-bottom:44px}
+    .rstat{background:#fff;padding:28px 24px;text-align:center}
+    .rstat__num{font-size:clamp(32px,3.5vw,52px);font-weight:900;color:var(--magenta);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+    .rstat__num i{font-size:.55em;font-style:normal;margin-left:2px}
+    .rstat__label{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+    .reach__seceyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:20px}
+    .reach__secs{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;background:transparent}
+    @media(max-width:800px){.reach__secs{grid-template-columns:1fr}}
+    .reach__secs span{display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--hair);cursor:default}
+    .reach__secs span::before{content:attr(data-name);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
+    .reach__secs span::after{content:"";height:6px;background:var(--magenta);border-radius:3px;width:calc(var(--pct,0) * 1%);min-width:6px;opacity:.85;transition:width .5s ease}
+    .reach__secs span b{color:var(--fg);font-weight:900;font-size:15px;font-variant-numeric:tabular-nums;min-width:32px;text-align:right}
+
+    /* 2b · beyond malaysia */
+    .beyond{max-width:1400px;margin:0 auto 80px;padding:0 6vw}
+    .beyond__head{margin-bottom:28px}
+    .beyond__eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:10px}
+    .beyond__title{font-size:clamp(28px,3.4vw,44px);font-weight:900;letter-spacing:-.015em;line-height:1.05;margin-bottom:12px}
+    .beyond__title em{color:var(--magenta);font-style:italic}
+    .beyond__sub{font-size:clamp(19px,1.5vw,24px);color:var(--fg);font-weight:700;max-width:900px;line-height:1.5}
+    .beyond__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;margin-top:32px}
+    @media(max-width:800px){.beyond__grid{grid-template-columns:1fr}}
+    .ctry{display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--hair);cursor:default}
+    .ctry__name{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);margin:0}
+    .ctry__bar{height:6px;background:var(--magenta);border-radius:3px;width:calc(var(--pct,0) * 1%);min-width:6px;opacity:.85;transition:width .5s ease}
+    .ctry__num{color:var(--fg);font-weight:900;font-size:15px;font-variant-numeric:tabular-nums;min-width:32px;text-align:right;margin:0}
+    .ctry__lbl{display:none}
+
+    /* 3 · signature projects */
+    .sig{max-width:1400px;margin:0 auto 80px;padding:0 6vw}
+    .sig__head{margin-bottom:32px}
+    .sig__eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:10px}
+    .sig__title{font-size:clamp(28px,3.4vw,44px);font-weight:900;letter-spacing:-.015em;line-height:1.05}
+    .sig__title em{color:var(--magenta);font-style:italic}
+    .sig__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media(max-width:1100px){.sig__grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:800px){.sig__grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.sig__grid{grid-template-columns:1fr}}
+    .sig__card{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08);cursor:pointer;transition:transform .35s,box-shadow .35s;aspect-ratio:4/5}
+    .sig__card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.16)}
+    .sig__card .sig__img{position:absolute;inset:0;background:#e9ebf0 center/cover no-repeat;transition:transform .5s}
+    .sig__card:hover .sig__img{transform:scale(1.04)}
+    .sig__card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.85) 100%)}
+    .sig__body{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:#fff;z-index:1}
+    .sig__sec{display:inline-block;padding:4px 12px;background:var(--magenta);border-radius:99px;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+    .sig__name{font-size:clamp(18px,1.5vw,24px);font-weight:900;line-height:1.15;margin-bottom:4px;letter-spacing:-.005em}
+    .sig__loc{font-size:12px;opacity:.85;letter-spacing:.04em}
+
+    /* 4 · experience by sector */
+    .expsec{max-width:1400px;margin:0 auto 80px;padding:0 6vw}
+    .expsec__head{margin-bottom:28px}
+    .expsec__eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:10px}
+    .expsec__title{font-size:clamp(28px,3.4vw,44px);font-weight:900;letter-spacing:-.015em;line-height:1.05}
+    .expsec__title em{color:var(--magenta);font-style:italic}
+    .expsec__tabs{display:flex;flex-wrap:wrap;gap:0 4px;margin:24px 0 36px;border-bottom:1px solid var(--hair);padding-bottom:0}
+    .expsec__tab{position:relative;padding:14px 18px 16px;border:0;background:transparent;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:color .2s;font-family:inherit;display:inline-flex;align-items:baseline;gap:8px}
+    .expsec__tab::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:3px;background:var(--magenta);transform:scaleX(0);transform-origin:center;transition:transform .25s ease}
+    .expsec__tab:hover{color:var(--fg)}
+    .expsec__tab.on{color:var(--fg)}
+    .expsec__tab.on::after{transform:scaleX(1)}
+    .expsec__tab b{color:var(--magenta);font-weight:900;font-size:11px;font-variant-numeric:tabular-nums;opacity:.85}
+    .expsec__tab.on b{opacity:1}
+    .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair)}
+    .secblk:last-child{border-bottom:0}
+    .secblk__title{font-size:16px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:22px;display:flex;align-items:baseline;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--magenta)}
+    .secblk__title span{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:none;margin-left:auto}
+    .secblk__layout{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start}
+    @media(max-width:900px){.secblk__layout{grid-template-columns:1fr;gap:28px}}
+    .secblk__photo{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.12);aspect-ratio:4/5;cursor:pointer;transition:transform .35s,box-shadow .35s}
+    .secblk__photo:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(0,0,0,.18)}
+    .secblk__photo .photoimg{position:absolute;inset:0;background:#e9ebf0 center/cover no-repeat;transition:transform .5s}
+    .secblk__photo:hover .photoimg{transform:scale(1.04)}
+    .secblk__photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.85) 100%)}
+    .secblk__photocap{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:#fff;z-index:1}
+    .secblk__photocap .pname{font-size:20px;font-weight:900;line-height:1.2;margin-bottom:4px;letter-spacing:-.01em}
+    .secblk__photocap .ploc{font-size:12px;opacity:.85;letter-spacing:.04em}
+    .secblk__idx{display:flex;flex-direction:column}
+    .secblk__idx__row{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--hair)}
+    .secblk__idx__row:last-child{border-bottom:0}
+    .secblk__idx__no{font-size:14px;font-weight:900;color:var(--magenta);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+    .secblk__idx__name{font-size:17px;font-weight:800;color:var(--fg);line-height:1.3;letter-spacing:-.005em}
+    .secblk__idx__loc{font-size:12px;color:var(--muted);letter-spacing:.02em;text-align:right;white-space:nowrap}
+    .secblk__more{margin-top:12px;color:var(--muted);font-style:italic;font-size:12px;font-weight:500}
+    .secblk__none{color:var(--muted);font-size:14px;font-style:italic;padding:40px 0}
+
+    /* 5 · full references (compact search) */
+    .fullref{max-width:1400px;margin:0 auto;padding:60px 6vw 80px;background:#fff;border-top:1px solid var(--hair)}
+    .fullref__head{max-width:1400px;margin:0 auto 24px;display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .fullref__title{font-size:clamp(36px,4vw,56px);font-weight:900;letter-spacing:-.015em;line-height:1.05}
+    .fullref__title em{color:var(--magenta);font-style:italic}
+    .fullref__sub{font-size:17px;color:var(--muted);letter-spacing:.02em;font-weight:700;margin-top:8px}
+    .search{position:relative;flex:1;min-width:240px;max-width:360px}
+    .search input{width:100%;padding:11px 16px 11px 40px;border:1px solid var(--hair);border-radius:99px;background:#fff;font-size:13px;font-family:inherit;color:var(--fg);outline:none;transition:border .2s}
+    .search input:focus{border-color:var(--magenta)}
+    .search::before{content:"⌕";position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--muted)}
+    .fullref__wrap{display:grid;grid-template-columns:1fr 60px;gap:40px;align-items:start}
+    @media(max-width:800px){.fullref__wrap{grid-template-columns:1fr;gap:0}}
+    .fullref__body{min-width:0}
+    .fullref__jump{position:sticky;top:100px;display:flex;flex-direction:column;gap:2px;text-align:center;padding-top:8px}
+    @media(max-width:800px){.fullref__jump{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;margin-bottom:20px;padding-top:0}}
+    .fullref__jump a{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.05em;padding:4px 6px;text-decoration:none;transition:color .15s;font-variant-numeric:tabular-nums}
+    .fullref__jump a:hover{color:var(--magenta)}
+    .fullref__jump a.disabled{opacity:.28;pointer-events:none}
+    .aletter{padding:32px 0 16px;position:relative;scroll-margin-top:90px}
+    .aletter:first-child{padding-top:0}
+    .aletter__head{font-size:14px;font-weight:900;color:var(--magenta);letter-spacing:.12em;padding-bottom:12px;border-bottom:2px solid var(--magenta);margin-bottom:14px;display:flex;align-items:baseline;gap:12px}
+    .aletter__head span{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.08em}
+    .aletter__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:0 32px}
+    .aletter__row{padding:10px 0;border-bottom:1px solid var(--hair);display:flex;gap:12px;align-items:baseline}
+    .aletter__row b{font-size:14px;font-weight:700;color:var(--fg);flex:1;line-height:1.35}
+    .aletter__row .rloc{font-size:11px;color:var(--muted);letter-spacing:.02em;text-align:right;white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis}
+
+    /* lightbox */
+    .lb{position:fixed;inset:0;background:rgba(20,20,26,.94);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:40px;z-index:100;cursor:zoom-out}
+    .lb.open{display:flex}
+    .lb img{max-width:100%;max-height:88vh;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.5)}
+    .lb__cap{position:absolute;bottom:28px;left:0;right:0;text-align:center;color:#fff;font-size:13px;letter-spacing:.05em}
+    .lb__cap b{display:block;font-size:20px;font-weight:800;margin-bottom:4px}
+
+    .foot{border-top:1px solid var(--hair);padding:32px 6vw;text-align:center;font-size:12px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
+  </style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="top__in">
+      <a class="top__back" href="../index.html" aria-label="Back to presentation" title="Back to presentation">←</a>
+      <img class="top__logo" src="../assets/img/tonn-logo.png" alt="Tonn Cable">
+      <span class="top__title">Project References</span>
+    </div>
+  </header>
+
+  <!-- 1 · HERO -->
+  <section class="hero">
+    <div class="hero__eyebrow">Track record · Malaysia</div>
+    <h1 class="hero__title">Powering the projects that shape Malaysia — <em>and beyond.</em></h1>
+    <p class="hero__sub">You'll find our cable in the <mark>landmarks</mark> and <mark>hospitals</mark> people know — and in the <mark>train lines</mark>, <mark>data centres</mark> and <mark>bridges</mark> they rely on every day, right across the region.</p>
+  </section>
+
+  <!-- 2 · OUR REACH -->
+  <section class="reach">
+    <div class="reach__stats">
+      <div class="rstat"><div class="rstat__num" id="stTotal">0</div><div class="rstat__label">Projects delivered</div></div>
+      <div class="rstat"><div class="rstat__num" id="stCountries">0</div><div class="rstat__label">Countries</div></div>
+      <div class="rstat"><div class="rstat__num" id="stSectors">0</div><div class="rstat__label">Sectors served</div></div>
+      <div class="rstat"><div class="rstat__num">24</div><div class="rstat__label">Years of experience</div></div>
+    </div>
+    <p class="reach__seceyebrow">Sectors we serve</p>
+    <div class="reach__secs" id="reachSecs"></div>
+  </section>
+
+  <!-- 2b · BEYOND MALAYSIA -->
+  <section class="beyond" id="beyond">
+    <div class="beyond__head">
+      <div class="beyond__eyebrow">Beyond Malaysia</div>
+      <h2 class="beyond__title">Trusted <em>beyond borders.</em></h2>
+      <p class="beyond__sub">Our cable travels well. It's in condominiums and stadiums in Yangon, running under the bridges that cross the Ayeyawady, wired into resorts across the Maldives, powering casinos and homes in Phnom Penh, and behind the walls of dozens of projects in Singapore.</p>
+    </div>
+    <div class="beyond__grid" id="beyondGrid"></div>
+  </section>
+
+  <!-- 3 · SIGNATURE PROJECTS -->
+  <section class="sig">
+    <div class="sig__head">
+      <div class="sig__eyebrow">Signature projects</div>
+      <h2 class="sig__title">The landmarks Tonn Cable <em>powers.</em></h2>
+    </div>
+    <div class="sig__grid" id="sigGrid"></div>
+  </section>
+
+  <!-- 4 · EXPERIENCE BY SECTOR -->
+  <section class="expsec">
+    <div class="expsec__head">
+      <div class="expsec__eyebrow">Experience by sector</div>
+      <h2 class="expsec__title">Depth across every <em>industry.</em></h2>
+    </div>
+    <div class="expsec__tabs" id="expTabs"></div>
+    <div id="expBody"></div>
+  </section>
+
+  <!-- 5 · FULL REFERENCES -->
+  <section class="fullref">
+    <div class="fullref__head">
+      <div>
+        <h2 class="fullref__title">Full <em>project database.</em></h2>
+        <p class="fullref__sub"><b id="frCount">0</b> references · searchable</p>
+      </div>
+      <div class="search"><input type="text" id="frSearch" placeholder="Search project name, location, sector…"></div>
+    </div>
+    <div class="fullref__wrap">
+      <div class="fullref__body" id="frBody"></div>
+      <nav class="fullref__jump" id="frJump" aria-label="Jump to letter"></nav>
+    </div>
+  </section>
+
+  <div class="lb" id="lb">
+    <img id="lbImg" alt="">
+    <div class="lb__cap"><b id="lbName"></b><span id="lbLoc"></span></div>
+  </div>
+
+  <footer class="foot">© Tonn Cable · Get Wired with Industry</footer>
+
+  <script src="projects.js"></script>
+  <script>
+    (async function () {
+      let projects = [];
+      if (window.PROJECTS) projects = window.PROJECTS;
+      else {
+        try { const r = await fetch('projects.json'); projects = await r.json(); }
+        catch { document.body.innerHTML += '<p style="padding:40px;color:red">Could not load projects.json — use projects.js or serve over http.</p>'; return; }
+      }
+
+      // Sector display order + optional icon
+      const SECTOR_ORDER = ['Data Centre','Infrastructure','Commercial','Government','Healthcare','Utility','Industrial','Residential','Water Treatment','Education','Sports & Leisure'];
+      const SECTOR_LABEL = {'Utility':'Energy & Utilities','Sports & Leisure':'Hospitality & Leisure'};
+      const lbl = s => SECTOR_LABEL[s] || s;
+
+      // Signature: hand-picked (must exist in list; skipped if missing)
+      const SIGNATURE_NAMES = [
+        'Merdeka 118',
+        'YTL Kulai Data Center',
+        'Pavilion Bukit Jalil',
+        'Hospital Putrajaya',
+        'Istana Kuala Kangsar',
+        'MRT Sungai Buloh',
+        'Subang Airport',
+        'MSU Medical Centre'
+      ];
+
+      // Country tag: undefined/missing = Malaysia
+      projects.forEach(p => { if (!p.country) p.country = 'Malaysia'; });
+      const intlProjects = projects.filter(p => p.country !== 'Malaysia');
+      const countries = Array.from(new Set(projects.map(p => p.country)));
+      const intlCountries = countries.filter(c => c !== 'Malaysia');
+
+      // --- 2 · reach stats + sector chips ---
+      const sectors = Array.from(new Set(projects.map(p => p.sector)));
+      const orderedSectors = SECTOR_ORDER.filter(s => sectors.includes(s)).concat(sectors.filter(s => !SECTOR_ORDER.includes(s)));
+      const bySector = orderedSectors.map(s => ({sector:s, items:projects.filter(p => p.sector === s)}));
+      function animateCount(el, target, suffix){
+        const dur = 1400, t0 = performance.now();
+        function tick(now){
+          const p = Math.min((now - t0) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + (suffix || '');
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      const stTotal = document.getElementById('stTotal');
+      const stCountries = document.getElementById('stCountries');
+      const stSectors = document.getElementById('stSectors');
+      const stYears = document.querySelectorAll('.rstat__num')[3];
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            animateCount(stTotal, projects.length, '+');
+            animateCount(stCountries, countries.length);
+            animateCount(stSectors, orderedSectors.length);
+            if (stYears) animateCount(stYears, 24);
+            obs.disconnect();
+          }
+        });
+      }, {threshold: 0.3});
+      io.observe(stTotal);
+      const maxSec = Math.max(...bySector.map(g => g.items.length));
+      document.getElementById('reachSecs').innerHTML = bySector.map(g => `<span data-name="${lbl(g.sector)}" style="--pct:${Math.round(g.items.length/maxSec*100)}"><b>${g.items.length}</b></span>`).join('');
+
+      // --- 2b · Beyond Malaysia country tiles ---
+      const COUNTRY_ORDER = ['Singapore','Myanmar','Cambodia','Maldives','Brunei','Vietnam'];
+      const orderedIntl = COUNTRY_ORDER.filter(c => intlCountries.includes(c)).concat(intlCountries.filter(c => !COUNTRY_ORDER.includes(c)));
+      const intlCounts = orderedIntl.map(c => projects.filter(p => p.country === c).length);
+      const maxIntl = Math.max(...intlCounts);
+      document.getElementById('beyondGrid').innerHTML = orderedIntl.map((c, i) => {
+        const n = intlCounts[i];
+        return `<div class="ctry" style="--pct:${Math.round(n/maxIntl*100)}"><div class="ctry__name">${c}</div><div class="ctry__bar"></div><div class="ctry__num">${n}</div></div>`;
+      }).join('');
+
+      // --- 3 · signature ---
+      const sigList = SIGNATURE_NAMES.map(n => projects.find(p => p.name === n)).filter(Boolean);
+      document.getElementById('sigGrid').innerHTML = sigList.map(p => `
+        <figure class="sig__card" data-name="${p.name.replace(/"/g,'&quot;')}">
+          <div class="sig__img" style="background-image:url('${p.img || '../assets/img/factory.JPG'}')"></div>
+          <figcaption class="sig__body">
+            <div class="sig__name">${p.name}</div>
+            <div class="sig__loc">${[p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ')}</div>
+          </figcaption>
+        </figure>
+      `).join('');
+
+      // --- 4 · sector tabs + blocks ---
+      const totalCount = projects.length;
+      const intlTabHtml = intlProjects.length ? `<button class="expsec__tab" data-tab="__intl">🌏 International<b>${intlProjects.length}</b></button>` : '';
+      const tabsHtml = ['<button class="expsec__tab on" data-tab="All">All<b>' + totalCount + '</b></button>']
+        .concat(bySector.map(g => `<button class="expsec__tab" data-tab="${g.sector}">${lbl(g.sector)}<b>${g.items.length}</b></button>`))
+        .concat([intlTabHtml])
+        .join('');
+      document.getElementById('expTabs').innerHTML = tabsHtml;
+
+      function renderExp(tab) {
+        let groups;
+        if (tab === '__intl') {
+          groups = orderedIntl.map(c => ({sector:c, items:projects.filter(p => p.country === c)}));
+        } else {
+          groups = tab === 'All' ? bySector.slice() : bySector.filter(g => g.sector === tab);
+        }
+        // Sort by count desc (most projects first)
+        groups = groups.slice().sort((a, b) => b.items.length - a.items.length);
+        const body = document.getElementById('expBody');
+        if (!groups.length) { body.innerHTML = '<p class="secblk__none">Nothing to show.</p>'; return; }
+        body.innerHTML = groups.map(g => {
+          const feat = g.items.find(p => p.img);
+          // Mix Malaysia + international naturally by sorting alphabetically
+          const idxSource = (feat ? g.items.filter(p => p !== feat) : g.items).slice().sort((a, b) => a.name.localeCompare(b.name));
+          const CAP = feat ? 7 : 8;
+          const idxShown = idxSource.slice(0, CAP);
+          const more = g.items.length - idxShown.length - (feat ? 1 : 0);
+          const idxHtml = `
+            <div class="secblk__idx">
+              ${idxShown.map((p, i) => {
+                const loc = [p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ');
+                const n = String(i + 1).padStart(2, '0');
+                return `<div class="secblk__idx__row"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name">${p.name}</span><span class="secblk__idx__loc">${loc}</span></div>`;
+              }).join('')}
+              ${more > 0 ? `<p class="secblk__more">+ ${more} more — see full database below ↓</p>` : ''}
+            </div>`;
+          const layoutHtml = feat ? `
+            <div class="secblk__layout">
+              <figure class="secblk__photo" data-name="${feat.name.replace(/"/g,'&quot;')}">
+                <div class="photoimg" style="background-image:url('${feat.img}')"></div>
+                <figcaption class="secblk__photocap">
+                  <div class="pname">${feat.name}</div>
+                  <div class="ploc">${[feat.location, feat.country !== 'Malaysia' ? feat.country : null].filter(Boolean).join(' · ')}</div>
+                </figcaption>
+              </figure>
+              ${idxHtml}
+            </div>` : idxHtml;
+          return `
+            <div class="secblk">
+              <div class="secblk__title">${lbl(g.sector)} <span>${g.items.length} project${g.items.length!==1?'s':''}</span></div>
+              ${layoutHtml}
+            </div>
+          `;
+        }).join('');
+      }
+      renderExp('All');
+      document.getElementById('expTabs').addEventListener('click', e => {
+        const btn = e.target.closest('.expsec__tab'); if (!btn) return;
+        document.querySelectorAll('.expsec__tab').forEach(x => x.classList.toggle('on', x === btn));
+        const tab = btn.dataset.tab;
+        renderExp(tab);
+        // sync full database search + scroll to it (skip "All", nothing to filter)
+        if (tab !== 'All') {
+          let term = '';
+          if (tab === '__intl') term = 'international';
+          else term = (SECTOR_LABEL[tab] || tab);
+          frSearch.value = term;
+          renderFR();
+        }
+      });
+
+      // --- 5 · full references, alphabetical directory ---
+      const frBody = document.getElementById('frBody');
+      const frJump = document.getElementById('frJump');
+      const frCount = document.getElementById('frCount');
+      const frSearch = document.getElementById('frSearch');
+      const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+      function firstLetter(name){
+        const c = name.replace(/^[^A-Za-z0-9]+/,'').charAt(0).toUpperCase();
+        return /[A-Z]/.test(c) ? c : '#';
+      }
+      function renderFR(){
+        const q = frSearch.value.toLowerCase().trim();
+        const isIntl = /^(international|overseas|abroad|export|beyond)/i.test(q);
+        const list = projects.filter(p => {
+          if (!q) return true;
+          if (isIntl) return p.country && p.country !== 'Malaysia';
+          const sectorLbl = (SECTOR_LABEL[p.sector] || p.sector || '').toLowerCase();
+          return p.name.toLowerCase().includes(q)
+              || (p.location||'').toLowerCase().includes(q)
+              || (p.sector||'').toLowerCase().includes(q)
+              || sectorLbl.includes(q)
+              || (p.country||'').toLowerCase().includes(q);
+        });
+        list.sort((a,b) => a.name.localeCompare(b.name));
+        frCount.textContent = list.length;
+        const groups = {};
+        list.forEach(p => { const k = firstLetter(p.name); (groups[k] = groups[k] || []).push(p); });
+        const keys = Object.keys(groups).sort();
+        frBody.innerHTML = keys.map(k => `
+          <section class="aletter" id="alpha-${k}">
+            <h3 class="aletter__head">${k}</h3>
+            <div class="aletter__grid">
+              ${groups[k].map(p => `
+                <div class="aletter__row">
+                  <b>${p.name}</b>
+                  <span class="rloc">${[p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ')}</span>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+        `).join('') || '<p style="padding:60px 0;color:var(--muted);text-align:center">No matches.</p>';
+        frJump.innerHTML = ALPHA.map(l => groups[l]
+          ? `<a href="#alpha-${l}">${l}</a>`
+          : `<a class="disabled">${l}</a>`
+        ).join('');
+      }
+      frSearch.addEventListener('input', renderFR);
+      renderFR();
+
+      // --- lightbox (only on cards with images) ---
+      const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbName = document.getElementById('lbName'), lbLoc = document.getElementById('lbLoc');
+      document.body.addEventListener('click', e => {
+        const target = e.target.closest('.sig__card,.secblk__photo'); if (!target) return;
+        const name = target.dataset.name; if (!name) return;
+        const p = projects.find(x => x.name === name); if (!p || !p.img) return;
+        lbImg.src = p.img; lbName.textContent = p.name; lbLoc.textContent = [p.location, lbl(p.sector)].filter(Boolean).join(' · ');
+        lb.classList.add('open');
+      });
+      lb.addEventListener('click', () => lb.classList.remove('open'));
+    })();
+  </script>
+</body>
+</html>

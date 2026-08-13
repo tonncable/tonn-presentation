@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tonn Cable — Get Wired with Industry</title>
+<meta name="description" content="Tonn Cable factory visit & university talk — power cables, manufacturing and careers.">
+<link rel="stylesheet" href="css/fonts.css"><!-- self-hosted Poppins (offline) -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/slides.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+  <div class="deck">
+    <div class="stage-wrap">
+      <div class="stage" id="stage"><!-- slides injected by deck.js --></div>
+    </div>
+  </div>
+
+  <!-- UI overlay -->
+  <div class="ui">
+    <div class="progress" id="progress"></div>
+    <div class="hint">← → to navigate · F fullscreen · O overview</div>
+    <div class="hud">
+      <button class="hud__btn" data-action="prev" title="Previous (←)" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="hud__btn" data-action="next" title="Next (→)" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <button class="hud__btn" data-action="overview" title="Overview (O)" aria-label="Overview">
+        <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+      </button>
+      <button class="hud__btn" data-action="fullscreen" title="Fullscreen (F)" aria-label="Fullscreen">
+        <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+      <span class="hud__count"><b id="count">1</b> / <span id="total">6</span></span>
+    </div>
+  </div>
+
+  <!-- overview grid -->
+  <div class="overview" id="overview">
+    <div class="overview__grid" id="ovGrid"></div>
+  </div>
+
+  <script src="js/templates.js"></script>
+  <script src="js/slides.js"></script>
+  <script src="js/deck.js"></script>
+</body>
+</html>
