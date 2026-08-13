@@ -96,7 +96,7 @@
     .expsec__tab.on::after{transform:scaleX(1)}
     .expsec__tab b{color:var(--magenta);font-weight:900;font-size:16px;font-variant-numeric:tabular-nums;opacity:.85}
     .expsec__tab.on b{opacity:1}
-    .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair)}
+    .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair);scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:80px}
     .secblk:last-child{border-bottom:0}
     .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding-bottom:20px;border-bottom:2px solid var(--magenta)}
     .secblk__title span{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
@@ -526,27 +526,52 @@
       var nextKey = (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ');
       var prevKey = (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp');
 
-      // If in "By Sector" section, arrow keys cycle sector tabs first
+      // If in "By Sector" section, arrow keys navigate sector groups or tabs
       if(isExpsec && (nextKey || prevKey)){
-        var tabs = [].slice.call(document.querySelectorAll('.expsec__tab'));
-        if(tabs.length){
-          var onIdx = tabs.findIndex(function(t){ return t.classList.contains('on'); });
-          if(onIdx === -1) onIdx = 0;
+        var activeTab = document.querySelector('.expsec__tab.on');
+        var isAllTab = activeTab && activeTab.dataset.tab === 'All';
 
-          if(nextKey){
-            if(onIdx < tabs.length - 1){
-              e.preventDefault();
-              tabs[onIdx + 1].click();
-              return;
+        if(isAllTab){
+          // "All" tab: arrow keys scroll between sector group blocks
+          var blocks = [].slice.call(document.querySelectorAll('.secblk'));
+          if(blocks.length){
+            var scrollTop = window.scrollY;
+            // find the block whose top is at or above the viewport top (with 100px tolerance)
+            var curBlk = -1;
+            for(var i = 0; i < blocks.length; i++){
+              var bt = blocks[i].getBoundingClientRect().top + scrollTop;
+              if(bt <= scrollTop + 100) curBlk = i;
             }
-            // last tab already active → fall through to jump to next section
-          } else if(prevKey){
-            if(onIdx > 0){
-              e.preventDefault();
-              tabs[onIdx - 1].click();
-              return;
+            if(nextKey){
+              if(curBlk < blocks.length - 1){
+                e.preventDefault();
+                blocks[curBlk + 1].scrollIntoView({behavior:'smooth', block:'start'});
+                return;
+              }
+              // last block → fall through to next section
+            } else if(prevKey){
+              if(curBlk > 0){
+                e.preventDefault();
+                blocks[curBlk - 1].scrollIntoView({behavior:'smooth', block:'start'});
+                return;
+              }
+              // first block → fall through to prev section
             }
-            // first tab already active → fall through to jump to prev section
+          }
+        } else {
+          // specific tab active: arrow keys cycle through tabs
+          var tabs = [].slice.call(document.querySelectorAll('.expsec__tab'));
+          if(tabs.length){
+            var onIdx = tabs.findIndex(function(t){ return t.classList.contains('on'); });
+            if(onIdx === -1) onIdx = 0;
+            if(nextKey){
+              if(onIdx < tabs.length - 1){ e.preventDefault(); tabs[onIdx + 1].click(); return; }
+            } else if(prevKey){
+              if(onIdx > 0){ e.preventDefault(); tabs[onIdx - 1].click(); return; }
+              // first specific tab → go back to "All"
+              var allTab = tabs[0];
+              if(allTab && allTab.dataset.tab === 'All'){ e.preventDefault(); allTab.click(); return; }
+            }
           }
         }
       }
