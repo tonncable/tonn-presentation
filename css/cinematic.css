@@ -812,7 +812,7 @@ body{padding-top:0}
 .welcome{padding-top:80px}
 
 /* Timeline media: dual award certificates side-by-side (medium size, no card) */
-.ctstop__media--awards{background:transparent!important;box-shadow:none!important;aspect-ratio:auto;padding:0;display:flex;align-items:center;justify-content:center;gap:28px;min-height:380px}
-.ctstop__media--awards img{width:auto!important;height:auto!important;max-width:48%;max-height:460px;object-fit:contain;box-shadow:0 14px 36px rgba(20,10,20,.2);border-radius:6px;transition:transform .4s ease}
+.ctstop__media--awards{background:transparent!important;box-shadow:none!important;aspect-ratio:auto;padding:0;display:flex;align-items:flex-start;justify-content:center;gap:28px;min-height:0}
+.ctstop__media--awards img{width:auto!important;height:auto!important;max-width:48%;max-height:none!important;object-fit:contain;box-shadow:0 14px 36px rgba(20,10,20,.2);border-radius:6px;transition:transform .4s ease;display:block}
 .ctstop:hover .ctstop__media--awards img{transform:scale(1.03)}
 html.theme-light .ctstop__media--awards{background:transparent!important}
