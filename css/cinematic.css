@@ -702,3 +702,35 @@ body.light .process-intro{border-color:rgba(0,0,0,.08)}
 .trust__list{display:flex;flex-wrap:wrap;gap:12px 14px;list-style:none;margin:0;padding:0}
 .trust__list li{font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#15151c;padding:10px 18px;border:1.5px solid rgba(20,10,20,.14);border-radius:100px;transition:border-color .2s,color .2s,background .2s}
 .trust__list li:hover{border-color:var(--magenta);color:var(--magenta);background:rgba(203,10,124,.04)}
+
+/* Our Milestones — vertical alternating timeline */
+.mtl{position:relative;max-width:1200px;margin:60px auto 0;padding:20px 20px 60px}
+.mtl__spine{position:absolute;left:50%;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--magenta),var(--copper));border-radius:4px;transform:translateX(-50%);box-shadow:0 0 20px rgba(203,10,124,.3)}
+.mtl__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:36px}
+.mile{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:32px}
+.mile__year{font-size:clamp(28px,2.6vw,42px);font-weight:900;color:var(--magenta);letter-spacing:-.02em;font-variant-numeric:tabular-nums;text-align:right;padding-right:16px}
+.mile__card{display:flex;align-items:center;gap:20px;background:#fff;border:2px solid var(--magenta);border-radius:16px;padding:20px 24px;box-shadow:0 0 0 1px var(--magenta),0 10px 28px rgba(203,10,124,.12);transition:transform .25s,box-shadow .25s;min-height:96px}
+.mile__card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--magenta),0 16px 40px rgba(203,10,124,.2)}
+.mile__logo{max-width:80px;max-height:64px;object-fit:contain;flex-shrink:0}
+.mile__badge{flex-shrink:0;width:80px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,var(--magenta),var(--copper));color:#fff;border-radius:10px;font-size:13px;font-weight:900;letter-spacing:.04em;padding:8px;line-height:1.15}
+.mile__text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.mile__text b{font-size:clamp(16px,1.25vw,20px);font-weight:900;color:#15151c;letter-spacing:-.005em;line-height:1.2}
+.mile__text span{font-size:13px;color:#57525d;font-weight:600;line-height:1.4}
+.mile::before{content:"";position:absolute;left:50%;top:50%;width:18px;height:18px;background:#fff;border:3px solid var(--magenta);border-radius:50%;transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 0 4px rgba(203,10,124,.15)}
+/* Alternate sides: odd = card on left, even = card on right */
+.mile:nth-child(odd){grid-template-areas:"card dot year"}
+.mile:nth-child(even){grid-template-areas:"year dot card"}
+.mile:nth-child(odd) .mile__card{grid-area:card;justify-self:end;max-width:520px;width:100%}
+.mile:nth-child(odd) .mile__year{grid-area:year;text-align:left;padding:0 0 0 16px}
+.mile:nth-child(even) .mile__card{grid-area:card;justify-self:start;max-width:520px;width:100%}
+.mile:nth-child(even) .mile__year{grid-area:year;text-align:right;padding:0 16px 0 0}
+.mile--origin .mile__card{background:linear-gradient(135deg,rgba(203,10,124,.06),rgba(232,116,59,.06))}
+.mile--origin .mile__text b{color:var(--magenta)}
+@media(max-width:900px){
+  .mtl{padding-left:0;padding-right:0}
+  .mtl__spine{left:24px;transform:none}
+  .mile,.mile:nth-child(odd),.mile:nth-child(even){grid-template-columns:60px 1fr;grid-template-areas:"year card"!important;gap:16px}
+  .mile__year,.mile:nth-child(odd) .mile__year,.mile:nth-child(even) .mile__year{grid-area:year;text-align:right;padding:0;font-size:20px}
+  .mile__card,.mile:nth-child(odd) .mile__card,.mile:nth-child(even) .mile__card{grid-area:card;justify-self:stretch;max-width:none;margin-left:32px}
+  .mile::before{left:24px}
+}
