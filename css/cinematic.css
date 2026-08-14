@@ -810,3 +810,9 @@ html.theme-light .ctstop__media--pls{background:transparent!important}
 /* Push welcome content down so topnav doesn't cover eyebrow */
 body{padding-top:0}
 .welcome{padding-top:80px}
+
+/* Timeline media: dual award certificates side-by-side (medium size, no card) */
+.ctstop__media--awards{background:transparent!important;box-shadow:none!important;aspect-ratio:auto;padding:0;display:flex;align-items:center;justify-content:center;gap:24px;min-height:280px}
+.ctstop__media--awards img{width:auto!important;height:auto!important;max-width:45%;max-height:340px;object-fit:contain;box-shadow:0 12px 32px rgba(20,10,20,.18);border-radius:6px;transition:transform .4s ease}
+.ctstop:hover .ctstop__media--awards img{transform:scale(1.03)}
+html.theme-light .ctstop__media--awards{background:transparent!important}
