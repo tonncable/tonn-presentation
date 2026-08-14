@@ -1532,7 +1532,7 @@
         var t = targets[i]; if (!t) return;
         e.preventDefault();
         var y = t.getBoundingClientRect().top + window.scrollY - 60;
-        window.scrollTo({top: Math.max(0, y), behavior: 'smooth'});
+        window.scrollTo({top: Math.max(0, y), behavior: 'instant'});
       });
     });
 
