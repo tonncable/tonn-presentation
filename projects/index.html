@@ -44,11 +44,11 @@
     .rstat{background:#fff;padding:28px 24px;text-align:center}
     .rstat__num{font-size:clamp(32px,3.5vw,52px);font-weight:900;color:var(--magenta);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
     .rstat__num i{font-size:.55em;font-style:normal;margin-left:2px}
-    .rstat__label{font-size:16px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+    .rstat__label{font-size:15px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--fg);margin-top:10px}
     .reach__seceyebrow{font-size:16px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:22px}
     .reach__secs{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;background:transparent}
     @media(max-width:800px){.reach__secs{grid-template-columns:1fr}}
-    .reach__secs span{display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--hair);cursor:default}
+    .reach__secs span{display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:16px;padding:26px 0;border-bottom:1px solid var(--hair);cursor:default}
     .reach__secs span::before{content:attr(data-name);font-size:18px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
     .reach__secs span::after{content:"";height:6px;background:var(--magenta);border-radius:3px;width:calc(var(--pct,0) * 1%);min-width:6px;opacity:.85;transition:width .5s ease}
     .reach__secs span b{color:var(--fg);font-weight:900;font-size:21px;font-variant-numeric:tabular-nums;min-width:40px;text-align:right}
@@ -59,7 +59,7 @@
     .beyond__eyebrow{font-size:20px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-weight:800;margin-bottom:16px}
     .beyond__title{font-size:clamp(42px,5vw,72px);font-weight:900;letter-spacing:-.02em;line-height:1.02;margin-bottom:20px}
     .beyond__title em{color:var(--magenta);font-style:italic}
-    .beyond__sub{font-size:clamp(26px,2.1vw,36px);color:var(--fg);font-weight:700;max-width:1600px;line-height:1.45}
+    .beyond__sub{font-size:clamp(18px,1.5vw,24px);color:var(--fg);font-weight:600;max-width:1400px;line-height:1.55}
     .beyond__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;margin-top:32px}
     @media(max-width:800px){.beyond__grid{grid-template-columns:1fr}}
     .ctry{display:grid;grid-template-columns:280px 1fr auto;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--hair);cursor:default}
@@ -369,11 +369,11 @@
         if (!groups.length) { body.innerHTML = '<p class="secblk__none">Nothing to show.</p>'; return; }
         body.innerHTML = groups.map(g => {
           const feat = g.items.find(p => p.img);
-          // Mix Malaysia + international naturally by sorting alphabetically
-          const idxSource = (feat ? g.items.filter(p => p !== feat) : g.items).slice().sort((a, b) => a.name.localeCompare(b.name));
-          const CAP = feat ? 7 : 8;
+          // Include ALL items (feat included) in the list; sort alphabetically
+          const idxSource = g.items.slice().sort((a, b) => a.name.localeCompare(b.name));
+          const CAP = 8;
           const idxShown = idxSource.slice(0, CAP);
-          const more = g.items.length - idxShown.length - (feat ? 1 : 0);
+          const more = g.items.length - idxShown.length;
           const idxHtml = `
             <div class="secblk__idx">
               ${idxShown.map((p, i) => {
