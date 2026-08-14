@@ -157,7 +157,6 @@
 
   <!-- 3c · TIMELINE -->
   <section class="chapter" id="history-timeline">
-    <div class="tljump" id="tljump" aria-label="Jump to year"></div>
     <div class="cabletl" id="cabletl">
       <svg class="cabletl__snake" viewBox="0 0 100 800" preserveAspectRatio="none" aria-hidden="true">
         <defs>
@@ -405,7 +404,7 @@
         window.addEventListener('resize', updateCurrent);
         updateCurrent();
         function timelineActive(){
-          var section = document.getElementById('history');
+          var section = document.getElementById('history-timeline');
           if (!section) return false;
           var r = section.getBoundingClientRect();
           return r.top < window.innerHeight * 0.6 && r.bottom > window.innerHeight * 0.4;
