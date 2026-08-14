@@ -8,7 +8,6 @@
   { "name": "Ministry of Home Affairs", "sector": "Government", "img": "../assets/img/ministry-home-affairs.jpg", "location": "Putrajaya" },
   { "name": "Hospital Putrajaya", "sector": "Healthcare", "img": "../assets/img/hospital-putrajaya.png", "location": "Putrajaya" },
   { "name": "Istana Kuala Kangsar", "sector": "Government", "img": "../assets/img/istana-kuala-kangsar.jpg", "location": "Kuala Kangsar, Perak" },
-  { "name": "Subang Airport", "sector": "Infrastructure", "img": "../assets/img/subang-airport.jpg", "location": "Subang, Selangor" },
   { "name": "MSU Medical Centre", "sector": "Healthcare", "img": "../assets/img/msu-medical-centre.jpg", "client": "MSU", "location": "Shah Alam" },
   { "name": "MRT Sungai Buloh", "sector": "Infrastructure", "img": "../assets/img/mrt-sungai-buloh.jpg", "location": "Sungai Buloh, Selangor" },
 
