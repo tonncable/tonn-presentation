@@ -999,11 +999,11 @@
     </div>
   </section>
 
-  <!-- 9b · Q&A -->
+  <!-- 9b · INSIGHT -->
   <section class="process-intro" id="insight">
     <span class="eyebrow" data-reveal>Before we go further</span>
-    <h2 class="display" data-reveal style="--d:.1s;font-size:clamp(64px,7vw,120px);line-height:.95;letter-spacing:-.03em"><em>Q&amp;A</em></h2>
-    <p class="lead" data-reveal style="--d:.2s;max-width:820px;margin:20px auto 0;text-align:center">Quick answers to the questions buyers ask most — what really goes inside a cable, and why it matters.</p>
+    <h2 class="display" data-reveal style="--d:.1s;font-size:clamp(64px,7vw,120px);line-height:.95;letter-spacing:-.03em"><em>Insight</em></h2>
+    <p class="lead" data-reveal style="--d:.2s;max-width:820px;margin:20px auto 0;text-align:center">A quick look at something most buyers never see — what really goes inside a cable, and why it matters.</p>
   </section>
 
   <!-- 9c · INSIGHT · 01 · PVC vs XLPE -->
@@ -1537,14 +1537,13 @@
     });
 
     function update(){
-      var mid = window.scrollY + window.innerHeight/2;
-      var best = 0, bestDist = Infinity;
+      // Highlight the last topnav target whose top has crossed above the viewport line (100px from top)
+      var line = window.scrollY + 100;
+      var best = 0;
       targets.forEach(function(t, i){
         if (!t) return;
-        var r = t.getBoundingClientRect();
-        var center = window.scrollY + r.top + r.height/2;
-        var d = Math.abs(center - mid);
-        if (d < bestDist) { bestDist = d; best = i; }
+        var top = window.scrollY + t.getBoundingClientRect().top;
+        if (top <= line) best = i;
       });
       items.forEach(function(a, i){ a.classList.toggle('on', i === best); });
     }
