@@ -74,7 +74,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   position: fixed; left: 0; top: 0; height: 3px;
   background: linear-gradient(90deg, var(--magenta), var(--magenta-bright));
   width: 0; transition: width .4s var(--ease); z-index: 60;
-  box-shadow: 0 0 14px rgba(203,10,124,.8);
+  box-shadow: 0 0 14px rgba(165,0,100,.8);
 }
 
 .hud {

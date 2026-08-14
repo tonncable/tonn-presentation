@@ -12,8 +12,8 @@
   linear-gradient(90deg, rgba(8,8,11,.7) 0%, rgba(8,8,11,.1) 55%); }
 .scrim--stmt { background: radial-gradient(120% 120% at 30% 30%, rgba(13,13,15,.55), rgba(13,13,15,.93) 70%); }
 .scrim--solid { background:
-  radial-gradient(60% 80% at 80% 18%, rgba(203,10,124,.30), transparent 60%),
-  radial-gradient(70% 70% at 12% 95%, rgba(203,10,124,.16), transparent 55%); }
+  radial-gradient(60% 80% at 80% 18%, rgba(165,0,100,.30), transparent 60%),
+  radial-gradient(70% 70% at 12% 95%, rgba(165,0,100,.16), transparent 55%); }
 
 /* ---------- type ---------- */
 .display { font-weight: 800; font-size: 92px; line-height: .98; letter-spacing: -.02em; color: #fff; }
@@ -45,7 +45,7 @@
 .split { position: absolute; inset: 0; display: flex; }
 .split__media { position: relative; width: 46%; overflow: hidden; }
 .split__media .bleed__img { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.split__badge { position: absolute; left: 28px; bottom: 28px; background: var(--magenta); color: #fff; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 100px; box-shadow: 0 10px 30px rgba(203,10,124,.4); }
+.split__badge { position: absolute; left: 28px; bottom: 28px; background: var(--magenta); color: #fff; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 100px; box-shadow: 0 10px 30px rgba(165,0,100,.4); }
 .split__body { position: relative; width: 54%; left: auto; inset: 0 0 0 auto; justify-content: center; padding: 64px 72px 64px 64px; }
 .split__body .h2 { margin-bottom: 20px; }
 .ticks { list-style: none; margin-top: 28px; display: grid; gap: 14px; }
@@ -204,7 +204,7 @@
 .steps--5 { grid-template-columns: repeat(5, 1fr); }
 .step__img { position: relative; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; background: var(--bg-2); }
 .step__img .bleed__img { position: absolute; inset: 0; }
-.step__no { position: absolute; top: 9px; left: 9px; width: 26px; height: 26px; border-radius: 50%; background: var(--magenta); color: #fff; font-size: 13px; font-weight: 700; display: grid; place-items: center; box-shadow: 0 4px 12px rgba(203,10,124,.4); }
+.step__no { position: absolute; top: 9px; left: 9px; width: 26px; height: 26px; border-radius: 50%; background: var(--magenta); color: #fff; font-size: 13px; font-weight: 700; display: grid; place-items: center; box-shadow: 0 4px 12px rgba(165,0,100,.4); }
 .step__name { font-size: 15px; font-weight: 700; color: var(--fg); margin-top: 13px; line-height: 1.2; }
 .step__desc { font-size: 12.5px; color: var(--muted); line-height: 1.45; margin-top: 6px; }
 
