@@ -257,6 +257,40 @@
 
   <nav class="secnav" id="secnav" aria-label="Section navigation"></nav>
 
+  <button class="fsbtn" id="fsBtn" type="button" title="Fullscreen (F)" aria-label="Toggle fullscreen">
+    <svg class="fsbtn__on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V3h6"/><path d="M21 9V3h-6"/><path d="M3 15v6h6"/><path d="M21 15v6h-6"/></svg>
+    <svg class="fsbtn__off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6"/><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M15 21h6v-6"/></svg>
+  </button>
+  <style>
+    .fsbtn{position:fixed;right:22px;bottom:22px;z-index:70;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);border:1.5px solid rgba(20,10,20,.12);color:#15151c;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 30px rgba(20,10,20,.15);transition:transform .2s,background .2s,color .2s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .fsbtn:hover{background:var(--magenta);color:#fff;transform:scale(1.08)}
+    .fsbtn svg{width:20px;height:20px}
+    .fsbtn__off{display:none}
+    body.is-fs .fsbtn__on{display:none}
+    body.is-fs .fsbtn__off{display:block}
+  </style>
+  <script>
+  (function(){
+    var btn = document.getElementById('fsBtn');
+    function toggleFS(){
+      if (!document.fullscreenElement) {
+        (document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen).call(document.documentElement);
+      } else {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      }
+    }
+    btn.addEventListener('click', toggleFS);
+    document.addEventListener('fullscreenchange', function(){
+      document.body.classList.toggle('is-fs', !!document.fullscreenElement);
+    });
+    document.addEventListener('keydown', function(e){
+      var tag = e.target && e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFS(); }
+    });
+  })();
+  </script>
+
   <footer class="foot">© Tonn Cable · Get Wired with Industry</footer>
 
   <script src="projects.js"></script>
