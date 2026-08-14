@@ -24,7 +24,26 @@
   </div>
   <div class="sbar" id="sbar"></div>
   <a class="nav" href="#welcome" aria-label="Tonn Cable — home" style="display:flex;align-items:center;gap:10px;"><img src="assets/img/tonn-logo.png" alt="Tonn Cable"></a>
-  <div class="dots">
+  <nav class="topnav" id="topnav" aria-label="Section navigation">
+    <div class="topnav__inner">
+      <a class="topnav__item" href="#welcome">Welcome</a>
+      <a class="topnav__item" href="#company">Company</a>
+      <a class="topnav__item" href="#values">Values</a>
+      <a class="topnav__item" href="#history">History</a>
+      <a class="topnav__item" href="#factory">Factory</a>
+      <a class="topnav__item" href="#video">Line</a>
+      <a class="topnav__item" href="#products">Products</a>
+      <a class="topnav__item" href="#process">Process</a>
+      <a class="topnav__item" href="#trials">QC</a>
+      <a class="topnav__item" href="#certifications">Certifications</a>
+      <a class="topnav__item" href="#standards">Standards</a>
+      <a class="topnav__item" href="#references">Projects</a>
+      <a class="topnav__item" href="#insight">Q&amp;A</a>
+      <a class="topnav__item" href="#reg-update">News</a>
+      <a class="topnav__item" href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="dots" style="display:none">
     <a class="nav__dot" href="#welcome"></a>
     <a class="nav__dot" href="#intro"></a>
     <a class="nav__dot" href="#company"></a>
@@ -1500,6 +1519,44 @@
       }, { threshold: 0.4 });
       io.observe(sec);
     })();
+  </script>
+
+  <script>
+  /* Top nav — smooth scroll + scrollspy highlight */
+  (function(){
+    var nav = document.getElementById('topnav');
+    if (!nav) return;
+    var items = [].slice.call(nav.querySelectorAll('.topnav__item'));
+    var targets = items.map(function(a){
+      var id = a.getAttribute('href').replace('#','');
+      return document.getElementById(id);
+    });
+
+    items.forEach(function(a, i){
+      a.addEventListener('click', function(e){
+        var t = targets[i]; if (!t) return;
+        e.preventDefault();
+        var y = t.getBoundingClientRect().top + window.scrollY - 60;
+        window.scrollTo({top: Math.max(0, y), behavior: 'smooth'});
+      });
+    });
+
+    function update(){
+      var mid = window.scrollY + window.innerHeight/2;
+      var best = 0, bestDist = Infinity;
+      targets.forEach(function(t, i){
+        if (!t) return;
+        var r = t.getBoundingClientRect();
+        var center = window.scrollY + r.top + r.height/2;
+        var d = Math.abs(center - mid);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      items.forEach(function(a, i){ a.classList.toggle('on', i === best); });
+    }
+    window.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('resize', update);
+    update();
+  })();
   </script>
 </body>
 </html>
