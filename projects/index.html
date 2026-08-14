@@ -162,16 +162,17 @@
     .foot{border-top:1px solid var(--hair);padding:40px 6vw;text-align:center;font-size:16px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
 
     /* ── Section-by-section slide navigation ── */
-    html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
+    html{scroll-behavior:smooth;scroll-snap-type:y proximity}
     body>section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;scroll-margin-top:0;padding-top:100px;padding-bottom:60px;margin:0 auto}
     body>section.hero{padding-top:120px}
     body>section.fullref{scroll-snap-align:start;min-height:100vh;justify-content:flex-start;padding-top:100px}
     /* keep max-width but let section fill vertical */
-    body>section.reach,body>section.beyond,body>section.sig,body>section.expsec,body>section.fullref{margin-bottom:0}
+    body>section.reach,body>section.beyond,body>section.sig,body>section.fullref{margin-bottom:0}
+    body>section.expsec{margin-bottom:100px;padding-bottom:60px}
     /* prevent horizontal scroll */
     html,body{overflow-x:hidden}
-    /* fullref list can scroll internally if too tall */
-    .fullref__wrap{max-height:calc(100vh - 220px);overflow-y:auto;padding-right:8px}
+    /* fullref list flows as a single long list — no inner scroll */
+    .fullref__wrap{max-height:none;overflow:visible;padding-right:0}
     /* section indicator dots on right side */
     .secnav{position:fixed;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:60}
     .secnav a{width:10px;height:10px;border-radius:50%;background:rgba(0,0,0,.22);transition:background .25s,transform .25s;cursor:pointer}
