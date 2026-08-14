@@ -164,7 +164,7 @@ window.PROJECTS =
   { "name": "Inya Myaing Residence", "sector": "Residential", "country": "Myanmar", "location": "Myanmar" },
   { "name": "Stadium Wunna Theikdi", "sector": "Sports & Leisure", "country": "Myanmar", "location": "Myanmar" },
   { "name": "Uniteam Marine Office Building", "sector": "Commercial", "country": "Myanmar", "location": "Yangon" },
-  { "name": "Nyaung Don Bridge", "sector": "Infrastructure", "img": "../assets/img/ayeyawady-nyaungdon.png", "country": "Myanmar", "location": "Nyaung Don" },
+  { "name": "Nyaung Don Bridge", "sector": "Infrastructure", "country": "Myanmar", "location": "Nyaung Don" },
   { "name": "Ayeyawady Bridge (Pakokku)", "sector": "Infrastructure", "country": "Myanmar", "location": "Pakokku" },
   { "name": "Ayeyawady Bridge (Sinkhan)", "sector": "Infrastructure", "country": "Myanmar", "location": "Sinkhan" },
   { "name": "Ayeyawady Bridge (Nyaungdon)", "sector": "Infrastructure", "country": "Myanmar", "location": "Nyaungdon" },
