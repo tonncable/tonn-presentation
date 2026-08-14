@@ -413,6 +413,13 @@
           var r = section.getBoundingClientRect();
           return r.top < window.innerHeight * 0.6 && r.bottom > window.innerHeight * 0.4;
         }
+        function firstStopFocused(){
+          var el = stops[0]; if (!el) return false;
+          var r = el.getBoundingClientRect();
+          var center = r.top + r.height/2;
+          // consider "on" 2002 if its center is within middle 50% of viewport
+          return center > window.innerHeight * 0.25 && center < window.innerHeight * 0.75;
+        }
         window.addEventListener('keydown', function(e){
           if (!timelineActive()) return;
           var tag = e.target && e.target.tagName;
@@ -421,9 +428,17 @@
           if (lb && lb.classList.contains('open')) return;
           var next = e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ';
           var prev = e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp';
-          if (next && currentIdx < stops.length - 1){
-            e.preventDefault(); e.stopImmediatePropagation();
-            scrollToStop(++currentIdx);
+          if (next){
+            // First entry into timeline — snap to 2002 instead of advancing to 2003
+            if (currentIdx === 0 && !firstStopFocused()){
+              e.preventDefault(); e.stopImmediatePropagation();
+              scrollToStop(0);
+              return;
+            }
+            if (currentIdx < stops.length - 1){
+              e.preventDefault(); e.stopImmediatePropagation();
+              scrollToStop(++currentIdx);
+            }
           } else if (prev && currentIdx > 0){
             e.preventDefault(); e.stopImmediatePropagation();
             scrollToStop(--currentIdx);
