@@ -30,7 +30,7 @@
       <a class="topnav__item" href="#intro">Introduction</a>
       <a class="topnav__item" href="#history-title">History</a>
       <a class="topnav__item" href="#products-title">Product Type</a>
-      <a class="topnav__item" href="#process">Manufacturing Process</a>
+      <a class="topnav__item" href="#mfg-title">Manufacturing Process</a>
       <a class="topnav__item" href="#trials">QC</a>
       <a class="topnav__item" href="#ref-title">Project Reference</a>
       <a class="topnav__item" href="#insight">Insight</a>
@@ -531,17 +531,6 @@
     <p class="corp__note" data-reveal>▶ Plays from YouTube — this section needs internet (the rest of the site works fully offline).</p>
   </section>
 
-  <!-- 4 · FACTORY VIDEO -->
-  <section class="video-sec" id="video">
-    <video id="factoryVid" src="assets/video/factory.mp4" muted loop playsinline preload="metadata"></video>
-    <button class="video-sec__btn" id="soundBtn">🔊 Sound on</button>
-    <div class="video-sec__in">
-      <span class="eyebrow" data-reveal>Inside the plant</span>
-      <h2 class="display head--oneline" data-reveal style="--d:.1s">See the line in motion.</h2>
-      <p data-reveal style="--d:.2s">Real production at our Beranang factory — where copper and aluminium become finished cable.</p>
-    </div>
-  </section>
-
   <!-- 4b · CHAPTER TITLE — PRODUCT TYPE -->
   <section class="chaptitle" id="products-title">
     <div class="chaptitle__inner">
@@ -566,6 +555,25 @@
       <div class="prod" data-reveal style="--d:.3s" data-cable="data"><span class="prod__no">07</span><span class="prod__name">Instrumentation &amp; Network</span><span class="prod__view">View in 3D ⤢</span></div>
       <div class="prod" data-reveal style="--d:.35s" data-cable="tape"><span class="prod__no">08</span><span class="prod__name">Copper &amp; Aluminium Tape</span><span class="prod__view">View in 3D ⤢</span></div>
       <div class="prod" data-reveal style="--d:.4s" data-cable="bare"><span class="prod__no">09</span><span class="prod__name">Bare Conductors</span><span class="prod__view">View in 3D ⤢</span></div>
+    </div>
+  </section>
+
+  <!-- 4c · CHAPTER TITLE — MANUFACTURING PROCESS -->
+  <section class="chaptitle" id="mfg-title">
+    <div class="chaptitle__inner">
+      <h2 class="chaptitle__title" data-reveal>Manufacturing <em>Process</em></h2>
+      <div class="chaptitle__rule" data-reveal style="--d:.2s"></div>
+    </div>
+  </section>
+
+  <!-- 4 · FACTORY VIDEO -->
+  <section class="video-sec" id="video">
+    <video id="factoryVid" src="assets/video/factory.mp4" muted loop playsinline preload="metadata"></video>
+    <button class="video-sec__btn" id="soundBtn">🔊 Sound on</button>
+    <div class="video-sec__in">
+      <span class="eyebrow" data-reveal>Inside the plant</span>
+      <h2 class="display head--oneline" data-reveal style="--d:.1s">See the line in motion.</h2>
+      <p data-reveal style="--d:.2s">Real production at our Beranang factory — where copper and aluminium become finished cable.</p>
     </div>
   </section>
 
@@ -1550,6 +1558,93 @@
     window.addEventListener('scroll', update, {passive:true});
     window.addEventListener('resize', update);
     update();
+  })();
+  </script>
+
+  <script>
+  /* Chapter-bounded scrolling — user can only scroll within one chapter; must click a tab to switch */
+  (function(){
+    var chapters = [
+      ['welcome'],
+      ['intro','company','cert-title','certifications','standards','values'],
+      ['history-title','history','history-timeline','factory','corporate'],
+      ['products-title','products'],
+      ['mfg-title','video','line','process','process-body'],
+      ['trials','trials-checks'],
+      ['ref-title','references'],
+      ['insight','insight-1','insight-2','insight-3','undersize','undersize-why','standard-intro','design-steps'],
+      ['reg-update'],
+      ['contact']
+    ];
+    var sectionToChap = {};
+    chapters.forEach(function(c, i){ c.forEach(function(id){ sectionToChap[id] = i; }); });
+    var currentChap = 0;
+
+    function getBounds(){
+      var ids = chapters[currentChap];
+      var first = document.getElementById(ids[0]);
+      var last = document.getElementById(ids[ids.length - 1]);
+      if (!first || !last) return null;
+      var topOff = first.getBoundingClientRect().top + window.scrollY;
+      var lastRect = last.getBoundingClientRect();
+      var botOff = lastRect.top + window.scrollY + lastRect.height - window.innerHeight;
+      return {top: Math.max(0, topOff - 20), bot: Math.max(0, botOff + 20)};
+    }
+
+    // Sync current chapter based on where user is (initial load, tab click, hash change)
+    function syncFromScroll(){
+      var y = window.scrollY + window.innerHeight/3;
+      var found = 0;
+      chapters.forEach(function(c, i){
+        var first = document.getElementById(c[0]);
+        if (first && first.getBoundingClientRect().top + window.scrollY <= y) found = i;
+      });
+      currentChap = found;
+    }
+    syncFromScroll();
+
+    document.querySelectorAll('.topnav__item').forEach(function(a){
+      a.addEventListener('click', function(){
+        var id = a.getAttribute('href').replace('#','');
+        if (id in sectionToChap) currentChap = sectionToChap[id];
+      });
+    });
+
+    // Block wheel past chapter boundary
+    window.addEventListener('wheel', function(e){
+      var b = getBounds(); if (!b) return;
+      var y = window.scrollY;
+      if (e.deltaY < 0 && y <= b.top + 2) e.preventDefault();
+      if (e.deltaY > 0 && y >= b.bot - 2) e.preventDefault();
+    }, {passive: false});
+
+    // Block keyboard scroll past boundary
+    window.addEventListener('keydown', function(e){
+      var tag = e.target && e.target.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      var down = e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ';
+      var up = e.key === 'ArrowUp' || e.key === 'PageUp';
+      if (!down && !up) return;
+      var b = getBounds(); if (!b) return;
+      var y = window.scrollY;
+      if (down && y >= b.bot - 2) e.preventDefault();
+      if (up && y <= b.top + 2) e.preventDefault();
+    });
+
+    // Fallback: clamp scroll position on any overshoot (touch, momentum, etc.)
+    var raf = null;
+    window.addEventListener('scroll', function(){
+      if (raf) return;
+      raf = requestAnimationFrame(function(){
+        var b = getBounds();
+        if (b) {
+          var y = window.scrollY;
+          if (y < b.top - 10) window.scrollTo(0, b.top);
+          else if (y > b.bot + 10) window.scrollTo(0, b.bot);
+        }
+        raf = null;
+      });
+    }, {passive: true});
   })();
   </script>
 </body>
