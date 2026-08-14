@@ -778,3 +778,6 @@ html.theme-light .ctstop__media--pls{background:transparent!important}
 /* Smaller single-logo timeline media (e.g. JKR, TÜV) */
 .ctstop__media--logos.ctstop__media--sm{min-height:220px}
 .ctstop__media--logos.ctstop__media--sm img,.ctstop__media--logos.ctstop__media--sm img:only-child{max-width:440px!important;max-height:220px!important;width:auto!important;height:auto!important}
+
+/* Full-viewport chapter — used to isolate each section into its own screen */
+.chapter--full{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:80px;padding-bottom:80px}
