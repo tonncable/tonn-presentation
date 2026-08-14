@@ -162,7 +162,7 @@ window.PROJECTS =
   { "name": "Kong Meng San Temple", "sector": "Government", "country": "Singapore", "location": "Singapore" },
 
   { "name": "Inya Myaing Residence", "sector": "Residential", "country": "Myanmar", "location": "Myanmar" },
-  { "name": "Stadium Wunna Theikdi", "sector": "Sports & Leisure", "country": "Myanmar", "img": "https://upload.wikimedia.org/wikipedia/en/9/90/Wunna_Theikdi_Stadium.jpg", "location": "Myanmar" },
+  { "name": "Stadium Wunna Theikdi", "sector": "Sports & Leisure", "country": "Myanmar", "location": "Myanmar" },
   { "name": "Uniteam Marine Office Building", "sector": "Commercial", "country": "Myanmar", "location": "Yangon" },
   { "name": "Nyaung Don Bridge", "sector": "Infrastructure", "img": "../assets/img/ayeyawady-nyaungdon.png", "country": "Myanmar", "location": "Nyaung Don" },
   { "name": "Ayeyawady Bridge (Pakokku)", "sector": "Infrastructure", "country": "Myanmar", "location": "Pakokku" },
@@ -175,7 +175,7 @@ window.PROJECTS =
   { "name": "AAA Resort & Hotel", "sector": "Sports & Leisure", "country": "Maldives", "img": "https://gos3.ibcdn.com/9adb4ed082c911eaa2ba0242ac110002.jpg", "location": "Maldives" },
   { "name": "Hondaafushi Project", "sector": "Sports & Leisure", "country": "Maldives", "location": "Hondaafushi" },
 
-  { "name": "Naga World 2 Casino & Hotel", "sector": "Sports & Leisure", "country": "Cambodia", "img": "https://cambodiagolfholiday.com/gomisuq/2024/06/unnamed.jpg", "location": "Phnom Penh" },
+  { "name": "Naga World 2 Casino & Hotel", "sector": "Sports & Leisure", "country": "Cambodia", "location": "Phnom Penh" },
   { "name": "Borey Sen Sok Condo", "sector": "Residential", "country": "Cambodia", "location": "Phnom Penh" },
   { "name": "National Olympic Committee of Cambodia", "sector": "Government", "country": "Cambodia", "location": "Cambodia" },
 
