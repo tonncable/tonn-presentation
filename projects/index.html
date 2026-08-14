@@ -202,6 +202,10 @@
       <div class="rstat"><div class="rstat__num" id="stSectors">0</div><div class="rstat__label">Sectors served</div></div>
       <div class="rstat"><div class="rstat__num">24</div><div class="rstat__label">Years of experience</div></div>
     </div>
+  </section>
+
+  <!-- 1b · SECTORS WE SERVE (own section) -->
+  <section class="reach" id="sectors">
     <p class="reach__seceyebrow">Sectors we serve</p>
     <div class="reach__secs" id="reachSecs"></div>
   </section>
@@ -487,7 +491,7 @@
     if(!sections.length) return;
 
     var nav = document.getElementById('secnav');
-    var labels = ['Overview','Beyond Malaysia','Signature','By Sector','Database'];
+    var labels = ['Overview','Sectors','Beyond Malaysia','Signature','By Sector','Database'];
     sections.forEach(function(s, i){
       var a = document.createElement('a');
       a.title = labels[i] || ('Section '+(i+1));
