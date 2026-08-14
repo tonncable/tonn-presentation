@@ -367,7 +367,9 @@
         const body = document.getElementById('expBody');
         if (!groups.length) { body.innerHTML = '<p class="secblk__none">Nothing to show.</p>'; return; }
         body.innerHTML = groups.map(g => {
-          const feat = g.items.find(p => p.img);
+          // Items whose image should render in THIS view (imgIntlOnly hides thumbnail on sector tabs)
+          const hasVisibleImg = p => p.img && !(p.imgIntlOnly && tab !== '__intl');
+          const feat = g.items.find(hasVisibleImg);
           // Sort alphabetically. Cap at 8 only when the "All" overview is showing; specific tabs show every project.
           const idxSource = g.items.slice().sort((a, b) => a.name.localeCompare(b.name));
           const CAP = (tab === 'All') ? 8 : Infinity;
@@ -381,7 +383,7 @@
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails
-          const extras = (tab !== 'All') ? g.items.filter(p => p.img && p !== feat) : [];
+          const extras = (tab !== 'All') ? g.items.filter(p => hasVisibleImg(p) && p !== feat) : [];
           const extrasHtml = extras.length ? `
             <div class="secblk__extras">
               ${extras.map(p => `
