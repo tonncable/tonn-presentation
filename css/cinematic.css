@@ -746,3 +746,16 @@ body.light .process-intro{border-color:rgba(0,0,0,.08)}
 .certwall__item span{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#57525d;text-align:center;line-height:1.3}
 .certwall__note{text-align:center;margin:36px auto 0;max-width:1200px}
 .certwall__note span{display:inline-block;padding:12px 24px;border:1.5px solid var(--magenta);border-radius:100px;font-size:14px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta)}
+
+/* Certification chips inside timeline stops */
+.ctstop__certs{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;max-width:640px}
+.ctstop--right .ctstop__certs{margin-left:auto;justify-content:flex-end}
+.cchip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--magenta);border-radius:100px;padding:8px 16px;font-size:14px;font-weight:800;letter-spacing:.06em;color:#15151c;box-shadow:0 4px 12px rgba(203,10,124,.12)}
+.cchip img{height:20px;width:auto;max-width:32px;object-fit:contain}
+.cchip--origin{background:linear-gradient(135deg,var(--magenta),var(--copper));color:#fff;border-color:transparent;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+@media(max-width:900px){
+  .ctstop__certs{margin-top:14px;gap:6px}
+  .ctstop--right .ctstop__certs{margin-left:0;justify-content:flex-start}
+  .cchip{font-size:12px;padding:6px 12px}
+  .cchip img{height:16px}
+}
