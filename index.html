@@ -157,6 +157,7 @@
 
   <!-- 3c · TIMELINE -->
   <section class="chapter" id="history-timeline">
+    <div class="tljump" id="tljump" aria-label="Jump to year"></div>
     <div class="cabletl" id="cabletl">
       <svg class="cabletl__snake" viewBox="0 0 100 800" preserveAspectRatio="none" aria-hidden="true">
         <defs>
@@ -369,6 +370,22 @@
           node.addEventListener('click', function(){ scrollToStop(i); });
           node.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToStop(i); } });
         });
+        // Build year jump navigator (click any year -> scroll to that stop)
+        var jump = document.getElementById('tljump');
+        var pills = [];
+        if (jump) {
+          stops.forEach(function(s, i){
+            var yr = (s.querySelector('.ctstop__year')||{}).textContent || '';
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'tljump__btn';
+            btn.textContent = yr;
+            btn.setAttribute('aria-label', 'Jump to ' + yr);
+            btn.addEventListener('click', function(){ scrollToStop(i); });
+            jump.appendChild(btn);
+            pills.push(btn);
+          });
+        }
         // Keyboard: arrow keys jump year-by-year when the timeline is on screen
         var currentIdx = 0;
         function updateCurrent(){
@@ -382,6 +399,7 @@
           });
           currentIdx = best;
           stops.forEach(function(s, i){ s.classList.toggle('is-focus', i === best); });
+          pills.forEach(function(p, i){ p.classList.toggle('on', i === best); });
         }
         window.addEventListener('scroll', updateCurrent, { passive: true });
         window.addEventListener('resize', updateCurrent);

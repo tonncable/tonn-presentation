@@ -781,3 +781,10 @@ html.theme-light .ctstop__media--pls{background:transparent!important}
 
 /* Full-viewport chapter — used to isolate each section into its own screen */
 .chapter--full{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:80px;padding-bottom:80px}
+
+/* Timeline year jump navigator */
+.tljump{position:sticky;top:16px;z-index:10;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:14px 16px;margin:0 auto 20px;max-width:1400px;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(165,0,100,.15);border-radius:100px;box-shadow:0 10px 30px rgba(20,10,20,.08)}
+.tljump__btn{background:transparent;border:1.5px solid transparent;border-radius:100px;padding:8px 18px;font-family:inherit;font-size:15px;font-weight:800;letter-spacing:.04em;color:#57525d;cursor:pointer;transition:all .2s;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tljump__btn:hover{color:var(--magenta);border-color:rgba(165,0,100,.3)}
+.tljump__btn.on{background:var(--magenta);color:#fff;border-color:var(--magenta);box-shadow:0 4px 12px rgba(165,0,100,.35)}
+@media(max-width:900px){.tljump{gap:6px;padding:10px}.tljump__btn{font-size:13px;padding:6px 12px}}
