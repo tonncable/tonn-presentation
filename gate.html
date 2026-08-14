@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tonn Cable — Access</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23120A12'/%3E%3Ccircle cx='16' cy='16' r='11' fill='%23CB0A7C'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23E8743B'/%3E%3C/svg%3E">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif}
+  body{
+    background:linear-gradient(135deg,#120A12 0%,#2a0f24 100%);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    padding:20px;
+  }
+  .gate{
+    width:100%;max-width:440px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:56px 44px;
+    text-align:center;
+    backdrop-filter:blur(20px);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .gate__logo{margin-bottom:32px}
+  .gate__logo img{width:64px;height:64px}
+  .gate__eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#CB0A7C;font-weight:800;margin-bottom:14px}
+  .gate__title{font-size:28px;font-weight:900;letter-spacing:-.01em;margin-bottom:12px;line-height:1.15}
+  .gate__sub{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:36px;line-height:1.5}
+  .gate__form{display:flex;flex-direction:column;gap:14px}
+  .gate__input{
+    width:100%;padding:18px 20px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;
+    color:#fff;font-size:16px;font-family:inherit;
+    outline:none;transition:all .2s;
+    text-align:center;letter-spacing:.05em;
+  }
+  .gate__input:focus{border-color:#CB0A7C;background:rgba(203,10,124,.08)}
+  .gate__input::placeholder{color:rgba(255,255,255,.35)}
+  .gate__btn{
+    width:100%;padding:18px 20px;
+    background:linear-gradient(90deg,#CB0A7C,#E8743B);
+    border:0;border-radius:12px;
+    color:#fff;font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    cursor:pointer;font-family:inherit;
+    transition:transform .15s,box-shadow .2s;
+  }
+  .gate__btn:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(203,10,124,.4)}
+  .gate__btn:active{transform:translateY(0)}
+  .gate__err{
+    color:#ff5c8a;font-size:13px;font-weight:600;
+    min-height:18px;margin-top:4px;
+    opacity:0;transition:opacity .2s;
+  }
+  .gate__err.show{opacity:1}
+  .gate__hint{margin-top:28px;font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.06em}
+</style>
+</head>
+<body>
+  <div class="gate">
+    <div class="gate__logo">
+      <img src="assets/img/tonn-logo.png" alt="Tonn Cable" onerror="this.style.display='none'">
+    </div>
+    <div class="gate__eyebrow">Private Preview</div>
+    <h1 class="gate__title">Tonn Cable Presentation</h1>
+    <p class="gate__sub">This preview is for invited viewers only. Please enter the access password to continue.</p>
+    <form class="gate__form" id="gateForm">
+      <input type="password" class="gate__input" id="gatePw" placeholder="Enter password" autocomplete="off" autofocus required>
+      <div class="gate__err" id="gateErr">Incorrect password. Try again.</div>
+      <button type="submit" class="gate__btn">Enter</button>
+    </form>
+    <div class="gate__hint">Contact Tonn Cable for access</div>
+  </div>
+
+<script>
+(function(){
+  // Change this password anytime — visitors will need the new one after that.
+  var PASSWORD = 'tonn2025';
+  var TOKEN_KEY = 'tonn_gate_ok';
+  var TOKEN_VAL = 'tonn:' + PASSWORD;
+
+  // Already unlocked? go straight in.
+  try {
+    if (sessionStorage.getItem(TOKEN_KEY) === TOKEN_VAL) {
+      location.replace('index.html');
+      return;
+    }
+  } catch(e){}
+
+  var form = document.getElementById('gateForm');
+  var pw = document.getElementById('gatePw');
+  var err = document.getElementById('gateErr');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (pw.value === PASSWORD) {
+      try { sessionStorage.setItem(TOKEN_KEY, TOKEN_VAL); } catch(e){}
+      location.replace('index.html');
+    } else {
+      err.classList.add('show');
+      pw.value = '';
+      pw.focus();
+      setTimeout(function(){ err.classList.remove('show'); }, 2400);
+    }
+  });
+})();
+</script>
+</body>
+</html>
