@@ -7,58 +7,65 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23120A12'/%3E%3Ccircle cx='16' cy='16' r='11' fill='%23CB0A7C'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='%23E8743B'/%3E%3C/svg%3E">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif}
+  html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
   body{
-    background:linear-gradient(135deg,#CB0A7C 0%,#8A0A5C 50%,#E8743B 100%);
-    color:#fff;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(203,10,124,.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, rgba(138,10,92,.4) 0%, transparent 50%),
+      #1a0512;
+    color:#15151c;
     display:flex;align-items:center;justify-content:center;
     padding:20px;
   }
   .gate{
     width:100%;max-width:440px;
-    background:rgba(20,10,20,.35);
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:24px;
-    padding:56px 44px;
+    background:#fff;
+    border-radius:20px;
+    padding:48px 44px 36px;
     text-align:center;
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
     box-shadow:0 30px 80px rgba(0,0,0,.35);
   }
-  .gate__logo{margin-bottom:32px}
-  .gate__logo img{max-width:220px;height:auto}
-  .gate__eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#CB0A7C;font-weight:800;margin-bottom:14px}
-  .gate__title{font-size:28px;font-weight:900;letter-spacing:-.01em;margin-bottom:12px;line-height:1.15}
-  .gate__sub{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:36px;line-height:1.5}
-  .gate__form{display:flex;flex-direction:column;gap:14px}
+  .gate__logo{margin-bottom:22px;display:flex;justify-content:center}
+  .gate__logo img{max-width:200px;height:auto;display:block}
+  .gate__title{font-size:26px;font-weight:800;letter-spacing:-.01em;color:#15151c;margin-bottom:6px}
+  .gate__sub{font-size:14px;color:#8a8590;margin-bottom:28px}
+  .gate__form{display:flex;flex-direction:column;gap:8px;text-align:left}
+  .gate__label{font-size:14px;font-weight:700;color:#15151c;margin-bottom:4px;margin-top:8px}
+  .gate__field{position:relative}
   .gate__input{
-    width:100%;padding:18px 20px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:12px;
-    color:#fff;font-size:16px;font-family:inherit;
-    outline:none;transition:all .2s;
-    text-align:center;letter-spacing:.05em;
+    width:100%;padding:14px 44px 14px 16px;
+    background:#fff;
+    border:1.5px solid #f5c8dd;
+    border-radius:10px;
+    color:#15151c;font-size:15px;font-family:inherit;
+    outline:none;transition:border-color .2s;
   }
-  .gate__input:focus{border-color:#CB0A7C;background:rgba(203,10,124,.08)}
-  .gate__input::placeholder{color:rgba(255,255,255,.35)}
+  .gate__input:focus{border-color:#CB0A7C}
+  .gate__input::placeholder{color:#c9c3ce}
+  .gate__eye{
+    position:absolute;right:14px;top:50%;transform:translateY(-50%);
+    background:none;border:0;cursor:pointer;padding:4px;
+    color:#a09aa8;display:flex;align-items:center;
+  }
+  .gate__eye:hover{color:#CB0A7C}
+  .gate__eye svg{width:20px;height:20px}
   .gate__btn{
-    width:100%;padding:18px 20px;
-    background:linear-gradient(90deg,#CB0A7C,#E8743B);
-    border:0;border-radius:12px;
-    color:#fff;font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    width:100%;padding:14px 20px;margin-top:20px;
+    background:linear-gradient(180deg,#CB0A7C 0%,#8A0A5C 100%);
+    border:0;border-radius:10px;
+    color:#fff;font-size:15px;font-weight:700;
     cursor:pointer;font-family:inherit;
-    transition:transform .15s,box-shadow .2s;
+    transition:transform .12s,box-shadow .2s,filter .2s;
   }
-  .gate__btn:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(203,10,124,.4)}
-  .gate__btn:active{transform:translateY(0)}
+  .gate__btn:hover{filter:brightness(1.05);box-shadow:0 10px 24px rgba(203,10,124,.35)}
+  .gate__btn:active{transform:translateY(1px)}
   .gate__err{
-    color:#ff5c8a;font-size:13px;font-weight:600;
-    min-height:18px;margin-top:4px;
+    color:#e11436;font-size:13px;font-weight:600;
+    text-align:center;margin-top:12px;min-height:18px;
     opacity:0;transition:opacity .2s;
   }
   .gate__err.show{opacity:1}
-  .gate__hint{margin-top:28px;font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.06em}
+  .gate__hint{margin-top:18px;font-size:12px;color:#a09aa8}
 </style>
 </head>
 <body>
@@ -66,24 +73,28 @@
     <div class="gate__logo">
       <img src="assets/img/image2.png" alt="Tonn Cable">
     </div>
-    <div class="gate__eyebrow">Private Preview</div>
-    <p class="gate__sub">This preview is for invited viewers only. Please enter the access password to continue.</p>
+    <h1 class="gate__title">Welcome back</h1>
+    <p class="gate__sub">Sign in to the Tonn Cable portal</p>
     <form class="gate__form" id="gateForm">
-      <input type="password" class="gate__input" id="gatePw" placeholder="Enter password" autocomplete="off" autofocus required>
+      <label class="gate__label" for="gatePw">Password</label>
+      <div class="gate__field">
+        <input type="password" class="gate__input" id="gatePw" placeholder="Your password" autocomplete="off" autofocus required>
+        <button type="button" class="gate__eye" id="gateEye" aria-label="Show password">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+      <button type="submit" class="gate__btn">Sign in</button>
       <div class="gate__err" id="gateErr">Incorrect password. Try again.</div>
-      <button type="submit" class="gate__btn">Enter</button>
     </form>
-    <div class="gate__hint">Contact Tonn Cable for access</div>
+    <div class="gate__hint">Access limited to invited viewers</div>
   </div>
 
 <script>
 (function(){
-  // Change this password anytime — visitors will need the new one after that.
   var PASSWORD = 'tonn2025';
   var TOKEN_KEY = 'tonn_gate_ok';
   var TOKEN_VAL = 'tonn:' + PASSWORD;
 
-  // Already unlocked? go straight in.
   try {
     if (sessionStorage.getItem(TOKEN_KEY) === TOKEN_VAL) {
       location.replace('index.html');
@@ -94,6 +105,12 @@
   var form = document.getElementById('gateForm');
   var pw = document.getElementById('gatePw');
   var err = document.getElementById('gateErr');
+  var eye = document.getElementById('gateEye');
+
+  eye.addEventListener('click', function(){
+    pw.type = pw.type === 'password' ? 'text' : 'password';
+    pw.focus();
+  });
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
