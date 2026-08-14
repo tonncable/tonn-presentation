@@ -766,3 +766,11 @@ body.light .process-intro{border-color:rgba(0,0,0,.08)}
 .ctstop__media--logos:only-child img,.ctstop__media--logos img:only-child{max-width:70%;max-height:220px}
 .ctstop:hover .ctstop__media--logos img{transform:none}
 html.theme-light .ctstop__media--logos{background:transparent!important}
+
+/* PLS Singapore inline badge card */
+.ctstop__media--pls{background:transparent!important;box-shadow:none!important;aspect-ratio:auto;padding:20px;display:flex;align-items:center;justify-content:center;min-height:220px}
+html.theme-light .ctstop__media--pls{background:transparent!important}
+.pls-card{background:#fff;border:3px solid var(--magenta);border-radius:12px;padding:28px 40px;text-align:center;box-shadow:0 12px 32px rgba(203,10,124,.2);min-width:280px;display:flex;flex-direction:column;gap:6px}
+.pls-card__flag{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#57525d;margin-bottom:8px}
+.pls-card__title{font-size:32px;font-weight:900;color:var(--magenta);letter-spacing:-.01em;line-height:1}
+.pls-card__meta{font-size:15px;font-weight:800;color:#15151c;letter-spacing:.06em;font-variant-numeric:tabular-nums}
