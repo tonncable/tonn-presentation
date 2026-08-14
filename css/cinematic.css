@@ -667,3 +667,12 @@ body.light .process-intro{border-color:rgba(0,0,0,.08)}
   body::after,.hero__current .pulse,.charged__dot,.stage3d .cable{animation:none!important}
   .loader{display:none!important}
 }
+
+/* Chapter title interstitial */
+.chaptitle{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 6vw;overflow:hidden;background:radial-gradient(ellipse at center,rgba(203,10,124,.08),transparent 65%)}
+.chaptitle__inner{position:relative;z-index:2;max-width:1200px}
+.chaptitle__num{display:block;font-size:clamp(120px,18vw,260px);font-weight:900;line-height:.9;letter-spacing:-.04em;background:linear-gradient(135deg,var(--magenta) 0%,var(--copper) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;opacity:.95}
+.chaptitle__kicker{display:block;margin-top:18px;font-size:clamp(14px,1.2vw,18px);letter-spacing:.42em;text-transform:uppercase;color:var(--magenta);font-weight:800}
+.chaptitle__title{margin-top:24px;font-size:clamp(56px,7vw,120px);font-weight:900;letter-spacing:-.02em;line-height:1.02;color:var(--fg)}
+.chaptitle__title em{font-style:italic;color:var(--magenta)}
+.chaptitle__rule{margin:44px auto 0;width:min(320px,50vw);height:3px;background:linear-gradient(90deg,transparent,var(--magenta),var(--copper),transparent);border-radius:3px}
