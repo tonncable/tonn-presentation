@@ -94,8 +94,20 @@
   var PASSWORD = 'tonn2025';
   var TOKEN_KEY = 'tonn_gate_ok';
   var TOKEN_VAL = 'tonn:' + PASSWORD;
+  var TTL_MS   = 24 * 60 * 60 * 1000; // 24 hours
 
-  // where to send the user after successful unlock — from ?next= or default to main
+  function isUnlocked(){
+    try {
+      var raw = localStorage.getItem(TOKEN_KEY);
+      if (!raw) return false;
+      var parts = raw.split('|');
+      if (parts[0] !== TOKEN_VAL) return false;
+      var exp = parseInt(parts[1], 10);
+      if (!exp || Date.now() > exp) { localStorage.removeItem(TOKEN_KEY); return false; }
+      return true;
+    } catch(e){ return false; }
+  }
+
   function getDest(){
     try {
       var params = new URLSearchParams(location.search);
@@ -106,13 +118,7 @@
   }
   var dest = getDest();
 
-  // already unlocked? go straight through
-  try {
-    if (localStorage.getItem(TOKEN_KEY) === TOKEN_VAL) {
-      location.replace(dest);
-      return;
-    }
-  } catch(e){}
+  if (isUnlocked()) { location.replace(dest); return; }
 
   var form = document.getElementById('gateForm');
   var pw = document.getElementById('gatePw');
@@ -127,7 +133,7 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if (pw.value === PASSWORD) {
-      try { localStorage.setItem(TOKEN_KEY, TOKEN_VAL); } catch(e){}
+      try { localStorage.setItem(TOKEN_KEY, TOKEN_VAL + '|' + (Date.now() + TTL_MS)); } catch(e){}
       location.replace(dest);
     } else {
       err.classList.add('show');

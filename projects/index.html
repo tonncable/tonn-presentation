@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>(function(){try{if(localStorage.getItem('tonn_gate_ok')!=='tonn:tonn2025'){location.replace('../gate.html?next=projects/index.html');}}catch(e){location.replace('../gate.html?next=projects/index.html');}})();</script>
+  <script>(function(){function fail(){location.replace('../gate.html?next=projects/index.html');}try{var r=localStorage.getItem('tonn_gate_ok');if(!r){fail();return;}var p=r.split('|');if(p[0]!=='tonn:tonn2025'||!p[1]||Date.now()>parseInt(p[1],10)){localStorage.removeItem('tonn_gate_ok');fail();}}catch(e){fail();}})();</script>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Tonn Cable — Project References</title>
   <link rel="icon" href="data:,">
