@@ -95,9 +95,21 @@
   var TOKEN_KEY = 'tonn_gate_ok';
   var TOKEN_VAL = 'tonn:' + PASSWORD;
 
+  // where to send the user after successful unlock — from ?next= or default to main
+  function getDest(){
+    try {
+      var params = new URLSearchParams(location.search);
+      var n = params.get('next');
+      if (n && /^[\/\w][\w\-\.\/]*$/.test(n)) return n;
+    } catch(e){}
+    return 'index.html';
+  }
+  var dest = getDest();
+
+  // already unlocked? go straight through
   try {
-    if (sessionStorage.getItem(TOKEN_KEY) === TOKEN_VAL) {
-      location.replace('index.html');
+    if (localStorage.getItem(TOKEN_KEY) === TOKEN_VAL) {
+      location.replace(dest);
       return;
     }
   } catch(e){}
@@ -115,8 +127,8 @@
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if (pw.value === PASSWORD) {
-      try { sessionStorage.setItem(TOKEN_KEY, TOKEN_VAL); } catch(e){}
-      location.replace('index.html');
+      try { localStorage.setItem(TOKEN_KEY, TOKEN_VAL); } catch(e){}
+      location.replace(dest);
     } else {
       err.classList.add('show');
       pw.value = '';
