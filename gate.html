@@ -9,23 +9,24 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;font-family:'Inter',system-ui,-apple-system,sans-serif}
   body{
-    background:linear-gradient(135deg,#120A12 0%,#2a0f24 100%);
+    background:linear-gradient(135deg,#CB0A7C 0%,#8A0A5C 50%,#E8743B 100%);
     color:#fff;
     display:flex;align-items:center;justify-content:center;
     padding:20px;
   }
   .gate{
     width:100%;max-width:440px;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
+    background:rgba(20,10,20,.35);
+    border:1px solid rgba(255,255,255,.14);
     border-radius:24px;
     padding:56px 44px;
     text-align:center;
     backdrop-filter:blur(20px);
-    box-shadow:0 30px 80px rgba(0,0,0,.5);
+    -webkit-backdrop-filter:blur(20px);
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
   }
   .gate__logo{margin-bottom:32px}
-  .gate__logo img{width:64px;height:64px}
+  .gate__logo img{max-width:220px;height:auto}
   .gate__eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#CB0A7C;font-weight:800;margin-bottom:14px}
   .gate__title{font-size:28px;font-weight:900;letter-spacing:-.01em;margin-bottom:12px;line-height:1.15}
   .gate__sub{font-size:15px;color:rgba(255,255,255,.6);margin-bottom:36px;line-height:1.5}
@@ -63,10 +64,9 @@
 <body>
   <div class="gate">
     <div class="gate__logo">
-      <img src="assets/img/tonn-logo.png" alt="Tonn Cable" onerror="this.style.display='none'">
+      <img src="assets/img/image2.png" alt="Tonn Cable">
     </div>
     <div class="gate__eyebrow">Private Preview</div>
-    <h1 class="gate__title">Tonn Cable Presentation</h1>
     <p class="gate__sub">This preview is for invited viewers only. Please enter the access password to continue.</p>
     <form class="gate__form" id="gateForm">
       <input type="password" class="gate__input" id="gatePw" placeholder="Enter password" autocomplete="off" autofocus required>
