@@ -240,21 +240,6 @@
     <div id="expBody"></div>
   </section>
 
-  <!-- 5 · FULL REFERENCES -->
-  <section class="fullref">
-    <div class="fullref__head">
-      <div>
-        <h2 class="fullref__title">Full <em>project database.</em></h2>
-        <p class="fullref__sub"><b id="frCount">0</b> references · searchable</p>
-      </div>
-      <div class="search"><input type="text" id="frSearch" placeholder="Search project name, location, sector…"></div>
-    </div>
-    <div class="fullref__wrap">
-      <div class="fullref__body" id="frBody"></div>
-      <nav class="fullref__jump" id="frJump" aria-label="Jump to letter"></nav>
-    </div>
-  </section>
-
   <div class="lb" id="lb">
     <img id="lbImg" alt="">
     <div class="lb__cap"><b id="lbName"></b><span id="lbLoc"></span></div>
@@ -374,11 +359,10 @@
         if (!groups.length) { body.innerHTML = '<p class="secblk__none">Nothing to show.</p>'; return; }
         body.innerHTML = groups.map(g => {
           const feat = g.items.find(p => p.img);
-          // Include ALL items (feat included) in the list; sort alphabetically
+          // Sort alphabetically. Cap at 8 only when the "All" overview is showing; specific tabs show every project.
           const idxSource = g.items.slice().sort((a, b) => a.name.localeCompare(b.name));
-          const CAP = 8;
+          const CAP = (tab === 'All') ? 8 : Infinity;
           const idxShown = idxSource.slice(0, CAP);
-          const more = g.items.length - idxShown.length;
           const idxHtml = `
             <div class="secblk__idx">
               ${idxShown.map((p, i) => {
@@ -386,7 +370,6 @@
                 const n = String(i + 1).padStart(2, '0');
                 return `<div class="secblk__idx__row"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name">${p.name}</span><span class="secblk__idx__loc">${loc}</span></div>`;
               }).join('')}
-              ${more > 0 ? `<p class="secblk__more">+ ${more} more — see full database below ↓</p>` : ''}
             </div>`;
           const layoutHtml = feat ? `
             <div class="secblk__layout">
@@ -413,64 +396,7 @@
         document.querySelectorAll('.expsec__tab').forEach(x => x.classList.toggle('on', x === btn));
         const tab = btn.dataset.tab;
         renderExp(tab);
-        // sync full database search + scroll to it (skip "All", nothing to filter)
-        if (tab !== 'All') {
-          let term = '';
-          if (tab === '__intl') term = 'international';
-          else term = (SECTOR_LABEL[tab] || tab);
-          frSearch.value = term;
-          renderFR();
-        }
       });
-
-      // --- 5 · full references, alphabetical directory ---
-      const frBody = document.getElementById('frBody');
-      const frJump = document.getElementById('frJump');
-      const frCount = document.getElementById('frCount');
-      const frSearch = document.getElementById('frSearch');
-      const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-      function firstLetter(name){
-        const c = name.replace(/^[^A-Za-z0-9]+/,'').charAt(0).toUpperCase();
-        return /[A-Z]/.test(c) ? c : '#';
-      }
-      function renderFR(){
-        const q = frSearch.value.toLowerCase().trim();
-        const isIntl = /^(international|overseas|abroad|export|beyond)/i.test(q);
-        const list = projects.filter(p => {
-          if (!q) return true;
-          if (isIntl) return p.country && p.country !== 'Malaysia';
-          const sectorLbl = (SECTOR_LABEL[p.sector] || p.sector || '').toLowerCase();
-          return p.name.toLowerCase().includes(q)
-              || (p.location||'').toLowerCase().includes(q)
-              || (p.sector||'').toLowerCase().includes(q)
-              || sectorLbl.includes(q)
-              || (p.country||'').toLowerCase().includes(q);
-        });
-        list.sort((a,b) => a.name.localeCompare(b.name));
-        frCount.textContent = list.length;
-        const groups = {};
-        list.forEach(p => { const k = firstLetter(p.name); (groups[k] = groups[k] || []).push(p); });
-        const keys = Object.keys(groups).sort();
-        frBody.innerHTML = keys.map(k => `
-          <section class="aletter" id="alpha-${k}">
-            <h3 class="aletter__head">${k}</h3>
-            <div class="aletter__grid">
-              ${groups[k].map(p => `
-                <div class="aletter__row">
-                  <b>${p.name}</b>
-                  <span class="rloc">${[p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ')}</span>
-                </div>
-              `).join('')}
-            </div>
-          </section>
-        `).join('') || '<p style="padding:60px 0;color:var(--muted);text-align:center">No matches.</p>';
-        frJump.innerHTML = ALPHA.map(l => groups[l]
-          ? `<a href="#alpha-${l}">${l}</a>`
-          : `<a class="disabled">${l}</a>`
-        ).join('');
-      }
-      frSearch.addEventListener('input', renderFR);
-      renderFR();
 
       // --- lightbox (only on cards with images) ---
       const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbName = document.getElementById('lbName'), lbLoc = document.getElementById('lbLoc');
@@ -492,7 +418,7 @@
     if(!sections.length) return;
 
     var nav = document.getElementById('secnav');
-    var labels = ['Overview','Sectors','Beyond Malaysia','Signature','By Sector','Database'];
+    var labels = ['Overview','Sectors','Beyond Malaysia','Signature','By Sector'];
     sections.forEach(function(s, i){
       var a = document.createElement('a');
       a.title = labels[i] || ('Section '+(i+1));
