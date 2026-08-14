@@ -774,3 +774,7 @@ html.theme-light .ctstop__media--pls{background:transparent!important}
 .pls-card__flag{font-size:14px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#57525d;margin-bottom:8px}
 .pls-card__title{font-size:32px;font-weight:900;color:var(--magenta);letter-spacing:-.01em;line-height:1}
 .pls-card__meta{font-size:15px;font-weight:800;color:#15151c;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+
+/* Smaller single-logo timeline media (e.g. JKR, TÜV) */
+.ctstop__media--logos.ctstop__media--sm{min-height:140px}
+.ctstop__media--logos.ctstop__media--sm img,.ctstop__media--logos.ctstop__media--sm img:only-child{max-width:280px!important;max-height:130px!important;width:auto!important;height:auto!important}
