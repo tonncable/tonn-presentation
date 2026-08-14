@@ -1430,15 +1430,25 @@
   <!-- 13 · CONTACT -->
   <section class="contact" id="contact">
     <div class="contact__glow"></div>
-    <span class="eyebrow" data-reveal>Get wired with industry</span>
-    <h2 class="display head--oneline" data-reveal style="--d:.1s">Let's <em>get wired.</em></h2>
+    <h2 class="contact__hero" data-reveal>
+      <span class="contact__l1">Let's get wired,</span>
+      <span class="contact__l2">with <img class="contact__logo" src="assets/img/tonn-logo.png" alt="Tonn Cable"></span>
+    </h2>
     <div class="contact__rows">
       <div class="crow" data-reveal style="--d:.2s"><span>Email</span><a href="mailto:enquiry@tonncable.com">enquiry@tonncable.com</a></div>
       <div class="crow" data-reveal style="--d:.3s"><span>Phone</span><b>(603) 8766 9888</b></div>
       <div class="crow" data-reveal style="--d:.4s"><span>Web</span><a href="https://www.tonncable.com">www.tonncable.com</a></div>
     </div>
-    <p class="foot" data-reveal style="--d:.5s">Tonn Cable Sdn Bhd · Beranang, Selangor, Malaysia</p>
+    <p class="contact__by" data-reveal style="--d:.5s">by Business Development Department</p>
+    <p class="foot" data-reveal style="--d:.6s">Tonn Cable Sdn Bhd · Beranang, Selangor, Malaysia</p>
   </section>
+  <style>
+    .contact__hero{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:clamp(48px,6vw,88px);font-weight:900;letter-spacing:-.02em;line-height:1.05;margin-bottom:44px}
+    .contact__l1{color:var(--fg)}
+    .contact__l2{display:inline-flex;align-items:center;gap:20px;color:var(--fg);font-style:italic;color:var(--magenta)}
+    .contact__logo{height:.9em;width:auto;display:inline-block;vertical-align:middle}
+    .contact__by{margin-top:22px;font-size:14px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);text-align:center}
+  </style>
 
   <div class="certmodal" id="certmodal">
     <button class="certmodal__close" type="button" aria-label="Close">×</button>
@@ -1557,12 +1567,20 @@
         e.preventDefault();
         var y = t.getBoundingClientRect().top + window.scrollY - 60;
         window.scrollTo({top: Math.max(0, y), behavior: 'instant'});
+        // Immediately mark clicked tab as active (don't wait for scrollspy to catch up)
+        items.forEach(function(x, j){ x.classList.toggle('on', j === i); });
+        window.__navLock = i;
+        setTimeout(function(){ window.__navLock = null; }, 800);
       });
     });
 
     function update(){
-      // Highlight the last topnav target whose top has crossed above the viewport line (100px from top)
-      var line = window.scrollY + 100;
+      // Respect a fresh tab click (navLock) so the clicked tab stays highlighted briefly
+      if (window.__navLock != null) {
+        items.forEach(function(a, i){ a.classList.toggle('on', i === window.__navLock); });
+        return;
+      }
+      var line = window.scrollY + 120;
       var best = 0;
       targets.forEach(function(t, i){
         if (!t) return;
