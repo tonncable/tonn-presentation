@@ -17,7 +17,7 @@ window.PROJECTS =
   },
   {
     "name": "YTL Kulai Data Center",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "img": "../assets/img/ytl-kulai.jpg",
     "client": "YTL",
     "location": "Kulai, Johor",
@@ -126,12 +126,12 @@ window.PROJECTS =
   },
   {
     "name": "Air Trunk Johor Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "location": "Johor"
   },
   {
     "name": "Sedenak Data Center Park",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "location": "Sedenak, Johor",
     "year": "2020-2024",
     "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE - 754 m | 300 mm² AL/XLPE/PVC BLACK CABLE - 1,000 m",
@@ -139,7 +139,7 @@ window.PROJECTS =
   },
   {
     "name": "Microsoft Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "location": "Cyberjaya",
     "year": "2023",
     "details": "400 mm² x 1C CU/XLPE/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 5 - 54 m | 240 mm² x 1C CU/XLPE/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 5 - 84 m",
@@ -454,7 +454,7 @@ window.PROJECTS =
   },
   {
     "name": "Telekom Malaysia S/B",
-    "sector": "Industrial",
+    "sector": "Telecom",
     "img": "https://theedgemalaysia.com/_next/image?url=https%3A%2F%2Fassets.theedgemarkets.com%2Ftm-tower-2_20221214091126_tm.com_.my_.jpg&w=1920&q=75",
     "location": "Malaysia"
   },
@@ -1362,7 +1362,7 @@ window.PROJECTS =
   },
   {
     "name": "Bridge Data Centres",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2023",
     "details": "4 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 881 m | 1.5 mm² x 9c CU/PVC/PVC MULTICORE CABLE - 2,037 m | 1.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 524 m | 1.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 180 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 180 m",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. (TEBRAU)",
@@ -1370,19 +1370,19 @@ window.PROJECTS =
   },
   {
     "name": "CSF Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2025",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 160 m | 95 mm² CU/PVC GREEN CABLE - 60 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,528 m | 35 mm² CU/PVC GREEN CABLE - 382 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 324 m | 16 mm² CU/PVC GREEN CABLE 100M - 1 coil",
     "dealer": "NANYANG ELECTRIC CO. (M) SDN. BHD."
   },
   {
     "name": "Cx2 Cyberjaya",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "location": "Putrajaya"
   },
   {
     "name": "Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "120 mm² CU/PVC GREEN CABLE - 495 m | 95 mm² CU/PVC GREEN CABLE - 910 m | 50 mm² CU/PVC GREEN CABLE - 910 m | 25 mm² CU/PVC GREEN CABLE - 770 m | 16 mm² CU/PVC GREEN CABLE - 770 m | 6 mm² CU/PVC GREEN CABLE 100M - 4 coil",
     "dealer": "ACTGEN INDUSTRY SDN. BHD.",
@@ -1390,7 +1390,7 @@ window.PROJECTS =
   },
   {
     "name": "DayOne Data Centre, Kempas Tech Park",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 180 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 5,000 m | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 4,972 m | 4 mm² CU/MICA/PVC FR (ORANGE) CABLE - 6,180 m | 4 mm² CU/PVC GREEN CABLE - 10,000 m | 2.5 mm² CU/MICA/PVC FR (ORANGE) CABLE 1 KM - 4 coil",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD. +2 more",
@@ -1398,7 +1398,7 @@ window.PROJECTS =
   },
   {
     "name": "EdgeConneX KUL21 Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "70 mm² CU/PVC GREEN CABLE - 200 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,290 m | 25 mm² STRANDED BARE COPPER - 2,500 m | 25 mm² CU/PVC BLACK CABLE - 2,500 m | 16 mm² CU/PVC GREEN CABLE - 2,500 m | 16 mm² CU/PVC BLACK CABLE - 2,500 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more",
@@ -1406,7 +1406,7 @@ window.PROJECTS =
   },
   {
     "name": "Ednex KUL01",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "6 MM X 50 MM COPPER TAPE (METROD) 60KGS++",
     "dealer": "ROSADO TRADELINE SDN. BHD.",
@@ -1414,28 +1414,28 @@ window.PROJECTS =
   },
   {
     "name": "Equinix Kl02, Cyberjaya (vicinity)",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 1,745 kg",
     "dealer": "ROSADO TRADELINE SDN. BHD."
   },
   {
     "name": "GDS International Nusajaya Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2024",
     "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 170 m | 300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 600 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
     "name": "Jalan Digital Utama, Sedenak Data Centre Park",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2025-2026",
     "details": "300 mm² x 1c CU/XLPE/AWA/PVC CABLE - 500 m | 95mm² x 3C + 70mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 450 m | 16mm² x 3C + 25mm² AERIAL BUNDLED CABLE (LV) - 2,200 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,900 m | 4 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE - 700 m | 4 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE - 1,006 m",
     "dealer": "ROSADO TRADELINE SDN. BHD."
   },
   {
     "name": "JHB02 Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "2.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 2,380 m | 2.5 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 1,785 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
@@ -1443,7 +1443,7 @@ window.PROJECTS =
   },
   {
     "name": "K2 Sedenak Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2025",
     "details": "185mm² x 3C + 120mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 1,000 m",
     "dealer": "ELECTRIC MASTER SDN. BHD.",
@@ -1451,7 +1451,7 @@ window.PROJECTS =
   },
   {
     "name": "KUL21, Cyber Point 4",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m | 16 mm² CU/PVC GREEN CABLE - 400 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
@@ -1459,18 +1459,18 @@ window.PROJECTS =
   },
   {
     "name": "Kwasa Sentral Data Centre (Kl2003) DC2",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2020",
     "details": "120 mm² STRANDED BARE COPPER - 300 m",
     "dealer": "PUISSANCE ENGINEERING SDN BHD"
   },
   {
     "name": "Lion Data Centre, Bukit Jalil",
-    "sector": "Telecom & Data"
+    "sector": "Data Centre"
   },
   {
     "name": "PDG JH1 Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2024",
     "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 680 m | 4 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 1,574 m | 2.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 2,761 m | 1.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 8,720 m | 1.5 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 8,820 m | 1.5 mm² x 5c CU/PVC/PVC MULTICORE CABLE - 5,225 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD. +1 more",
@@ -1478,14 +1478,14 @@ window.PROJECTS =
   },
   {
     "name": "PI Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2026",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 7,289 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 5,526 m | 240 mm² CU/PVC GREEN CABLE - 1,511 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 1,631 m | 120 mm² CU/PVC GREEN CABLE - 2,835 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 8,824 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "Raven Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2023",
     "details": "10 mm² CU/PVC GREEN CABLE - 13,500 m | 6 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 13,500 m | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 289 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 289 m | 1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 698 m | 1.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 360 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more",
@@ -1493,7 +1493,7 @@ window.PROJECTS =
   },
   {
     "name": "Sedenak Tech Park",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2023-2026",
     "details": "300 mm² CU/PVC GREEN CABLE - 5,000 m | 300 mm² CU/XLPE/PVC GREEN CABLE - 1,000 m | 6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 48,012 kg | 6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 13,358 kg | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 15,670 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 12,105 m",
     "dealer": "YSE ELECTRIC (M) SDN. BHD. +2 more",
@@ -1501,14 +1501,14 @@ window.PROJECTS =
   },
   {
     "name": "Strateq Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2023-2024",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 86 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 250 m | 70 mm² CU/PVC GREEN CABLE 100M - 1 coil",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD. / OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Vantage Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2024-2026",
     "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 8,044 m | 6 mm² x 5c CU/PVC/PVC CABLE (RD/YE/BU/BK/GN) (600/1000V) - 2,065 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
@@ -1516,14 +1516,14 @@ window.PROJECTS =
   },
   {
     "name": "Yondr Data Centre, Sedenak",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2025",
     "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 500 m | 6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 300 m",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "YTL Data Centre",
-    "sector": "Telecom & Data",
+    "sector": "Data Centre",
     "year": "2025",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 1,632 m | 95 mm² CU/PVC GREEN CABLE - 1,744 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD.",
@@ -4846,7 +4846,7 @@ window.PROJECTS =
   },
   {
     "name": "Telekom Malaysia Berhad, Jln Gasing PJ",
-    "sector": "Oil & Gas"
+    "sector": "Telecom"
   },
   {
     "name": "Alpha Angle, Wangsa Maju",
@@ -6877,7 +6877,7 @@ window.PROJECTS =
   },
   {
     "name": "Telekom Malaysia Building No. 2, Bandar Kaba",
-    "sector": "Infrastructure",
+    "sector": "Telecom",
     "year": "2025",
     "details": "10 mm² CU/PVC GREEN CABLE 100M - 60 coil | 10 mm² CU/PVC BLACK CABLE 100M - 60 coil | 10 mm² CU/PVC RED CABLE 100M - 60 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 60 coil | 2.5 mm² CU/PVC RED CABLE 100M - 60 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 60 coil",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD.",
