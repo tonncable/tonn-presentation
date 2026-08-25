@@ -105,8 +105,13 @@
     .expsec__tab.on b{opacity:1}
     .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair);scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:80px}
     .secblk:last-child{border-bottom:0}
-    .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:#fff;z-index:9;box-shadow:0 6px 12px -8px rgba(0,0,0,.1)}
-    .secblk__title span{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
+    .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:#fff;z-index:9;box-shadow:0 6px 12px -8px rgba(0,0,0,.1);flex-wrap:wrap}
+    .secblk__title .count{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
+    .secblk__sort{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .secblk__sort .slbl{margin-right:4px}
+    .secblk__sort button{border:1px solid var(--hair);background:#fff;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .15s}
+    .secblk__sort button:hover{border-color:var(--magenta);color:var(--magenta)}
+    .secblk__sort button.on{background:var(--magenta);border-color:var(--magenta);color:#fff}
     .secblk__layout{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start}
     @media(max-width:900px){.secblk__layout{grid-template-columns:1fr;gap:28px}}
     .secblk__photo{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.12);aspect-ratio:4/5;cursor:pointer;transition:transform .35s,box-shadow .35s}
@@ -408,6 +413,35 @@
         .join('');
       document.getElementById('expTabs').innerHTML = tabsHtml;
 
+      // Sort mode per sector (persist across renders)
+      const sortMode = {}; // key: sector, value: 'year'|'az'|'meterage'|'featured'
+      const yearEnd = y => { if (!y) return -1; const m = String(y).match(/(\d{4})(?:-(\d{4}))?/); return m ? parseInt(m[2]||m[1],10) : -1; };
+      const cableMeterage = (details) => {
+        if (!details) return 0;
+        return details.split('|').reduce((sum, spec) => {
+          const mM = spec.match(/-\s*([\d,]+(?:\.\d+)?)\s*m\b/i);
+          if (mM) return sum + parseFloat(mM[1].replace(/,/g,''));
+          const mCoil = spec.match(/-\s*([\d,]+(?:\.\d+)?)\s*coil/i);
+          if (mCoil) {
+            const c = parseFloat(mCoil[1].replace(/,/g,''));
+            const sz = spec.match(/(\d+(?:\.\d+)?)\s*(?:M\b|KM\b)/i);
+            let per = 100;
+            if (sz) { per = parseFloat(sz[1]); if (/KM\b/i.test(sz[0])) per *= 1000; }
+            return sum + c * per;
+          }
+          return sum;
+        }, 0);
+      };
+      const sigSet = new Set(SIGNATURE_NAMES);
+      const sortItems = (items, mode) => {
+        const arr = items.slice();
+        if (mode === 'az') return arr.sort((a,b) => a.name.localeCompare(b.name));
+        if (mode === 'meterage') return arr.sort((a,b) => cableMeterage(b.details) - cableMeterage(a.details) || a.name.localeCompare(b.name));
+        if (mode === 'featured') return arr.sort((a,b) => (sigSet.has(b.name)?1:0) - (sigSet.has(a.name)?1:0) || yearEnd(b.year) - yearEnd(a.year) || a.name.localeCompare(b.name));
+        // default: year newest first
+        return arr.sort((a,b) => { const ya=yearEnd(a.year), yb=yearEnd(b.year); if (ya!==yb) return yb-ya; return a.name.localeCompare(b.name); });
+      };
+
       function renderExp(tab) {
         let groups;
         if (tab === '__intl') {
@@ -423,14 +457,8 @@
           // Items whose image should render in THIS view (imgIntlOnly hides thumbnail on sector tabs)
           const hasVisibleImg = p => p.img && !(p.imgIntlOnly && tab !== '__intl');
           const feat = g.items.find(hasVisibleImg);
-          // Sort alphabetically. Cap at 8 only when the "All" overview is showing; specific tabs show every project.
-          // Sort: newest year first; entries with no year sink to bottom; alphabetical within same year
-          const yearEnd = y => { if (!y) return -1; const m = String(y).match(/(\d{4})(?:-(\d{4}))?/); return m ? parseInt(m[2]||m[1],10) : -1; };
-          const idxSource = g.items.slice().sort((a, b) => {
-            const ya = yearEnd(a.year), yb = yearEnd(b.year);
-            if (ya !== yb) return yb - ya;
-            return a.name.localeCompare(b.name);
-          });
+          const mode = sortMode[g.sector] || 'year';
+          const idxSource = sortItems(g.items, mode);
           const CAP = (tab === 'All') ? 8 : Infinity;
           const idxShown = idxSource.slice(0, CAP);
           const idxHtml = `
@@ -440,14 +468,8 @@
                 const hasDetail = !!(p.year || p.details || p.dealer);
                 const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
                 const esc = s => s.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-                // Right-side info: year · N cables (blank if no detail)
-                let rightInfo = '';
-                if (p.year || cbls.length) {
-                  const parts = [];
-                  if (p.year) parts.push(p.year);
-                  if (cbls.length) parts.push(`${cbls.length} cable${cbls.length!==1?'s':''}`);
-                  rightInfo = parts.join(' · ');
-                }
+                // Right-side info: just year (blank if none)
+                const rightInfo = p.year || '';
                 // Expanded detail: year + via header, bulleted cable list
                 const dealerFull = p.dealer || '';
                 const listHtml = cbls.map(c => `<li>${esc(c)}</li>`).join('');
@@ -493,9 +515,12 @@
               ${leftCol}
               ${idxHtml}
             </div>` : idxHtml;
+          const currentMode = sortMode[g.sector] || 'year';
+          const sortOpts = [['year','Year ↓'],['az','A–Z'],['meterage','Meterage'],['featured','Featured']];
+          const sortHtml = `<div class="secblk__sort" data-sector="${g.sector.replace(/"/g,'&quot;')}"><span class="slbl">Sort</span>${sortOpts.map(([k,l]) => `<button data-sort="${k}"${currentMode===k?' class="on"':''}>${l}</button>`).join('')}</div>`;
           return `
             <div class="secblk">
-              <div class="secblk__title">${lbl(g.sector)} <span>${g.items.length} project${g.items.length!==1?'s':''}</span></div>
+              <div class="secblk__title">${lbl(g.sector)} <span class="count">${g.items.length} project${g.items.length!==1?'s':''}</span>${sortHtml}</div>
               ${layoutHtml}
             </div>
           `;
@@ -505,12 +530,21 @@
       document.getElementById('expTabs').addEventListener('click', e => {
         const btn = e.target.closest('.expsec__tab'); if (!btn) return;
         document.querySelectorAll('.expsec__tab').forEach(x => x.classList.toggle('on', x === btn));
-        const tab = btn.dataset.tab;
-        renderExp(tab);
+        currentTab = btn.dataset.tab;
+        renderExp(currentTab);
       });
 
-      // --- expandable project rows ---
+      // --- expandable project rows + sort buttons ---
+      let currentTab = 'All';
       document.getElementById('expBody').addEventListener('click', e => {
+        const sortBtn = e.target.closest('.secblk__sort button');
+        if (sortBtn) {
+          e.stopPropagation();
+          const sector = sortBtn.parentElement.dataset.sector;
+          sortMode[sector] = sortBtn.dataset.sort;
+          renderExp(currentTab);
+          return;
+        }
         const row = e.target.closest('.secblk__idx__row.has-detail'); if (!row) return;
         row.classList.toggle('expanded');
       });
