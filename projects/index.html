@@ -474,8 +474,14 @@
                 const hasDetail = !!(p.year || p.details || p.dealer);
                 const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
                 const esc = s => s.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-                // Right-side info: just year (blank if none)
-                const rightInfo = p.year || '';
+                // Right-side info: location, else country (default Malaysia)
+                let rightInfo = '';
+                if (p.location) {
+                  rightInfo = p.location;
+                  if (p.country && p.country !== 'Malaysia' && !p.location.includes(p.country)) rightInfo += ' · ' + p.country;
+                } else {
+                  rightInfo = p.country || 'Malaysia';
+                }
                 // Expanded detail: year + via header, bulleted cable list
                 const dealerFull = p.dealer || '';
                 const listHtml = cbls.map(c => {
