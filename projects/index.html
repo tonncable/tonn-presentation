@@ -130,9 +130,21 @@
     .secblk__idx{display:flex;flex-direction:column}
     .secblk__idx__row{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hair)}
     .secblk__idx__row:last-child{border-bottom:0}
-    .secblk__idx__no{font-size:19px;font-weight:900;color:var(--magenta);letter-spacing:.04em;font-variant-numeric:tabular-nums}
-    .secblk__idx__name{font-size:22px;font-weight:800;color:var(--fg);line-height:1.3;letter-spacing:-.005em}
+    .secblk__idx__no{font-size:19px;font-weight:900;color:var(--magenta);letter-spacing:.04em;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;line-height:1.1}
+    .secblk__idx__no small{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.06em;margin-top:3px}
+    .secblk__idx__name{font-size:22px;font-weight:800;color:var(--fg);line-height:1.3;letter-spacing:-.005em;display:flex;align-items:baseline;gap:10px}
+    .secblk__idx__name .chev{font-size:14px;color:var(--muted);transition:transform .2s;display:inline-block}
     .secblk__idx__loc{font-size:16px;color:var(--muted);letter-spacing:.02em;text-align:right;white-space:nowrap}
+    .secblk__idx__row{cursor:default}
+    .secblk__idx__row.has-detail{cursor:pointer}
+    .secblk__idx__row.has-detail:hover .chev{color:var(--magenta)}
+    .secblk__idx__row.expanded .chev{transform:rotate(90deg);color:var(--magenta)}
+    .secblk__idx__detail{grid-column:1/-1;margin-top:12px;padding:14px 18px;background:#faf7fa;border-left:3px solid var(--magenta);border-radius:0 6px 6px 0;font-size:14px;line-height:1.6;color:var(--fg);display:none}
+    .secblk__idx__row.expanded .secblk__idx__detail{display:block}
+    .secblk__idx__detail .dlbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+    .secblk__idx__detail .drow{margin-bottom:6px}
+    .secblk__idx__detail .drow:last-child{margin-bottom:0}
+    .secblk__idx__detail .cbl{display:inline-block;padding:2px 8px;margin:2px 4px 2px 0;background:#fff;border:1px solid var(--hair);border-radius:12px;font-size:13px}
     .secblk__more{margin-top:16px;color:var(--muted);font-style:italic;font-size:16px;font-weight:500}
     .secblk__none{color:var(--muted);font-size:17px;font-style:italic;padding:40px 0}
 
@@ -413,7 +425,17 @@
               ${idxShown.map((p, i) => {
                 const loc = [p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ');
                 const n = String(i + 1).padStart(2, '0');
-                return `<div class="secblk__idx__row"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name">${p.name}</span><span class="secblk__idx__loc">${loc}</span></div>`;
+                const hasDetail = !!(p.year || p.details || p.dealer);
+                const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
+                const detail = hasDetail ? `<div class="secblk__idx__detail">
+                  ${p.year ? `<div class="drow"><span class="dlbl">Year</span>${p.year}</div>` : ''}
+                  ${cbls.length ? `<div class="drow"><span class="dlbl">Cables</span>${cbls.map(c => `<span class="cbl">${c.replace(/</g,'&lt;')}</span>`).join('')}</div>` : ''}
+                  ${p.dealer ? `<div class="drow"><span class="dlbl">Via</span>${p.dealer.replace(/</g,'&lt;')}</div>` : ''}
+                </div>` : '';
+                const yearBadge = p.year ? `<small>${p.year}</small>` : '';
+                const chev = hasDetail ? `<span class="chev">›</span>` : '';
+                const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
+                return `<div class="${cls}"><span class="secblk__idx__no">${n}${yearBadge}</span><span class="secblk__idx__name">${p.name}${chev}</span><span class="secblk__idx__loc">${loc}</span>${detail}</div>`;
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails
@@ -460,6 +482,12 @@
         document.querySelectorAll('.expsec__tab').forEach(x => x.classList.toggle('on', x === btn));
         const tab = btn.dataset.tab;
         renderExp(tab);
+      });
+
+      // --- expandable project rows ---
+      document.getElementById('expBody').addEventListener('click', e => {
+        const row = e.target.closest('.secblk__idx__row.has-detail'); if (!row) return;
+        row.classList.toggle('expanded');
       });
 
       // --- lightbox (only on cards with images) ---
