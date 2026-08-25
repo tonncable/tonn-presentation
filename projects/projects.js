@@ -4753,442 +4753,442 @@ window.PROJECTS =
   },
   {
     "name": "Alpha Angle, Wangsa Maju",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Amore Fitness P.L - Starvista, Singapore",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Asian Football Confederation, Bukit Jalil KL",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Avantro (GE2404)",
-    "sector": "Others",
+    "sector": "Residential",
     "year": "2026",
     "details": "16 mm² CU/PVC BLACK CABLE - 16,488 m",
     "dealer": "PUISSANCE ENGINEERING SDN. BHD."
   },
   {
     "name": "Bandar Rimbayu Show Gallery",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Cadbury confectionery malaysia",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Calvary Convention Central in Kuala Lumpur",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Canopy Hill",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "CCM Fertilizer Sdn Bhd, Kuala Lumpur",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "CPI City",
-    "sector": "Others",
+    "sector": "Commercial",
     "year": "2023",
     "details": "2.5 mm² CU/PVC BLACK CABLE 100M",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
     "name": "Cure & Care Rehabilitation Centre ( CCRC ), Perlis",
-    "sector": "Others"
+    "sector": "Healthcare"
   },
   {
     "name": "Cyberia-Cyberjaya",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "D'pristine Medini, Johor",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "DK U5 Subang",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "DXN Cyberville",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Elmina Urban Park, City of Elmina",
-    "sector": "Others",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "YAT HIN ELECTRICAL SDN. BHD."
   },
   {
     "name": "Gamuda Go Kart, Gamuda Cove",
-    "sector": "Others",
+    "sector": "Sports & Leisure",
     "year": "2024",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 1,300 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
   },
   {
     "name": "Gelanggang Bola Jaring Stadium Kota Raja, Klang Selangor",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "GEO, Bukit Rimau",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Hu's Peaces Land (Fairy Park) Memorial Park",
-    "sector": "Others",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 369 m",
     "dealer": "GEMILITE SDN. BHD."
   },
   {
     "name": "Institut Tanah dan Ukur Negara, Tanjung Malim Perak",
-    "sector": "Others"
+    "sector": "Education"
   },
   {
     "name": "Institute Jantung Negara, Kuala Lumpur",
-    "sector": "Others"
+    "sector": "Healthcare"
   },
   {
     "name": "IPP Glass House",
-    "sector": "Others",
+    "sector": "Sports & Leisure",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "OKA MARKETING SDN. BHD."
   },
   {
     "name": "Jaffar Brothers Pte Ltd, Pakistan",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Jln KLIA S3",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "Kementerian Dalam Negeri, Putrajaya",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "KL118",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "KLGCC infra, K.L.",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Kolej Vokasional Kuala Kangsar, Perak",
-    "sector": "Others"
+    "sector": "Education"
   },
   {
     "name": "Komplek KDN Wilayah, Kuala Lumpur",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "Komplek Sukan Bagan Datuk, Perak",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Kompleks Kastam WPKL, Kelana Jaya, PJ",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "Kompleks Sukan Kawasan Paya Besar, Kuala Berang, Terengganu",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Kompleks Sukan Ranau, Sandakan",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Kota Baru Prison",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "KPJ Ampang Puteri, Hulu Langat Selangor",
-    "sector": "Others"
+    "sector": "Healthcare"
   },
   {
     "name": "Ladang Felda Aring 6, Kelantan",
-    "sector": "Others",
+    "sector": "Industrial",
     "year": "2019-2020",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 82 m",
     "dealer": "ONG LETRIK"
   },
   {
     "name": "Ladang Pasir Logok, Kota Tinggi",
-    "sector": "Others",
+    "sector": "Industrial",
     "year": "2026",
     "details": "6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,216 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
     "name": "Ladang Rakyat Cheneh, Terengganu",
-    "sector": "Others",
+    "sector": "Industrial",
     "year": "2025-2026",
     "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "ACE DYNASTY ELECTRICAL (KT) SDN. BHD."
   },
   {
     "name": "Leader Steel Services Centre s/b",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Lee Rubber, Kuala Krai, Kelantan",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Lembaga Hasil Dalam Negeri Kluang Johor (LHDN Kluang)",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "Lembaga Hasil Dalam Negeri Sg Petani, Kedah",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "Logi Air Sekor, Pekan, Pahang",
-    "sector": "Others"
+    "sector": "Water Treatment"
   },
   {
     "name": "Lumut Maritime Terminal S/B (LMTSB) Acheh, Sitiawan Perak",
-    "sector": "Others",
+    "sector": "Infrastructure",
     "year": "2020-2026",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "Malaysian Rubber Board, Sabah",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "McDonald's Setia Alam, Selangor",
-    "sector": "Others"
+    "sector": "Retail"
   },
   {
     "name": "Mediacorp Mediaspolis (Buona Vista), Singapore",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Mesahill, Nilai",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "MS Fusion, Ulu Tiram",
-    "sector": "Others",
+    "sector": "Residential",
     "year": "2026",
     "details": "10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "ROSADO TRADELINE SDN. BHD."
   },
   {
     "name": "Natioanal Heart Institute (IJN)",
-    "sector": "Others"
+    "sector": "Healthcare"
   },
   {
     "name": "Nippon Express, Shah Alam",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "North Kiara Concerto",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Padang Rugbi Kompleks Sukan MBI, Ipoh Perak",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Pan Borneo Project, Sarawak",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "Pansonic AVC, Shah Alam",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "PAVILLION Bukit Jalil, Selangor",
-    "sector": "Others"
+    "sector": "Retail"
   },
   {
     "name": "Pejabat Jabatan Kesihatan Pahang, Kuantan, Pahang",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "PEMBINAAN JELATIK",
-    "sector": "Others",
+    "sector": "Industrial",
     "year": "2024",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
     "dealer": "J & J ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Penang Ferry Terminal, Butterworth",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "Penang General Hopistal",
-    "sector": "Others"
+    "sector": "Healthcare"
   },
   {
     "name": "PMU 132KV Pajam, Mantin Negeri Sembilan",
-    "sector": "Others"
+    "sector": "Utility"
   },
   {
     "name": "Politeknik Nilai, Seremban",
-    "sector": "Others"
+    "sector": "Education"
   },
   {
     "name": "PPA1M, Precint 11, Putrajaya",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "PROJEK PENGAKALAN",
-    "sector": "Others",
+    "sector": "Government",
     "year": "2026",
     "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "HATTRIC VENTURE SDN. BHD."
   },
   {
     "name": "Puteri Habour, Johor",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "RAPID - Pengerang Johor",
-    "sector": "Others"
+    "sector": "Oil & Gas"
   },
   {
     "name": "Rubberex Alliance s/b, Perak",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Shah Alam Puspakom",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Shimizu Cyberjaya Site",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Sime Darby Biodiesel SB, Carey Island, Kuala Langat, Sel",
-    "sector": "Others",
+    "sector": "Industrial",
     "year": "2023-2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "ELECTRO DYNAMIC SDN. BHD."
   },
   {
     "name": "Sime Darby, Sungai Buloh",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Sjk ( c ) Bahau",
-    "sector": "Others"
+    "sector": "Education"
   },
   {
     "name": "Sky Meridien, KL",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Sky Suite, Jalan P. Ramlee, KLCC",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Spritzer Malaysia, Taiping",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Stadium KPRJ, Kempas Johor Bahru, Johor",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Stadium Wunna Thake Hti, Myanmar",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Stesen Janakuasa Sultan Azlan Shah, Seri Manjung Perak",
-    "sector": "Others"
+    "sector": "Utility"
   },
   {
     "name": "Sunway Pyramid Phase 2",
-    "sector": "Others"
+    "sector": "Retail"
   },
   {
     "name": "Taman Asa Jaya Sports Centre",
-    "sector": "Others",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
     "dealer": "MIGHTY PRO ENGINEERING SDN. BHD."
   },
   {
     "name": "Taman MBI Desa Ku, Karangan Kedah",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Tebatan Banjir, Batu Rakit, Sg Tok, K.Terengganu",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "Tentera Udara Diraja Malaysia, Subang (TUDM Subang)",
-    "sector": "Others"
+    "sector": "Government"
   },
   {
     "name": "The Arcuz, Kelana Jaya",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Toyo Tires Malaysia, Taiping Perak",
-    "sector": "Others"
+    "sector": "Industrial"
   },
   {
     "name": "Trengganu State Stadium",
-    "sector": "Others"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Triumi, Penang (P162)",
-    "sector": "Others",
+    "sector": "Residential",
     "year": "2023-2024",
     "details": "25 mm² CU/XLPE/PVC BLACK CABLE",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "TRX C3 Tunnel",
-    "sector": "Others"
+    "sector": "Infrastructure"
   },
   {
     "name": "TRX Lifestyle Quarter, KL",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "Turo Landed Property, Singapore",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Ufone Building in Islamabad, Pakistan",
-    "sector": "Others"
+    "sector": "Commercial"
   },
   {
     "name": "UITM Farm Gambang, Pahang",
-    "sector": "Others"
+    "sector": "Education"
   },
   {
     "name": "Upperville, Melawati",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Watten Estate Landed Property, Singapore",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "Xin Hai Laubros",
-    "sector": "Others",
+    "sector": "Residential",
     "year": "2025",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,084 m",
     "dealer": "SN ELECTRIC SDN. BHD."
   },
   {
     "name": "Yeashin, Melaka",
-    "sector": "Others"
+    "sector": "Residential"
   },
   {
     "name": "MASJID AL-FARIDEE",
@@ -6302,84 +6302,84 @@ window.PROJECTS =
   },
   {
     "name": "Arena Jubli Perak Football Field",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2020",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE - 450 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN BHD"
   },
   {
     "name": "Kompleks Belia dan Sukan",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2023-2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 590 m",
     "dealer": "JURUTERA SRI EMAS"
   },
   {
     "name": "Kompleks Sukan Setiawangsa",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2025",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 755 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "Larkin Stadium, Johor Bahru",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2026",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD."
   },
   {
     "name": "Pasir Gudang Municipal Council Stadium",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2020",
     "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE - 600 m",
     "dealer": "JIA SHENG ELECTRICAL SDN BHD"
   },
   {
     "name": "STADIUM ENTRANCE MERDEKA 118",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2026",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
     "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
     "name": "Stadium Gong Badak, Kuala Terengganu",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2020",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 70 coil",
     "dealer": "SAMAJAYA ELECTRICAL TRADING SDN BHD"
   },
   {
     "name": "STADIUM HOKI BUKIT JALIL",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 268 m",
     "dealer": "VELOCITY CONSTRUCTION SDN. BHD."
   },
   {
     "name": "STADIUM SULTAN IBRAHIM",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2019-2026",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,524 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
     "name": "SUK Selangor Sports Complex",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 12 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
     "name": "Taman Awam Tepian Sungai Muar",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2019-2020",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 7 m",
     "dealer": "KAF ENGINEERING"
   },
   {
     "name": "TAPAK PROJEK KOMPLEKS SUKAN MINI",
-    "sector": "Sports",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,500 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
