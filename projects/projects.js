@@ -364,7 +364,7 @@ window.PROJECTS =
     "location": "Bangi, Selangor"
   },
   {
-    "name": "Petronas Methanol Plant 3 (Pmlsb)",
+    "name": "Petronas Methanol Plant 3 (PMLSB)",
     "sector": "Oil & Gas",
     "location": "Labuan"
   },
@@ -489,7 +489,7 @@ window.PROJECTS =
     "location": "Seri Iskandar, Perak"
   },
   {
-    "name": "Garden International School (Gis)",
+    "name": "Garden International School (GIS)",
     "sector": "Education",
     "location": "Kuala Lumpur"
   },
@@ -631,7 +631,7 @@ window.PROJECTS =
     "location": "Nilai, Negeri Sembilan"
   },
   {
-    "name": "Wcs Condominium",
+    "name": "WCS Condominium",
     "sector": "Residential",
     "country": "Singapore",
     "location": "Singapore"
@@ -894,7 +894,7 @@ window.PROJECTS =
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
-    "name": "Bsn Training Centre",
+    "name": "BSN Training Centre",
     "sector": "Commercial",
     "year": "2020",
     "details": "120 mm² CU/PVC GREEN CABLE - 80 m | 95 mm² CU/PVC GREEN CABLE - 115 m | 16 mm² CU/PVC GREEN CABLE 100M - 4 coil | 10 mm² CU/PVC GREEN CABLE - 2,316 m | 6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 600 m",
@@ -968,7 +968,7 @@ window.PROJECTS =
     "sector": "Commercial"
   },
   {
-    "name": "Ioi City Tower, Ioi City Mall",
+    "name": "IOI City Tower, IOI City Mall",
     "sector": "Retail",
     "year": "2024",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 252 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 288 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 2,060 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 25 mm² CU/PVC GREEN CABLE - 847 m",
@@ -1061,7 +1061,7 @@ window.PROJECTS =
     "dealer": "G. S. ELECTRIC TRADING (JB)"
   },
   {
-    "name": "Melaka Auto City, Mitc Ayer Keroh",
+    "name": "Melaka Auto City, MITC Ayer Keroh",
     "sector": "Commercial",
     "year": "2020",
     "details": "2.5 mm² CU/PVC BLACK CABLE (1000mtr x 5 coil) - 5,000 m | 2.5 mm² CU/PVC YELLOW CABLE (1000mtr x 5 coil) - 5,000 m | 2.5 mm² CU/PVC GREEN CABLE (1000mtr x 5 coil) - 5,000 m | 2.5 mm² CU/PVC RED CABLE (1000mtr x 5 coil ) - 5,000 m",
@@ -1182,7 +1182,7 @@ window.PROJECTS =
     "location": "Kuala Lumpur"
   },
   {
-    "name": "Rhb Head Office",
+    "name": "RHB Head Office",
     "sector": "Commercial"
   },
   {
@@ -1236,7 +1236,7 @@ window.PROJECTS =
     "dealer": "PUISSANCE ENGINEERING SDN BHD"
   },
   {
-    "name": "TDCX Office, Menara Uoa Bangsar",
+    "name": "TDCX Office, Menara UOA Bangsar",
     "sector": "Commercial",
     "year": "2025",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 120 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 280 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 118 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 116 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 38 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 38 coil",
@@ -1311,7 +1311,7 @@ window.PROJECTS =
     "location": "Kulai"
   },
   {
-    "name": "Csf Data Centre",
+    "name": "CSF Data Centre",
     "sector": "Telecom & Data",
     "year": "2025",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 160 m | 95 mm² CU/PVC GREEN CABLE - 60 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,528 m | 35 mm² CU/PVC GREEN CABLE - 382 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 324 m | 16 mm² CU/PVC GREEN CABLE 100M - 1 coil",
@@ -1355,7 +1355,7 @@ window.PROJECTS =
     "location": "Cyberjaya"
   },
   {
-    "name": "Equinix Kl02, Cyberjaya (Vicinity)",
+    "name": "Equinix Kl02, Cyberjaya (vicinity)",
     "sector": "Telecom & Data",
     "year": "2026",
     "details": "6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 1,745 kg",
@@ -1419,7 +1419,7 @@ window.PROJECTS =
     "location": "Johor"
   },
   {
-    "name": "Pi Data Centre",
+    "name": "PI Data Centre",
     "sector": "Telecom & Data",
     "year": "2026",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 7,289 m",
@@ -1537,7 +1537,7 @@ window.PROJECTS =
     "dealer": "BERSATU JUTA ELECTRIC SDN. BHD."
   },
   {
-    "name": "Kolej Tuanku Jaafar (Mantin)",
+    "name": "Kolej Tuanku Jaafar (MANTIN)",
     "sector": "Education",
     "year": "2023",
     "details": "1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
@@ -1603,7 +1603,7 @@ window.PROJECTS =
     "location": "Bangi"
   },
   {
-    "name": "Maahad Ahmad (Stam), Kampung Sri Asahan",
+    "name": "Maahad Ahmad (STAM), Kampung Sri Asahan",
     "sector": "Education",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
@@ -1986,7 +1986,7 @@ window.PROJECTS =
     "location": "JB"
   },
   {
-    "name": "Sri Kdu International School",
+    "name": "Sri KDU International School",
     "sector": "Education",
     "year": "2020",
     "details": "2.5 mm² x 2c CU/PVC/SWA/PVC CABLE - 950 m",
@@ -2011,7 +2011,7 @@ window.PROJECTS =
     "dealer": "AIK HING LETRIK (PG) SDN. BHD."
   },
   {
-    "name": "TNB Hq Campus, Bangsar (Mr043)",
+    "name": "TNB Hq Campus, Bangsar (MR043)",
     "sector": "Utility"
   },
   {
@@ -2221,7 +2221,7 @@ window.PROJECTS =
     "dealer": "GENUINE ELECTRIC SDN. BHD."
   },
   {
-    "name": "Dewan Kuliah (Dk) MRSM Muar",
+    "name": "Dewan Kuliah (DK) MRSM Muar",
     "sector": "Government",
     "year": "2023",
     "details": "95 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 168 m",
@@ -2439,7 +2439,7 @@ window.PROJECTS =
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
-    "name": "Penang Contingent Police Headquarters (Ipk Pulau Pinang)",
+    "name": "Penang Contingent Police Headquarters (IPK Pulau Pinang)",
     "sector": "Government",
     "year": "2025",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 217 m",
@@ -3664,7 +3664,7 @@ window.PROJECTS =
     "dealer": "SB ELEKTRIK & ELEKTRONIK SDN. BHD."
   },
   {
-    "name": "Intel Km-8",
+    "name": "Intel KM-8",
     "sector": "Industrial",
     "year": "2024",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 4,500 m",
@@ -4752,7 +4752,7 @@ window.PROJECTS =
     "sector": "Oil & Gas"
   },
   {
-    "name": "Ktl Offshore (M) Yard",
+    "name": "KTL Offshore (M) Yard",
     "sector": "Oil & Gas",
     "year": "2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 84 m",
@@ -4783,7 +4783,7 @@ window.PROJECTS =
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
-    "name": "Schlumberger Petroleum And Suppliers (Pkfz)",
+    "name": "Schlumberger Petroleum And Suppliers (PKFZ)",
     "sector": "Oil & Gas"
   },
   {
@@ -4805,7 +4805,7 @@ window.PROJECTS =
     "sector": "Sports & Recreation"
   },
   {
-    "name": "Avantro (Ge2404)",
+    "name": "Avantro (GE2404)",
     "sector": "Residential",
     "year": "2026",
     "details": "16 mm² CU/PVC BLACK CABLE - 16,488 m",
@@ -5373,7 +5373,7 @@ window.PROJECTS =
     "dealer": "WINSTAR ELECTRICAL SDN BHD"
   },
   {
-    "name": "Tribute Mosque (Ge2405)",
+    "name": "Tribute Mosque (GE2405)",
     "sector": "Religious",
     "year": "2026",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 538 m",
@@ -6240,12 +6240,12 @@ window.PROJECTS =
     "location": "Penang"
   },
   {
-    "name": "Ioi City Mall",
+    "name": "IOI City Mall",
     "sector": "Retail",
     "location": "Putrajaya"
   },
   {
-    "name": "Ioi Mall Phase2 Puchong",
+    "name": "IOI Mall Phase2 Puchong",
     "sector": "Retail",
     "location": "Selangor"
   },
@@ -6547,7 +6547,7 @@ window.PROJECTS =
     "sector": "Infrastructure"
   },
   {
-    "name": "East Klang Valley Expressway (Ekve)",
+    "name": "East Klang Valley Expressway (EKVE)",
     "sector": "Infrastructure",
     "year": "2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,750 m",
@@ -6592,7 +6592,7 @@ window.PROJECTS =
     "country": "Singapore"
   },
   {
-    "name": "Klb Terminal",
+    "name": "KLB Terminal",
     "sector": "Infrastructure",
     "year": "2026",
     "details": "120 mm² x 3c CU/XLPE/PVC CABLE (RD/YE/BU) - 1,212 m",
