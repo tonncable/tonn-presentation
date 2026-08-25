@@ -103,9 +103,9 @@
     .expsec__tab.on::after{transform:scaleX(1)}
     .expsec__tab b{color:var(--magenta);font-weight:900;font-size:16px;font-variant-numeric:tabular-nums;opacity:.85}
     .expsec__tab.on b{opacity:1}
-    .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair);scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:80px}
+    .secblk{margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--hair);scroll-margin-top:80px}
     .secblk:last-child{border-bottom:0}
-    .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:#fff;z-index:9;box-shadow:0 6px 12px -8px rgba(0,0,0,.1);flex-wrap:wrap}
+    .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:rgba(255,255,255,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9;flex-wrap:wrap}
     .secblk__title .count{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
     /* Global sort control (one for whole section) */
     .expsec__toolbar{display:flex;justify-content:flex-end;margin:-8px 0 20px}
@@ -205,10 +205,10 @@
     .foot{border-top:1px solid var(--hair);padding:40px 6vw;text-align:center;font-size:16px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
 
     /* ── Section-by-section slide navigation ── */
-    html{scroll-behavior:smooth;scroll-snap-type:y proximity}
-    body>section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;scroll-margin-top:0;padding-top:100px;padding-bottom:60px;margin:0 auto}
+    html{scroll-behavior:smooth}
+    body>section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;scroll-margin-top:0;padding-top:100px;padding-bottom:60px;margin:0 auto}
     body>section.hero{padding-top:120px}
-    body>section.fullref{scroll-snap-align:start;min-height:100vh;justify-content:flex-start;padding-top:100px}
+    body>section.fullref{min-height:100vh;justify-content:flex-start;padding-top:100px}
     /* keep max-width but let section fill vertical */
     body>section.reach,body>section.beyond,body>section.fullref{margin-bottom:0}
     body>section.sig{padding-bottom:80px}
