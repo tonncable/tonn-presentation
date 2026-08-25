@@ -1547,7 +1547,7 @@ window.PROJECTS =
     "dealer": "NANYANG ELECTRIC CO. (M) SDN. BHD."
   },
   {
-    "name": "INSTITUT LATIHAN SULTAN AHMAD SHAH",
+    "name": "Institut Latihan Sultan Ahmad Shah",
     "sector": "Education",
     "year": "2025",
     "details": "6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 140 m",
@@ -1562,35 +1562,35 @@ window.PROJECTS =
     "sector": "Education"
   },
   {
-    "name": "KOLEJ KEDIAMAN RAJA",
+    "name": "Kolej Kediaman Raja",
     "sector": "Education",
     "year": "2024",
     "details": "16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 450 m",
     "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
-    "name": "KOLEJ KERIS MAS",
+    "name": "Kolej Keris Mas",
     "sector": "Education",
     "year": "2024",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "UNITY POWER ELECTRICAL (M) SDN. BHD."
   },
   {
-    "name": "KOLEJ SEPULUH UPM SERDANG",
+    "name": "Kolej Sepuluh UPM Serdang",
     "sector": "Education",
     "year": "2025",
     "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 20 coil",
     "dealer": "BERSATU JUTA ELECTRIC SDN. BHD."
   },
   {
-    "name": "KOLEJ TUANKU JAAFAR (MANTIN)",
+    "name": "Kolej Tuanku Jaafar (Mantin)",
     "sector": "Education",
     "year": "2023",
     "details": "1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
   },
   {
-    "name": "KOLEJ UNGKU OMAR",
+    "name": "Kolej Ungku Omar",
     "sector": "Education",
     "year": "2026",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
@@ -1604,14 +1604,14 @@ window.PROJECTS =
     "dealer": "NEW MALURI LETRIK (SELANGOR) SDN. BHD."
   },
   {
-    "name": "KOLEJ VOKASIONAL AMPANGAN",
+    "name": "Kolej Vokasional Ampangan",
     "sector": "Education",
     "year": "2026",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 212 m",
     "dealer": "FAMOUS LITE ELECTRICAL SDN. BHD."
   },
   {
-    "name": "KOLEJ VOKASIONAL JUASSEH",
+    "name": "Kolej Vokasional Juasseh",
     "sector": "Education",
     "year": "2023",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 105 m",
@@ -1625,7 +1625,7 @@ window.PROJECTS =
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "KOLEJ VOKASIONAL TENGKU AMPUAN AFZAN",
+    "name": "Kolej Vokasional Tengku Ampuan Afzan",
     "sector": "Education",
     "year": "2023-2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
@@ -1689,7 +1689,7 @@ window.PROJECTS =
     "dealer": "POWER CONTROL ENTERPRISE"
   },
   {
-    "name": "MASJID UNIVERSITI PUTRA MALAYSIA",
+    "name": "Masjid Universiti Putra Malaysia",
     "sector": "Education",
     "year": "2026",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 824 m",
@@ -1700,7 +1700,7 @@ window.PROJECTS =
     "sector": "Education"
   },
   {
-    "name": "POLITEKNIK METRO KUALA LUMPUR",
+    "name": "Politeknik Metro Kuala Lumpur",
     "sector": "Education",
     "year": "2024",
     "details": "4 mm² CU/PVC BLACK CABLE 100M - 15 coil",
@@ -1725,35 +1725,35 @@ window.PROJECTS =
     "sector": "Education"
   },
   {
-    "name": "SEKOLAH KEB SERI KEPONG",
+    "name": "Sekolah Keb Seri Kepong",
     "sector": "Education",
     "year": "2023",
     "details": "1.5 mm² CU/PVC BLACK CABLE 100M",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SEKOLAH KEBANGSAAAN TITI TERAS",
+    "name": "Sekolah Kebangsaaan Titi Teras",
     "sector": "Education",
     "year": "2026",
     "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 101 m",
     "dealer": "CT LETRIK SDN BHD"
   },
   {
-    "name": "SEKOLAH KEBANGSAAN DANAU KOTA",
+    "name": "Sekolah Kebangsaan Danau Kota",
     "sector": "Education",
     "year": "2023",
     "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SEKOLAH KEBANGSAAN KUBANG KERIAN 2",
+    "name": "Sekolah Kebangsaan Kubang Kerian 2",
     "sector": "Education",
     "year": "2023",
     "details": "16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 450 m",
     "dealer": "SANWEL ELECTRIC"
   },
   {
-    "name": "SEKOLAH KEBANGSAAN PERMATANG DAMAR LAUT",
+    "name": "Sekolah Kebangsaan Permatang Damar Laut",
     "sector": "Education",
     "year": "2026",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 45 m",
@@ -1774,49 +1774,49 @@ window.PROJECTS =
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
-    "name": "SEKOLAH KEBANGSAAN SEGAMBUT",
+    "name": "Sekolah Kebangsaan Segambut",
     "sector": "Education",
     "year": "2024",
     "details": "16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 72 m",
     "dealer": "VMAX ELEKTRIK SDN. BHD."
   },
   {
-    "name": "SEKOLAH KEBANGSAAN SUNGAI BATU",
+    "name": "Sekolah Kebangsaan Sungai Batu",
     "sector": "Education",
     "year": "2025",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 118 m",
     "dealer": "HEGEN ELECTRICAL TRADING"
   },
   {
-    "name": "SEKOLAH KEBANGSAAN TAMAN TASIK JAYA",
+    "name": "Sekolah Kebangsaan Taman Tasik Jaya",
     "sector": "Education",
     "year": "2025",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 110 m",
     "dealer": "MAYTEC ELECTRIC SDN. BHD."
   },
   {
-    "name": "SEKOLAH KEBANGSAAN TAMING JAYA.",
+    "name": "Sekolah Kebangsaan Taming Jaya.",
     "sector": "Education",
     "year": "2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 95 m",
     "dealer": "BERSATU JUTA ELECTRIC SDN. BHD."
   },
   {
-    "name": "SEKOLAH MENEGAH ISLAN HIDAYA",
+    "name": "Sekolah Menegah Islan Hidaya",
     "sector": "Education",
     "year": "2026",
     "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "HIGH SING ELECTRIC SDN. BHD."
   },
   {
-    "name": "SEKOLAH MENENGAH DATO LOKMAN",
+    "name": "Sekolah Menengah Dato Lokman",
     "sector": "Education",
     "year": "2023",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 85 m",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SEKOLAH MENENGAH KEB MIHARJA",
+    "name": "Sekolah Menengah Keb Miharja",
     "sector": "Education",
     "year": "2023",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil",
@@ -1848,7 +1848,7 @@ window.PROJECTS =
     "dealer": "ELECTRICA TECHNOLOGY SDN. BHD."
   },
   {
-    "name": "SK BNDR BARU SG BULOH",
+    "name": "SK Bndr Baru Sg Buloh",
     "sector": "Education",
     "year": "2025",
     "details": "25 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK)",
@@ -1862,42 +1862,42 @@ window.PROJECTS =
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SK DESA PINGGIRAN PUTRA PPKI",
+    "name": "SK Desa Pinggiran Putra Ppki",
     "sector": "Education",
     "year": "2026",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
-    "name": "SK KRUBONG",
+    "name": "SK Krubong",
     "sector": "Education",
     "year": "2024",
     "details": "16 mm² CU/PVC BLACK CABLE",
     "dealer": "MULTI TECH ELECTRICAL CONSTRUCTION SDN. BHD."
   },
   {
-    "name": "SK LAVENDER HEIGHT",
+    "name": "SK Lavender Height",
     "sector": "Education",
     "year": "2025",
     "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m",
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
   },
   {
-    "name": "SK PANDAN INDAH.",
+    "name": "SK Pandan Indah.",
     "sector": "Education",
     "year": "2025",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 73 m",
     "dealer": "BERSATU JUTA ELECTRIC SDN. BHD."
   },
   {
-    "name": "SK PUTRAJAYA",
+    "name": "SK Putrajaya",
     "sector": "Education",
     "year": "2025",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
-    "name": "SK SERI KEPONG",
+    "name": "SK Seri Kepong",
     "sector": "Education",
     "year": "2023",
     "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 90 coil",
@@ -1911,21 +1911,21 @@ window.PROJECTS =
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SK TEBING TEMBAH",
+    "name": "SK Tebing Tembah",
     "sector": "Education",
     "year": "2025",
     "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil",
     "dealer": "MONT AERO SDN. BHD."
   },
   {
-    "name": "SK TUNKU SYED SYAABAN",
+    "name": "SK Tunku Syed Syaaban",
     "sector": "Education",
     "year": "2026",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 135 m",
     "dealer": "ACE DYNASTY ELECTRICAL (KL) SDN. BHD."
   },
   {
-    "name": "SMK BANDAR SERI PUTRA",
+    "name": "SMK Bandar Seri Putra",
     "sector": "Education",
     "year": "2026",
     "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
@@ -1946,14 +1946,14 @@ window.PROJECTS =
     "dealer": "NEW MALURI LETRIK (SELANGOR) SDN. BHD."
   },
   {
-    "name": "SMK DATO LOKMAN",
+    "name": "SMK Dato Lokman",
     "sector": "Education",
     "year": "2023",
     "details": "6 mm² CU/PVC BLACK CABLE 100M - 12 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SMK KOTA MASAI",
+    "name": "SMK Kota Masai",
     "sector": "Education",
     "year": "2026",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m",
@@ -1967,21 +1967,21 @@ window.PROJECTS =
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
   },
   {
-    "name": "SMK MIHARJA",
+    "name": "SMK Miharja",
     "sector": "Education",
     "year": "2023",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "SMK PAGOH PERDANA",
+    "name": "SMK Pagoh Perdana",
     "sector": "Education",
     "year": "2023",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. (TEBRAU)"
   },
   {
-    "name": "SMK PUTRAJAYA PRESINT 8",
+    "name": "SMK Putrajaya Presint 8",
     "sector": "Education",
     "year": "2025",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 340 m",
@@ -2100,14 +2100,14 @@ window.PROJECTS =
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
   },
   {
-    "name": "UNIVERSITI MALAYSIA",
+    "name": "Universiti Malaysia",
     "sector": "Education",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
-    "name": "UNIVERSITI MALAYSIA TERENGGANU",
+    "name": "Universiti Malaysia Terengganu",
     "sector": "Education",
     "year": "2025",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 180 m",
@@ -2121,7 +2121,7 @@ window.PROJECTS =
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
   },
   {
-    "name": "UNIVERSITI PERTAHANAN NASIONAL MALAYSIA",
+    "name": "Universiti Pertahanan Nasional Malaysia",
     "sector": "Education",
     "year": "2025",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 80 m",
@@ -2135,14 +2135,14 @@ window.PROJECTS =
     "dealer": "KSE CONSTRUCTION"
   },
   {
-    "name": "UNIVERSITI SAINS ISLAM MALAYSIA",
+    "name": "Universiti Sains Islam Malaysia",
     "sector": "Education",
     "year": "2023-2026",
     "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m",
     "dealer": "KEJURUTERAAN ELEKTRIK AHS"
   },
   {
-    "name": "UNIVERSITI SULTAN ZAINAL ABIDIN",
+    "name": "Universiti Sultan Zainal Abidin",
     "sector": "Education",
     "year": "2026",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m",
@@ -2223,35 +2223,35 @@ window.PROJECTS =
     "sector": "Government"
   },
   {
-    "name": "DEWAN CAMELIA MAJLIS BANDARAYA",
+    "name": "Dewan Camelia Majlis Bandaraya",
     "sector": "Government",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "DEWAN CANSELOR TUN ABDUL RAZAK",
+    "name": "Dewan Canselor Tun Abdul Razak",
     "sector": "Government",
     "year": "2025",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE",
     "dealer": "GENUINE ELECTRIC SDN. BHD."
   },
   {
-    "name": "DEWAN KULIAH (DK) MRSM MUAR",
+    "name": "Dewan Kuliah (Dk) MRSM Muar",
     "sector": "Government",
     "year": "2023",
     "details": "95 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 168 m",
     "dealer": "HOCK SENG ELECTRICAL SDN. BHD."
   },
   {
-    "name": "DEWAN MBPJ ARA DAMANSARA",
+    "name": "Dewan MBPJ Ara Damansara",
     "sector": "Government",
     "year": "2026",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 175 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
-    "name": "DEWAN SERBAGUNA MBSJ",
+    "name": "Dewan Serbaguna MBSJ",
     "sector": "Government",
     "year": "2026",
     "details": "2.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK)",
@@ -2463,7 +2463,7 @@ window.PROJECTS =
     "dealer": "SYARIKAT ELEKTRIK HEAP SENG SDN. BHD."
   },
   {
-    "name": "PERKESO Ipoh",
+    "name": "Perkeso Ipoh",
     "sector": "Government",
     "year": "2025",
     "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 3,000 m",
@@ -2544,14 +2544,14 @@ window.PROJECTS =
     "sector": "Healthcare"
   },
   {
-    "name": "HOSPITAL BANTING",
+    "name": "Hospital Banting",
     "sector": "Healthcare",
     "year": "2025",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 180 m",
     "dealer": "UNITY POWER ELECTRICAL (M) SDN. BHD."
   },
   {
-    "name": "HOSPITAL COLUMBIA ( BUKIT JALIL )",
+    "name": "Hospital Columbia ( Bukit Jalil )",
     "sector": "Healthcare",
     "year": "2025",
     "details": "4 mm² CU/PVC BLACK CABLE 100M - 15 coil",
@@ -2581,7 +2581,7 @@ window.PROJECTS =
     "sector": "Healthcare"
   },
   {
-    "name": "HOSPITAL PANTAI KUALA LUMPUR",
+    "name": "Hospital Pantai Kuala Lumpur",
     "sector": "Healthcare",
     "year": "2025",
     "details": "25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 660 m",
@@ -2652,7 +2652,7 @@ window.PROJECTS =
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD."
   },
   {
-    "name": "HOSPITAL UNIVERSITI SAINS MALAYSIA",
+    "name": "Hospital Universiti Sains Malaysia",
     "sector": "Healthcare",
     "year": "2025",
     "details": "16 mm² CU/PVC BLACK CABLE - 3,000 m",
@@ -2663,7 +2663,7 @@ window.PROJECTS =
     "sector": "Healthcare"
   },
   {
-    "name": "INSTITUT PERUBATAN FORENSIK NEGARA -IPFN",
+    "name": "Institut Perubatan Forensik Negara -Ipfn",
     "sector": "Healthcare",
     "year": "2025",
     "details": "3 MM X 25 MM COPPER TAPE (METROD) 60KGS+/- - 183 kg",
@@ -2692,14 +2692,14 @@ window.PROJECTS =
     "dealer": "S.L.H ELECTRIC TRADING SDN. BHD."
   },
   {
-    "name": "KLINIK KESIHATAN SALAK SELATAN",
+    "name": "Klinik Kesihatan Salak Selatan",
     "sector": "Healthcare",
     "year": "2024",
     "details": "25 mm² CU/PVC BLACK CABLE 100M - 3 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
-    "name": "KLINIK KESIHATAN TONGKANG PECAH",
+    "name": "Klinik Kesihatan Tongkang Pecah",
     "sector": "Healthcare",
     "year": "2026",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 60 m",
@@ -3938,7 +3938,7 @@ window.PROJECTS =
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD."
   },
   {
-    "name": "MEMBINA 1 UNIT GUDANG DI NOMBOR",
+    "name": "Membina 1 Unit Gudang Di Nombor",
     "sector": "Industrial",
     "year": "2026",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 182 m",
@@ -5017,7 +5017,7 @@ window.PROJECTS =
     "sector": "Government"
   },
   {
-    "name": "PEMBINAAN JELATIK",
+    "name": "Pembinaan Jelatik",
     "sector": "Industrial",
     "year": "2024",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
@@ -5044,7 +5044,7 @@ window.PROJECTS =
     "sector": "Residential"
   },
   {
-    "name": "PROJEK PENGAKALAN",
+    "name": "Projek Pengakalan",
     "sector": "Government",
     "year": "2026",
     "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK)",
@@ -5191,7 +5191,7 @@ window.PROJECTS =
     "sector": "Residential"
   },
   {
-    "name": "MASJID AL-FARIDEE",
+    "name": "Masjid Al-Faridee",
     "sector": "Mosque",
     "year": "2023",
     "details": "50 mm² CU/PVC BLACK CABLE",
@@ -5205,56 +5205,56 @@ window.PROJECTS =
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
-    "name": "MASJID DENAI ALAM",
+    "name": "Masjid Denai Alam",
     "sector": "Mosque",
     "year": "2023",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 160 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
-    "name": "MASJID FOREST HEIGHT",
+    "name": "Masjid Forest Height",
     "sector": "Mosque",
     "year": "2023",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "GEMILITE SDN. BHD."
   },
   {
-    "name": "MASJID JAMEK KG RAWA",
+    "name": "Masjid Jamek Kg Rawa",
     "sector": "Mosque",
     "year": "2025",
     "details": "95mm² x 3C + 70mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 900 m",
     "dealer": "WAN ELECTRICAL"
   },
   {
-    "name": "MASJID JAMEK SULTAN HISHAMUDDIN",
+    "name": "Masjid Jamek Sultan Hishamuddin",
     "sector": "Mosque",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "BNB ELECTRIC SDN. BHD."
   },
   {
-    "name": "MASJID KLEBANG PUTRA",
+    "name": "Masjid Klebang Putra",
     "sector": "Mosque",
     "year": "2025",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 114 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
-    "name": "MASJID KOTA DAMANSARA",
+    "name": "Masjid Kota Damansara",
     "sector": "Mosque",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 430 m",
     "dealer": "TRANSLITE ELECTRIC SDN. BHD."
   },
   {
-    "name": "MASJID SELANDAR",
+    "name": "Masjid Selandar",
     "sector": "Mosque",
     "year": "2026",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "SUPER TOP ELECTRICAL ENGINEERING"
   },
   {
-    "name": "MASJID SEREMBAN SELATAN",
+    "name": "Masjid Seremban Selatan",
     "sector": "Mosque",
     "year": "2023",
     "details": "35 mm² CU/PVC BLACK CABLE",
@@ -5268,14 +5268,14 @@ window.PROJECTS =
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
-    "name": "MASJID TERAPUNG YAN",
+    "name": "Masjid Terapung Yan",
     "sector": "Mosque",
     "year": "2025",
     "details": "16 mm² CU/PVC BLACK CABLE 100M - 1 coil",
     "dealer": "STRAITS TECHNICS SDN. BHD."
   },
   {
-    "name": "MASJID TIRAM",
+    "name": "Masjid Tiram",
     "sector": "Mosque",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m",
@@ -5462,7 +5462,7 @@ window.PROJECTS =
     "dealer": "D.E. POWER ELECTRICAL & LIGHTING SDN. BHD."
   },
   {
-    "name": "CADANGAN MEMBINA RUMAH PH.4A(160UNIT)",
+    "name": "Cadangan Membina Rumah Ph.4a(160unit)",
     "sector": "Residential",
     "year": "2023-2024",
     "details": "4 mm² CU/PVC BLACK CABLE 100M - 41 coil",
@@ -5659,21 +5659,21 @@ window.PROJECTS =
     "dealer": "ACTGEN INDUSTRY SDN. BHD."
   },
   {
-    "name": "KUARTERS JPNS TAMAN BOTANI SHAH ALAM",
+    "name": "Kuarters JPNS Taman Botani Shah Alam",
     "sector": "Residential",
     "year": "2026",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
-    "name": "KUARTERS KKM SG CHUA",
+    "name": "Kuarters KKM Sg Chua",
     "sector": "Residential",
     "year": "2024",
     "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "UNITY POWER ELECTRICAL (M) SDN. BHD."
   },
   {
-    "name": "KUARTERS KTMB GEMAS",
+    "name": "Kuarters KTMB Gemas",
     "sector": "Residential",
     "year": "2023",
     "details": "16mm² x 3C + 25mm² AERIAL BUNDLED CABLE (LV)",
@@ -5804,7 +5804,7 @@ window.PROJECTS =
     "dealer": "BRILLIANT LTP BUILDER SDN. BHD."
   },
   {
-    "name": "PPR SERI PANTAI BLOCK 100",
+    "name": "PPR Seri Pantai Block 100",
     "sector": "Residential",
     "year": "2023",
     "details": "10 mm² CU/PVC BLACK CABLE - 4,600 m",
@@ -6110,7 +6110,7 @@ window.PROJECTS =
     "sector": "Retail"
   },
   {
-    "name": "CADANGAN MEMBINA SEBUAH STESEN MINYAK &",
+    "name": "Cadangan Membina Sebuah Stesen Minyak &",
     "sector": "Retail",
     "year": "2023",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
@@ -6336,7 +6336,7 @@ window.PROJECTS =
     "dealer": "JIA SHENG ELECTRICAL SDN BHD"
   },
   {
-    "name": "STADIUM ENTRANCE MERDEKA 118",
+    "name": "Stadium Entrance Merdeka 118",
     "sector": "Sports & Leisure",
     "year": "2026",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
@@ -6350,14 +6350,14 @@ window.PROJECTS =
     "dealer": "SAMAJAYA ELECTRICAL TRADING SDN BHD"
   },
   {
-    "name": "STADIUM HOKI BUKIT JALIL",
+    "name": "Stadium Hoki Bukit Jalil",
     "sector": "Sports & Leisure",
     "year": "2023",
     "details": "10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 268 m",
     "dealer": "VELOCITY CONSTRUCTION SDN. BHD."
   },
   {
-    "name": "STADIUM SULTAN IBRAHIM",
+    "name": "Stadium Sultan Ibrahim",
     "sector": "Sports & Leisure",
     "year": "2019-2026",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,524 m",
@@ -6378,7 +6378,7 @@ window.PROJECTS =
     "dealer": "KAF ENGINEERING"
   },
   {
-    "name": "TAPAK PROJEK KOMPLEKS SUKAN MINI",
+    "name": "Tapak Projek Kompleks Sukan Mini",
     "sector": "Sports & Leisure",
     "year": "2023",
     "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,500 m",
