@@ -2770,89 +2770,89 @@ window.PROJECTS =
   },
   {
     "name": "Eastwood Valley Golf & Country Club, Miri",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 205 m",
     "dealer": "SIS ELECTRICAL COMPANY"
   },
   {
     "name": "Four Points / Hotel Amansari, Seri Alam, Johor",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2025",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 732 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Gocos Hotel, Klang",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 384 m",
     "dealer": "HUP SENG ELECTRICAL ENGINEERING"
   },
   {
     "name": "ISY Hotel, Sepang",
-    "sector": "Hospitality"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Marriot Hotel, Pulau Perhentian",
-    "sector": "Hospitality"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Pekan Resort Hotel in Pahang",
-    "sector": "Hospitality"
+    "sector": "Sports & Leisure"
   },
   {
     "name": "Primula Beach Resort, Batu Buruk",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "400 mm² x 1c CU/XLPE/AWA/PVC CABLE",
     "dealer": "ACE DYNASTY ELECTRICAL (KT) SDN. BHD."
   },
   {
     "name": "Pulai Springs Resort, Johor",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2025-2026",
     "details": "25 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 4,380 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
     "name": "Rasa Sayang Hotel, Batu Ferringhi, Penang",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2025",
     "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 287 m",
     "dealer": "INNER ELECTRICAL SDN. BHD."
   },
   {
     "name": "Restoran Selasih, Johor Bahru",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 200 m",
     "dealer": "OKA MARKETING SDN. BHD."
   },
   {
     "name": "Royale Chulan Kuala Lumpur",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2026",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 1,920 m",
     "dealer": "EV CONNECTION SDN. BHD."
   },
   {
     "name": "Sunway Resort Hotel",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 1,480 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "The Banjaran Hotsprings Retreat",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 54 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "Tun Razak Exchange (TRX), Kuala Lumpur",
-    "sector": "Hospitality",
+    "sector": "Sports & Leisure",
     "year": "2023",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 680 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
