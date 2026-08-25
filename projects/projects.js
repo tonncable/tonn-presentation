@@ -36,7 +36,7 @@ window.PROJECTS =
   },
   {
     "name": "Sg Sireh Water Treatment Plant",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "img": "../assets/img/image12.png",
     "location": "Tanjung Karang, Selangor"
   },
@@ -100,11 +100,6 @@ window.PROJECTS =
     "name": "I-City",
     "sector": "Commercial",
     "location": "Shah Alam"
-  },
-  {
-    "name": "Warisan Merdeka Tower",
-    "sector": "Commercial",
-    "location": "Kuala Lumpur"
   },
   {
     "name": "Oxley Towers",
@@ -183,17 +178,7 @@ window.PROJECTS =
     "location": "Kota Damansara, Selangor"
   },
   {
-    "name": "MRT Sungai Buloh Station",
-    "sector": "Infrastructure",
-    "location": "Sungai Buloh, Selangor"
-  },
-  {
     "name": "MRT Kg Baru Sg Buloh Station",
-    "sector": "Infrastructure",
-    "location": "Sungai Buloh, Selangor"
-  },
-  {
-    "name": "MRT Sg Buloh Tehpoh Station",
     "sector": "Infrastructure",
     "location": "Sungai Buloh, Selangor"
   },
@@ -201,11 +186,6 @@ window.PROJECTS =
     "name": "KLIA Security Post 3",
     "sector": "Infrastructure",
     "location": "Sepang, Selangor"
-  },
-  {
-    "name": "Pan Borneo",
-    "sector": "Infrastructure",
-    "location": "Sabah"
   },
   {
     "name": "Handal Indah Tebrau Depot",
@@ -456,32 +436,32 @@ window.PROJECTS =
   },
   {
     "name": "Loji Rawatan Air Felda Chini",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Chini, Pahang"
   },
   {
     "name": "Loji Rawatan Air Beruas",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Beruas, Perak"
   },
   {
     "name": "Loji Rawatan Air Endau",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Mersing, Johor"
   },
   {
     "name": "Loji Rawatan Air Semenyih 2",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Dengkil, Selangor"
   },
   {
     "name": "Gerik V Water Treatment Plant",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Gerik, Perak"
   },
   {
     "name": "Tebaran Banjir Batu Rakit",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Kuala Terengganu"
   },
   {
@@ -1072,10 +1052,6 @@ window.PROJECTS =
     "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 15,256 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 3,520 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 4,480 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
     "location": "Shah Alam"
-  },
-  {
-    "name": "KL 118 Tower",
-    "sector": "Commercial"
   },
   {
     "name": "Kompleks Pejabat Petronas",
@@ -4986,10 +4962,6 @@ window.PROJECTS =
     "location": "Putrajaya"
   },
   {
-    "name": "KL118",
-    "sector": "Commercial"
-  },
-  {
     "name": "KLGCC infra, K.L.",
     "sector": "Sports & Leisure"
   },
@@ -5075,7 +5047,7 @@ window.PROJECTS =
   },
   {
     "name": "Logi Air Sekor",
-    "sector": "Water Treatment",
+    "sector": "Utility",
     "location": "Pekan, Pahang"
   },
   {
@@ -6735,10 +6707,6 @@ window.PROJECTS =
     "year": "2024",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,120 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
-  },
-  {
-    "name": "Kuala Lumpur International Airport 2",
-    "sector": "Infrastructure"
   },
   {
     "name": "Kuala Lumpur Mass Rapid Transit V4 project",
