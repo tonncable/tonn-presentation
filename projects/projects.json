@@ -16,7 +16,10 @@
     "sector": "Data Centre",
     "img": "../assets/img/ytl-kulai.jpg",
     "client": "YTL",
-    "location": "Kulai, Johor"
+    "location": "Kulai, Johor",
+    "year": "2023-2026",
+    "details": "150 mm² CU/PVC GREEN CABLE - 2,194 m",
+    "dealer": "GEMILITE SDN. BHD. +1 more"
   },
   {
     "name": "Penjara Taiping",
@@ -1513,14 +1516,6 @@
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 1,632 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD.",
     "location": "Pekan Nanas"
-  },
-  {
-    "name": "YTL Green Data Centre Park",
-    "sector": "Data Centre",
-    "year": "2023-2026",
-    "details": "150 mm² CU/PVC GREEN CABLE - 2,194 m",
-    "dealer": "GEMILITE SDN. BHD. +1 more",
-    "location": "Kulai, Johor"
   },
   {
     "name": "Akademi Pengangkutan Jalan Malaysia",
