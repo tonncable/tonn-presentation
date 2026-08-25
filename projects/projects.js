@@ -371,17 +371,10 @@ window.PROJECTS =
   {
     "name": "Samsung SDI Energy Malaysia",
     "sector": "Industrial",
-    "location": "Seremban, Negeri Sembilan"
-  },
-  {
-    "name": "Hartalega NGC",
-    "sector": "Industrial",
-    "location": "Sepang, Selangor"
-  },
-  {
-    "name": "Spritzer Factory",
-    "sector": "Industrial",
-    "location": "Perak"
+    "location": "Seremban, Negeri Sembilan",
+    "year": "2023",
+    "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 1,000 m",
+    "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD."
   },
   {
     "name": "Nestle Manufacturing (M) SB",
@@ -501,11 +494,6 @@ window.PROJECTS =
     "location": "Kuala Lumpur"
   },
   {
-    "name": "Ideal Residency",
-    "sector": "Residential",
-    "location": "Penang"
-  },
-  {
     "name": "Residensi Prima Fairpark",
     "sector": "Residential",
     "location": "Ipoh, Perak"
@@ -600,11 +588,6 @@ window.PROJECTS =
     "name": "Sustio Penang",
     "sector": "Residential",
     "location": "Penang"
-  },
-  {
-    "name": "PPAIM Selasih",
-    "sector": "Residential",
-    "location": "Putrajaya"
   },
   {
     "name": "Pusat Bandar Putra Permai (V208, KVMRT 2)",
@@ -830,12 +813,6 @@ window.PROJECTS =
     "sector": "Government",
     "country": "Cambodia",
     "location": "Cambodia"
-  },
-  {
-    "name": "Top Sports Textile Ltd",
-    "sector": "Industrial",
-    "country": "Vietnam",
-    "location": "Vietnam"
   },
   {
     "name": "AEON Bandar Tun Hussein Onn",
@@ -4356,13 +4333,6 @@ window.PROJECTS =
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
-    "name": "Samsung, Senawang",
-    "sector": "Industrial",
-    "year": "2023",
-    "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 1,000 m",
-    "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD."
-  },
-  {
     "name": "Sandvik Equipment",
     "sector": "Industrial",
     "year": "2023-2025",
@@ -4691,13 +4661,6 @@ window.PROJECTS =
     "sector": "Industrial",
     "year": "2025",
     "details": "500 mm² CU/XLPE/PVC BLACK CABLE",
-    "dealer": "ITEC ELECTRIC (MALACCA) SDN. BHD."
-  },
-  {
-    "name": "Vertive",
-    "sector": "Industrial",
-    "year": "2025-2026",
-    "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 528 m",
     "dealer": "ITEC ELECTRIC (MALACCA) SDN. BHD.",
     "location": "Johor Bahru"
   },
@@ -5465,13 +5428,6 @@ window.PROJECTS =
     "sector": "Residential"
   },
   {
-    "name": "Alpinia Residence",
-    "sector": "Residential",
-    "year": "2024",
-    "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 10,120 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
-  },
-  {
     "name": "Alpinia, Bandar Nilai Utama",
     "sector": "Residential",
     "year": "2024-2025",
@@ -5506,10 +5462,6 @@ window.PROJECTS =
     "year": "2025-2026",
     "details": "25 mm² CU/PVC BLACK CABLE - 4,200 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
-  },
-  {
-    "name": "Austville Residences Condo. Spore",
-    "sector": "Residential"
   },
   {
     "name": "Bandar Alam Perdana (AP4)",
@@ -5828,15 +5780,10 @@ window.PROJECTS =
   {
     "name": "M Vertical KL City Residence",
     "sector": "Residential",
-    "location": "Kuala Lumpur"
-  },
-  {
-    "name": "M Vertical",
-    "sector": "Residential",
+    "location": "Kuala Lumpur",
     "year": "2019-2020",
     "details": "4 mm² CU/PVC BLACK CABLE 100M - 298 coil",
-    "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B.",
-    "location": "Cheras"
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B."
   },
   {
     "name": "Masai Apartments (Blocks B5 & B6)",
