@@ -432,10 +432,9 @@
                   ${cbls.length ? `<div class="drow"><span class="dlbl">Cables</span>${cbls.map(c => `<span class="cbl">${c.replace(/</g,'&lt;')}</span>`).join('')}</div>` : ''}
                   ${p.dealer ? `<div class="drow"><span class="dlbl">Via</span>${p.dealer.replace(/</g,'&lt;')}</div>` : ''}
                 </div>` : '';
-                const yearBadge = p.year ? `<small>${p.year}</small>` : '';
                 const chev = hasDetail ? `<span class="chev">›</span>` : '';
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
-                return `<div class="${cls}"><span class="secblk__idx__no">${n}${yearBadge}</span><span class="secblk__idx__name">${p.name}${chev}</span><span class="secblk__idx__loc">${loc}</span>${detail}</div>`;
+                return `<div class="${cls}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name">${p.name}${chev}</span><span class="secblk__idx__loc">${loc}</span>${detail}</div>`;
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails

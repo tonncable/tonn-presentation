@@ -105,7 +105,10 @@
   {
     "name": "Oxley Towers",
     "sector": "Commercial",
-    "location": "Kuala Lumpur"
+    "location": "Kuala Lumpur",
+    "year": "2023-2025",
+    "details": "10 mm² CU/PVC GREEN CABLE - 3,314 m | 10 mm² CU/PVC BLACK CABLE - 3,314 m | 10 mm² CU/PVC RED CABLE - 3,314 m | 10 mm² CU/PVC BLUE CABLE - 3,314 m | 10 mm² CU/PVC YELLOW CABLE - 3,314 m",
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Air Trunk Johor Data Centre",
@@ -115,7 +118,10 @@
   {
     "name": "Sedenak Data Center Park",
     "sector": "Data Centre",
-    "location": "Sedenak, Johor"
+    "location": "Sedenak, Johor",
+    "year": "2020-2024",
+    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE - 754 m | 300 mm² AL/XLPE/PVC BLACK CABLE - 1,000 m",
+    "dealer": "TIEN YUAN ELECTRICAL SDN. BHD."
   },
   {
     "name": "Microsoft Data Centre",
@@ -271,11 +277,6 @@
     "name": "Hospital Universiti Malaysia Sabah (HUMS)",
     "sector": "Healthcare",
     "location": "Sabah"
-  },
-  {
-    "name": "Hospital Sultanah Aminah JB",
-    "sector": "Healthcare",
-    "location": "Johor Bahru, Johor"
   },
   {
     "name": "Hospital Pengajar UniSZA",
@@ -531,11 +532,6 @@
     "location": "Kota Kinabalu, Sabah"
   },
   {
-    "name": "M Vertica KL City Residences",
-    "sector": "Residential",
-    "location": "Kuala Lumpur"
-  },
-  {
     "name": "Razak City Residences",
     "sector": "Residential",
     "location": "Kuala Lumpur"
@@ -666,18 +662,6 @@
     "name": "Xiao En Memorial Park",
     "sector": "Sports & Leisure",
     "location": "Nilai, Negeri Sembilan"
-  },
-  {
-    "name": "Mediacorp Mediapolis (Buona Vista)",
-    "sector": "Commercial",
-    "country": "Singapore",
-    "location": "Buona Vista"
-  },
-  {
-    "name": "HDB Mechanised Parking System (Bangkitroad)",
-    "sector": "Infrastructure",
-    "country": "Singapore",
-    "location": "Bangkitroad"
   },
   {
     "name": "WCS Condominium",
@@ -1166,14 +1150,6 @@
     "location": "Selangor"
   },
   {
-    "name": "Oxley Tower",
-    "sector": "Commercial",
-    "year": "2023-2025",
-    "details": "10 mm² CU/PVC GREEN CABLE - 3,314 m | 10 mm² CU/PVC BLACK CABLE - 3,314 m | 10 mm² CU/PVC RED CABLE - 3,314 m | 10 mm² CU/PVC BLUE CABLE - 3,314 m | 10 mm² CU/PVC YELLOW CABLE - 3,314 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
-    "location": "Kuala Lumpur"
-  },
-  {
     "name": "Pasar Borong Pandan",
     "sector": "Commercial",
     "year": "2026",
@@ -1499,14 +1475,6 @@
     "details": "10 mm² CU/PVC GREEN CABLE - 13,500 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more",
     "location": "Cyberjaya"
-  },
-  {
-    "name": "Sedenak Data Centre",
-    "sector": "Data Centre",
-    "year": "2020-2024",
-    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE - 754 m | 300 mm² AL/XLPE/PVC BLACK CABLE - 1,000 m",
-    "dealer": "TIEN YUAN ELECTRICAL SDN. BHD.",
-    "location": "Johor"
   },
   {
     "name": "Sedenak Tech Park",
@@ -3583,11 +3551,6 @@
     "dealer": "ELECTRICA TECHNOLOGY SDN. BHD."
   },
   {
-    "name": "Gerik Water Treatment Plant",
-    "sector": "Industrial",
-    "location": "Perak"
-  },
-  {
     "name": "Greenverse Kertih",
     "sector": "Industrial",
     "year": "2025",
@@ -5181,11 +5144,6 @@
     "location": "Shah Alam"
   },
   {
-    "name": "PAVILLION Bukit Jalil",
-    "sector": "Retail",
-    "location": "Selangor"
-  },
-  {
     "name": "Pejabat Jabatan Kesihatan Pahang",
     "sector": "Government",
     "location": "Kuantan, Pahang"
@@ -5901,7 +5859,8 @@
   },
   {
     "name": "M Vertical KL City Residence",
-    "sector": "Residential"
+    "sector": "Residential",
+    "location": "Kuala Lumpur"
   },
   {
     "name": "M Vertical",
