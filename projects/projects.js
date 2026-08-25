@@ -1464,7 +1464,7 @@ window.PROJECTS =
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
-    "name": "Ytl Data Centre",
+    "name": "YTL Data Centre",
     "sector": "Telecom & Data",
     "year": "2025",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 1,632 m",
