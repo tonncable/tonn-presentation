@@ -5279,7 +5279,8 @@ window.PROJECTS =
   },
   {
     "name": "TRX C3 Tunnel",
-    "sector": "Infrastructure"
+    "sector": "Infrastructure",
+    "img": "https://themalaysianreserve.com/wp-content/uploads/2023/11/TRX-tunnel-Bernama.jpg"
   },
   {
     "name": "TRX Lifestyle Quarter",
@@ -6799,7 +6800,8 @@ window.PROJECTS =
   },
   {
     "name": "Penang International Airport",
-    "sector": "Infrastructure"
+    "sector": "Infrastructure",
+    "img": "https://static.routesonline.com/images/cached/photograph-3672-scaled-620x0.jpg"
   },
   {
     "name": "Penang Port North Butterworth Container Terminal",
@@ -6974,7 +6976,8 @@ window.PROJECTS =
     "sector": "Utility",
     "year": "2024",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 565 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 280 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
+    "img": "https://cdn1.npcdn.net/userfiles/21700/image/294_ecr7wg_1740451327.jpg"
   },
   {
     "name": "Loji Air Sungai Kampar",
@@ -7173,7 +7176,8 @@ window.PROJECTS =
     "sector": "Utility",
     "year": "2025",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,020 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 125 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 520 m",
-    "dealer": "MAGNITUDE POWER SDN. BHD."
+    "dealer": "MAGNITUDE POWER SDN. BHD.",
+    "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmCJls3LoupYKPqybZvM28LMJBOpNBgMP55Yq1U71x540rMSapVjXA-Z-EyM--bhKshyRspuzXv8ybwHLdBbvQN3w8jG_R6Udr5qrl0O8cKo6_WnphZ1tcXloorIMQT89JrP7_dHw=s680-w680-h510-rw"
   },
   {
     "name": "SAJ Water Treatment Plant",
