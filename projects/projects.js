@@ -596,38 +596,38 @@ window.PROJECTS =
   },
   {
     "name": "JDT Football Stadium",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "img": "https://storage.googleapis.com/origin-awsassets.nst.com.my/images/articles/wtsultan123_NSTfield_image_socialmedia.var_1615516600.jpg",
     "location": "Johor"
   },
   {
     "name": "Pulau Sipadan Resort & Tours",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "location": "Tawau, Sabah"
   },
   {
     "name": "Perhentian Marriott Resort & Spa",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "location": "Perhentian, Terengganu"
   },
   {
     "name": "Jl99 Wonderland Park",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Batu Caves, Selangor"
   },
   {
     "name": "Lumut Bay Water Park",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Lumut, Perak"
   },
   {
     "name": "Tropicana Golf & Country Resort",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "location": "Selangor"
   },
   {
     "name": "Xiao En Memorial Park",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Nilai, Negeri Sembilan"
   },
   {
@@ -656,7 +656,7 @@ window.PROJECTS =
   },
   {
     "name": "Champion Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "country": "Singapore",
     "location": "Singapore"
   },
@@ -735,7 +735,7 @@ window.PROJECTS =
   },
   {
     "name": "Stadium Wunna Theikdi",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "country": "Myanmar",
     "img": "https://upload.wikimedia.org/wikipedia/en/9/90/Wunna_Theikdi_Stadium.jpg",
     "location": "Myanmar"
@@ -784,20 +784,20 @@ window.PROJECTS =
   },
   {
     "name": "Aaa Resort & Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "country": "Maldives",
     "img": "https://gos3.ibcdn.com/9adb4ed082c911eaa2ba0242ac110002.jpg",
     "location": "Maldives"
   },
   {
     "name": "Hondaafushi Project",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "country": "Maldives",
     "location": "Hondaafushi"
   },
   {
     "name": "Naga World 2 Casino & Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "country": "Cambodia",
     "img": "https://cambodiagolfholiday.com/gomisuq/2024/06/unnamed.jpg",
     "location": "Phnom Penh"
@@ -2774,7 +2774,7 @@ window.PROJECTS =
   },
   {
     "name": "Eastwood Valley Golf & Country Club",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 205 m",
     "dealer": "SIS ELECTRICAL COMPANY",
@@ -2782,7 +2782,7 @@ window.PROJECTS =
   },
   {
     "name": "Four Points / Hotel Amansari, Seri Alam",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2025",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 732 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD.",
@@ -2790,7 +2790,7 @@ window.PROJECTS =
   },
   {
     "name": "Gocos Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2023",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 384 m",
     "dealer": "HUP SENG ELECTRICAL ENGINEERING",
@@ -2798,21 +2798,21 @@ window.PROJECTS =
   },
   {
     "name": "Isy Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "location": "Sepang"
   },
   {
     "name": "Marriot Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "location": "Pulau Perhentian"
   },
   {
     "name": "Pekan Resort Hotel In Pahang",
-    "sector": "Sports & Leisure"
+    "sector": "Hospitality"
   },
   {
     "name": "Primula Beach Resort",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2023",
     "details": "400 mm² x 1c CU/XLPE/AWA/PVC CABLE",
     "dealer": "ACE DYNASTY ELECTRICAL (KT) SDN. BHD.",
@@ -2820,7 +2820,7 @@ window.PROJECTS =
   },
   {
     "name": "Pulai Springs Resort",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2025-2026",
     "details": "25 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 4,380 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD.",
@@ -2828,7 +2828,7 @@ window.PROJECTS =
   },
   {
     "name": "Rasa Sayang Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2025",
     "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 287 m",
     "dealer": "INNER ELECTRICAL SDN. BHD.",
@@ -2836,7 +2836,7 @@ window.PROJECTS =
   },
   {
     "name": "Restoran Selasih",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2023",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 200 m",
     "dealer": "OKA MARKETING SDN. BHD.",
@@ -2844,28 +2844,28 @@ window.PROJECTS =
   },
   {
     "name": "Royale Chulan Kuala Lumpur",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2026",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 1,920 m",
     "dealer": "EV CONNECTION SDN. BHD."
   },
   {
     "name": "Sunway Resort Hotel",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2023",
     "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 1,480 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "The Banjaran Hotsprings Retreat",
-    "sector": "Sports & Leisure",
+    "sector": "Hospitality",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 54 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "Tun Razak Exchange (TRX)",
-    "sector": "Sports & Leisure",
+    "sector": "Commercial",
     "year": "2023",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 680 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD.",
@@ -2874,7 +2874,8 @@ window.PROJECTS =
   {
     "name": "60-90tph Palm Oil Mill, Kalimantan Barat",
     "sector": "Industrial",
-    "location": "Indonesia"
+    "location": "Indonesia",
+    "country": "Indonesia"
   },
   {
     "name": "8-Unit Semi-Detached Factory, Puncak Alam",
@@ -4577,7 +4578,8 @@ window.PROJECTS =
   {
     "name": "Top Sports Textile Ltd Factory",
     "sector": "Industrial",
-    "location": "Vietnam"
+    "location": "Vietnam",
+    "country": "Vietnam"
   },
   {
     "name": "Tpg Oil & Gas SDN BHD",
@@ -4794,12 +4796,13 @@ window.PROJECTS =
   },
   {
     "name": "Amore Fitness P.l - Starvista",
-    "sector": "Sports & Leisure",
-    "location": "Singapore"
+    "sector": "Sports & Recreation",
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Asian Football Confederation, Bukit Jalil KL",
-    "sector": "Sports & Leisure"
+    "sector": "Sports & Recreation"
   },
   {
     "name": "Avantro (Ge2404)",
@@ -4860,21 +4863,21 @@ window.PROJECTS =
   },
   {
     "name": "Elmina Urban Park, City Of Elmina",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "YAT HIN ELECTRICAL SDN. BHD."
   },
   {
     "name": "Gamuda Go Kart, Gamuda Cove",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2024",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 1,300 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
   },
   {
     "name": "Gelanggang Bola Jaring Stadium Kota Raja, Klang Selangor",
-    "sector": "Sports & Leisure"
+    "sector": "Sports & Recreation"
   },
   {
     "name": "Geo, Bukit Rimau",
@@ -4882,7 +4885,7 @@ window.PROJECTS =
   },
   {
     "name": "Hu's Peaces Land (Fairy Park) Memorial Park",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 369 m",
     "dealer": "GEMILITE SDN. BHD."
@@ -4898,7 +4901,7 @@ window.PROJECTS =
   },
   {
     "name": "IPP Glass House",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK)",
     "dealer": "OKA MARKETING SDN. BHD."
@@ -4906,7 +4909,8 @@ window.PROJECTS =
   {
     "name": "Jaffar Brothers Pte Ltd",
     "sector": "Industrial",
-    "location": "Pakistan"
+    "location": "Pakistan",
+    "country": "Pakistan"
   },
   {
     "name": "Jalan KLIA S3",
@@ -4919,7 +4923,7 @@ window.PROJECTS =
   },
   {
     "name": "Klgcc Infra, K.l.",
-    "sector": "Sports & Leisure"
+    "sector": "Sports & Recreation"
   },
   {
     "name": "Kolej Vokasional Kuala Kangsar",
@@ -4933,7 +4937,7 @@ window.PROJECTS =
   },
   {
     "name": "Komplek Sukan Bagan Datuk",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Perak"
   },
   {
@@ -4943,12 +4947,12 @@ window.PROJECTS =
   },
   {
     "name": "Kompleks Sukan Kawasan Paya Besar, Kuala Berang",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Terengganu"
   },
   {
     "name": "Kompleks Sukan Ranau",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Sandakan"
   },
   {
@@ -5026,7 +5030,8 @@ window.PROJECTS =
   {
     "name": "Mediacorp Mediaspolis (Buona Vista)",
     "sector": "Commercial",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Mesahill",
@@ -5055,7 +5060,7 @@ window.PROJECTS =
   },
   {
     "name": "Padang Rugbi Kompleks Sukan MBI, Ipoh Perak",
-    "sector": "Sports & Leisure"
+    "sector": "Sports & Recreation"
   },
   {
     "name": "Pan Borneo Project",
@@ -5163,13 +5168,8 @@ window.PROJECTS =
   },
   {
     "name": "Stadium Kprj, Kempas Johor Bahru",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "location": "Johor"
-  },
-  {
-    "name": "Stadium Wunna Thake Hti",
-    "sector": "Sports & Leisure",
-    "location": "Myanmar"
   },
   {
     "name": "Stesen Janakuasa Sultan Azlan Shah, Seri Manjung Perak",
@@ -5181,7 +5181,7 @@ window.PROJECTS =
   },
   {
     "name": "Taman Asa Jaya Sports Centre",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
     "dealer": "MIGHTY PRO ENGINEERING SDN. BHD."
@@ -5208,7 +5208,7 @@ window.PROJECTS =
   },
   {
     "name": "Trengganu State Stadium",
-    "sector": "Sports & Leisure"
+    "sector": "Sports & Recreation"
   },
   {
     "name": "Triumi, Penang (P162)",
@@ -5229,12 +5229,14 @@ window.PROJECTS =
   {
     "name": "Turo Landed Property",
     "sector": "Residential",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Ufone Building In Islamabad",
     "sector": "Commercial",
-    "location": "Pakistan"
+    "location": "Pakistan",
+    "country": "Pakistan"
   },
   {
     "name": "UITM Farm Gambang",
@@ -5248,7 +5250,8 @@ window.PROJECTS =
   {
     "name": "Watten Estate Landed Property",
     "sector": "Residential",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Xin Hai Laubros",
@@ -5414,11 +5417,13 @@ window.PROJECTS =
   {
     "name": "Algandeer Housing Project - Najaf",
     "sector": "Residential",
-    "location": "Iraq"
+    "location": "Iraq",
+    "country": "Iraq"
   },
   {
     "name": "Aljunid/Hougang Town Council, Singapore (Hdb Project)",
-    "sector": "Residential"
+    "sector": "Residential",
+    "country": "Singapore"
   },
   {
     "name": "Alpinia, Bandar Nilai Utama",
@@ -5652,7 +5657,8 @@ window.PROJECTS =
   {
     "name": "Hdb Mechanised Parking System (Bangkit Road)",
     "sector": "Residential",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Hijayu 2, Bandar Sri Sendayan",
@@ -6145,7 +6151,8 @@ window.PROJECTS =
   {
     "name": "Valley Condominium Project",
     "sector": "Residential",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Villa Bukit Negeri",
@@ -6187,7 +6194,8 @@ window.PROJECTS =
   {
     "name": "Amore Fitness P.l - The Seletar Mall",
     "sector": "Retail",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Ampang Tesco Hypermarket",
@@ -6324,7 +6332,8 @@ window.PROJECTS =
   {
     "name": "Popular Bookstore Ltd - The Seletar Mall",
     "sector": "Retail",
-    "location": "Singapore"
+    "location": "Singapore",
+    "country": "Singapore"
   },
   {
     "name": "Prai Sunway Carnival Mall",
@@ -6408,28 +6417,28 @@ window.PROJECTS =
   },
   {
     "name": "Arena Jubli Perak Football Field",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2020",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE - 450 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN BHD"
   },
   {
     "name": "Kompleks Belia Dan Sukan",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023-2025",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 590 m",
     "dealer": "JURUTERA SRI EMAS"
   },
   {
     "name": "Kompleks Sukan Setiawangsa",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2025",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 755 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "Larkin Stadium",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2026",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD.",
@@ -6437,21 +6446,21 @@ window.PROJECTS =
   },
   {
     "name": "Pasir Gudang Municipal Council Stadium",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2020",
     "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE - 600 m",
     "dealer": "JIA SHENG ELECTRICAL SDN BHD"
   },
   {
     "name": "Stadium Entrance Merdeka 118",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2026",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
     "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
     "name": "Stadium Gong Badak",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2020",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 70 coil",
     "dealer": "SAMAJAYA ELECTRICAL TRADING SDN BHD",
@@ -6459,35 +6468,35 @@ window.PROJECTS =
   },
   {
     "name": "Stadium Hoki Bukit Jalil",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023",
     "details": "10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 268 m",
     "dealer": "VELOCITY CONSTRUCTION SDN. BHD."
   },
   {
     "name": "Stadium Sultan Ibrahim",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2019-2026",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,524 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
     "name": "SUK Selangor Sports Complex",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 12 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
     "name": "Taman Awam Tepian Sungai Muar",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2019-2020",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 7 m",
     "dealer": "KAF ENGINEERING"
   },
   {
     "name": "Tapak Projek Kompleks Sukan Mini",
-    "sector": "Sports & Leisure",
+    "sector": "Sports & Recreation",
     "year": "2023",
     "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,500 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
@@ -6579,7 +6588,8 @@ window.PROJECTS =
     "sector": "Infrastructure",
     "year": "2026",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
+    "country": "Singapore"
   },
   {
     "name": "Klb Terminal",
