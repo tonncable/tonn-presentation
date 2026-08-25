@@ -2659,10 +2659,6 @@ window.PROJECTS =
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
   },
   {
-    "name": "Hospital University Malaysia Sabah (HUMS)",
-    "sector": "Healthcare"
-  },
-  {
     "name": "Institut Perubatan Forensik Negara -Ipfn",
     "sector": "Healthcare",
     "year": "2025",
@@ -2762,10 +2758,6 @@ window.PROJECTS =
   },
   {
     "name": "Tawakal Hospital",
-    "sector": "Healthcare"
-  },
-  {
-    "name": "Thompson Hospital, Kota Damansara",
     "sector": "Healthcare"
   },
   {
@@ -5823,10 +5815,6 @@ window.PROJECTS =
     "year": "2023",
     "details": "300 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 780 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
-  },
-  {
-    "name": "Razak City Residence",
-    "sector": "Residential"
   },
   {
     "name": "Ren Residence, Bukit Jalil",
