@@ -1394,7 +1394,8 @@ window.PROJECTS =
     "year": "2026",
     "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 180 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 5,000 m | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 4,972 m | 4 mm² CU/MICA/PVC FR (ORANGE) CABLE - 6,180 m | 4 mm² CU/PVC GREEN CABLE - 10,000 m | 2.5 mm² CU/MICA/PVC FR (ORANGE) CABLE 1 KM - 4 coil",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD. +2 more",
-    "location": "Johor Bahru"
+    "location": "Johor Bahru",
+    "img": "https://api.dayonedc.com/wp-content/uploads/2025/07/cropped-nusajaya-data-center-scaled-1.jpg"
   },
   {
     "name": "EdgeConneX KUL21 Data Centre",
@@ -1466,7 +1467,8 @@ window.PROJECTS =
   },
   {
     "name": "Lion Data Centre, Bukit Jalil",
-    "sector": "Data Centre"
+    "sector": "Data Centre",
+    "img": "https://rpmschedulers.com/wp-content/uploads/2023/02/Lion-Data-Centre_2.jpg"
   },
   {
     "name": "PDG JH1 Data Centre",
