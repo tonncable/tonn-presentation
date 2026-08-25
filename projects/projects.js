@@ -13,7 +13,7 @@ window.PROJECTS =
     "location": "Selangor"
   },
   {
-    "name": "Ytl Kulai Data Center",
+    "name": "YTL Kulai Data Center",
     "sector": "Data Centre",
     "img": "../assets/img/ytl-kulai.jpg",
     "client": "YTL",
@@ -41,7 +41,7 @@ window.PROJECTS =
     "location": "Tanjung Karang, Selangor"
   },
   {
-    "name": "Ministry Of Home Affairs",
+    "name": "Ministry of Home Affairs",
     "sector": "Government",
     "img": "../assets/img/ministry-home-affairs.jpg",
     "location": "Putrajaya"
@@ -1090,7 +1090,7 @@ window.PROJECTS =
     "location": "Petaling Jaya"
   },
   {
-    "name": "Ministry Of Home Affairs Complex In Kuala Lumpur",
+    "name": "Ministry of Home Affairs Complex in Kuala Lumpur",
     "sector": "Commercial"
   },
   {
