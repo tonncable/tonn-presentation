@@ -5407,7 +5407,8 @@ window.PROJECTS =
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 8 m | 95 mm² CU/PVC BLACK CABLE - 1,230 m | 50 mm² CU/PVC GREEN CABLE - 300 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
     "location": "Shah Alam",
-    "img": "https://selangor.travel/wp-content/uploads/2019/09/Sultan_Salahuddin_Abdul_Aziz_Mosque_Blue_Dome_Tourism_Selangor.jpg"
+    "img": "https://selangor.travel/wp-content/uploads/2019/09/Sultan_Salahuddin_Abdul_Aziz_Mosque_Blue_Dome_Tourism_Selangor.jpg",
+    "hero": true
   },
   {
     "name": "Masjid Terapung Yan",
