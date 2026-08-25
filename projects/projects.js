@@ -4,7 +4,10 @@ window.PROJECTS =
     "name": "Merdeka 118",
     "sector": "Commercial",
     "img": "../assets/img/image14.png",
-    "location": "Kuala Lumpur"
+    "location": "Kuala Lumpur",
+    "year": "2026",
+    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 50 mm² CU/PVC GREEN CABLE - 150 m",
+    "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
     "name": "Pavilion Bukit Jalil",
@@ -99,7 +102,10 @@ window.PROJECTS =
   {
     "name": "I-City",
     "sector": "Commercial",
-    "location": "Shah Alam"
+    "location": "Shah Alam",
+    "year": "2025",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 800 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 210 m | 70 mm² CU/PVC GREEN CABLE - 140 m | 10 mm² CU/PVC GREEN CABLE - 1,000 m",
+    "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Oxley Towers",
@@ -125,7 +131,10 @@ window.PROJECTS =
   {
     "name": "Microsoft Data Centre",
     "sector": "Telecom & Data",
-    "location": "Cyberjaya"
+    "location": "Cyberjaya",
+    "year": "2023",
+    "details": "400 mm² x 1C CU/XLPE/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 5 - 54 m | 240 mm² x 1C CU/XLPE/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 5 - 84 m",
+    "dealer": "SJEE ENGINEERING SDN. BHD."
   },
   {
     "name": "MRT Feeder Bus Depot Kajang",
@@ -471,7 +480,10 @@ window.PROJECTS =
   {
     "name": "Universiti Malaysia Pahang",
     "sector": "Education",
-    "location": "Pekan, Pahang"
+    "location": "Pekan, Pahang",
+    "year": "2020",
+    "details": "50 mm² x 4c AL/XLPE/SWA/PVC CABLE - 247 m | 25 mm² x 4c AL/PVC/SWA/PVC CABLE - 2,775 m",
+    "dealer": "PRISMA DINAMIK SDN BHD"
   },
   {
     "name": "Universiti Kebangsaan Malaysia",
@@ -572,7 +584,10 @@ window.PROJECTS =
   {
     "name": "Sunsuria City",
     "sector": "Residential",
-    "location": "Sepang, Selangor"
+    "location": "Sepang, Selangor",
+    "year": "2020",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 530 m",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Utropolis (Pl074)",
@@ -1289,7 +1304,8 @@ window.PROJECTS =
     "sector": "Commercial",
     "year": "2024",
     "details": "via SAMETECH SOLUTIONS SDN. BHD.",
-    "location": "Shah Alam"
+    "location": "Shah Alam",
+    "dealer": "SAMETECH SOLUTIONS SDN. BHD."
   },
   {
     "name": "Xiao En Nilai Memorial Park",
@@ -1372,8 +1388,8 @@ window.PROJECTS =
     "name": "Jalan Digital Utama, Sedenak Data Centre Park",
     "sector": "Telecom & Data",
     "year": "2025-2026",
-    "details": "300 mm² x 1c CU/XLPE/AWA/PVC CABLE - 500 m",
-    "dealer": "ROSADO TRADELINE SDN. BHD. / CHI-TAK ELECTRICAL SDN. BHD."
+    "details": "300 mm² x 1c CU/XLPE/AWA/PVC CABLE - 500 m | 95mm² x 3C + 70mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 450 m | 16mm² x 3C + 25mm² AERIAL BUNDLED CABLE (LV) - 2,200 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,900 m | 4 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE - 700 m | 4 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE - 1,006 m",
+    "dealer": "ROSADO TRADELINE SDN. BHD."
   },
   {
     "name": "JHB02 Data Centre",
@@ -1414,7 +1430,7 @@ window.PROJECTS =
     "name": "PDG JH1 Data Centre",
     "sector": "Telecom & Data",
     "year": "2024",
-    "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 680 m",
+    "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 680 m | 4 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 1,574 m | 2.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 2,761 m | 1.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 8,720 m | 1.5 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 8,820 m | 1.5 mm² x 5c CU/PVC/PVC MULTICORE CABLE - 5,225 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD. +1 more",
     "location": "Johor"
   },
@@ -1422,14 +1438,14 @@ window.PROJECTS =
     "name": "PI Data Centre",
     "sector": "Telecom & Data",
     "year": "2026",
-    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 7,289 m",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 7,289 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 5,526 m | 240 mm² CU/PVC GREEN CABLE - 1,511 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 1,631 m | 120 mm² CU/PVC GREEN CABLE - 2,835 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 8,824 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "Raven Data Centre",
     "sector": "Telecom & Data",
     "year": "2023",
-    "details": "10 mm² CU/PVC GREEN CABLE - 13,500 m",
+    "details": "10 mm² CU/PVC GREEN CABLE - 13,500 m | 6 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 13,500 m | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 289 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 289 m | 1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 698 m | 1.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 360 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more",
     "location": "Cyberjaya"
   },
@@ -1437,7 +1453,7 @@ window.PROJECTS =
     "name": "Sedenak Tech Park",
     "sector": "Telecom & Data",
     "year": "2023-2026",
-    "details": "300 mm² CU/PVC GREEN CABLE - 5,000 m",
+    "details": "300 mm² CU/PVC GREEN CABLE - 5,000 m | 300 mm² CU/XLPE/PVC GREEN CABLE - 1,000 m | 6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 48,012 kg | 6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 13,358 kg | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 15,670 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 12,105 m",
     "dealer": "YSE ELECTRIC (M) SDN. BHD. +2 more",
     "location": "Kulai, Johor"
   },
@@ -1445,14 +1461,14 @@ window.PROJECTS =
     "name": "Strateq Data Centre",
     "sector": "Telecom & Data",
     "year": "2023-2024",
-    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 86 m",
-    "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
+    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 86 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 250 m | 70 mm² CU/PVC GREEN CABLE 100M - 1 coil",
+    "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD. / OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Vantage Data Centre",
     "sector": "Telecom & Data",
     "year": "2024-2026",
-    "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 8,044 m",
+    "details": "6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 8,044 m | 6 mm² x 5c CU/PVC/PVC CABLE (RD/YE/BU/BK/GN) (600/1000V) - 2,065 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
     "location": "Cyberjaya"
   },
@@ -1460,14 +1476,14 @@ window.PROJECTS =
     "name": "Yondr Data Centre, Sedenak",
     "sector": "Telecom & Data",
     "year": "2025",
-    "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 500 m",
+    "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 500 m | 6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 300 m",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "YTL Data Centre",
     "sector": "Telecom & Data",
     "year": "2025",
-    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 1,632 m",
+    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 1,632 m | 95 mm² CU/PVC GREEN CABLE - 1,744 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD.",
     "location": "Pekan Nanas"
   },
@@ -1482,7 +1498,7 @@ window.PROJECTS =
     "name": "Darul Quran Hostel Blocks",
     "sector": "Education",
     "year": "2023",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 462 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 462 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,340 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,007 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 546 m | 50 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 346 m | 25 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 650 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
@@ -1496,7 +1512,7 @@ window.PROJECTS =
     "name": "Garden International School",
     "sector": "Education",
     "year": "2023-2024",
-    "details": "400 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 76 m",
+    "details": "400 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 76 m | 35 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,900 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 436 m",
     "dealer": "NANYANG ELECTRIC CO. (M) SDN. BHD.",
     "location": "Kuala Lumpur"
   },
@@ -1504,7 +1520,7 @@ window.PROJECTS =
     "name": "Institut Latihan Sultan Ahmad Shah",
     "sector": "Education",
     "year": "2025",
-    "details": "6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 140 m",
+    "details": "6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 140 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 640 m",
     "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
@@ -1533,7 +1549,7 @@ window.PROJECTS =
     "name": "Kolej Sepuluh UPM Serdang",
     "sector": "Education",
     "year": "2025",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 20 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 20 coil | 2.5 mm² CU/PVC RED CABLE 100M - 20 coil | 1.5 mm² CU/PVC BLUE CABLE 100M - 20 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 20 coil | 1.5 mm² CU/PVC RED CABLE 100M - 20 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 20 coil",
     "dealer": "BERSATU JUTA ELECTRIC SDN. BHD."
   },
   {
@@ -1554,7 +1570,7 @@ window.PROJECTS =
     "name": "Kolej Universiti Islam Antarabangsa Selangor (KUIS)",
     "sector": "Education",
     "year": "2023-2025",
-    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 928 m",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 928 m | 95 mm² CU/PVC GREEN CABLE - 232 m | 25 mm² CU/PVC BLACK CABLE - 360 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 892 m | 16 mm² CU/PVC BLACK CABLE - 500 m | 10 mm² CU/PVC BLACK CABLE - 860 m",
     "dealer": "NEW MALURI LETRIK (SELANGOR) SDN. BHD.",
     "location": "Bangi"
   },
@@ -1569,14 +1585,14 @@ window.PROJECTS =
     "name": "Kolej Vokasional Juasseh",
     "sector": "Education",
     "year": "2023",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 105 m",
-    "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 105 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 67 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 207 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 10 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 454 m",
+    "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD. / WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
     "name": "Kolej Vokasional Setapak",
     "sector": "Education",
     "year": "2025",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 90 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 90 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 67 m | 4 mm² CU/PVC GREEN CABLE 100M - 12 coil | 4 mm² CU/PVC BLACK CABLE 100M - 12 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 15 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 15 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD.",
     "location": "Kuala Lumpur"
   },
@@ -1591,14 +1607,14 @@ window.PROJECTS =
     "name": "Kompleks Muzik UPSI",
     "sector": "Education",
     "year": "2025",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 450 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 450 m | 240 mm² CU/PVC GREEN CABLE - 100 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 950 m | 150 mm² CU/PVC GREEN CABLE - 210 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 428 m | 25 mm² CU/PVC GREEN CABLE - 275 m",
     "dealer": "ISE SOLUTIONS (M) SDN BHD"
   },
   {
     "name": "KUIS Campus",
     "sector": "Education",
     "year": "2025",
-    "details": "6 mm² CU/PVC BLACK CABLE 100M - 30 coil",
+    "details": "6 mm² CU/PVC BLACK CABLE 100M - 30 coil | 4 mm² CU/PVC GREEN CABLE 100M - 75 coil | 4 mm² CU/PVC BLACK CABLE 100M - 45 coil | 4 mm² CU/PVC BLUE CABLE 100M - 15 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 60 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 60 coil",
     "dealer": "GEMILITE SDN. BHD.",
     "location": "Bangi"
   },
@@ -1613,14 +1629,14 @@ window.PROJECTS =
     "name": "Mahallah Abu Bakar Office, IIUM",
     "sector": "Education",
     "year": "2020",
-    "details": "16 mm² CU/PVC BLACK CABLE 100M - 55 coil",
-    "dealer": "KVC INDUSTRIAL SUPPLIES SDN BHD"
+    "details": "16 mm² CU/PVC BLACK CABLE 100M - 55 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 420 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 420 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 120 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 570 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 570 coil",
+    "dealer": "KVC INDUSTRIAL SUPPLIES SDN BHD +1 more"
   },
   {
     "name": "Maktab Tentera Diraja Malaysia (Royal Military College)",
     "sector": "Education",
     "year": "2023",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 340 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 180 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 210 m | 16 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 30 m",
     "dealer": "JUTABINA SEMPURNA SDN. BHD."
   },
   {
@@ -1644,7 +1660,7 @@ window.PROJECTS =
     "name": "Masjid Universiti Kebangsaan Malaysia (UKM)",
     "sector": "Religious",
     "year": "2024-2025",
-    "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 400 m",
+    "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 400 m | 35 mm² CU/PVC BLACK CABLE - 360 m | 25 mm² CU/PVC GREEN CABLE 100M - 1 coil",
     "dealer": "POWER CONTROL ENTERPRISE"
   },
   {
@@ -1663,14 +1679,14 @@ window.PROJECTS =
     "name": "Politeknik Metro Kuala Lumpur",
     "sector": "Education",
     "year": "2024",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 15 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 15 coil | 4 mm² CU/PVC GREEN CABLE 100M - 15 coil | 4 mm² CU/PVC RED CABLE 100M - 5 coil | 4 mm² CU/PVC BLUE CABLE 100M - 5 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 21 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 21 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
     "name": "Politeknik Ungku Omar",
     "sector": "Education",
     "year": "2025",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 626 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 626 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 83 m",
     "dealer": "S.L.H ELECTRIC TRADING SDN. BHD.",
     "location": "Ipoh"
   },
@@ -1678,7 +1694,7 @@ window.PROJECTS =
     "name": "School Project, Tambun",
     "sector": "Education",
     "year": "2023",
-    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 165 m",
+    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 165 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 430 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,400 m | 10 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 1,000 m",
     "dealer": "PERKHIDMATAN LETRIK LEE",
     "location": "Ipoh"
   },
@@ -1705,7 +1721,7 @@ window.PROJECTS =
     "name": "Sekolah Kebangsaan Danau Kota",
     "sector": "Education",
     "year": "2023",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 12 coil | 2.5 mm² CU/PVC RED CABLE 100M - 6 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 4 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 15 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 10 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD.",
     "location": "Kuala Lumpur"
   },
@@ -1727,7 +1743,7 @@ window.PROJECTS =
     "name": "Sekolah Kebangsaan Pulo",
     "sector": "Education",
     "year": "2024",
-    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 150 coil",
+    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 150 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 150 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 300 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 300 coil | 1.5 mm² CU/PVC BLUE CABLE 100M - 100 coil | 1.5 mm² CU/PVC RED CABLE 100M - 100 coil",
     "dealer": "NICE FINE RESOURCES SDN. BHD.",
     "location": "Kuching"
   },
@@ -1735,7 +1751,7 @@ window.PROJECTS =
     "name": "Sekolah Kebangsaan Putrajaya Presint 8",
     "sector": "Education",
     "year": "2025",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m | 70 mm² CU/PVC GREEN CABLE 100M - 1 coil | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 390 m",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
@@ -1777,21 +1793,21 @@ window.PROJECTS =
     "name": "Sekolah Menengah Dato Lokman",
     "sector": "Education",
     "year": "2023",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 85 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 85 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 65 m | 25 mm² CU/PVC BLACK CABLE 100M - 5 coil | 25 mm² CU/PVC GREEN CABLE 100M - 1 coil | 16 mm² CU/PVC BLACK CABLE - 1,000 m | 16 mm² CU/PVC GREEN CABLE 100M - 2 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
     "name": "Sekolah Menengah Keb Miharja",
     "sector": "Education",
     "year": "2023",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil | 4 mm² CU/PVC BLACK CABLE 100M - 6 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 15 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 15 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 35 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 35 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
     "name": "Sekolah Seni Malaysia Kuala Lumpur, Pudu",
     "sector": "Education",
     "year": "2024",
-    "details": "10 mm² CU/PVC BLACK CABLE 100M - 12 coil",
+    "details": "10 mm² CU/PVC BLACK CABLE 100M - 12 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 90 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 90 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 30 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 130 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 125 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
@@ -1803,7 +1819,7 @@ window.PROJECTS =
     "name": "SJKC Elmina",
     "sector": "Education",
     "year": "2025",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 526 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 526 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 272 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 222 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 875 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 2,720 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 390 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD.",
     "location": "Shah Alam"
   },
@@ -1860,14 +1876,14 @@ window.PROJECTS =
     "name": "SK Seri Kepong",
     "sector": "Education",
     "year": "2023",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 90 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 90 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 90 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 30 coil | 2.5 mm² CU/PVC RED CABLE 100M - 30 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 70 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 70 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
     "name": "SK Taman Maluri",
     "sector": "Education",
     "year": "2024",
-    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 90 coil",
+    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 90 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 90 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 30 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 30 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 85 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 85 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD.",
     "location": "Kuala Lumpur"
   },
@@ -1875,7 +1891,7 @@ window.PROJECTS =
     "name": "SK Tebing Tembah",
     "sector": "Education",
     "year": "2025",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 12 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 12 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 18 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 18 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 8 coil | 1.5 mm² CU/PVC RED CABLE 100M - 8 coil",
     "dealer": "MONT AERO SDN. BHD."
   },
   {
@@ -1904,28 +1920,28 @@ window.PROJECTS =
     "name": "SMK Bertam Putra",
     "sector": "Education",
     "year": "2025",
-    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 700 m",
+    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 700 m | 240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 250 m | 120 mm² CU/PVC GREEN CABLE - 984 m | 70 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 420 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 864 m | 35 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 840 m",
     "dealer": "NEW MALURI LETRIK (SELANGOR) SDN. BHD."
   },
   {
     "name": "SMK Dato Lokman",
     "sector": "Education",
     "year": "2023",
-    "details": "6 mm² CU/PVC BLACK CABLE 100M - 12 coil",
+    "details": "6 mm² CU/PVC BLACK CABLE 100M - 12 coil | 6 mm² CU/PVC GREEN CABLE 100M - 12 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 60 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 60 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 50 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 50 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
     "name": "SMK Kota Masai",
     "sector": "Education",
     "year": "2026",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 206 m | 16 mm² CU/PVC GREEN CABLE - 800 m | 16 mm² CU/PVC BLUE CABLE - 650 m | 4 mm² CU/PVC BLACK CABLE 100M - 45 coil | 4 mm² CU/PVC GREEN CABLE 100M - 45 coil",
     "dealer": "ONMATRIX SYSTEMS SDN. BHD."
   },
   {
     "name": "SMK Matang Jaya",
     "sector": "Education",
     "year": "2026",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 404 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 404 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 312 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 650 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 85 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 830 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE - 400 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD.",
     "location": "Kuching"
   },
@@ -1933,7 +1949,7 @@ window.PROJECTS =
     "name": "SMK Miharja",
     "sector": "Education",
     "year": "2023",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 6 coil | 4 mm² CU/PVC BLACK CABLE 100M - 6 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 15 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 15 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 20 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 20 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
@@ -1954,14 +1970,14 @@ window.PROJECTS =
     "name": "SMK Seri Duyong",
     "sector": "Education",
     "year": "2023",
-    "details": "50 mm² CU/PVC RED CABLE - 860 m",
+    "details": "50 mm² CU/PVC RED CABLE - 860 m | 50 mm² CU/PVC BLUE CABLE - 860 m | 50 mm² CU/PVC YELLOW CABLE - 860 m | 50 mm² CU/PVC BLACK CABLE - 860 m | 35 mm² CU/PVC BLUE CABLE - 1,150 m | 35 mm² CU/PVC YELLOW CABLE - 1,150 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "SMK Suria Jaya",
     "sector": "Education",
     "year": "2024-2025",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 276 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 276 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 275 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 55 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 138 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 610 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 260 m",
     "dealer": "ELECTRIC MASTER SDN. BHD.",
     "location": "Yong Peng, Johor"
   },
@@ -1977,7 +1993,7 @@ window.PROJECTS =
     "name": "SMKA Kuala Lumpur",
     "sector": "Education",
     "year": "2024",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 30 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 30 coil | 4 mm² CU/PVC BLACK CABLE 100M - 30 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 120 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 120 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 120 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 120 coil",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
   },
   {
@@ -2023,7 +2039,7 @@ window.PROJECTS =
     "name": "UCSI University, Cheras Campus",
     "sector": "Education",
     "year": "2025",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 780 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 780 m | 50 mm² CU/PVC GREEN CABLE - 390 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
@@ -2035,7 +2051,7 @@ window.PROJECTS =
     "name": "UITM Jengka Campus",
     "sector": "Education",
     "year": "2025",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 140 m | 50 mm² CU/PVC BLACK CABLE 100M - 5 coil | 35 mm² CU/PVC BLACK CABLE - 24 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
     "location": "Pahang"
   },
@@ -2047,7 +2063,7 @@ window.PROJECTS =
     "name": "UITM Puncak Alam Campus",
     "sector": "Education",
     "year": "2020",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE - 420 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE - 420 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE - 95 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 385 m",
     "dealer": "SPL ELEKTRIK (KLANG) SDN. BHD."
   },
   {
@@ -2061,7 +2077,7 @@ window.PROJECTS =
     "name": "Universiti Kebangsaan Malaysia (UKM)",
     "sector": "Education",
     "year": "2025",
-    "details": "35 mm² CU/PVC BLACK CABLE - 180 m",
+    "details": "35 mm² CU/PVC BLACK CABLE - 180 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 392 m | 16 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 98 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 592 m | 6 mm² CU/PVC GREEN CABLE 100M - 3 coil",
     "dealer": "POWER CONTROL ENTERPRISE",
     "location": "Bangi"
   },
@@ -2069,8 +2085,8 @@ window.PROJECTS =
     "name": "Universiti Malaya",
     "sector": "Education",
     "year": "2024-2026",
-    "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 312 m",
-    "dealer": "CABLETECH ELECTRIC SDN. BHD.",
+    "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 312 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 560 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 850 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 850 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 890 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 830 coil",
+    "dealer": "CABLETECH ELECTRIC SDN. BHD. +2 more",
     "location": "Kuala Lumpur"
   },
   {
@@ -2091,22 +2107,22 @@ window.PROJECTS =
     "name": "Universiti Pendidikan Sultan Idris (UPSI)",
     "sector": "Education",
     "year": "2023-2026",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m",
-    "dealer": "CABLETECH ELECTRIC SDN. BHD.",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 170 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m | 16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,000 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,050 m",
+    "dealer": "CABLETECH ELECTRIC SDN. BHD. +2 more",
     "location": "Tanjung Malim"
   },
   {
     "name": "Universiti Pertahanan Nasional Malaysia",
     "sector": "Education",
     "year": "2025",
-    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 80 m",
+    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 80 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m",
     "dealer": "J & J ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Universiti Putra Malaysia",
     "sector": "Education",
     "year": "2025-2026",
-    "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 108 m",
+    "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 108 m | 240 mm² CU/PVC BLACK CABLE - 120 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 55 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 15 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 30 m | 6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 30 m",
     "dealer": "KSE CONSTRUCTION",
     "location": "Serdang"
   },
@@ -2114,14 +2130,14 @@ window.PROJECTS =
     "name": "Universiti Sains Islam Malaysia",
     "sector": "Education",
     "year": "2023-2026",
-    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m",
+    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 450 m | 2.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 550 m",
     "dealer": "KEJURUTERAAN ELEKTRIK AHS"
   },
   {
     "name": "Universiti Sultan Zainal Abidin",
     "sector": "Education",
     "year": "2026",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 60 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 70 m | 25 mm² x 4c XLPE/SWA/PVC CABLE - 135 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
