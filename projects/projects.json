@@ -1365,7 +1365,8 @@
     "year": "2023",
     "details": "4 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 881 m | 1.5 mm² x 9c CU/PVC/PVC MULTICORE CABLE - 2,037 m | 1.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 524 m | 1.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 180 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 180 m",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. (TEBRAU)",
-    "location": "Kulai"
+    "location": "Kulai",
+    "img": "https://www.cablingtek.com/wp-content/uploads/2021/02/archives1622-p1.jpg"
   },
   {
     "name": "CSF Data Centre",
@@ -6640,7 +6641,8 @@
   },
   {
     "name": "Istana Duta Highway In Kuala Lumpur",
-    "sector": "Infrastructure"
+    "sector": "Infrastructure",
+    "img": "https://www.mmsbconsult.com.my/wp-content/uploads/2018/06/proj-IstanaRamps.jpg"
   },
   {
     "name": "Johor Bahru Singapore RTS Link",
@@ -6648,7 +6650,8 @@
     "year": "2026",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m | 10 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 230 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
-    "country": "Singapore"
+    "country": "Singapore",
+    "img": "https://www.mymrt.com.my/wp-content/uploads/2021/02/RTS-Link-Banner-2-scaled.jpg"
   },
   {
     "name": "KLB Terminal",
@@ -6663,7 +6666,8 @@
     "year": "2024-2025",
     "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 960 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 399 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 1,761 m | 3 MM X 25 MM COPPER STRIP (PM COPPER) 55KGS - 165 kg | 2.5 mm² CU/PVC BLACK CABLE 100M - 75 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 75 coil",
     "dealer": "EXCEL M & E SDN. BHD.",
-    "location": "Sepang"
+    "location": "Sepang",
+    "img": "https://static.ffx.io/images/$zoom_1%2C$multiply_0.3066%2C$ratio_1.777778%2C$width_1905%2C$x_20%2C$y_128/t_crop_custom/q_86%2Cf_auto/eb62acf426ba1c1f467917dcf7617dbb2274bddc"
   },
   {
     "name": "KLIA Cargo Village",
@@ -6766,7 +6770,8 @@
     "sector": "Infrastructure",
     "year": "2020",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 500 m | 3C x 16mm² + 25mm² AERIAL BUNDLED CABLE (LV) - 500 m",
-    "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
+    "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD.",
+    "img": "https://assets.theedgemarkets.com/mrt_mass_rapid_transit_by_suhaimi_yusuf_20220315193833_theedgemarkets_2.jpg"
   },
   {
     "name": "MRT-V4",
@@ -6822,7 +6827,8 @@
     "sector": "Infrastructure",
     "year": "2025",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 900 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 176 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 600 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 336 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 100 m | 50 mm² CU/XLPE/PVC BLACK CABLE - 150 m",
-    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD."
+    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD.",
+    "img": "https://www.sunwayconstruction.com.my/wp-content/uploads/2025/03/brt-sunway-line.jpg"
   },
   {
     "name": "Sandakan Port",
