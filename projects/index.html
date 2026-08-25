@@ -143,20 +143,15 @@
     .secblk__idx__row.has-detail{cursor:pointer}
     .secblk__idx__row.has-detail:hover .chev{color:var(--magenta)}
     .secblk__idx__row.expanded .chev{transform:rotate(90deg);color:var(--magenta)}
-    .secblk__idx__detail{grid-column:1/-1;margin-top:14px;padding:18px 20px;background:#faf7fa;border-radius:10px;font-size:14px;line-height:1.5;color:var(--fg);display:none}
+    .secblk__idx__detail{grid-column:1/-1;margin-top:14px;padding:18px 22px;background:#faf7fa;border-left:3px solid var(--magenta);border-radius:0 8px 8px 0;font-size:14px;line-height:1.55;color:var(--fg);display:none}
     .secblk__idx__row.expanded .secblk__idx__detail{display:block}
-    .secblk__idx__detail .dhead{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
-    .secblk__idx__detail .yr{font-size:22px;font-weight:900;color:var(--magenta);letter-spacing:-.01em}
-    .secblk__idx__detail .via{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-    .secblk__idx__detail .via b{color:var(--fg);font-weight:800;letter-spacing:.02em;text-transform:none;font-size:13px;margin-left:4px}
-    .cbl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px}
-    .cbl-chip{padding:8px 12px;background:#fff;border:1px solid var(--hair);border-radius:8px;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-left:3px solid #c9c4cc}
-    .cbl-chip.xlpe{border-left-color:var(--magenta)}
-    .cbl-chip.mica{border-left-color:#e85a2a}
-    .cbl-chip.al{border-left-color:#6b7a8f}
-    .cbl-chip.tape{border-left-color:#c9a34a}
-    .cbl-chip .cspec{color:var(--fg);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .cbl-chip .cqty{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .secblk__idx__detail .dhead{display:flex;align-items:center;gap:14px;margin-bottom:12px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+    .secblk__idx__detail .yr{font-size:20px;font-weight:900;color:var(--magenta);letter-spacing:-.01em}
+    .secblk__idx__detail .via{font-size:14px;color:var(--fg);font-weight:700}
+    .secblk__idx__detail .via .dlbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+    .cbl-list{list-style:disc;padding-left:22px;margin:0;color:var(--fg)}
+    .cbl-list li{padding:3px 0;font-size:14px;line-height:1.5}
+    .cbl-list li::marker{color:var(--magenta)}
     .secblk__more{margin-top:16px;color:var(--muted);font-style:italic;font-size:16px;font-weight:500}
     .secblk__none{color:var(--muted);font-size:17px;font-style:italic;padding:40px 0}
 
@@ -435,51 +430,33 @@
           const idxHtml = `
             <div class="secblk__idx">
               ${idxShown.map((p, i) => {
-                const loc = [p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ');
                 const n = String(i + 1).padStart(2, '0');
                 const hasDetail = !!(p.year || p.details || p.dealer);
                 const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
                 const esc = s => s.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-                // Classify each cable by dominant insulation
-                const chipClass = (spec) => {
-                  const u = spec.toUpperCase();
-                  if (u.includes('MICA') || u.includes(' FR')) return 'mica';
-                  if (u.includes('COPPER TAPE') || u.includes('COPPER STRIP')) return 'tape';
-                  if (/\bAL\//.test(u) || u.includes('AERIAL BUNDLED')) return 'al';
-                  if (u.includes('XLPE')) return 'xlpe';
-                  return '';
-                };
-                // Split cable spec into "spec" (before " - qty") and "qty" (after)
-                const splitQty = (s) => {
-                  const m = s.match(/^(.*?)\s*-\s*([\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i);
-                  return m ? [m[1].trim(), m[2].trim()] : [s, ''];
-                };
-                // Dealer short: strip common suffixes, keep first 3 words
-                const dealerShort = (d) => d.replace(/\s*\(.*?\)\s*/g,'').replace(/\s*(SDN\.?\s*BHD\.?|SENDIRIAN BERHAD|BERHAD|SDN BHD).*$/i,'').replace(/\+\d+\s*more.*$/,'').trim();
-                const dealerFull = p.dealer ? p.dealer : '';
-                const dealerLbl = dealerFull ? dealerShort(dealerFull) : '';
-                const extraDealers = dealerFull.match(/\+(\d+)\s*more/i);
-                // Metadata rail (always visible under name)
-                const railParts = [];
-                if (p.year) railParts.push(`<span class="mchip year">${p.year}</span>`);
-                if (cbls.length) railParts.push(`<span class="mchip">${cbls.length} cable${cbls.length!==1?'s':''}</span>`);
-                if (dealerLbl) railParts.push(`<span class="mchip">via ${esc(dealerLbl)}${extraDealers?` +${extraDealers[1]}`:''}</span>`);
-                const rail = railParts.length ? `<div class="secblk__idx__meta">${railParts.join('<span class="mdot">·</span>')}</div>` : '';
-                // Expanded detail: chip grid
-                const chipsHtml = cbls.map(c => {
-                  const [spec, qty] = splitQty(c);
-                  return `<div class="cbl-chip ${chipClass(spec)}"><span class="cspec">${esc(spec)}</span>${qty?`<span class="cqty">${esc(qty)}</span>`:''}</div>`;
-                }).join('');
+                // Right-side info: year · N cables (fallback to location if no detail)
+                let rightInfo = '';
+                if (p.year || cbls.length) {
+                  const parts = [];
+                  if (p.year) parts.push(p.year);
+                  if (cbls.length) parts.push(`${cbls.length} cable${cbls.length!==1?'s':''}`);
+                  rightInfo = parts.join(' · ');
+                } else {
+                  rightInfo = [p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ');
+                }
+                // Expanded detail: year + via header, bulleted cable list
+                const dealerFull = p.dealer || '';
+                const listHtml = cbls.map(c => `<li>${esc(c)}</li>`).join('');
                 const detail = hasDetail ? `<div class="secblk__idx__detail">
-                  <div class="dhead">
-                    ${p.year ? `<div class="yr">${p.year}</div>` : ''}
-                    ${dealerFull ? `<div class="via">Via <b>${esc(dealerFull)}</b></div>` : ''}
-                  </div>
-                  ${chipsHtml ? `<div class="cbl-grid">${chipsHtml}</div>` : ''}
+                  ${(p.year || dealerFull) ? `<div class="dhead">
+                    ${p.year ? `<span class="yr">${p.year}</span>` : ''}
+                    ${dealerFull ? `<span class="via"><span class="dlbl">via</span> ${esc(dealerFull)}</span>` : ''}
+                  </div>` : ''}
+                  ${listHtml ? `<ul class="cbl-list">${listHtml}</ul>` : ''}
                 </div>` : '';
                 const chev = hasDetail ? `<span class="chev">›</span>` : '';
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
-                return `<div class="${cls}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span>${rail}</span><span class="secblk__idx__loc">${loc}</span>${detail}</div>`;
+                return `<div class="${cls}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span></span><span class="secblk__idx__loc">${rightInfo}</span>${detail}</div>`;
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails
