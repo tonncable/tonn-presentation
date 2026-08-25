@@ -720,7 +720,8 @@
     "name": "Sri Verramakaliamman Temple",
     "sector": "Religious",
     "country": "Singapore",
-    "location": "Singapore"
+    "location": "Singapore",
+    "img": "https://static.wixstatic.com/media/60409b_9c754725a97b4d02adaf3d3a5c84ae73~mv2.jpeg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01/60409b_9c754725a97b4d02adaf3d3a5c84ae73~mv2.jpeg"
   },
   {
     "name": "Orchard Gateway",
@@ -1711,7 +1712,8 @@
     "sector": "Religious",
     "year": "2026",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 824 m",
-    "dealer": "ENETOU SOLUTIONS SDN. BHD."
+    "dealer": "ENETOU SOLUTIONS SDN. BHD.",
+    "img": "https://d2kihw5e8drjh5.cloudfront.net/eyJidWNrZXQiOiJ1dGEtaW1hZ2VzIiwia2V5IjoicGxhY2VfaW1nL2JiMDU4OWY5YTc3YzQ2MmE5OWM3Y2UzMmU3MzdhMDBmIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo2NDAsImhlaWdodCI6NjQwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJ0b0Zvcm1hdCI6ICJ3ZWJwIn19"
   },
   {
     "name": "Permata Pintar UKM",
@@ -4925,7 +4927,8 @@
     "sector": "Sports & Recreation",
     "year": "2023",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
-    "dealer": "YAT HIN ELECTRICAL SDN. BHD."
+    "dealer": "YAT HIN ELECTRICAL SDN. BHD.",
+    "img": "https://img.iproperty.com.my/angel/750x1000-fit/wp-content/uploads/sites/2/2023/07/1.-Featured-Elmina-Iconic-Bridge-s.jpg"
   },
   {
     "name": "Gamuda Go Kart, Gamuda Cove",
@@ -5402,7 +5405,8 @@
     "year": "2025",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 8 m | 95 mm² CU/PVC BLACK CABLE - 1,230 m | 50 mm² CU/PVC GREEN CABLE - 300 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
-    "location": "Shah Alam"
+    "location": "Shah Alam",
+    "img": "https://selangor.travel/wp-content/uploads/2019/09/Sultan_Salahuddin_Abdul_Aziz_Mosque_Blue_Dome_Tourism_Selangor.jpg"
   },
   {
     "name": "Masjid Terapung Yan",
