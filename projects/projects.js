@@ -35,7 +35,10 @@ window.PROJECTS =
     "name": "MRT Feeder Bus Depot Desa Tun Razak",
     "sector": "Infrastructure",
     "img": "../assets/img/mrt-feeder-bus.jpg",
-    "location": "Kuala Lumpur"
+    "location": "Kuala Lumpur",
+    "year": "2025",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 2,592 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 4,344 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 1,086 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 1,840 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 534 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 1,027 m",
+    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD."
   },
   {
     "name": "Sg Sireh Water Treatment Plant",
@@ -95,7 +98,10 @@ window.PROJECTS =
   {
     "name": "Mayang Mall",
     "sector": "Retail",
-    "location": "Kuala Terengganu"
+    "location": "Kuala Terengganu",
+    "year": "2024-2026",
+    "details": "300 mm² CU/XLPE/PVC BLACK CABLE | 50 mm² CU/XLPE/PVC BLACK CABLE | 35 mm² CU/XLPE/PVC BLACK CABLE | 25 mm² CU/PVC BLACK CABLE",
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +4 more"
   },
   {
     "name": "Mydin Tunjong Mall",
@@ -152,7 +158,10 @@ window.PROJECTS =
   {
     "name": "MRT Feeder Bus Depot Sungai Buloh",
     "sector": "Infrastructure",
-    "location": "Sungai Buloh, Selangor"
+    "location": "Sungai Buloh, Selangor",
+    "year": "2025",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 2,432 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 1,464 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 66 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 1,006 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 329 m | 2.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 329 m",
+    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD."
   },
   {
     "name": "MRT Feeder Bus Depot Weld Quay",
@@ -167,7 +176,10 @@ window.PROJECTS =
   {
     "name": "MRT Feeder Bus Depot Serdang",
     "sector": "Infrastructure",
-    "location": "Serdang, Selangor"
+    "location": "Serdang, Selangor",
+    "year": "2025",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 1,248 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 568 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 142 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 386 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 124 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 609 m",
+    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD."
   },
   {
     "name": "MRT Tun Razak Exchange (TRX)",
@@ -197,7 +209,10 @@ window.PROJECTS =
   {
     "name": "KLIA Security Post 3",
     "sector": "Infrastructure",
-    "location": "Sepang, Selangor"
+    "location": "Sepang, Selangor",
+    "year": "2023",
+    "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 1,080 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,900 m | 70 mm² CU/PVC GREEN CABLE - 170 m | 35 mm² CU/PVC GREEN CABLE - 305 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 1,910 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 1,000 m",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Handal Indah Tebrau Depot",
@@ -446,7 +461,10 @@ window.PROJECTS =
   {
     "name": "Celcom Kepong",
     "sector": "Industrial",
-    "location": "Kepong, Kuala Lumpur"
+    "location": "Kepong, Kuala Lumpur",
+    "year": "2024-2025",
+    "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 3,084 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 664 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 2,784 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 800 m | 35 mm² CU/PVC BLACK CABLE - 1,112 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 2,540 m",
+    "dealer": "TM ELEKTRIK (SERDANG) SENDIRIAN BERHAD"
   },
   {
     "name": "Loji Rawatan Air Felda Chini",
@@ -540,7 +558,10 @@ window.PROJECTS =
   {
     "name": "Greenfield Residence",
     "sector": "Residential",
-    "location": "Sunway, Selangor"
+    "location": "Sunway, Selangor",
+    "year": "2020",
+    "details": "70 mm² CU/MICA/XLPE/PVC FR CABLE - 510 m | 50 mm² CU/MICA/XLPE/PVC FR CABLE - 576 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 1,920 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 50 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 45 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 70 coil",
+    "dealer": "KEJURUTERAAN ASASTERA BERHAD"
   },
   {
     "name": "Lakefront Residence",
@@ -581,12 +602,18 @@ window.PROJECTS =
   {
     "name": "Setia Ecohill",
     "sector": "Residential",
-    "location": "Semenyih, Selangor"
+    "location": "Semenyih, Selangor",
+    "year": "2020",
+    "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 4,552 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 5,700 m | 25 mm² CU/PVC GREEN CABLE - 1,138 m",
+    "dealer": "GEMILITE SDN BHD"
   },
   {
     "name": "Serene Heights",
     "sector": "Residential",
-    "location": "Semenyih, Selangor"
+    "location": "Semenyih, Selangor",
+    "year": "2025",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,050 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 600 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 6,718 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,000 m | 16 mm² CU/PVC GREEN CABLE - 2,658 m | 2.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 3,172 m",
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +2 more"
   },
   {
     "name": "Trion",
@@ -5307,7 +5334,7 @@ window.PROJECTS =
     "name": "Masjid Bandaraya KotaSAS",
     "sector": "Religious",
     "year": "2025",
-    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 250 m",
+    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 250 m | 25 mm² CU/PVC BLACK CABLE - 1,200 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 500 m | 2.5 mm² CU/PVC BLACK CABLE 100M - 120 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 120 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 120 coil",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
     "location": "Kuantan"
   },
@@ -5315,7 +5342,7 @@ window.PROJECTS =
     "name": "Masjid Denai Alam",
     "sector": "Religious",
     "year": "2023",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 160 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 160 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 690 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
@@ -5343,7 +5370,7 @@ window.PROJECTS =
     "name": "Masjid Klebang Putra",
     "sector": "Religious",
     "year": "2025",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 114 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 114 m | 16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 114 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 450 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
@@ -5371,7 +5398,7 @@ window.PROJECTS =
     "name": "Masjid Sultan Salahuddin Abdul Aziz Shah",
     "sector": "Religious",
     "year": "2025",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 8 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 8 m | 95 mm² CU/PVC BLACK CABLE - 1,230 m | 50 mm² CU/PVC GREEN CABLE - 300 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
     "location": "Shah Alam"
   },
@@ -5379,7 +5406,7 @@ window.PROJECTS =
     "name": "Masjid Terapung Yan",
     "sector": "Religious",
     "year": "2025",
-    "details": "16 mm² CU/PVC BLACK CABLE 100M - 1 coil",
+    "details": "16 mm² CU/PVC BLACK CABLE 100M - 1 coil | 16 mm² CU/PVC RED CABLE 100M - 1 coil | 16 mm² CU/PVC YELLOW CABLE 100M - 1 coil | 16 mm² CU/PVC BLUE CABLE 100M - 1 coil",
     "dealer": "STRAITS TECHNICS SDN. BHD."
   },
   {
@@ -5407,22 +5434,22 @@ window.PROJECTS =
     "name": "Tribute Mosque (GE2405)",
     "sector": "Religious",
     "year": "2026",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 538 m",
-    "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 538 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 144 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 117 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 510 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 744 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,238 m",
+    "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD. +1 more"
   },
   {
     "name": "1308 Units RSKU Selayang",
     "sector": "Residential",
     "year": "2024-2025",
-    "details": "16 mm² CU/XLPE/PVC BLACK CABLE 100M - 160 coil",
+    "details": "16 mm² CU/XLPE/PVC BLACK CABLE 100M - 160 coil | 16 mm² CU/PVC GREEN CABLE 100M - 40 coil",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "168 Park, Selayang",
     "sector": "Residential",
     "year": "2024",
-    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 784 m",
-    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
+    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 784 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 10,356 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 7,928 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,708 m | 16 mm² CU/PVC GREEN CABLE - 7,785 m | 16 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 836 m",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD. +1 more"
   },
   {
     "name": "2-Block Apartment Development (1,308 Units)",
@@ -5460,8 +5487,8 @@ window.PROJECTS =
     "name": "Alpinia, Bandar Nilai Utama",
     "sector": "Residential",
     "year": "2024-2025",
-    "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 15,508 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
+    "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 15,508 m | 16 mm² CU/XLPE/PVC GREEN CABLE - 6,000 m",
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more"
   },
   {
     "name": "Amberland, Pulai Block A3",
@@ -5482,14 +5509,14 @@ window.PROJECTS =
     "name": "Arena Condominium Phase 2 (344 Units)",
     "sector": "Residential",
     "year": "2024",
-    "details": "16 mm² CU/XLPE/PVC BLACK CABLE - 14,551 m",
+    "details": "16 mm² CU/XLPE/PVC BLACK CABLE - 14,551 m | 16 mm² CU/PVC GREEN CABLE - 7,416 m | 10 mm² CU/PVC BLACK CABLE - 24 m | 10 mm² CU/PVC GREEN CABLE - 12 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Astrum Ampang, Ampang Jaya",
     "sector": "Residential",
     "year": "2025-2026",
-    "details": "25 mm² CU/PVC BLACK CABLE - 4,200 m",
+    "details": "25 mm² CU/PVC BLACK CABLE - 4,200 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 241 m | 16 mm² CU/PVC GREEN CABLE - 1,000 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 140 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 660 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 350 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
@@ -5503,7 +5530,7 @@ window.PROJECTS =
     "name": "Bandar Nilai Utama",
     "sector": "Residential",
     "year": "2024",
-    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 467 m",
+    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 467 m | 185 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 367 m | 95 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 250 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
@@ -5533,28 +5560,28 @@ window.PROJECTS =
     "name": "Bangi Avenue, Bandar Baru Bangi",
     "sector": "Residential",
     "year": "2020",
-    "details": "95 mm² CU/MICA/XLPE/PVC FR CABLE - 1,568 m",
-    "dealer": "YB ELECTRICAL ENGINEERING SDN. BHD."
+    "details": "95 mm² CU/MICA/XLPE/PVC FR CABLE - 1,568 m | 70 mm² CU/PVC BLACK CABLE - 390 m | 35 mm² CU/MICA/XLPE/PVC FR CABLE - 1,412 m | 35 mm² CU/PVC GREEN CABLE - 200 m | 25 mm² CU/PVC BLACK CABLE 100M - 34 coil | 6 mm² CU/PVC GREEN CABLE - 8,000 m",
+    "dealer": "YB ELECTRICAL ENGINEERING SDN. BHD. +1 more"
   },
   {
     "name": "Bay Rocks Garden Waterfront Villas",
     "sector": "Residential",
     "year": "2025",
-    "details": "4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,400 m",
+    "details": "4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,400 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Bayu Residensi",
     "sector": "Residential",
     "year": "2023",
-    "details": "70 mm² CU/XLPE/PVC BLACK CABLE - 1,180 m",
+    "details": "70 mm² CU/XLPE/PVC BLACK CABLE - 1,180 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 7,900 m | 25 mm² CU/PVC RED CABLE - 2,750 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 54,850 m | 16 mm² CU/XLPE/PVC RED CABLE - 52,150 m | 16 mm² CU/PVC GREEN CABLE - 48,900 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Bukit Hartamas",
     "sector": "Residential",
     "year": "2019-2020",
-    "details": "70 mm² CU/PVC BLACK CABLE - 550 m",
+    "details": "70 mm² CU/PVC BLACK CABLE - 550 m | 25 mm² CU/PVC BLACK CABLE - 8,800 m | 25 mm² CU/MICA/XLPE/PVC FR CABLE - 1,700 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE - 165 m | 10 mm² CU/MICA/XLPE/PVC FR CABLE - 1,760 m | 10 mm² CU/PVC GREEN CABLE - 1,328 m",
     "dealer": "NANYANG ELECTRIC CO. (M) SDN BHD",
     "location": "Cheras"
   },
@@ -5562,7 +5589,7 @@ window.PROJECTS =
     "name": "Bukit Kepayang Housing Development",
     "sector": "Residential",
     "year": "2025",
-    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,100 m",
+    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,100 m | 16 mm² CU/PVC GREEN CABLE 100M - 7 coil | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 850 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 80 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 80 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 50 coil",
     "dealer": "D.E. POWER ELECTRICAL & LIGHTING SDN. BHD.",
     "location": "Seremban"
   },
@@ -5570,14 +5597,14 @@ window.PROJECTS =
     "name": "Cadangan Membina Rumah Ph.4a(160unit)",
     "sector": "Residential",
     "year": "2023-2024",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 41 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 41 coil | 4 mm² CU/PVC GREEN CABLE 100M - 41 coil | 4 mm² CU/PVC YELLOW CABLE 100M - 31 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 47 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 47 coil | 2.5 mm² CU/PVC RED CABLE 100M - 46 coil",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Casa Tiara, Teluk Kumbar",
     "sector": "Residential",
     "year": "2026",
-    "details": "400 mm² AL/XLPE/PVC BLACK CABLE - 1,320 m",
+    "details": "400 mm² AL/XLPE/PVC BLACK CABLE - 1,320 m | 185 mm² AL/XLPE/PVC BLACK CABLE - 200 m | 50 mm² CU/XLPE/PVC BLACK CABLE - 500 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 732 m | 25 mm² CU/PVC GREEN CABLE - 336 m | 10 mm² CU/PVC BLACK CABLE - 650 m",
     "dealer": "HAPPY LITE ELECTRICAL SDN. BHD."
   },
   {
@@ -5591,7 +5618,7 @@ window.PROJECTS =
     "name": "Centaurea Phase 1 (92 Terrace Units)",
     "sector": "Residential",
     "year": "2023",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 200 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 200 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 200 coil | 2.5 mm² CU/PVC RED CABLE 100M - 80 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 200 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 200 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 100 coil",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -5620,22 +5647,22 @@ window.PROJECTS =
     "name": "Eco Horizon Beldon",
     "sector": "Residential",
     "year": "2023-2025",
-    "details": "16 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,909 m",
+    "details": "16 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,909 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 4,665 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 7,970 m",
     "dealer": "INNER ELECTRICAL SDN. BHD."
   },
   {
     "name": "Eco Majestic",
     "sector": "Residential",
     "year": "2025-2026",
-    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 344 m",
-    "dealer": "YB ELECTRICAL ENGINEERING SDN. BHD.",
+    "details": "95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 344 m | 70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,492 m | 50 mm² CU/PVC GREEN CABLE - 200 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 20,000 m | 10 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 3,012 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 850 m",
+    "dealer": "YB ELECTRICAL ENGINEERING SDN. BHD. +2 more",
     "location": "Semenyih"
   },
   {
     "name": "Eco Radiance",
     "sector": "Residential",
     "year": "2026",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 995 m",
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 995 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 250 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m | 1.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 130 m",
     "dealer": "ACTGEN INDUSTRY SDN. BHD.",
     "location": "Semenyih"
   },
@@ -5643,8 +5670,8 @@ window.PROJECTS =
     "name": "Elmina Valley, City Of Elmina",
     "sector": "Residential",
     "year": "2020",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 4,150 m",
-    "dealer": "SME ELECTRIC SDN BHD"
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 4,150 m | 16 mm² CU/PVC GREEN CABLE - 4,150 m | 4 mm² CU/PVC BLACK CABLE 100M - 60 coil | 2.5 mm² x 12c CU/PVC/SWA/PVC CABLE BS6346 - 4,980 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 115 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 115 coil",
+    "dealer": "SME ELECTRIC SDN BHD +1 more"
   },
   {
     "name": "Forest Heights",
@@ -5658,8 +5685,8 @@ window.PROJECTS =
     "name": "Gamuda Cove",
     "sector": "Residential",
     "year": "2023-2026",
-    "details": "240 mm² x 1c CU/XLPE/AWA/PVC CABLE - 350 m",
-    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD.",
+    "details": "240 mm² x 1c CU/XLPE/AWA/PVC CABLE - 350 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 165 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 5,284 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 11,904 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 6,270 m | 16 mm² CU/PVC GREEN CABLE - 5,467 m",
+    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD. +3 more",
     "location": "Dengkil"
   },
   {
@@ -5674,7 +5701,7 @@ window.PROJECTS =
     "name": "Ganggarak Development Phase 4",
     "sector": "Residential",
     "year": "2020",
-    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 305 coil",
+    "details": "2.5 mm² CU/PVC BLACK CABLE 100M - 305 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 305 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 100 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 100 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 310 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 310 coil",
     "dealer": "FURSE ELECTRIC (SABAH) SDN. BHD.",
     "location": "Labuan"
   },
@@ -5682,7 +5709,7 @@ window.PROJECTS =
     "name": "Greenland Danga Bay, Phase F1b",
     "sector": "Residential",
     "year": "2025",
-    "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 315 m",
+    "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 315 m | 25 mm² CU/PVC BLACK CABLE - 6,450 m | 16 mm² CU/PVC GREEN CABLE - 3,230 m",
     "dealer": "TIEN YUAN ELECTRICAL SDN. BHD."
   },
   {
@@ -5695,8 +5722,8 @@ window.PROJECTS =
     "name": "Hijayu 2, Bandar Sri Sendayan",
     "sector": "Residential",
     "year": "2023",
-    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,161 m",
-    "dealer": "UNITECH ELECTRICAL ENGINEERING SDN. BHD."
+    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,161 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 2,000 m | 16 mm² CU/PVC GREEN CABLE - 1,000 m | 16 mm² CU/PVC GREEN CABLE 100M - 4 coil | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,142 m | 1.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,164 m",
+    "dealer": "UNITECH ELECTRICAL ENGINEERING SDN. BHD. +2 more"
   },
   {
     "name": "Horizon Hills Housing, Johor Bharu",
@@ -5706,21 +5733,21 @@ window.PROJECTS =
     "name": "Idaman, Kwasa Damansara",
     "sector": "Residential",
     "year": "2026",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 195 m",
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 195 m | 25 mm² CU/PVC GREEN CABLE - 115 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 428 m | 16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 400 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 600 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,110 m",
     "dealer": "ADVANCE ELECTRIC SUPPLY SDN. BHD."
   },
   {
     "name": "Ideal Venice Residency",
     "sector": "Residential",
     "year": "2024-2025",
-    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
+    "details": "16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 4,000 m",
     "dealer": "KHEAN HUAT ELECTRICAL SDN BHD"
   },
   {
     "name": "Impiana Sky Residensi, Bukit Jalil",
     "sector": "Residential",
     "year": "2020",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 16 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 16 coil | 4 mm² CU/PVC GREEN CABLE 100M - 16 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 32 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 32 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 32 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 32 coil",
     "dealer": "GENTLELITE ELECTRICAL TRADING S/B"
   },
   {
@@ -5734,14 +5761,14 @@ window.PROJECTS =
     "name": "Irama Villa, Bandar Kinrara (98 Units)",
     "sector": "Residential",
     "year": "2024",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 832 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 832 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 776 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 278 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Karisma Service Apartment",
     "sector": "Residential",
     "year": "2025",
-    "details": "25 mm² CU/PVC BLACK CABLE - 10,510 m",
+    "details": "25 mm² CU/PVC BLACK CABLE - 10,510 m | 16 mm² CU/PVC GREEN CABLE - 3,787 m",
     "dealer": "ELECTRIC MASTER SDN. BHD.",
     "location": "Seremban"
   },
@@ -5749,14 +5776,14 @@ window.PROJECTS =
     "name": "KL 1906, Kuchai East",
     "sector": "Residential",
     "year": "2020",
-    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 112 coil",
+    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 112 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 112 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 38 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 38 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 106 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 106 coil",
     "dealer": "PUISSANCE ENGINEERING SDN BHD"
   },
   {
     "name": "Kota Puteri Sales Gallery",
     "sector": "Residential",
     "year": "2024",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 170 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 170 m | 16 mm² x 4c CU/PVC/PVC CABLE (RD/YE/BU/BK) (600/1000V) - 1,520 m",
     "dealer": "YEW ELECTRICAL & LIGHTING TRADING"
   },
   {
@@ -5770,7 +5797,7 @@ window.PROJECTS =
     "name": "Ksl Ceros",
     "sector": "Residential",
     "year": "2026",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 460 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 460 coil | 4 mm² CU/PVC GREEN CABLE 100M - 440 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 335 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 325 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 460 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 450 coil",
     "dealer": "ACTGEN INDUSTRY SDN. BHD.",
     "location": "Gelang Patah, Johor"
   },
@@ -5799,7 +5826,7 @@ window.PROJECTS =
     "name": "Lakecity",
     "sector": "Residential",
     "year": "2025",
-    "details": "35 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 895 m",
+    "details": "35 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 895 m | 16 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 675 m | 2.5 mm² CU/MICA/PVC FR (ORANGE) CABLE - 5,000 m | 1.5 mm² CU/MICA/PVC FR (ORANGE) CABLE - 17,000 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
     "location": "Kepong"
   },
@@ -5812,21 +5839,21 @@ window.PROJECTS =
     "sector": "Residential",
     "location": "Kuala Lumpur",
     "year": "2019-2020",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 298 coil",
-    "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B."
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 298 coil | 4 mm² CU/PVC GREEN CABLE 100M - 298 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 1,726 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 1,716 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 1,136 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 1,110 coil",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B. +2 more"
   },
   {
     "name": "Masai Apartments (Blocks B5 & B6)",
     "sector": "Residential",
     "year": "2026",
-    "details": "25 mm² CU/PVC BLACK CABLE - 11,880 m",
+    "details": "25 mm² CU/PVC BLACK CABLE - 11,880 m | 10 mm² CU/PVC GREEN CABLE - 5,952 m",
     "dealer": "ZHONG ZHONG ELECTRIC SDN. BHD."
   },
   {
     "name": "Midas Apartment, Bandar Seri Alam",
     "sector": "Residential",
     "year": "2023",
-    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 504 m",
+    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 504 m | 630 mm² AL/XLPE/PVC BLACK CABLE - 1,519 m | 500 mm² x 1c CU/XLPE/AWA/PVC CABLE - 161 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 282 m | 16 mm² CU/PVC BLACK CABLE - 8,900 m | 10 mm² CU/PVC GREEN CABLE - 1,850 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD.",
     "location": "Johor Bahru"
   },
@@ -5841,35 +5868,35 @@ window.PROJECTS =
     "name": "Mutiara Hills Sales Gallery",
     "sector": "Residential",
     "year": "2024-2025",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 170 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 170 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 700 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,140 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,180 m | 2.5 mm² x 9c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 565 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Nadayu 801, Block B",
     "sector": "Residential",
     "year": "2025",
-    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 1,060 m",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 1,060 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 644 m | 95 mm² CU/PVC GREEN CABLE - 275 m | 50 mm² CU/PVC GREEN CABLE - 311 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 280 m | 25 mm² CU/PVC GREEN CABLE - 70 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Novo 3 Service Apartments",
     "sector": "Residential",
     "year": "2026",
-    "details": "120 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 272 m",
+    "details": "120 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 272 m | 70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 460 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 488 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 156 m | 6 mm² CU/MICA/PVC FR (ORANGE) CABLE - 172 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "One Jesselton Condominium",
     "sector": "Residential",
     "year": "2023",
-    "details": "150 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 240 m",
+    "details": "150 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 240 m | 120 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 356 m | 95 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 752 m | 70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,544 m | 70 mm² CU/PVC GREEN CABLE - 500 m | 50 mm² CU/PVC GREEN CABLE - 200 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
     "name": "Palm Springs Development",
     "sector": "Residential",
     "year": "2023",
-    "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 200 m",
+    "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 200 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 788 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 95 m | 35 mm² CU/PVC GREEN CABLE - 197 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 116 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,532 m",
     "dealer": "CHI-TAK ELECTRICAL (SELANGOR) SDN. BHD."
   },
   {
@@ -5882,9 +5909,9 @@ window.PROJECTS =
   {
     "name": "Pangsapuri Idaman, Bukit Jelutong",
     "sector": "Residential",
-    "year": "2024-2025",
-    "details": "70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 501 m",
-    "dealer": "GEMILITE SDN. BHD."
+    "year": "2024",
+    "details": "4 mm² CU/PVC RED CABLE 100M - 60 coil | 4 mm² CU/PVC BLACK CABLE 100M - 60 coil | 4 mm² CU/PVC GREEN CABLE 100M - 60 coil | 2.5 mm² CU/PVC RED CABLE 100M - 88 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 88 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 88 coil",
+    "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
     "name": "Park Seven Condo. KLCC",
@@ -5895,7 +5922,7 @@ window.PROJECTS =
     "name": "Petik Mekar, Hill Park 3, Kajang 2",
     "sector": "Residential",
     "year": "2024",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,000 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
@@ -5918,21 +5945,21 @@ window.PROJECTS =
     "name": "PPR Pengerang",
     "sector": "Residential",
     "year": "2023",
-    "details": "16 mm² CU/PVC BLACK CABLE - 9,337 m",
+    "details": "16 mm² CU/PVC BLACK CABLE - 9,337 m | 16 mm² CU/PVC GREEN CABLE - 1,936 m",
     "dealer": "BRILLIANT LTP BUILDER SDN. BHD."
   },
   {
     "name": "PPR Seri Pantai Block 100",
     "sector": "Residential",
     "year": "2023",
-    "details": "10 mm² CU/PVC BLACK CABLE - 4,600 m",
+    "details": "10 mm² CU/PVC BLACK CABLE - 4,600 m | 3 MM X 25 MM COPPER STRIP (METROD) 60KGS+/- - 60.4 kg",
     "dealer": "WIDURI GLOBAL SDN. BHD."
   },
   {
     "name": "Princess Cove",
     "sector": "Residential",
     "year": "2023",
-    "details": "50 mm² x 3c CU/MICA/XLPE/PVC FR CABLE - 800 m",
+    "details": "50 mm² x 3c CU/MICA/XLPE/PVC FR CABLE - 800 m | 4 mm² CU/MICA/PVC FR (ORANGE) CABLE - 20,000 m | 1.5 mm² CU/MICA/PVC FR (ORANGE) CABLE - 41,528 m",
     "dealer": "DWISOLAR SDN. BHD.",
     "location": "Johor Bahru"
   },
@@ -5940,28 +5967,28 @@ window.PROJECTS =
     "name": "Radia Residence, Bukit Jelutong",
     "sector": "Residential",
     "year": "2023",
-    "details": "300 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 780 m",
+    "details": "300 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 780 m | 240 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 865 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
     "name": "Ren Residence, Bukit Jalil",
     "sector": "Residential",
     "year": "2025-2026",
-    "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 60,000 m",
-    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
+    "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 60,000 m | 16 mm² CU/PVC GREEN CABLE - 23,000 m | 6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 885 m | 4 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 1,245 m",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD. +2 more"
   },
   {
     "name": "Residensi Daffodil, Persiaran Puncak",
     "sector": "Residential",
     "year": "2025",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 219 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 219 coil | 4 mm² CU/PVC GREEN CABLE 100M - 219 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 237 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 237 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 302 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 292 coil",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Residensi Elopura",
     "sector": "Residential",
     "year": "2024",
-    "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,314 m",
+    "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,314 m | 240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 350 m",
     "dealer": "FURSE ELECTRIC (SABAH) SDN. BHD.",
     "location": "Sandakan"
   },
@@ -5969,7 +5996,7 @@ window.PROJECTS =
     "name": "Residensi New Urban",
     "sector": "Residential",
     "year": "2025",
-    "details": "16 mm² CU/XLPE/PVC BLACK CABLE - 9,336 m",
+    "details": "16 mm² CU/XLPE/PVC BLACK CABLE - 9,336 m | 16 mm² CU/PVC GREEN CABLE - 4,668 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
@@ -5980,7 +6007,7 @@ window.PROJECTS =
     "name": "Residensi Pr1ma Rumpun Bahagia, Block 1",
     "sector": "Residential",
     "year": "2026",
-    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 225 m",
+    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 225 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 155 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 146 m",
     "dealer": "ITEC ELECTRIC (MALACCA) SDN. BHD."
   },
   {
@@ -5994,7 +6021,7 @@ window.PROJECTS =
     "name": "Rumah Selangorku Selayang",
     "sector": "Residential",
     "year": "2025",
-    "details": "16 mm² CU/XLPE/PVC BLACK CABLE 100M - 164 coil",
+    "details": "16 mm² CU/XLPE/PVC BLACK CABLE 100M - 164 coil | 16 mm² CU/PVC GREEN CABLE 100M - 80 coil",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
@@ -6008,22 +6035,22 @@ window.PROJECTS =
     "name": "Sari Permaisuri, Block A",
     "sector": "Residential",
     "year": "2020",
-    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 120 coil",
+    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 120 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 120 coil | 2.5 mm² CU/PVC RED CABLE 100M - 40 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 40 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 120 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 120 coil",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B."
   },
   {
     "name": "Scientex Jenjarom",
     "sector": "Residential",
     "year": "2025-2026",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,700 m",
-    "dealer": "ELECTRIC MASTER SDN. BHD."
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,700 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 4,000 m",
+    "dealer": "ELECTRIC MASTER SDN. BHD. +1 more"
   },
   {
     "name": "Scientex Pulai Mutiara, Kangkar Pulai",
     "sector": "Residential",
     "year": "2020-2024",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 360 m",
-    "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD.",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 360 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,380 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE - 1,250 m | 16 mm² CU/PVC BLACK CABLE - 5,300 m | 16 mm² CU/PVC GREEN CABLE - 1,100 m | 1.5 mm² x 7c CU/PVC/PVC CABLE - 770 m",
+    "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD. +1 more",
     "location": "Johor"
   },
   {
@@ -6037,22 +6064,22 @@ window.PROJECTS =
     "name": "Sensory Residence",
     "sector": "Residential",
     "year": "2019-2020",
-    "details": "16 mm² CU/PVC BLACK CABLE - 7,906 m",
-    "dealer": "SAMAJAYA ELECTRICAL TRADING SDN. BHD.",
+    "details": "16 mm² CU/PVC BLACK CABLE - 7,906 m | 16 mm² CU/PVC GREEN CABLE - 2,879 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 440 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 355 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 420 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 360 coil",
+    "dealer": "SAMAJAYA ELECTRICAL TRADING SDN. BHD. +3 more",
     "location": "Bangi"
   },
   {
     "name": "Seri Permaisuri, Block B",
     "sector": "Residential",
     "year": "2019-2020",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 230 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 230 coil | 4 mm² CU/PVC BLACK CABLE 100M - 230 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 423 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 422 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 618 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 600 coil",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO S/B."
   },
   {
     "name": "Shorea Hartamas",
     "sector": "Residential",
     "year": "2024",
-    "details": "25 mm² CU/PVC BLACK CABLE 100M - 5 coil",
+    "details": "25 mm² CU/PVC BLACK CABLE 100M - 5 coil | 25 mm² CU/PVC BLUE CABLE 100M - 2 coil | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,658 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 2,202 m | 2.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,726 m | 1.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 750 m",
     "dealer": "D.E. POWER ELECTRICAL & LIGHTING SDN. BHD.",
     "location": "Port Dickson"
   },
@@ -6064,7 +6091,7 @@ window.PROJECTS =
     "name": "SkyVogue Residence, Taman Desa",
     "sector": "Residential",
     "year": "2023-2024",
-    "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 640 m",
+    "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 640 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 10,076 m | 16 mm² CU/PVC GREEN CABLE - 6,532 m | 10 mm² CU/PVC BLACK CABLE - 1,744 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 287 m | 4 mm² CU/MICA/PVC FR (ORANGE) CABLE - 1,556 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
@@ -6086,7 +6113,7 @@ window.PROJECTS =
     "name": "Taman Rasa Utama Sales Gallery",
     "sector": "Residential",
     "year": "2024",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 572 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 572 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 650 m | 1.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 885 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
@@ -6111,7 +6138,7 @@ window.PROJECTS =
     "name": "The Nest Residences",
     "sector": "Residential",
     "year": "2023",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 89 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 89 coil | 4 mm² CU/PVC BLACK CABLE 100M - 86 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 327 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 317 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 279 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 250 coil",
     "dealer": "GEMILITE SDN. BHD."
   },
   {
@@ -6161,15 +6188,15 @@ window.PROJECTS =
     "name": "Triara Residence, Ara Damansara",
     "sector": "Residential",
     "year": "2025-2026",
-    "details": "4 mm² CU/PVC BLACK CABLE 100M - 30 coil",
+    "details": "4 mm² CU/PVC BLACK CABLE 100M - 30 coil | 4 mm² CU/PVC GREEN CABLE 100M - 30 coil | 4 mm² CU/PVC YELLOW CABLE 100M - 15 coil | 4 mm² CU/PVC RED CABLE 100M - 15 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 40 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 40 coil",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Triuni Residences",
     "sector": "Residential",
     "year": "2020-2023",
-    "details": "70 mm² CU/XLPE/PVC BLACK CABLE - 916 m",
-    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
+    "details": "70 mm² CU/XLPE/PVC BLACK CABLE - 916 m | 70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 335 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 906 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 6,020 m | 25 mm² CU/PVC BLACK CABLE - 1,860 m | 16 mm² CU/PVC GREEN CABLE - 3,010 m",
+    "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +1 more",
     "location": "Penang"
   },
   {
@@ -6207,7 +6234,7 @@ window.PROJECTS =
     "name": "AEON Mall Cheras Selatan",
     "sector": "Retail",
     "year": "2023",
-    "details": "240 mm² CU/PVC GREEN CABLE - 465 m",
+    "details": "240 mm² CU/PVC GREEN CABLE - 465 m | 185 mm² CU/PVC GREEN CABLE - 180 m | 95 mm² CU/PVC GREEN CABLE - 70 m | 35 mm² CU/PVC GREEN CABLE - 150 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -6219,8 +6246,8 @@ window.PROJECTS =
     "name": "AEON Mall Shah Alam",
     "sector": "Retail",
     "year": "2023-2024",
-    "details": "300 mm² CU/PVC GREEN CABLE - 440 m",
-    "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
+    "details": "300 mm² CU/PVC GREEN CABLE - 440 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 120 mm² CU/PVC GREEN CABLE - 15 m | 50 mm² CU/PVC GREEN CABLE 90M - 1 coil | 35 mm² CU/PVC GREEN CABLE - 165 m",
+    "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD. +1 more"
   },
   {
     "name": "Amore Fitness P.l - The Seletar Mall",
@@ -6240,7 +6267,7 @@ window.PROJECTS =
     "name": "Cadangan Membina Sebuah Stesen Minyak &",
     "sector": "Retail",
     "year": "2023",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 130 m | 50 mm² CU/XLPE/PVC BLACK CABLE 100M - 1 coil | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 300 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 250 m | 1.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 200 m",
     "dealer": "TRANSLITE ELECTRIC SDN. BHD."
   },
   {
@@ -6251,7 +6278,7 @@ window.PROJECTS =
     "name": "Eoan Mall Au2, Setiawangsa",
     "sector": "Retail",
     "year": "2023",
-    "details": "300 mm² CU/PVC GREEN CABLE - 660 m",
+    "details": "300 mm² CU/PVC GREEN CABLE - 660 m | 185 mm² CU/PVC GREEN CABLE - 85 m | 150 mm² CU/PVC GREEN CABLE - 200 m | 35 mm² CU/PVC GREEN CABLE - 180 m | 10 mm² CU/PVC GREEN CABLE - 40 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -6298,7 +6325,7 @@ window.PROJECTS =
     "name": "KLK Mall",
     "sector": "Retail",
     "year": "2026",
-    "details": "35 mm² CU/PVC BLACK CABLE - 2,000 m",
+    "details": "35 mm² CU/PVC BLACK CABLE - 2,000 m | 25 mm² CU/PVC BLACK CABLE - 8,000 m | 16 mm² CU/PVC GREEN CABLE - 3,000 m | 10 mm² CU/PVC BLACK CABLE - 5,000 m | 10 mm² CU/PVC GREEN CABLE - 1,500 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "TRANSLITE ELECTRIC SDN. BHD."
   },
   {
@@ -6309,7 +6336,7 @@ window.PROJECTS =
     "name": "Maydin Tunjung",
     "sector": "Retail",
     "year": "2019-2020",
-    "details": "1.5 mm² CU/PVC RED CABLE 100M - 276 coil",
+    "details": "1.5 mm² CU/PVC RED CABLE 100M - 276 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 276 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 226 coil | 1.5 mm² CU/PVC BLUE CABLE 100M - 226 coil | 1.5 mm² CU/PVC WHITE CABLE 100M - 176 coil",
     "dealer": "SYARIKAT LETRIK KT UNION SDN BHD",
     "location": "Kota Bharu"
   },
@@ -6352,8 +6379,8 @@ window.PROJECTS =
     "name": "Pacific Mall",
     "sector": "Retail",
     "year": "2025",
-    "details": "70 mm² CU/PVC BLACK CABLE - 1,815 m",
-    "dealer": "PUISSANCE ENGINEERING SDN. BHD.",
+    "details": "70 mm² CU/PVC BLACK CABLE - 1,815 m | 70 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,292 m | 35 mm² CU/PVC GREEN CABLE - 928 m | 25 mm² CU/PVC BLACK CABLE - 605 m",
+    "dealer": "PUISSANCE ENGINEERING SDN. BHD. +1 more",
     "location": "Johor Bahru"
   },
   {
@@ -6374,7 +6401,7 @@ window.PROJECTS =
     "name": "Queensbay Mall",
     "sector": "Retail",
     "year": "2026",
-    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 320 m",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 1,120 m | 120 mm² CU/PVC GREEN CABLE - 140 m | 95 mm² CU/PVC GREEN CABLE - 80 m",
     "dealer": "EV CONNECTION SDN. BHD.",
     "location": "Penang"
   },
@@ -6386,7 +6413,7 @@ window.PROJECTS =
     "name": "Setia City Mall, Setia Alam",
     "sector": "Retail",
     "year": "2024",
-    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 1,256 m",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 1,256 m | 150 mm² CU/PVC GREEN CABLE - 158 m",
     "dealer": "YLE ELECTRIC SDN. BHD."
   },
   {
@@ -6398,7 +6425,7 @@ window.PROJECTS =
     "name": "Starhill Gallery",
     "sector": "Retail",
     "year": "2020",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 150 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 5,280 m | 10 mm² CU/PVC BLACK CABLE - 25,179 m | 10 mm² CU/PVC GREEN CABLE - 9,610 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING S/B",
     "location": "Kuala Lumpur"
   },
@@ -6406,15 +6433,15 @@ window.PROJECTS =
     "name": "Sutera Mall",
     "sector": "Retail",
     "year": "2024-2026",
-    "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 2,320 m",
-    "dealer": "SN ELECTRIC SDN. BHD.",
+    "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 2,320 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 2,120 m | 240 mm² CU/PVC GREEN CABLE - 265 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 4,342 m",
+    "dealer": "SN ELECTRIC SDN. BHD. +1 more",
     "location": "Johor Bahru"
   },
   {
     "name": "Tasek Centre Mall",
     "sector": "Retail",
     "year": "2024",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 1,200 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 1,200 m | 120 mm² CU/PVC GREEN CABLE - 200 m | 50 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 25 mm² CU/PVC GREEN CABLE - 80 m | 10 mm² CU/PVC BLACK CABLE - 128 m",
     "dealer": "SME ELECTRIC SDN. BHD."
   },
   {
@@ -6450,21 +6477,21 @@ window.PROJECTS =
     "name": "Arena Jubli Perak Football Field",
     "sector": "Sports & Recreation",
     "year": "2020",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE - 450 m",
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE - 450 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE - 290 m | 4 mm² x 3c CU/PVC/SWA/PVC CABLE - 150 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE - 1,440 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN BHD"
   },
   {
     "name": "Kompleks Belia Dan Sukan",
     "sector": "Sports & Recreation",
     "year": "2023-2025",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 590 m",
-    "dealer": "JURUTERA SRI EMAS"
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 590 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,151 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,074 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,730 m | 4 mm² CU/PVC GREEN CABLE 100M - 110 coil | 4 mm² CU/PVC BLACK CABLE 100M - 110 coil",
+    "dealer": "JURUTERA SRI EMAS / TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
     "name": "Kompleks Sukan Setiawangsa",
     "sector": "Sports & Recreation",
     "year": "2025",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 755 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 755 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 4 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,360 m",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD."
   },
   {
@@ -6486,14 +6513,14 @@ window.PROJECTS =
     "name": "Stadium Entrance Merdeka 118",
     "sector": "Sports & Recreation",
     "year": "2026",
-    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
+    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 50 mm² CU/PVC GREEN CABLE - 150 m",
     "dealer": "HING SENG WORLD ELECTRICAL SDN. BHD."
   },
   {
     "name": "Stadium Gong Badak",
     "sector": "Sports & Recreation",
     "year": "2020",
-    "details": "4 mm² CU/PVC GREEN CABLE 100M - 70 coil",
+    "details": "4 mm² CU/PVC GREEN CABLE 100M - 70 coil | 4 mm² CU/PVC BLACK CABLE 100M - 70 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 210 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 210 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 420 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 420 coil",
     "dealer": "SAMAJAYA ELECTRICAL TRADING SDN BHD",
     "location": "Kuala Terengganu"
   },
@@ -6508,22 +6535,22 @@ window.PROJECTS =
     "name": "Stadium Sultan Ibrahim",
     "sector": "Sports & Recreation",
     "year": "2019-2026",
-    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,524 m",
+    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 2,524 m | 70 mm² CU/PVC GREEN CABLE - 631 m | 35 mm² CU/PVC BLACK CABLE - 1,932 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE - 600 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 4,400 m | 25 mm² CU/PVC GREEN CABLE - 963 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
   },
   {
     "name": "SUK Selangor Sports Complex",
     "sector": "Sports & Recreation",
     "year": "2024",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 12 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 12 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 266 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 107 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 80 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 63 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD."
   },
   {
     "name": "Taman Awam Tepian Sungai Muar",
     "sector": "Sports & Recreation",
     "year": "2019-2020",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 7 m",
-    "dealer": "KAF ENGINEERING"
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 7 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 230 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE - 130 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE - 200 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE - 4,669 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE - 117 m",
+    "dealer": "KAF ENGINEERING +1 more"
   },
   {
     "name": "Tapak Projek Kompleks Sukan Mini",
@@ -6540,29 +6567,29 @@ window.PROJECTS =
     "name": "Bintulu Port",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 400 m",
+    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 400 m | 300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 340 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 770 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 180 m",
     "dealer": "PANSAR COMPANY SDN. BHD."
   },
   {
     "name": "Celcom Technical Operations Centre",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 2,700 m",
-    "dealer": "ZOFAR MECHANICAL & ELECTRICAL ENGINEERING SDN. BHD.",
+    "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 2,700 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 700 m | 95 mm² CU/PVC GREEN CABLE - 350 m | 35 mm² CU/PVC BLACK CABLE - 300 m | 16 mm² CU/PVC GREEN CABLE 100M - 1 coil",
+    "dealer": "ZOFAR MECHANICAL & ELECTRICAL ENGINEERING SDN. BHD. +1 more",
     "location": "Kepong"
   },
   {
     "name": "Celcom Telecoms Site, AEON Big Kepong",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 1,184 m",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 1,184 m | 300 mm² CU/XLPE/PVC BLACK CABLE - 160 m | 185 mm² CU/PVC GREEN CABLE - 200 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 40 m | 25 mm² CU/PVC BLACK CABLE 100M - 6 coil | 10 mm² CU/PVC GREEN CABLE 100M - 3 coil",
     "dealer": "ZOFAR MECHANICAL & ELECTRICAL ENGINEERING SDN. BHD."
   },
   {
     "name": "CelcomDigi Kepong",
     "sector": "Infrastructure",
     "year": "2025",
-    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 3,200 m",
+    "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 3,200 m | 150 mm² CU/PVC GREEN CABLE - 400 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 2,000 m | 120 mm² CU/PVC GREEN CABLE - 280 m",
     "dealer": "ZOFAR MECHANICAL & ELECTRICAL ENGINEERING SDN. BHD."
   },
   {
@@ -6593,21 +6620,21 @@ window.PROJECTS =
     "name": "Handal Indah Bus Depot, Tebrau",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "240 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 1,624 m",
+    "details": "240 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 1,624 m | 120 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 500 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,516 m | 70 mm² CU/PVC GREEN CABLE - 125 m | 35 mm² CU/PVC GREEN CABLE - 379 m",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. (TEBRAU)"
   },
   {
     "name": "Hentian Rehat & Rawat Penawar",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
+    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 250 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,200 m",
     "dealer": "HIGH SING ELECTRIC SDN. BHD."
   },
   {
     "name": "Intersky Phase 2 Infrastructure Works",
     "sector": "Infrastructure",
     "year": "2023",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 155 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 155 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,500 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -6618,7 +6645,7 @@ window.PROJECTS =
     "name": "Johor Bahru Singapore RTS Link",
     "sector": "Infrastructure",
     "year": "2026",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m",
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m | 10 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 230 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
     "country": "Singapore"
   },
@@ -6626,14 +6653,14 @@ window.PROJECTS =
     "name": "KLB Terminal",
     "sector": "Infrastructure",
     "year": "2026",
-    "details": "120 mm² x 3c CU/XLPE/PVC CABLE (RD/YE/BU) - 1,212 m",
+    "details": "120 mm² x 3c CU/XLPE/PVC CABLE (RD/YE/BU) - 1,212 m | 95 mm² CU/PVC GREEN CABLE - 130 m | 70 mm² x 3c CU/XLPE/PVC CABLE (RD/YE/BU) - 948 m | 70 mm² CU/PVC GREEN CABLE - 1,212 m | 35 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 399 m | 35 mm² CU/PVC GREEN CABLE - 948 m",
     "dealer": "EA ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "KLIA 2",
     "sector": "Infrastructure",
     "year": "2024-2025",
-    "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 960 m",
+    "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 960 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 399 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 1,761 m | 3 MM X 25 MM COPPER STRIP (PM COPPER) 55KGS - 165 kg | 2.5 mm² CU/PVC BLACK CABLE 100M - 75 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 75 coil",
     "dealer": "EXCEL M & E SDN. BHD.",
     "location": "Sepang"
   },
@@ -6641,14 +6668,14 @@ window.PROJECTS =
     "name": "KLIA Cargo Village",
     "sector": "Infrastructure",
     "year": "2025",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 350 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 350 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 95 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m",
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD."
   },
   {
     "name": "KLIA Warehouse",
     "sector": "Infrastructure",
     "year": "2023-2024",
-    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 370 coil",
+    "details": "2.5 mm² CU/PVC GREEN CABLE 100M - 370 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 370 coil | 2.5 mm² CU/PVC BLUE CABLE 100M - 120 coil | 2.5 mm² CU/PVC YELLOW CABLE 100M - 120 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 240 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 240 coil",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
     "location": "Sepang"
   },
@@ -6656,7 +6683,7 @@ window.PROJECTS =
     "name": "KLIA",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 222 m",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 222 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 257 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 858 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,093 m | 1.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,385 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,898 m",
     "dealer": "SME ELECTRIC SDN. BHD.",
     "location": "Sepang, Selangor"
   },
@@ -6671,14 +6698,14 @@ window.PROJECTS =
     "name": "KTMB Central Store",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "16 mm² CU/PVC BLACK CABLE - 10,000 m",
+    "details": "16 mm² CU/PVC BLACK CABLE - 10,000 m | 10 mm² CU/PVC GREEN CABLE - 5,000 m",
     "dealer": "SIN LIAN WAH ELECTRIC SDN. BHD."
   },
   {
     "name": "Kuala Besut Jetty",
     "sector": "Infrastructure",
     "year": "2019-2020",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE - 415 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE - 415 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE - 510 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE - 3,275 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 2,390 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE - 575 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE - 1,002 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN BHD",
     "location": "Terengganu"
   },
@@ -6686,7 +6713,7 @@ window.PROJECTS =
     "name": "Kuala Lumpur International Airport (KLIA)",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,120 m",
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,120 m | 95 mm² CU/PVC GREEN CABLE - 1,125 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,890 m | 35 mm² CU/PVC GREEN CABLE - 2,890 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 1,500 m | 10 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 3,750 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -6697,7 +6724,7 @@ window.PROJECTS =
     "name": "Kuantan Port Link Road",
     "sector": "Infrastructure",
     "year": "2020-2023",
-    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,250 m",
+    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,250 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE - 2,000 m | 2.5 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 600 m",
     "dealer": "FRANKY CONSTRUCTION SDN BHD"
   },
   {
@@ -6712,7 +6739,7 @@ window.PROJECTS =
     "name": "Langsat Bulkers Terminal",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m",
+    "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 60 m | 1.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 264 m",
     "dealer": "SN ELECTRIC SDN. BHD."
   },
   {
@@ -6737,7 +6764,7 @@ window.PROJECTS =
     "name": "MRT Line 2 (Putrajaya Line), Package V205",
     "sector": "Infrastructure",
     "year": "2020",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 500 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE - 500 m | 3C x 16mm² + 25mm² AERIAL BUNDLED CABLE (LV) - 500 m",
     "dealer": "TEC POWER ELECTRICAL SUPPLY SDN. BHD."
   },
   {
@@ -6772,14 +6799,14 @@ window.PROJECTS =
     "name": "Penang Port North Butterworth Container Terminal",
     "sector": "Infrastructure",
     "year": "2019-2026",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE - 268 m",
-    "dealer": "EXCEL M & E SDN. BHD."
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE - 268 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 348 m | 120 mm² CU/XLPE/PVC GREEN CABLE - 1,000 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 412 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 552 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE - 1,589 m",
+    "dealer": "EXCEL M & E SDN. BHD. +1 more"
   },
   {
     "name": "Pkt Logistics Centre, Persiaran Sungai Hampar",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 180 m",
+    "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 180 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 60 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 777 m | 70 mm² CU/PVC GREEN CABLE - 60 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 259 m | 25 mm² CU/PVC GREEN CABLE - 259 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
@@ -6787,20 +6814,20 @@ window.PROJECTS =
     "sector": "Infrastructure",
     "year": "2023",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,200 m",
-    "dealer": "ACTGEN INDUSTRY SDN. BHD."
+    "dealer": "ACTGEN INDUSTRY SDN. BHD. +1 more"
   },
   {
     "name": "RAPID Bus Depot, BRT Sunway",
     "sector": "Infrastructure",
-    "year": "2026",
-    "details": "400 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 267 m",
+    "year": "2025",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 900 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 176 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 600 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 336 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 100 m | 50 mm² CU/XLPE/PVC BLACK CABLE - 150 m",
     "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD."
   },
   {
     "name": "Sandakan Port",
     "sector": "Infrastructure",
     "year": "2023-2024",
-    "details": "70 mm² CU/PVC BLACK CABLE - 296 m",
+    "details": "70 mm² CU/PVC BLACK CABLE - 296 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,035 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,846 m",
     "dealer": "CK POWER ELECTRICAL (M) SDN. BHD.",
     "location": "Sabah"
   },
@@ -6808,8 +6835,8 @@ window.PROJECTS =
     "name": "Setia Alam Impian",
     "sector": "Infrastructure",
     "year": "2024-2026",
-    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,800 m",
-    "dealer": "GEMILITE SDN. BHD.",
+    "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,800 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,550 m | 16 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 2,832 m | 16 mm² CU/PVC GREEN CABLE - 2,761 m | 1.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 2,761 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 3,704 m",
+    "dealer": "GEMILITE SDN. BHD. +1 more",
     "location": "Shah Alam"
   },
   {
@@ -6827,7 +6854,7 @@ window.PROJECTS =
     "name": "Sritama Jetty",
     "sector": "Infrastructure",
     "year": "2023",
-    "details": "185mm² x 3C + 120mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 3,793 m",
+    "details": "185mm² x 3C + 120mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 3,793 m | 95mm² x 3C + 70mm² + 16mm² AERIAL BUNDLED CABLE (LV) - 4,800 m",
     "dealer": "ELECTRO DYNAMIC SDN. BHD."
   },
   {
@@ -6845,14 +6872,14 @@ window.PROJECTS =
     "name": "Tawau Port",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,800 m",
+    "details": "2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,800 m | 1.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,500 m",
     "dealer": "PEMBINAAN INDAH P.I.E SDN. BHD."
   },
   {
     "name": "Telekom Malaysia Building No. 2, Bandar Kaba",
     "sector": "Infrastructure",
     "year": "2025",
-    "details": "10 mm² CU/PVC GREEN CABLE 100M - 60 coil",
+    "details": "10 mm² CU/PVC GREEN CABLE 100M - 60 coil | 10 mm² CU/PVC BLACK CABLE 100M - 60 coil | 10 mm² CU/PVC RED CABLE 100M - 60 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 60 coil | 2.5 mm² CU/PVC RED CABLE 100M - 60 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 60 coil",
     "dealer": "SUNTECH ELECTRICAL SUPPLY SDN. BHD.",
     "location": "Melaka"
   },
@@ -6860,7 +6887,7 @@ window.PROJECTS =
     "name": "Terminal Bidor Sentral",
     "sector": "Infrastructure",
     "year": "2023-2024",
-    "details": "50 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,324 m",
+    "details": "50 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,324 m | 35 mm² CU/PVC BLACK CABLE - 1,312 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 3,816 m | 25 mm² CU/PVC BLACK CABLE - 1,812 m | 16 mm² CU/PVC BLACK CABLE - 4,348 m | 10 mm² CU/PVC BLACK CABLE - 5,828 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD.",
     "location": "Perak"
   },
@@ -6868,8 +6895,8 @@ window.PROJECTS =
     "name": "Tiong Nam Logistics Warehouse",
     "sector": "Infrastructure",
     "year": "2023-2026",
-    "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 400 m",
-    "dealer": "BEACONLITE ELECTRICAL SUPPLIER SDN. BHD."
+    "details": "120 mm² CU/XLPE/PVC BLACK CABLE - 400 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 53 m | 16 mm² CU/PVC GREEN/YELLOW CABLE - 2,450 m | 6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 2,000 m",
+    "dealer": "BEACONLITE ELECTRICAL SUPPLIER SDN. BHD. +1 more"
   },
   {
     "name": "Ulu Tiram Highway",
@@ -6880,21 +6907,21 @@ window.PROJECTS =
     "name": "WCE Bukit Kapar R&R (Southbound)",
     "sector": "Infrastructure",
     "year": "2025",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 471 m",
-    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 471 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 156 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 315 m",
+    "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD. / WH ELECTRICAL MARKETING (M) SDN. BHD."
   },
   {
     "name": "Westports Dry Bulk Terminal, Port Klang",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 70 m",
+    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 70 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 250 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 70 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 350 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "ACT ERAMAS LETRIK (M) SDN. BHD."
   },
   {
     "name": "Chenderoh Hydroelectric Power Station",
     "sector": "Utility",
     "year": "2026",
-    "details": "120 mm² STRANDED BARE COPPER - 500 m",
+    "details": "120 mm² STRANDED BARE COPPER - 500 m | 95 mm² STRANDED BARE COPPER 100M - 1 coil | 70 mm² STRANDED BARE COPPER - 200 m | 50 mm² STRANDED BARE COPPER - 300 m | 35 mm² STRANDED BARE COPPER - 300 m",
     "dealer": "ANDRITZ SDN. BHD.",
     "location": "Perak"
   },
@@ -6906,15 +6933,15 @@ window.PROJECTS =
     "name": "Indah Water Konsortium Treatment Plant",
     "sector": "Utility",
     "year": "2023",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,800 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 4,200 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,500 m | 1.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 3,700 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,500 m",
     "dealer": "NORTHWAY ELECTRIC SDN BHD"
   },
   {
     "name": "IWK Sewerage Facility, Alam Impian",
     "sector": "Utility",
     "year": "2026",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 288 m",
-    "dealer": "GLOBAL CABLE & ELECTRICAL SDN. BHD."
+    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 288 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 49 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 52 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,240 m | 2.5 mm² x 9c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 295 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 977 m",
+    "dealer": "GLOBAL CABLE & ELECTRICAL SDN. BHD. +1 more"
   },
   {
     "name": "Jeram Sanitary Landfill",
@@ -6927,7 +6954,7 @@ window.PROJECTS =
     "name": "JUS Water Treatment Plant",
     "sector": "Utility",
     "year": "2026",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 520 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 520 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 55 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 45 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 550 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE - 617 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
@@ -6939,14 +6966,14 @@ window.PROJECTS =
     "name": "Kota Damansara Sewage Treatment Plant",
     "sector": "Utility",
     "year": "2024",
-    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 565 m",
+    "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 565 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 280 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
   {
     "name": "Loji Air Sungai Kampar",
     "sector": "Utility",
     "year": "2024",
-    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 910 m",
+    "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 910 m | 150 mm² CU/PVC GREEN CABLE - 310 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
@@ -6960,8 +6987,8 @@ window.PROJECTS =
     "name": "Loji Rawatan Air Gunung Semanggol",
     "sector": "Utility",
     "year": "2025",
-    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 427 m",
-    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
+    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 427 m | 400 mm² x 1c CU/XLPE/AWA/PVC CABLE - 132 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 300 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 700 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,500 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m",
+    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD. +1 more"
   },
   {
     "name": "Loji Rawatan Air Jempol, Bahau, N. Sembilan",
@@ -6971,14 +6998,14 @@ window.PROJECTS =
     "name": "Loji Rawatan Air Lubuk Buntar Lama",
     "sector": "Utility",
     "year": "2024",
-    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 160 m",
+    "details": "630 mm² x 1c CU/XLPE/AWA/PVC CABLE - 160 m | 300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 175 m | 240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 400 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 190 m | 25 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 500 m",
     "dealer": "FAMOUS LITE ELECTRICAL SDN. BHD."
   },
   {
     "name": "Loji Rawatan Air SAJ, Kampung Tengah",
     "sector": "Utility",
     "year": "2023",
-    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 805 m",
+    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 805 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,254 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 9,073 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 7,979 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 7,309 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 5,997 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
   },
   {
@@ -7007,14 +7034,14 @@ window.PROJECTS =
     "name": "Matang Pagar Balancing Reservoir",
     "sector": "Utility",
     "year": "2026",
-    "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 740 m",
+    "details": "50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 740 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 570 m | 10 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 747 m | 4 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 570 m | 1.5 mm² x 9c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,785 m | 2PR x 1.5 mm² CU/PVC/OSCR/SWA/PVC CABLE - 1,590 m",
     "dealer": "ADASFA SDN. BHD."
   },
   {
     "name": "Mengkuang Water Treatment Plant",
     "sector": "Utility",
     "year": "2026",
-    "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
+    "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m | 16 mm² CU/PVC GREEN CABLE - 3,000 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD.",
     "location": "Penang"
   },
@@ -7022,7 +7049,7 @@ window.PROJECTS =
     "name": "Merlimau Water Treatment Plant",
     "sector": "Utility",
     "year": "2023",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 270 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 65 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 90 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 300 m | 1.5 mm² CU/PVC GREEN CABLE 100M - 6 coil",
     "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD.",
     "location": "Melaka"
   },
@@ -7030,57 +7057,57 @@ window.PROJECTS =
     "name": "Ngoi Ngoi Water Treatment Plant",
     "sector": "Utility",
     "year": "2025",
-    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 30 m",
+    "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 30 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 100 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 150 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 400 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m | 1.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 6,841 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
   },
   {
     "name": "PMU 275/132/33kV Gebeng Industri (GBID)",
     "sector": "Utility",
     "year": "2024",
-    "details": "50 mm² CU/PVC GREEN CABLE - 300 m",
+    "details": "50 mm² CU/PVC GREEN CABLE - 300 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,000 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 7,800 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 9,000 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 3,000 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "PMU 275/132/33kV Pudu Ulu",
     "sector": "Utility",
     "year": "2024-2025",
-    "details": "6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 121 kg",
+    "details": "6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 121 kg | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,000 m | 2.5 mm² x 37c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,131 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,999 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "PMU 275/33kV SIDC",
     "sector": "Utility",
     "year": "2024",
-    "details": "10 mm² x 4c CU/PVC/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 498 m",
-    "dealer": "AUCONPRO ENGINEERING SDN. BHD.",
+    "details": "10 mm² x 4c CU/PVC/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 498 m | 4 mm² x 4c CU/PVC/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 2,989 m | 2.5 mm² x 27c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 2,709 m | 2.5 mm² x 12c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 2,670 m | 2.5 mm² x 19c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 1,220 m | 2.5 mm² x 7c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 1,785 m",
+    "dealer": "AUCONPRO ENGINEERING SDN. BHD. +1 more",
     "location": "Kulai, Johor"
   },
   {
     "name": "PMU Ampang (TNB Main Intake Substation)",
     "sector": "Utility",
     "year": "2025",
-    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 2,500 m",
+    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 2,500 m | 6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 500 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 12,000 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 3,500 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "PMU Bayan Lepas (TNB Main Intake Substation)",
     "sector": "Utility",
     "year": "2023",
-    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 300 m",
+    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 300 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,600 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,500 m | 2.5 mm² x 37c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 100 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "PMU Cyberjaya North Substation",
     "sector": "Utility",
     "year": "2023",
-    "details": "2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,000 m",
+    "details": "2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,000 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,000 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "PMU Juru",
     "sector": "Utility",
     "year": "2023",
-    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,100 m",
+    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,100 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,800 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 3,100 m | 2.5 mm² x 37c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 500 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD.",
     "location": "Penang"
   },
@@ -7088,7 +7115,7 @@ window.PROJECTS =
     "name": "PMU Kelemak 275/132kV",
     "sector": "Utility",
     "year": "2024",
-    "details": "4 mm² x 4c CU/PVC/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
+    "details": "4 mm² x 4c CU/PVC/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 3,000 m | 2.5 mm² x 7c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 4,070 m | 2.5 mm² x 12c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 2,030 m | 2.5 mm² x 19c CU/PVC/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 1,006 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
@@ -7106,7 +7133,7 @@ window.PROJECTS =
     "name": "PMU Shah Alam West",
     "sector": "Utility",
     "year": "2024-2025",
-    "details": "6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 3,000 m",
+    "details": "6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 3,000 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 4,000 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 5,000 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,000 m | 2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m",
     "dealer": "AUCONPRO ENGINEERING SDN. BHD."
   },
   {
@@ -7131,21 +7158,21 @@ window.PROJECTS =
     "name": "PMU Tuanku Ja'afar Power Station",
     "sector": "Utility",
     "year": "2023-2024",
-    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,000 m",
+    "details": "10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,000 m | 6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 1,000 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m | 2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,000 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,000 m",
     "dealer": "VL SUCCESS MARKETING SDN. BHD."
   },
   {
     "name": "Putrajaya Power Station, Presint 11",
     "sector": "Utility",
     "year": "2025",
-    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m",
+    "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 145 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,020 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 125 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 520 m",
     "dealer": "MAGNITUDE POWER SDN. BHD."
   },
   {
     "name": "SAJ Water Treatment Plant",
     "sector": "Utility",
     "year": "2023",
-    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 240 m",
+    "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 240 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 734 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,282 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,033 m | 2.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 6,318 m | 2.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,144 m",
     "dealer": "SME ELECTRIC SDN. BHD."
   },
   {
@@ -7179,8 +7206,8 @@ window.PROJECTS =
     "name": "Sungai Kampar Water Treatment Plant",
     "sector": "Utility",
     "year": "2024",
-    "details": "95 mm² x 3c CU/XLPE/SWA/PVC CABLE (RD/YE/BU) - 252 m",
-    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
+    "details": "95 mm² x 3c CU/XLPE/SWA/PVC CABLE (RD/YE/BU) - 252 m | 70 mm² CU/PVC GREEN CABLE - 260 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 200 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 600 m | 6 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 900 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,300 m",
+    "dealer": "SURELITE ELECTRICAL CO. SDN. BHD. +1 more"
   },
   {
     "name": "Sungai Langat Treatment Plant",
@@ -7193,7 +7220,7 @@ window.PROJECTS =
     "name": "Sungai Pangsoon Water Treatment Plant",
     "sector": "Utility",
     "year": "2023",
-    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 625 m",
+    "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 625 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 118 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 950 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,678 m | 2.5 mm² CU/PVC/PVC BLACK/BLACK CABLE 100M - 4 coil",
     "dealer": "JC ELECTRICAL SDN. BHD."
   },
   {
@@ -7224,7 +7251,7 @@ window.PROJECTS =
     "name": "TNB Substation, Mergong Barrage",
     "sector": "Utility",
     "year": "2023",
-    "details": "6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 700 m",
+    "details": "6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 700 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,450 m | 2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,700 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,100 m | 1.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,300 m",
     "dealer": "ENERWAVE LINK SDN. BHD."
   }
 ];
