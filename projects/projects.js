@@ -78,22 +78,22 @@ window.PROJECTS =
   },
   {
     "name": "Shamelin Mall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "location": "Kuala Lumpur"
   },
   {
     "name": "Imago Shopping Mall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "location": "Kota Kinabalu"
   },
   {
     "name": "Mayang Mall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "location": "Kuala Terengganu"
   },
   {
     "name": "Mydin Tunjong Mall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "location": "Kota Bharu, Kelantan"
   },
   {
@@ -349,12 +349,12 @@ window.PROJECTS =
   },
   {
     "name": "Petronas Gambang Eastbound",
-    "sector": "Utility",
+    "sector": "Oil & Gas",
     "location": "Gambang, Pahang"
   },
   {
     "name": "Petronas Gambang Westbound",
-    "sector": "Utility",
+    "sector": "Oil & Gas",
     "location": "Gambang, Pahang"
   },
   {
@@ -365,7 +365,7 @@ window.PROJECTS =
   },
   {
     "name": "Petronas Methanol Plant 3 (Pmlsb)",
-    "sector": "Utility",
+    "sector": "Oil & Gas",
     "location": "Labuan"
   },
   {
@@ -627,7 +627,7 @@ window.PROJECTS =
   },
   {
     "name": "Xiao En Memorial Park",
-    "sector": "Sports & Recreation",
+    "sector": "Religious",
     "location": "Nilai, Negeri Sembilan"
   },
   {
@@ -644,13 +644,13 @@ window.PROJECTS =
   },
   {
     "name": "Popular Bookstore Ltd — Imm Building",
-    "sector": "Commercial",
+    "sector": "Retail",
     "country": "Singapore",
     "location": "Singapore"
   },
   {
     "name": "Amore Fitness P.l",
-    "sector": "Commercial",
+    "sector": "Sports & Recreation",
     "country": "Singapore",
     "location": "Singapore"
   },
@@ -662,7 +662,7 @@ window.PROJECTS =
   },
   {
     "name": "Sri Verramakaliamman Temple",
-    "sector": "Government",
+    "sector": "Religious",
     "country": "Singapore",
     "location": "Singapore"
   },
@@ -675,7 +675,7 @@ window.PROJECTS =
   },
   {
     "name": "Central Plaza",
-    "sector": "Commercial",
+    "sector": "Retail",
     "country": "Singapore",
     "location": "Singapore"
   },
@@ -699,7 +699,7 @@ window.PROJECTS =
   },
   {
     "name": "Boon Lay Place Shopping Centre",
-    "sector": "Commercial",
+    "sector": "Retail",
     "country": "Singapore",
     "location": "Boon Lay"
   },
@@ -723,7 +723,7 @@ window.PROJECTS =
   },
   {
     "name": "Kong Meng San Temple",
-    "sector": "Government",
+    "sector": "Religious",
     "country": "Singapore",
     "location": "Singapore"
   },
@@ -816,7 +816,7 @@ window.PROJECTS =
   },
   {
     "name": "AEON Bandar Tun Hussein Onn",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2026",
     "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 235 m",
     "dealer": "Y.L ELECTRIC (M) SDN. BHD.",
@@ -824,7 +824,7 @@ window.PROJECTS =
   },
   {
     "name": "AEON Permas Jaya",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2026",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 340 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 4,912 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 7,048 m | 35 mm² CU/PVC GREEN CABLE - 1,228 m | 16 mm² CU/PVC BLACK CABLE - 9,412 m | 16 mm² CU/PVC GREEN CABLE - 4,115 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD. +2 more"
@@ -838,14 +838,14 @@ window.PROJECTS =
   },
   {
     "name": "Ampang Point Shopping Centre",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2023",
     "details": "150 mm² CU/XLPE/PVC BLACK CABLE - 304 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 244 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 296 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 3,228 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 360 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 1,824 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
     "name": "Angsana Johor Bahru Mall Event Hall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2024",
     "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 120 m | 150 mm² CU/PVC GREEN CABLE - 120 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
@@ -969,7 +969,7 @@ window.PROJECTS =
   },
   {
     "name": "Ioi City Tower, Ioi City Mall",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2024",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 252 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 288 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 2,060 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 25 mm² CU/PVC GREEN CABLE - 847 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
@@ -1017,7 +1017,7 @@ window.PROJECTS =
   },
   {
     "name": "K Garden Sales Gallery",
-    "sector": "Commercial",
+    "sector": "Residential",
     "year": "2026",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,890 m | 16 mm² CU/PVC BLACK CABLE - 9,857 m | 16 mm² CU/PVC GREEN CABLE - 4,295 m | 10 mm² CU/PVC GREEN CABLE - 196 m",
     "dealer": "GT-MAX CONSTRUCTION SDN BHD"
@@ -1230,7 +1230,7 @@ window.PROJECTS =
   },
   {
     "name": "Sungai Mas Plaza",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2019-2020",
     "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 260 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 300 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 280 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 168 m | 70 mm² CU/PVC GREEN CABLE - 145 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 300 m",
     "dealer": "PUISSANCE ENGINEERING SDN BHD"
@@ -1257,7 +1257,7 @@ window.PROJECTS =
   },
   {
     "name": "Toppen Shopping Centre",
-    "sector": "Commercial",
+    "sector": "Retail",
     "year": "2025",
     "details": "800 mm² AL/XLPE/PVC BLACK CABLE - 2,400 m",
     "dealer": "SN ELECTRIC SDN. BHD.",
@@ -1293,7 +1293,7 @@ window.PROJECTS =
   },
   {
     "name": "Xiao En Nilai Memorial Park",
-    "sector": "Commercial"
+    "sector": "Religious"
   },
   {
     "name": "Zemart, Bandar Baru Enstek",
@@ -1642,14 +1642,14 @@ window.PROJECTS =
   },
   {
     "name": "Masjid Universiti Kebangsaan Malaysia (UKM)",
-    "sector": "Education",
+    "sector": "Religious",
     "year": "2024-2025",
     "details": "35 mm² CU/XLPE/PVC BLACK CABLE - 400 m",
     "dealer": "POWER CONTROL ENTERPRISE"
   },
   {
     "name": "Masjid Universiti Putra Malaysia",
-    "sector": "Education",
+    "sector": "Religious",
     "year": "2026",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 824 m",
     "dealer": "ENETOU SOLUTIONS SDN. BHD."
@@ -2012,7 +2012,7 @@ window.PROJECTS =
   },
   {
     "name": "TNB Hq Campus, Bangsar (Mr043)",
-    "sector": "Education"
+    "sector": "Utility"
   },
   {
     "name": "Tun Hussein Onn University",
@@ -2284,7 +2284,7 @@ window.PROJECTS =
   },
   {
     "name": "Institut Tadbiran Awam Negara (INTAN)",
-    "sector": "Government",
+    "sector": "Education",
     "year": "2020",
     "details": "16 mm² x 4c CU/XLPE/SWA/PVC CABLE - 610 m",
     "dealer": "SK AZMI ENTERPRISE"
@@ -2475,7 +2475,7 @@ window.PROJECTS =
   },
   {
     "name": "Pusat Latihan Asas, Akademi Pencegahan",
-    "sector": "Government",
+    "sector": "Education",
     "year": "2025",
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 40 m",
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
@@ -3404,7 +3404,7 @@ window.PROJECTS =
   },
   {
     "name": "FGV Bulkers Terminal",
-    "sector": "Industrial",
+    "sector": "Infrastructure",
     "year": "2020",
     "details": "70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 237 m",
     "dealer": "SN ELECTRIC SDN BHD"
@@ -3495,7 +3495,7 @@ window.PROJECTS =
   },
   {
     "name": "Greenverse Kertih",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2025",
     "details": "120 mm² CU/PVC GREEN CABLE - 384 m",
     "dealer": "BESTLITE ELECTRICAL SDN. BHD."
@@ -4154,7 +4154,7 @@ window.PROJECTS =
   },
   {
     "name": "Petron Malaysia Refining & Marketing",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2025",
     "details": "150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 310 m",
     "dealer": "Y.L ELECTRIC (M) SDN. BHD."
@@ -4168,14 +4168,14 @@ window.PROJECTS =
   },
   {
     "name": "Petronas Chemicals Fertiliser Kedah",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2023",
     "details": "35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Petronas Penapisan Melaka Refinery",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 430 m",
     "dealer": "VOLTAGE MASTER SDN. BHD."
@@ -4190,7 +4190,7 @@ window.PROJECTS =
   },
   {
     "name": "Petronas, Jeram",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2026",
     "details": "70 mm² CU/PVC GREEN/YELLOW CABLE",
     "dealer": "SYARIKAT PUDU BAHRU LETRIK (M) SDN. BHD."
@@ -4357,7 +4357,7 @@ window.PROJECTS =
   },
   {
     "name": "Senai Airport City",
-    "sector": "Industrial",
+    "sector": "Infrastructure",
     "year": "2024",
     "details": "120 mm² CU/PVC BLACK CABLE - 1,600 m",
     "dealer": "CHI-TAK ELECTRICAL (J.B.) SDN. BHD.",
@@ -4583,7 +4583,7 @@ window.PROJECTS =
   },
   {
     "name": "Tpg Oil & Gas SDN BHD",
-    "sector": "Industrial",
+    "sector": "Oil & Gas",
     "year": "2025",
     "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 960 m",
     "dealer": "NUSAJAYA ELECTRICAL & INDUSTRIAL SDN. BHD."
@@ -4885,7 +4885,7 @@ window.PROJECTS =
   },
   {
     "name": "Hu's Peaces Land (Fairy Park) Memorial Park",
-    "sector": "Sports & Recreation",
+    "sector": "Religious",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 369 m",
     "dealer": "GEMILITE SDN. BHD."
@@ -6193,7 +6193,7 @@ window.PROJECTS =
   },
   {
     "name": "Amore Fitness P.l - The Seletar Mall",
-    "sector": "Retail",
+    "sector": "Sports & Recreation",
     "location": "Singapore",
     "country": "Singapore"
   },
