@@ -5074,7 +5074,7 @@ window.PROJECTS =
     "sector": "Commercial"
   },
   {
-    "name": "Sjk ( c ) Bahau",
+    "name": "SJK(C) Bahau",
     "sector": "Education"
   },
   {
