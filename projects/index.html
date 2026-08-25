@@ -107,11 +107,16 @@
     .secblk:last-child{border-bottom:0}
     .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:#fff;z-index:9;box-shadow:0 6px 12px -8px rgba(0,0,0,.1);flex-wrap:wrap}
     .secblk__title .count{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
-    .secblk__sort{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-    .secblk__sort .slbl{margin-right:2px}
-    .secblk__sort button{border:0;background:transparent;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 0;cursor:pointer;font-family:inherit;transition:color .15s;border-bottom:2px solid transparent}
-    .secblk__sort button:hover{color:var(--magenta)}
-    .secblk__sort button.on{color:var(--magenta);border-bottom-color:var(--magenta)}
+    .secblk__sort{position:relative;display:inline-flex;align-items:center}
+    .secblk__sort__btn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--hair);border-radius:20px;padding:6px 12px;color:var(--muted);cursor:pointer;font-family:inherit;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:all .15s}
+    .secblk__sort__btn:hover,.secblk__sort.open .secblk__sort__btn{border-color:var(--magenta);color:var(--magenta)}
+    .secblk__sort__btn svg{width:14px;height:14px}
+    .secblk__sort__menu{position:absolute;top:calc(100% + 6px);right:0;background:#fff;border:1px solid var(--hair);border-radius:10px;box-shadow:0 8px 24px rgba(20,10,20,.12);padding:6px;display:none;min-width:160px;z-index:20}
+    .secblk__sort.open .secblk__sort__menu{display:block}
+    .secblk__sort__menu button{display:block;width:100%;text-align:left;background:transparent;border:0;padding:8px 12px;border-radius:6px;font-family:inherit;font-size:13px;font-weight:600;color:var(--fg);cursor:pointer;transition:background .12s;text-transform:none;letter-spacing:0}
+    .secblk__sort__menu button:hover{background:#faf7fa}
+    .secblk__sort__menu button.on{color:var(--magenta);background:#faf7fa}
+    .secblk__sort__menu button.on::before{content:"✓ ";font-weight:800}
     .secblk__layout{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start}
     @media(max-width:900px){.secblk__layout{grid-template-columns:1fr;gap:28px}}
     .secblk__photo{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.12);aspect-ratio:4/5;cursor:pointer;transition:transform .35s,box-shadow .35s}
@@ -522,8 +527,10 @@
               ${idxHtml}
             </div>` : idxHtml;
           const currentMode = sortMode[g.sector] || 'year';
-          const sortOpts = [['year','Year ↓'],['az','A–Z']];
-          const sortHtml = `<div class="secblk__sort" data-sector="${g.sector.replace(/"/g,'&quot;')}"><span class="slbl">Sort</span>${sortOpts.map(([k,l]) => `<button data-sort="${k}"${currentMode===k?' class="on"':''}>${l}</button>`).join('')}</div>`;
+          const sortOpts = [['year','Year — newest first'],['az','A–Z']];
+          const currentLabel = (sortOpts.find(o => o[0]===currentMode) || sortOpts[0])[1].split(' —')[0];
+          const sortIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12M10 18h4"/></svg>`;
+          const sortHtml = `<div class="secblk__sort" data-sector="${g.sector.replace(/"/g,'&quot;')}"><button class="secblk__sort__btn" type="button" aria-label="Sort options">${sortIcon}<span>Sort: ${currentLabel}</span></button><div class="secblk__sort__menu">${sortOpts.map(([k,l]) => `<button data-sort="${k}"${currentMode===k?' class="on"':''}>${l}</button>`).join('')}</div></div>`;
           return `
             <div class="secblk">
               <div class="secblk__title">${lbl(g.sector)} <span class="count">${g.items.length} project${g.items.length!==1?'s':''}</span>${sortHtml}</div>
@@ -540,19 +547,40 @@
         renderExp(currentTab);
       });
 
-      // --- expandable project rows + sort buttons ---
+      // --- expandable project rows + sort dropdown ---
       let currentTab = 'All';
       document.getElementById('expBody').addEventListener('click', e => {
-        const sortBtn = e.target.closest('.secblk__sort button');
-        if (sortBtn) {
+        // Toggle sort menu
+        const sortToggle = e.target.closest('.secblk__sort__btn');
+        if (sortToggle) {
           e.stopPropagation();
-          const sector = sortBtn.parentElement.dataset.sector;
-          sortMode[sector] = sortBtn.dataset.sort;
+          const wrap = sortToggle.closest('.secblk__sort');
+          const wasOpen = wrap.classList.contains('open');
+          document.querySelectorAll('.secblk__sort.open').forEach(el => el.classList.remove('open'));
+          if (!wasOpen) wrap.classList.add('open');
+          return;
+        }
+        // Pick sort option
+        const sortItem = e.target.closest('.secblk__sort__menu button');
+        if (sortItem) {
+          e.stopPropagation();
+          const sector = sortItem.closest('.secblk__sort').dataset.sector;
+          sortMode[sector] = sortItem.dataset.sort;
           renderExp(currentTab);
           return;
         }
+        // Row expand
         const row = e.target.closest('.secblk__idx__row.has-detail'); if (!row) return;
         row.classList.toggle('expanded');
+      });
+      // Close sort menu on outside click / Esc
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.secblk__sort')) {
+          document.querySelectorAll('.secblk__sort.open').forEach(el => el.classList.remove('open'));
+        }
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') document.querySelectorAll('.secblk__sort.open').forEach(el => el.classList.remove('open'));
       });
 
       // --- lightbox (only on cards with images) ---
