@@ -143,47 +143,20 @@
     .secblk__idx__row.has-detail{cursor:pointer}
     .secblk__idx__row.has-detail:hover .chev{color:var(--magenta)}
     .secblk__idx__row.expanded .chev{transform:rotate(90deg);color:var(--magenta)}
-    /* Project detail modal (option D — lightbox spec sheet) */
-    .prj-modal{position:fixed;inset:0;z-index:200;background:rgba(20,20,26,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:40px 20px;opacity:0;transition:opacity .2s}
-    .prj-modal.open{display:flex;opacity:1}
-    .prj-modal__panel{position:relative;width:100%;max-width:820px;max-height:calc(100vh - 80px);background:#fff;border-radius:16px;box-shadow:0 40px 80px rgba(20,10,20,.4);overflow:hidden;display:flex;flex-direction:column;transform:translateY(20px);transition:transform .25s}
-    .prj-modal.open .prj-modal__panel{transform:translateY(0)}
-    .prj-modal__close{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.06);border:0;font-size:24px;line-height:1;color:var(--fg);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;z-index:1}
-    .prj-modal__close:hover{background:var(--magenta);color:#fff}
-    .prj-modal__body{padding:36px 40px 32px;overflow-y:auto}
-    .prj-modal__sector{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);margin-bottom:12px}
-    .prj-modal__name{font-size:32px;font-weight:900;line-height:1.15;letter-spacing:-.015em;color:var(--fg);margin:0 0 6px;padding-right:40px}
-    .prj-modal__loc{font-size:16px;color:var(--muted);font-weight:600;letter-spacing:.02em}
-    .prj-modal__hero{display:flex;align-items:baseline;gap:24px;margin:24px 0 20px;padding:20px 24px;background:linear-gradient(135deg,#faf7fa,#fff);border-radius:12px;border-left:4px solid var(--magenta);flex-wrap:wrap}
-    .prj-modal__yr{font-size:44px;font-weight:900;color:var(--magenta);letter-spacing:-.02em;line-height:1}
-    .prj-modal__stats{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
-    .prj-modal__stats .st{display:flex;flex-direction:column;gap:2px}
-    .prj-modal__stats .st b{font-size:22px;font-weight:900;color:var(--fg);font-variant-numeric:tabular-nums;line-height:1}
-    .prj-modal__stats .st span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-    .prj-modal__section-hd{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:22px 0 12px}
-    .prj-modal__chart{display:flex;flex-direction:column;gap:6px}
-    .prj-modal__chart .bar{display:grid;grid-template-columns:120px 1fr auto;gap:12px;align-items:center;font-size:13px}
-    .prj-modal__chart .bar .label{color:var(--fg);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .prj-modal__chart .bar .track{height:8px;background:#f2eff3;border-radius:6px;overflow:hidden}
-    .prj-modal__chart .bar .fill{height:100%;background:linear-gradient(90deg,var(--magenta),#e05eb8);border-radius:6px;transition:width .4s}
-    .prj-modal__chart .bar .val{font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
-    .cbl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px}
-    .cbl-chip{padding:9px 13px;background:#fff;border:1px solid var(--hair);border-radius:8px;font-size:13px;display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-left:3px solid #c9c4cc}
+    .secblk__idx__detail{grid-column:1/-1;margin-top:14px;padding:18px 20px;background:#faf7fa;border-radius:10px;font-size:14px;line-height:1.5;color:var(--fg);display:none}
+    .secblk__idx__row.expanded .secblk__idx__detail{display:block}
+    .secblk__idx__detail .dhead{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+    .secblk__idx__detail .yr{font-size:22px;font-weight:900;color:var(--magenta);letter-spacing:-.01em}
+    .secblk__idx__detail .via{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .secblk__idx__detail .via b{color:var(--fg);font-weight:800;letter-spacing:.02em;text-transform:none;font-size:13px;margin-left:4px}
+    .cbl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px}
+    .cbl-chip{padding:8px 12px;background:#fff;border:1px solid var(--hair);border-radius:8px;font-size:13px;display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-left:3px solid #c9c4cc}
     .cbl-chip.xlpe{border-left-color:var(--magenta)}
     .cbl-chip.mica{border-left-color:#e85a2a}
     .cbl-chip.al{border-left-color:#6b7a8f}
     .cbl-chip.tape{border-left-color:#c9a34a}
-    .cbl-chip .cspec{color:var(--fg);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+    .cbl-chip .cspec{color:var(--fg);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .cbl-chip .cqty{color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-    .prj-modal__dealer{margin-top:18px;padding:14px 18px;background:#faf7fa;border-radius:10px;display:flex;align-items:center;gap:14px;font-size:14px}
-    .prj-modal__dealer .lbl{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-    .prj-modal__dealer .name{font-weight:800;color:var(--fg)}
-    @media (max-width: 640px) {
-      .prj-modal__body{padding:24px 20px}
-      .prj-modal__name{font-size:22px}
-      .prj-modal__yr{font-size:32px}
-      .prj-modal__chart .bar{grid-template-columns:90px 1fr auto;font-size:12px}
-    }
     .secblk__more{margin-top:16px;color:var(--muted);font-style:italic;font-size:16px;font-weight:500}
     .secblk__none{color:var(--muted);font-size:17px;font-style:italic;padding:40px 0}
 
@@ -303,13 +276,6 @@
   <div class="lb" id="lb">
     <img id="lbImg" alt="">
     <div class="lb__cap"><b id="lbName"></b><span id="lbLoc"></span></div>
-  </div>
-
-  <div class="prj-modal" id="prjModal" aria-hidden="true">
-    <div class="prj-modal__panel" role="dialog" aria-modal="true">
-      <button class="prj-modal__close" id="prjModalClose" aria-label="Close">×</button>
-      <div class="prj-modal__body" id="prjModalBody"></div>
-    </div>
   </div>
 
   <nav class="secnav" id="secnav" aria-label="Section navigation"></nav>
@@ -474,18 +440,46 @@
                 const hasDetail = !!(p.year || p.details || p.dealer);
                 const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
                 const esc = s => s.replace(/</g,'&lt;').replace(/>/g,'&gt;');
-                const dealerShort = (d) => d.replace(/\s*\(.*?\)\s*/g,'').replace(/\s*(SDN\.?\s*BHD\.?|SENDIRIAN BERHAD|BERHAD).*$/i,'').replace(/\+\d+\s*more.*$/,'').trim();
-                const dealerLbl = p.dealer ? dealerShort(p.dealer) : '';
-                const extraDealers = p.dealer ? (p.dealer.match(/\+(\d+)\s*more/i) || [])[1] : '';
+                // Classify each cable by dominant insulation
+                const chipClass = (spec) => {
+                  const u = spec.toUpperCase();
+                  if (u.includes('MICA') || u.includes(' FR')) return 'mica';
+                  if (u.includes('COPPER TAPE') || u.includes('COPPER STRIP')) return 'tape';
+                  if (/\bAL\//.test(u) || u.includes('AERIAL BUNDLED')) return 'al';
+                  if (u.includes('XLPE')) return 'xlpe';
+                  return '';
+                };
+                // Split cable spec into "spec" (before " - qty") and "qty" (after)
+                const splitQty = (s) => {
+                  const m = s.match(/^(.*?)\s*-\s*([\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i);
+                  return m ? [m[1].trim(), m[2].trim()] : [s, ''];
+                };
+                // Dealer short: strip common suffixes, keep first 3 words
+                const dealerShort = (d) => d.replace(/\s*\(.*?\)\s*/g,'').replace(/\s*(SDN\.?\s*BHD\.?|SENDIRIAN BERHAD|BERHAD|SDN BHD).*$/i,'').replace(/\+\d+\s*more.*$/,'').trim();
+                const dealerFull = p.dealer ? p.dealer : '';
+                const dealerLbl = dealerFull ? dealerShort(dealerFull) : '';
+                const extraDealers = dealerFull.match(/\+(\d+)\s*more/i);
+                // Metadata rail (always visible under name)
                 const railParts = [];
                 if (p.year) railParts.push(`<span class="mchip year">${p.year}</span>`);
                 if (cbls.length) railParts.push(`<span class="mchip">${cbls.length} cable${cbls.length!==1?'s':''}</span>`);
-                if (dealerLbl) railParts.push(`<span class="mchip">via ${esc(dealerLbl)}${extraDealers?` +${extraDealers}`:''}</span>`);
+                if (dealerLbl) railParts.push(`<span class="mchip">via ${esc(dealerLbl)}${extraDealers?` +${extraDealers[1]}`:''}</span>`);
                 const rail = railParts.length ? `<div class="secblk__idx__meta">${railParts.join('<span class="mdot">·</span>')}</div>` : '';
+                // Expanded detail: chip grid
+                const chipsHtml = cbls.map(c => {
+                  const [spec, qty] = splitQty(c);
+                  return `<div class="cbl-chip ${chipClass(spec)}"><span class="cspec">${esc(spec)}</span>${qty?`<span class="cqty">${esc(qty)}</span>`:''}</div>`;
+                }).join('');
+                const detail = hasDetail ? `<div class="secblk__idx__detail">
+                  <div class="dhead">
+                    ${p.year ? `<div class="yr">${p.year}</div>` : ''}
+                    ${dealerFull ? `<div class="via">Via <b>${esc(dealerFull)}</b></div>` : ''}
+                  </div>
+                  ${chipsHtml ? `<div class="cbl-grid">${chipsHtml}</div>` : ''}
+                </div>` : '';
                 const chev = hasDetail ? `<span class="chev">›</span>` : '';
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
-                const dataAttr = hasDetail ? ` data-prj-name="${p.name.replace(/"/g,'&quot;')}"` : '';
-                return `<div class="${cls}"${dataAttr}><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span>${rail}</span><span class="secblk__idx__loc">${loc}</span></div>`;
+                return `<div class="${cls}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span>${rail}</span><span class="secblk__idx__loc">${loc}</span>${detail}</div>`;
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails
@@ -534,94 +528,11 @@
         renderExp(tab);
       });
 
-      // --- project detail modal (option D) ---
-      const prjModal = document.getElementById('prjModal');
-      const prjModalBody = document.getElementById('prjModalBody');
-      const escHtml = s => (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-      const chipClass = (spec) => {
-        const u = spec.toUpperCase();
-        if (u.includes('MICA') || u.includes(' FR')) return 'mica';
-        if (u.includes('COPPER TAPE') || u.includes('COPPER STRIP')) return 'tape';
-        if (/\bAL\//.test(u) || u.includes('AERIAL BUNDLED')) return 'al';
-        if (u.includes('XLPE')) return 'xlpe';
-        return '';
-      };
-      const splitQty = (s) => {
-        const m = s.match(/^(.*?)\s*-\s*([\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i);
-        return m ? [m[1].trim(), m[2].trim()] : [s, ''];
-      };
-      // Extract meterage: "X m" direct, or "X coil" × 100M/200M/1KM parsed from spec text
-      const meterage = (fullSpec) => {
-        const mM = fullSpec.match(/-\s*([\d,]+(?:\.\d+)?)\s*m\b/i);
-        if (mM) return parseFloat(mM[1].replace(/,/g,''));
-        const mCoil = fullSpec.match(/-\s*([\d,]+(?:\.\d+)?)\s*coil/i);
-        if (mCoil) {
-          const coilCount = parseFloat(mCoil[1].replace(/,/g,''));
-          const sizeMatch = fullSpec.match(/(\d+(?:\.\d+)?)\s*(?:M\b|KM\b)/i);
-          let per = 100;
-          if (sizeMatch) {
-            per = parseFloat(sizeMatch[1]);
-            if (/KM\b/i.test(sizeMatch[0])) per *= 1000;
-          }
-          return coilCount * per;
-        }
-        return 0;
-      };
-      // Extract cable size (mm²) for label
-      const cableSize = (spec) => {
-        const m = spec.match(/(\d+(?:\.\d+)?)\s*mm²/i);
-        return m ? m[1] + ' mm²' : spec.split(' ').slice(0,3).join(' ');
-      };
-      const fmtNum = n => n.toLocaleString('en-US', {maximumFractionDigits:0});
-
-      const openPrjModal = (name) => {
-        const p = projects.find(x => x.name === name); if (!p) return;
-        const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
-        // Chart: sort by meterage desc, top 8
-        const chartData = cbls.map(c => ({label: cableSize(c), m: meterage(c), full: c})).filter(d => d.m > 0);
-        chartData.sort((a,b) => b.m - a.m);
-        const topChart = chartData.slice(0, 8);
-        const maxM = topChart[0]?.m || 1;
-        const totalM = chartData.reduce((s,d) => s+d.m, 0);
-        const chipsHtml = cbls.map(c => {
-          const [spec, qty] = splitQty(c);
-          return `<div class="cbl-chip ${chipClass(spec)}"><span class="cspec">${escHtml(spec)}</span>${qty?`<span class="cqty">${escHtml(qty)}</span>`:''}</div>`;
-        }).join('');
-        const chartHtml = topChart.length ? topChart.map(d => `
-          <div class="bar">
-            <span class="label">${escHtml(d.label)}</span>
-            <span class="track"><span class="fill" style="width:${(d.m/maxM*100).toFixed(1)}%"></span></span>
-            <span class="val">${fmtNum(d.m)} m</span>
-          </div>`).join('') : '';
-        prjModalBody.innerHTML = `
-          <div class="prj-modal__sector">${escHtml(lbl(p.sector))}</div>
-          <h2 class="prj-modal__name">${escHtml(p.name)}</h2>
-          ${p.location || p.country ? `<div class="prj-modal__loc">${escHtml([p.location, p.country && p.country!=='Malaysia' ? p.country : null].filter(Boolean).join(' · '))}</div>` : ''}
-          <div class="prj-modal__hero">
-            ${p.year ? `<div class="prj-modal__yr">${escHtml(p.year)}</div>` : ''}
-            <div class="prj-modal__stats">
-              ${cbls.length ? `<div class="st"><b>${cbls.length}</b><span>cable type${cbls.length!==1?'s':''}</span></div>` : ''}
-              ${totalM > 0 ? `<div class="st"><b>${fmtNum(totalM)}</b><span>metres total</span></div>` : ''}
-            </div>
-          </div>
-          ${chartHtml ? `<div class="prj-modal__section-hd">Meterage by size</div><div class="prj-modal__chart">${chartHtml}</div>` : ''}
-          ${chipsHtml ? `<div class="prj-modal__section-hd">All cable specifications</div><div class="cbl-grid">${chipsHtml}</div>` : ''}
-          ${p.dealer ? `<div class="prj-modal__dealer"><span class="lbl">Supplied via</span><span class="name">${escHtml(p.dealer)}</span></div>` : ''}
-        `;
-        prjModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      };
-      const closePrjModal = () => {
-        prjModal.classList.remove('open');
-        document.body.style.overflow = '';
-      };
+      // --- expandable project rows ---
       document.getElementById('expBody').addEventListener('click', e => {
         const row = e.target.closest('.secblk__idx__row.has-detail'); if (!row) return;
-        openPrjModal(row.dataset.prjName);
+        row.classList.toggle('expanded');
       });
-      document.getElementById('prjModalClose').addEventListener('click', closePrjModal);
-      prjModal.addEventListener('click', e => { if (e.target === prjModal) closePrjModal(); });
-      document.addEventListener('keydown', e => { if (e.key === 'Escape' && prjModal.classList.contains('open')) closePrjModal(); });
 
       // --- lightbox (only on cards with images) ---
       const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbName = document.getElementById('lbName'), lbLoc = document.getElementById('lbLoc');
