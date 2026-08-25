@@ -1468,8 +1468,7 @@ window.PROJECTS =
   },
   {
     "name": "Lion Data Centre, Bukit Jalil",
-    "sector": "Data Centre",
-    "img": "https://rpmschedulers.com/wp-content/uploads/2023/02/Lion-Data-Centre_2.jpg"
+    "sector": "Data Centre"
   },
   {
     "name": "PDG JH1 Data Centre",
