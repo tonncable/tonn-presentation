@@ -107,11 +107,11 @@
     .secblk:last-child{border-bottom:0}
     .secblk__title{font-size:23px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--magenta);margin-bottom:26px;display:flex;align-items:baseline;gap:18px;padding:16px 0 20px;border-bottom:2px solid var(--magenta);position:sticky;top:72px;background:#fff;z-index:9;box-shadow:0 6px 12px -8px rgba(0,0,0,.1);flex-wrap:wrap}
     .secblk__title .count{color:var(--muted);font-weight:600;font-size:16px;letter-spacing:.06em;text-transform:none;margin-left:auto}
-    .secblk__sort{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-    .secblk__sort .slbl{margin-right:4px}
-    .secblk__sort button{border:1px solid var(--hair);background:#fff;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .15s}
-    .secblk__sort button:hover{border-color:var(--magenta);color:var(--magenta)}
-    .secblk__sort button.on{background:var(--magenta);border-color:var(--magenta);color:#fff}
+    .secblk__sort{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .secblk__sort .slbl{margin-right:2px}
+    .secblk__sort button{border:0;background:transparent;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 0;cursor:pointer;font-family:inherit;transition:color .15s;border-bottom:2px solid transparent}
+    .secblk__sort button:hover{color:var(--magenta)}
+    .secblk__sort button.on{color:var(--magenta);border-bottom-color:var(--magenta)}
     .secblk__layout{display:grid;grid-template-columns:340px 1fr;gap:44px;align-items:start}
     @media(max-width:900px){.secblk__layout{grid-template-columns:1fr;gap:28px}}
     .secblk__photo{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.12);aspect-ratio:4/5;cursor:pointer;transition:transform .35s,box-shadow .35s}
@@ -157,6 +157,7 @@
     .cbl-list{list-style:disc;padding-left:22px;margin:0;color:var(--fg)}
     .cbl-list li{padding:3px 0;font-size:14px;line-height:1.5}
     .cbl-list li::marker{color:var(--magenta)}
+    .cbl-list li .qty{color:var(--magenta);font-weight:800}
     .secblk__more{margin-top:16px;color:var(--muted);font-style:italic;font-size:16px;font-weight:500}
     .secblk__none{color:var(--muted);font-size:17px;font-style:italic;padding:40px 0}
 
@@ -472,7 +473,12 @@
                 const rightInfo = p.year || '';
                 // Expanded detail: year + via header, bulleted cable list
                 const dealerFull = p.dealer || '';
-                const listHtml = cbls.map(c => `<li>${esc(c)}</li>`).join('');
+                const listHtml = cbls.map(c => {
+                  // Bold-magenta the trailing quantity (e.g. "- 2,500 m", "- 6 coil", "- 121 kg")
+                  const m = c.match(/^(.*?)(\s+-\s*[\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i);
+                  if (m) return `<li>${esc(m[1])}<span class="qty">${esc(m[2])}</span></li>`;
+                  return `<li>${esc(c)}</li>`;
+                }).join('');
                 const detail = hasDetail ? `<div class="secblk__idx__detail">
                   ${(p.year || dealerFull) ? `<div class="dhead">
                     ${p.year ? `<span class="yr">${p.year}</span>` : ''}
@@ -516,7 +522,7 @@
               ${idxHtml}
             </div>` : idxHtml;
           const currentMode = sortMode[g.sector] || 'year';
-          const sortOpts = [['year','Year ↓'],['az','A–Z'],['meterage','Meterage'],['featured','Featured']];
+          const sortOpts = [['year','Year ↓'],['az','A–Z']];
           const sortHtml = `<div class="secblk__sort" data-sector="${g.sector.replace(/"/g,'&quot;')}"><span class="slbl">Sort</span>${sortOpts.map(([k,l]) => `<button data-sort="${k}"${currentMode===k?' class="on"':''}>${l}</button>`).join('')}</div>`;
           return `
             <div class="secblk">
