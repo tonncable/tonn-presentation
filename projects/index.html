@@ -667,28 +667,27 @@
       const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbName = document.getElementById('lbName'), lbLoc = document.getElementById('lbLoc');
       function jumpToProjectRow(name){
         const p = projects.find(x => x.name === name); if (!p) return false;
-        const tabForRow = (currentTab === '__intl' || currentTab === 'All') ? currentTab : p.sector;
-        if (tabForRow !== currentTab) {
+        const needSwitch = currentTab !== 'All' && currentTab !== '__intl' && currentTab !== p.sector;
+        if (needSwitch) {
           const tabBtn = document.querySelector('.expsec__tab[data-tab="' + p.sector + '"]');
           if (tabBtn) tabBtn.click();
         }
-        // wait a tick for renderExp to run if tab changed
-        requestAnimationFrame(() => {
-          const row = document.querySelector('#expBody .secblk__idx__row[data-name="' + name.replace(/"/g,'\\"') + '"]');
+        const sel = '#expBody .secblk__idx__row[data-name="' + name.replace(/"/g,'\\"') + '"]';
+        const doScroll = () => {
+          const row = document.querySelector(sel);
           if (!row) return;
           if (row.classList.contains('has-detail')) row.classList.add('expanded');
           row.scrollIntoView({behavior:'smooth', block:'center'});
-        });
+        };
+        if (needSwitch) requestAnimationFrame(() => requestAnimationFrame(doScroll));
+        else doScroll();
         return true;
       }
       document.body.addEventListener('click', e => {
         const target = e.target.closest('.sig__card,.secblk__photo,.secblk__thumb'); if (!target) return;
         const name = target.dataset.name; if (!name) return;
         e.preventDefault();
-        // Scroll to Experience-by-sector section first, then jump to the row
-        const expSec = document.querySelector('.expsec');
-        if (expSec) expSec.scrollIntoView({behavior:'smooth', block:'start'});
-        setTimeout(() => jumpToProjectRow(name), 350);
+        jumpToProjectRow(name);
       });
       lb.addEventListener('click', () => lb.classList.remove('open'));
     })();
