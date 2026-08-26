@@ -6296,7 +6296,6 @@ window.PROJECTS =
   {
     "name": "AEON Mall Shah Alam",
     "sector": "Retail",
-    "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLitapNGEFlzjSLYfhyphenhyphenBzguEgCNzX8vM_xt643xqWrMHB7ejZOBo3brYoJzq2C0I83iwl0lzhwAAMXuUkDf0hh_rA_U9iOezkBUKzFCUX_7UPm0081XodTPvZSPsZzLRNR6icHbvo1DMmQ/s1600/AEON+Shah+Alam+01.jpg",
     "year": "2023-2024",
     "details": "300 mm² CU/PVC GREEN CABLE - 440 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 120 mm² CU/PVC GREEN CABLE - 15 m | 50 mm² CU/PVC GREEN CABLE 90M - 1 coil | 35 mm² CU/PVC GREEN CABLE - 165 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD. +1 more"
@@ -6352,7 +6351,7 @@ window.PROJECTS =
   {
     "name": "IOI City Mall",
     "sector": "Retail",
-    "img": "https://files.ioiproperties.com.my/dsites/s3fs-public/project/covers/20220825-171220-icmP2-DJI_0156.jpg",
+    "img": "https://res.klook.com/image/upload/fl_lossy.progressive,w_1200,h_630,c_fill,q_85/ioi-city-mall_2_felgkg.jpg",
     "location": "Putrajaya"
   },
   {
@@ -6453,7 +6452,7 @@ window.PROJECTS =
   {
     "name": "Queensbay Mall",
     "sector": "Retail",
-    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/28/60/6a/just-15-minutes-from.jpg?w=900&h=500&s=1",
+    "img": "https://sg1-cdn.pgimgs.com/projectnet-project/118062/ZPPHO.111401785.R800X800.jpg",
     "year": "2026",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 1,120 m | 120 mm² CU/PVC GREEN CABLE - 140 m | 95 mm² CU/PVC GREEN CABLE - 80 m",
     "dealer": "EV CONNECTION SDN. BHD.",
@@ -6478,7 +6477,7 @@ window.PROJECTS =
   {
     "name": "Starhill Gallery",
     "sector": "Retail",
-    "img": "https://archello.com/thumbs/images/2023/04/13/kokaistudios-the-starhill-shopping-centres-archello.1681369313.9209.jpg?fit=crop&auto=compress&w=546&h=362",
+    "img": "https://world-architects.com/images/Projects/57/98/17/8e16dc0829dc4a73ad8a5c477399f48a/8e16dc0829dc4a73ad8a5c477399f48a.6e7b65d0.jpg",
     "year": "2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 5,280 m | 10 mm² CU/PVC BLACK CABLE - 25,179 m | 10 mm² CU/PVC GREEN CABLE - 9,610 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING S/B",
