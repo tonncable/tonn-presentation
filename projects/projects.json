@@ -1561,6 +1561,7 @@
   {
     "name": "Garden International School",
     "sector": "Education",
+    "img": "https://axel.com.my/wp-content/uploads/2026/04/GIS3-1024x768.png",
     "year": "2023-2024",
     "details": "400 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 76 m | 35 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 1,900 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 436 m",
     "dealer": "NANYANG ELECTRIC CO. (M) SDN. BHD.",
@@ -1619,6 +1620,7 @@
   {
     "name": "Kolej Universiti Islam Antarabangsa Selangor (KUIS)",
     "sector": "Education",
+    "img": "https://www.selak-selak.com/wp-content/uploads/2022/10/20220626_144522-scaled.jpg",
     "year": "2023-2025",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 928 m | 95 mm² CU/PVC GREEN CABLE - 232 m | 25 mm² CU/PVC BLACK CABLE - 360 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 892 m | 16 mm² CU/PVC BLACK CABLE - 500 m | 10 mm² CU/PVC BLACK CABLE - 860 m",
     "dealer": "NEW MALURI LETRIK (SELANGOR) SDN. BHD.",
@@ -1656,6 +1658,7 @@
   {
     "name": "Kompleks Muzik UPSI",
     "sector": "Education",
+    "img": "https://fmsp.upsi.edu.my/wp-content/uploads/2025/09/Landing-Page-1024x678.png",
     "year": "2025",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 450 m | 240 mm² CU/PVC GREEN CABLE - 100 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 950 m | 150 mm² CU/PVC GREEN CABLE - 210 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 428 m | 25 mm² CU/PVC GREEN CABLE - 275 m",
     "dealer": "ISE SOLUTIONS (M) SDN BHD"
@@ -1701,6 +1704,7 @@
   {
     "name": "Management & Science University (MSU)",
     "sector": "Education",
+    "img": "https://www.msu.edu.my/files/files/exps%20Sep%20intake%20sustainability%20fb4.jpg",
     "year": "2026",
     "details": "120 mm² CU/PVC BLACK CABLE - 800 m",
     "dealer": "WH ELECTRICAL MARKETING (M) SDN. BHD.",
@@ -1869,6 +1873,7 @@
   {
     "name": "SJKC Elmina",
     "sector": "Education",
+    "img": "https://media.edgeprop.my/s3fs-public/editorial/my/2025/June/13/SJK%28c%29RegentElmina.jpg",
     "year": "2025",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 526 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 272 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 222 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 875 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 2,720 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 390 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD.",
@@ -2135,6 +2140,7 @@
   {
     "name": "Universiti Malaya",
     "sector": "Education",
+    "img": "https://www.ceria.um.edu.my/wp-content/uploads/2021/07/um-kl-gate.jpg",
     "year": "2024-2026",
     "details": "630 mm² CU/XLPE/PVC BLACK CABLE - 312 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 560 m | 2.5 mm² CU/PVC GREEN CABLE 100M - 850 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 850 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 890 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 830 coil",
     "dealer": "CABLETECH ELECTRIC SDN. BHD. +2 more",
