@@ -121,6 +121,7 @@ window.PROJECTS =
   {
     "name": "Oxley Towers",
     "sector": "Commercial",
+    "img": "https://sg.tepcdn.com/public/usr/6xjasb/65d527-027-OXLEY-KLCC-v9-Copy.jpg",
     "location": "Kuala Lumpur",
     "year": "2023-2025",
     "details": "10 mm² CU/PVC GREEN CABLE - 3,314 m | 10 mm² CU/PVC BLACK CABLE - 3,314 m | 10 mm² CU/PVC RED CABLE - 3,314 m | 10 mm² CU/PVC BLUE CABLE - 3,314 m | 10 mm² CU/PVC YELLOW CABLE - 3,314 m",
@@ -952,6 +953,7 @@ window.PROJECTS =
   {
     "name": "Botani Village Commercial Centre",
     "sector": "Commercial",
+    "img": "https://cdn.myportfolio.com/3d1abacd-25ff-4283-b1c5-f08de67c51b5/ec2c52e7-d0eb-4841-ac15-77aa0962b9a9_rw_3840.JPG?h=19feeae93749987102de840e8daf5467",
     "year": "2023-2024",
     "details": "400 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 40 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 220 m | 70 mm² CU/PVC BLACK CABLE - 500 m | 50 mm² CU/PVC BLACK CABLE - 708 m | 25 mm² CU/PVC BLACK CABLE - 6,128 m | 16 mm² CU/PVC GREEN CABLE - 2,329 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD."
@@ -1610,7 +1612,6 @@ window.PROJECTS =
   {
     "name": "Kolej Tuanku Jaafar (MANTIN)",
     "sector": "Education",
-    "img": "https://www.ktj.edu.my/userfiles/ktjmvc/imagery/header-images/01-about/header-about-senior-staff.jpg?command_1=resize&width_1=1200",
     "year": "2023",
     "details": "1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
@@ -3508,7 +3509,7 @@ window.PROJECTS =
   {
     "name": "FGV Palm Industries SDN BHD",
     "sector": "Industrial",
-    "img": "https://www.malaymail.com/malaymail/uploads/images/2023/10/07/152885.jpg",
+    "img": "https://assets.bharian.com.my/images/articles/fgv28og_BHfield_image_socialmedia.var_1693222541.jpg",
     "year": "2026",
     "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,980 m",
     "dealer": "PENTALITE ELECTRICAL SDN. BHD."
