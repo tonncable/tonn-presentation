@@ -3091,6 +3091,7 @@ window.PROJECTS =
   {
     "name": "B. Braun Medical Industries Campus 1",
     "sector": "Industrial",
+    "img": "https://voiceofasean.com/wp-content/uploads/2023/07/2.-B.-Braun-Campus-2-Main-Entrance-1-scaled.jpg",
     "year": "2025",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 3,066 m | 300 mm² CU/PVC GREEN CABLE - 413 m | 95 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 460 m | 50 mm² CU/PVC GREEN CABLE - 460 m | 25 mm² CU/PVC GREEN CABLE - 28 m",
     "dealer": "TEKNICO ELECTRICAL & ELECTRONIC SDN. BHD."
@@ -3105,6 +3106,7 @@ window.PROJECTS =
   {
     "name": "Barry Callebaut Asia",
     "sector": "Industrial",
+    "img": "https://www.barry-callebaut.com/sites/default/files/styles/node_page_intro_fallback/public/2021-11/BC%20in%20Port%20Klang%20Malaysia_0.jpg?itok=ta2iDeVw",
     "year": "2026",
     "details": "via GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
@@ -3251,6 +3253,7 @@ window.PROJECTS =
   {
     "name": "Chuan Sin SDN BHD (Spritzer)",
     "sector": "Industrial",
+    "img": "https://manufacturermalaysia.com/wp-content/uploads/2024/12/story-bg2.jpg",
     "year": "2023-2026",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 50 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 500 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 640 m | 10 mm² CU/PVC BLACK CABLE - 3,864 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 1,252 m | 6 mm² CU/PVC GREEN CABLE - 1,280 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD. +1 more"
@@ -3362,6 +3365,7 @@ window.PROJECTS =
   {
     "name": "Eco Business Park V (New Plant)",
     "sector": "Industrial",
+    "img": "https://assets.theedgemarkets.com/Paragon-Eco-Business-Park-7_BC_Thumb.jpg",
     "year": "2020-2026",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 800 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 3,600 m | 70 mm² CU/PVC GREEN CABLE - 200 m | 50 mm² CU/PVC GREEN CABLE - 900 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
@@ -3475,6 +3479,7 @@ window.PROJECTS =
   {
     "name": "FGV Palm Industries SDN BHD",
     "sector": "Industrial",
+    "img": "https://themalaysianreserve.com/wp-content/uploads/2022/11/FGV-250x167.jpg",
     "year": "2026",
     "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,980 m",
     "dealer": "PENTALITE ELECTRICAL SDN. BHD."
@@ -3857,6 +3862,7 @@ window.PROJECTS =
   {
     "name": "KL-Kepong Oleomas Plant",
     "sector": "Industrial",
+    "img": "https://www.klkoleo.com/wp-content/uploads/2021/11/Davoslife-NOV-2015-1LR.jpg",
     "year": "2024-2026",
     "details": "95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 129 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 341 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 922 m | 2.5 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 621 m | 1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 1,333 m | 1.5 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 1,162 m",
     "dealer": "SB ELEKTRIK & ELEKTRONIK SDN. BHD. +1 more"
@@ -3871,6 +3877,7 @@ window.PROJECTS =
   {
     "name": "Kompleks Tenusu Muadzam Shah",
     "sector": "Industrial",
+    "img": "https://i.ytimg.com/vi/ck09abU5q6k/maxresdefault.jpg",
     "year": "2026",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 3,600 m",
     "dealer": "FARM FRESH BERHAD",
@@ -4121,6 +4128,7 @@ window.PROJECTS =
   {
     "name": "Ngo Chew Hong Oils & Fats",
     "sector": "Industrial",
+    "img": "https://www.ngochewhong.com/wp-content/uploads/2019/04/Manufacturing-Facilities_04-600x400.jpg",
     "year": "2026",
     "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 208 m | 240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 91 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 182 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 125 m | 120 mm² CU/PVC GREEN CABLE - 286 m | 95 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 85 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
@@ -4311,6 +4319,7 @@ window.PROJECTS =
   {
     "name": "Proton City",
     "sector": "Industrial",
+    "img": "https://www.soyacincau.com/wp-content/uploads/2016/05/proton-city-e1462443021124.jpg",
     "year": "2020-2026",
     "details": "500 mm² CU/XLPE/PVC BLACK CABLE - 380 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 2,300 m | 240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 446 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 1,156 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,004 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE - 1,825 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD. +1 more",
@@ -4495,6 +4504,7 @@ window.PROJECTS =
   {
     "name": "Sony Emcs (Malaysia) SDN BHD",
     "sector": "Industrial",
+    "img": "https://pkct.com.my/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-06-at-6.31.04-PM.jpeg",
     "year": "2024-2026",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 504 m | 120 mm² CU/PVC GREEN CABLE - 214 m | 50 mm² CU/PVC BLACK CABLE - 1,605 m | 25 mm² CU/PVC BLACK CABLE - 1,800 m | 16 mm² CU/PVC GREEN CABLE - 985 m | 10 mm² CU/PVC BLACK CABLE - 9,000 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
@@ -6652,6 +6662,7 @@ window.PROJECTS =
   {
     "name": "Johor Bahru Singapore RTS Link",
     "sector": "Infrastructure",
+    "hero": true,
     "year": "2026",
     "details": "25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 800 m | 10 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 230 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
