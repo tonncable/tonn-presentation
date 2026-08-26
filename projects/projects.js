@@ -5445,7 +5445,7 @@ window.PROJECTS =
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 8 m | 95 mm² CU/PVC BLACK CABLE - 1,230 m | 50 mm² CU/PVC GREEN CABLE - 300 m",
     "dealer": "PRIMA DYNAMIC ELECTRICAL SDN. BHD.",
     "location": "Shah Alam",
-    "img": "https://selangor.travel/wp-content/uploads/2019/09/Sultan_Salahuddin_Abdul_Aziz_Mosque_Blue_Dome_Tourism_Selangor.jpg",
+    "img": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlKFlQ1hwq-hIKbEd_SeovXuWQ6CAFV_h-cTFxBxwxBxzcSVexcX9ljKysrCDwNA0J_BpJW-oqBJurYCi00Yv1clRq6ip_TYjFq4ds_NSrxZCbSzER-Pq84QFEMwVp-NaA0NoQ=s680-w680-h510-rw",
     "hero": true
   },
   {
