@@ -1609,6 +1609,7 @@
   {
     "name": "Kolej Tuanku Jaafar (MANTIN)",
     "sector": "Education",
+    "img": "https://www.ktj.edu.my/userfiles/ktjmvc/imagery/header-images/01-about/header-about-senior-staff.jpg?command_1=resize&width_1=1200",
     "year": "2023",
     "details": "1.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 3,000 m",
     "dealer": "CABLETECH ELECTRIC SDN. BHD."
@@ -4531,7 +4532,6 @@
   {
     "name": "Sony Emcs (Malaysia) SDN BHD",
     "sector": "Industrial",
-    "img": "https://pkct.com.my/wp-content/uploads/2021/04/WhatsApp-Image-2021-04-06-at-6.31.04-PM.jpeg",
     "year": "2024-2026",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 504 m | 120 mm² CU/PVC GREEN CABLE - 214 m | 50 mm² CU/PVC BLACK CABLE - 1,605 m | 25 mm² CU/PVC BLACK CABLE - 1,800 m | 16 mm² CU/PVC GREEN CABLE - 985 m | 10 mm² CU/PVC BLACK CABLE - 9,000 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
@@ -6475,6 +6475,7 @@
   {
     "name": "Starhill Gallery",
     "sector": "Retail",
+    "img": "https://archello.com/thumbs/images/2023/04/13/kokaistudios-the-starhill-shopping-centres-archello.1681369313.9209.jpg?fit=crop&auto=compress&w=546&h=362",
     "year": "2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 5,280 m | 10 mm² CU/PVC BLACK CABLE - 25,179 m | 10 mm² CU/PVC GREEN CABLE - 9,610 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING S/B",
