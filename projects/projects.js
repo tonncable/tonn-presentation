@@ -5281,11 +5281,6 @@ window.PROJECTS =
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
-    "name": "TRX C3 Tunnel",
-    "sector": "Infrastructure",
-    "img": "https://themalaysianreserve.com/wp-content/uploads/2023/11/TRX-tunnel-Bernama.jpg"
-  },
-  {
     "name": "TRX Lifestyle Quarter",
     "sector": "Commercial",
     "location": "KL"
@@ -6627,6 +6622,7 @@ window.PROJECTS =
   {
     "name": "Handal Indah Bus Depot, Tebrau",
     "sector": "Infrastructure",
+    "img": "https://www.causewaylink.com.my/wp-content/uploads/2024/07/Handal-Indah-Successfully-Deploys-16-Pink-Buses-for-SBST-Melaka_5-1024x768.jpg",
     "year": "2024",
     "details": "240 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 1,624 m | 120 mm² x 4c CU/XLPE/PVC CABLE (RD/YE/BU/BK) - 500 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 1,516 m | 70 mm² CU/PVC GREEN CABLE - 125 m | 35 mm² CU/PVC GREEN CABLE - 379 m",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. (TEBRAU)"
@@ -6701,6 +6697,7 @@ window.PROJECTS =
   {
     "name": "KLIA2 Control Post 6",
     "sector": "Infrastructure",
+    "img": "https://bxjohwisbyscemxltppk.supabase.co/storage/v1/object/public/article-images/airlines-operating-from-klia-terminal-1-and-klia-terminal-2-2.png",
     "year": "2023",
     "details": "25 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 2,000 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
@@ -6804,11 +6801,6 @@ window.PROJECTS =
     "location": "Pahang"
   },
   {
-    "name": "Penang International Airport",
-    "sector": "Infrastructure",
-    "img": "https://static.routesonline.com/images/cached/photograph-3672-scaled-620x0.jpg"
-  },
-  {
     "name": "Penang Port North Butterworth Container Terminal",
     "sector": "Infrastructure",
     "year": "2019-2026",
@@ -6873,7 +6865,8 @@ window.PROJECTS =
   },
   {
     "name": "Subang Airport",
-    "sector": "Infrastructure"
+    "sector": "Infrastructure",
+    "img": "https://apicms.thestar.com.my/uploads/images/2024/11/02/2996290.jpg"
   },
   {
     "name": "Swift Integrated Logistics Facility",
