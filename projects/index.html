@@ -585,7 +585,7 @@
                 </div>` : '';
                 const chev = hasDetail ? `<span class="chev">›</span>` : '';
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
-                return `<div class="${cls}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span></span><span class="secblk__idx__loc">${rightInfo}</span>${detail}</div>`;
+                return `<div class="${cls}" data-name="${p.name.replace(/"/g,'&quot;')}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span></span><span class="secblk__idx__loc">${rightInfo}</span>${detail}</div>`;
               }).join('')}
             </div>`;
           // On specific-sector view (long list), fill the left column with more thumbnails
@@ -663,14 +663,32 @@
         if (e.key === 'Escape') sortWrap.classList.remove('open');
       });
 
-      // --- lightbox (only on cards with images) ---
+      // --- click a picture → jump to that project row and expand it ---
       const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbName = document.getElementById('lbName'), lbLoc = document.getElementById('lbLoc');
+      function jumpToProjectRow(name){
+        const p = projects.find(x => x.name === name); if (!p) return false;
+        const tabForRow = (currentTab === '__intl' || currentTab === 'All') ? currentTab : p.sector;
+        if (tabForRow !== currentTab) {
+          const tabBtn = document.querySelector('.expsec__tab[data-tab="' + p.sector + '"]');
+          if (tabBtn) tabBtn.click();
+        }
+        // wait a tick for renderExp to run if tab changed
+        requestAnimationFrame(() => {
+          const row = document.querySelector('#expBody .secblk__idx__row[data-name="' + name.replace(/"/g,'\\"') + '"]');
+          if (!row) return;
+          if (row.classList.contains('has-detail')) row.classList.add('expanded');
+          row.scrollIntoView({behavior:'smooth', block:'center'});
+        });
+        return true;
+      }
       document.body.addEventListener('click', e => {
-        const target = e.target.closest('.sig__card,.secblk__photo'); if (!target) return;
+        const target = e.target.closest('.sig__card,.secblk__photo,.secblk__thumb'); if (!target) return;
         const name = target.dataset.name; if (!name) return;
-        const p = projects.find(x => x.name === name); if (!p || !p.img) return;
-        lbImg.src = p.img; lbName.textContent = p.name; lbLoc.textContent = [p.location, lbl(p.sector)].filter(Boolean).join(' · ');
-        lb.classList.add('open');
+        e.preventDefault();
+        // Scroll to Experience-by-sector section first, then jump to the row
+        const expSec = document.querySelector('.expsec');
+        if (expSec) expSec.scrollIntoView({behavior:'smooth', block:'start'});
+        setTimeout(() => jumpToProjectRow(name), 350);
       });
       lb.addEventListener('click', () => lb.classList.remove('open'));
     })();
