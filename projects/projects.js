@@ -397,6 +397,7 @@ window.PROJECTS =
     "name": "Petronas Research SDN BHD",
     "sector": "Utility",
     "img": "https://media.glassdoor.com/l/48/e1/9c/65/prsb-bangi.jpg?signature=df3e46cc86973e40000bc654850dad3b9a133340d8964ac154228df826cf4694",
+    "hero": true,
     "location": "Bangi, Selangor"
   },
   {
@@ -6669,7 +6670,7 @@ window.PROJECTS =
     "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 960 m | 25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 399 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 1,761 m | 3 MM X 25 MM COPPER STRIP (PM COPPER) 55KGS - 165 kg | 2.5 mm² CU/PVC BLACK CABLE 100M - 75 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 75 coil",
     "dealer": "EXCEL M & E SDN. BHD.",
     "location": "Sepang",
-    "img": "https://static.ffx.io/images/$zoom_1%2C$multiply_0.3066%2C$ratio_1.777778%2C$width_1905%2C$x_20%2C$y_128/t_crop_custom/q_86%2Cf_auto/eb62acf426ba1c1f467917dcf7617dbb2274bddc"
+    "img": "https://bxjohwisbyscemxltppk.supabase.co/storage/v1/object/public/article-images/airlines-operating-from-klia-terminal-1-and-klia-terminal-2-2.png"
   },
   {
     "name": "KLIA Cargo Village",
@@ -6693,14 +6694,6 @@ window.PROJECTS =
     "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 222 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 257 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 858 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,093 m | 1.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,385 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,898 m",
     "dealer": "SME ELECTRIC SDN. BHD.",
     "location": "Sepang, Selangor"
-  },
-  {
-    "name": "KLIA2 Control Post 6",
-    "sector": "Infrastructure",
-    "img": "https://bxjohwisbyscemxltppk.supabase.co/storage/v1/object/public/article-images/airlines-operating-from-klia-terminal-1-and-klia-terminal-2-2.png",
-    "year": "2023",
-    "details": "25 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 2,000 m",
-    "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "KTMB Central Store",
