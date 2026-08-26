@@ -4239,6 +4239,7 @@ window.PROJECTS =
   {
     "name": "Petronas Penapisan Melaka Refinery",
     "sector": "Oil & Gas",
+    "img": "https://fore-sight.com.my/wp-content/uploads/2017/06/Petronas_Catalyitc_Reforming_Unit_1.jpg",
     "year": "2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 430 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 789 m | 16 mm² CU/PVC GREEN CABLE - 495 m | 10 mm² CU/PVC GREEN CABLE - 789 m | 6 mm² x 3c CU/PVC/SWA/PVC CABLE (RD/YE/BU) - 750 m | 6 mm² x 3c CU/PVC/PVC CABLE (RD/YE/BU) (600/1000V) - 320 m",
     "dealer": "VOLTAGE MASTER SDN. BHD."
@@ -4817,6 +4818,7 @@ window.PROJECTS =
   {
     "name": "KTL Offshore (M) Yard",
     "sector": "Oil & Gas",
+    "img": "https://brookeholding.com/wp-content/uploads/2020/08/02.jpg",
     "year": "2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 84 m",
     "dealer": "ELEKTRIK HOCK SING SDN BHD"
