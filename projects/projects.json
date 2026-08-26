@@ -97,6 +97,7 @@
   {
     "name": "Mayang Mall",
     "sector": "Retail",
+    "img": "https://www.phb.com.my/clients/asset_E5316276-9983-47F1-A6C2-76D0C7985656/contentms/img/banner-mayang-mall.jpg",
     "location": "Kuala Terengganu",
     "year": "2024-2026",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE | 50 mm² CU/XLPE/PVC BLACK CABLE | 35 mm² CU/XLPE/PVC BLACK CABLE | 25 mm² CU/PVC BLACK CABLE",
@@ -612,6 +613,7 @@
   {
     "name": "Serene Heights",
     "sector": "Residential",
+    "img": "https://www.uemsunrise.com/storage/images/-dsc3674.jpeg",
     "location": "Semenyih, Selangor",
     "year": "2025",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,050 m | 25 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 600 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 6,718 m | 16 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,000 m | 16 mm² CU/PVC GREEN CABLE - 2,658 m | 2.5 mm² x 7c CU/PVC/PVC MULTICORE CABLE - 3,172 m",
@@ -1030,6 +1032,7 @@
   {
     "name": "IOI City Tower, IOI City Mall",
     "sector": "Retail",
+    "img": "https://www.searchofficekl.com/wp-content/uploads/2019/06/IOI-City-Towers-at-IOI-Resort-City-Putrajaya.jpg",
     "year": "2024",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 252 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 288 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 2,060 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 25 mm² CU/PVC GREEN CABLE - 847 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
@@ -1688,6 +1691,7 @@
   {
     "name": "Maktab Tentera Diraja Malaysia (Royal Military College)",
     "sector": "Education",
+    "img": "https://clips.mstar.com.my/images/blob/DBE5628D-338B-4851-86F7-182F2324FA4B",
     "year": "2023",
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 340 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 180 m | 35 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 210 m | 16 mm² x 2c CU/XLPE/SWA/PVC CABLE (RD/BK) - 30 m",
     "dealer": "JUTABINA SEMPURNA SDN. BHD."
@@ -2078,6 +2082,7 @@
   {
     "name": "Tenby International School, Setia Eco Park",
     "sector": "Education",
+    "img": "https://www.teacherhorizons.com/static/mediav2/schools/3530/images/503630_main.jpg",
     "year": "2023",
     "details": "240 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 700 m",
     "dealer": "AIK HING LETRIK (PG) SDN. BHD."
@@ -2132,6 +2137,7 @@
   {
     "name": "Universiti Kebangsaan Malaysia (UKM)",
     "sector": "Education",
+    "img": "https://www.freemalaysiatoday.com/cdn-cgi/image/quality=75,format=auto,fit=cover,dpr=1,width=1600,height=900/https://media.freemalaysiatoday.com/wp-content/uploads/2024/10/2a42e9df-ukm-universiti-kebangsaan-malaysia-ukmpic-171024.webp",
     "year": "2025",
     "details": "35 mm² CU/PVC BLACK CABLE - 180 m | 25 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 392 m | 16 mm² x 1c CU/MICA/XLPE/PVC FR CABLE - 98 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 592 m | 6 mm² CU/PVC GREEN CABLE 100M - 3 coil",
     "dealer": "POWER CONTROL ENTERPRISE",
@@ -2371,7 +2377,7 @@
   {
     "name": "Istana Bukit Serene",
     "sector": "Government",
-    "img": "https://www.mbjb.gov.my/sites/default/files/2022-08/mahkota.png",
+    "img": "https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format=webp,w=720/QwRY54Li1HMwD7oNfoYxfsWfnQF7ZOnFaGix3eQq9y",
     "year": "2023",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,500 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "OKA MARKETING SDN. BHD.",
@@ -2525,6 +2531,7 @@
   {
     "name": "Penjara Lelaki Kajang",
     "sector": "Government",
+    "img": "https://assets.hmetro.com.my/images/articles/bnm-kajang_HMfield_image_socialmedia.var_1641285137.jpg",
     "year": "2023-2024",
     "details": "70 mm² CU/PVC BLACK CABLE - 800 m | 50 mm² CU/PVC BLACK CABLE - 520 m | 35 mm² CU/PVC BLACK CABLE - 2,700 m | 16 mm² CU/PVC GREEN CABLE - 1,650 m | 16 mm² CU/PVC BLACK CABLE - 700 m | 10 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 500 m",
     "dealer": "D.E. POWER ELECTRICAL & LIGHTING SDN. BHD. +1 more"
@@ -2539,6 +2546,7 @@
   {
     "name": "PERKESO Ipoh",
     "sector": "Government",
+    "img": "https://www.realpm-intl.com/wp-content/uploads/2022/12/SOCSO_profile.jpg",
     "year": "2025",
     "details": "25 mm² CU/XLPE/PVC BLACK CABLE - 3,000 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 3,000 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 5,000 m | 2.5 mm² CU/PVC BLACK CABLE 100M - 152 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 145 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 210 coil",
     "dealer": "ACTGEN INDUSTRY SDN. BHD. +1 more"
@@ -6285,6 +6293,7 @@
   {
     "name": "AEON Mall Shah Alam",
     "sector": "Retail",
+    "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLitapNGEFlzjSLYfhyphenhyphenBzguEgCNzX8vM_xt643xqWrMHB7ejZOBo3brYoJzq2C0I83iwl0lzhwAAMXuUkDf0hh_rA_U9iOezkBUKzFCUX_7UPm0081XodTPvZSPsZzLRNR6icHbvo1DMmQ/s1600/AEON+Shah+Alam+01.jpg",
     "year": "2023-2024",
     "details": "300 mm² CU/PVC GREEN CABLE - 440 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 850 m | 120 mm² CU/PVC GREEN CABLE - 15 m | 50 mm² CU/PVC GREEN CABLE 90M - 1 coil | 35 mm² CU/PVC GREEN CABLE - 165 m",
     "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD. +1 more"
@@ -6340,6 +6349,7 @@
   {
     "name": "IOI City Mall",
     "sector": "Retail",
+    "img": "https://files.ioiproperties.com.my/dsites/s3fs-public/project/covers/20220825-171220-icmP2-DJI_0156.jpg",
     "location": "Putrajaya"
   },
   {
@@ -6440,6 +6450,7 @@
   {
     "name": "Queensbay Mall",
     "sector": "Retail",
+    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/28/60/6a/just-15-minutes-from.jpg?w=900&h=500&s=1",
     "year": "2026",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 1,120 m | 120 mm² CU/PVC GREEN CABLE - 140 m | 95 mm² CU/PVC GREEN CABLE - 80 m",
     "dealer": "EV CONNECTION SDN. BHD.",
