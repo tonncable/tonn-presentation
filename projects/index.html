@@ -151,7 +151,18 @@
     .secblk__photocap{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:#fff;z-index:1}
     .secblk__photocap .pname{font-size:24px;font-weight:900;line-height:1.2;margin-bottom:6px;letter-spacing:-.01em}
     .secblk__photocap .ploc{font-size:14px;opacity:.85;letter-spacing:.04em}
-    .secblk__left{display:flex;flex-direction:column;gap:16px}
+    .secblk__left{display:flex;flex-direction:column;gap:16px;position:sticky;top:120px;align-self:start}
+    .secblk__stats{background:linear-gradient(135deg,#f9f5f9 0%,#f0eaf2 100%);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:18px}
+    .secblk__stats__title{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--magenta);margin-bottom:2px}
+    .secblk__stats__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .secblk__stat{display:flex;flex-direction:column;gap:2px}
+    .secblk__stat .sval{font-size:26px;font-weight:900;color:var(--fg);line-height:1.1;letter-spacing:-.02em}
+    .secblk__stat .slbl{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+    .secblk__stats__locs{display:flex;flex-direction:column;gap:6px}
+    .secblk__stats__locs .loc-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;color:var(--fg)}
+    .secblk__stats__locs .loc-row .loc-bar{flex:1;height:4px;background:#e8e0e8;border-radius:2px;margin:0 10px}
+    .secblk__stats__locs .loc-row .loc-fill{height:100%;background:var(--magenta);border-radius:2px;display:block}
+    .secblk__stats__locs .loc-row .loc-n{color:var(--muted);font-size:12px;min-width:24px;text-align:right}
     .secblk__extras{display:flex;flex-direction:column;gap:14px}
     .secblk__thumb{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.12);aspect-ratio:3/5;cursor:pointer;transition:transform .3s,box-shadow .3s}
     .secblk__thumb:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.16)}
@@ -602,22 +613,53 @@
                 </figure>
               `).join('')}
             </div>` : '';
-          const leftCol = feat ? `
+          // --- stats card ---
+          const buildStats = (items) => {
+            const years = items.map(p => p.year).filter(Boolean).flatMap(y => y.split(/[-–]/).map(s => parseInt(s.trim())).filter(n => n > 1900));
+            const yrMin = years.length ? Math.min(...years) : null;
+            const yrMax = years.length ? Math.max(...years) : null;
+            const yrStr = yrMin ? (yrMin === yrMax ? String(yrMin) : yrMin + ' – ' + yrMax) : '—';
+            let totalM = 0;
+            items.forEach(p => {
+              (p.details || '').split('|').forEach(seg => {
+                const m = seg.match(/-\s*([\d,]+(?:\.\d+)?)\s*m\b/i);
+                if (m) totalM += parseFloat(m[1].replace(/,/g, ''));
+              });
+            });
+            const fmtLen = totalM >= 1000000 ? (totalM/1000000).toFixed(1) + 'M m' : totalM >= 1000 ? Math.round(totalM/1000).toLocaleString() + 'K m' : Math.round(totalM).toLocaleString() + ' m';
+            const locCounts = {};
+            items.forEach(p => { const l = p.location || p.country || 'Malaysia'; locCounts[l] = (locCounts[l]||0) + 1; });
+            const topLocs = Object.entries(locCounts).sort((a,b) => b[1]-a[1]).slice(0,5);
+            const locMax = topLocs.length ? topLocs[0][1] : 1;
+            const locsHtml = topLocs.map(([loc,n]) => `<div class="loc-row"><span>${loc}</span><span class="loc-bar"><span class="loc-fill" style="width:${Math.round(n/locMax*100)}%"></span></span><span class="loc-n">${n}</span></div>`).join('');
+            return `<div class="secblk__stats">
+              <div class="secblk__stats__title">Sector Overview</div>
+              <div class="secblk__stats__grid">
+                <div class="secblk__stat"><span class="sval">${items.length}</span><span class="slbl">Projects</span></div>
+                <div class="secblk__stat"><span class="sval">${yrStr}</span><span class="slbl">Years</span></div>
+                <div class="secblk__stat" style="grid-column:span 2"><span class="sval">${fmtLen}</span><span class="slbl">Total Cable</span></div>
+              </div>
+              ${topLocs.length ? `<div class="secblk__stats__title" style="margin-top:4px">Top Locations</div><div class="secblk__stats__locs">${locsHtml}</div>` : ''}
+            </div>`;
+          };
+          const statsHtml = (tab !== 'All') ? buildStats(g.items) : '';
+          const leftCol = `
             <div class="secblk__left">
-              <figure class="secblk__photo" data-name="${feat.name.replace(/"/g,'&quot;')}">
+              ${feat ? `<figure class="secblk__photo" data-name="${feat.name.replace(/"/g,'&quot;')}">
                 <div class="photoimg" style="background-image:url('${feat.img}')"></div>
                 <figcaption class="secblk__photocap">
                   <div class="pname">${feat.name}</div>
                   <div class="ploc">${[feat.location, feat.country !== 'Malaysia' ? feat.country : null].filter(Boolean).join(' · ')}</div>
                 </figcaption>
-              </figure>
+              </figure>` : ''}
               ${extrasHtml}
-            </div>` : '';
-          const layoutHtml = feat ? `
+              ${statsHtml}
+            </div>`;
+          const layoutHtml = (tab !== 'All') ? `
             <div class="secblk__layout">
               ${leftCol}
               ${idxHtml}
-            </div>` : idxHtml;
+            </div>` : (feat ? `<div class="secblk__layout">${leftCol}${idxHtml}</div>` : idxHtml);
           return `
             <div class="secblk">
               <div class="secblk__title">${lbl(g.sector)} <span class="count">${g.items.length} project${g.items.length!==1?'s':''}</span></div>

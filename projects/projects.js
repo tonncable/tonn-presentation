@@ -3908,6 +3908,7 @@ window.PROJECTS =
   {
     "name": "Kompleks Tenusu Muadzam Shah",
     "sector": "Industrial",
+    "hero": true,
     "img": "https://i.ytimg.com/vi/ck09abU5q6k/maxresdefault.jpg",
     "year": "2026",
     "details": "300 mm² CU/XLPE/PVC BLACK CABLE - 3,600 m",
