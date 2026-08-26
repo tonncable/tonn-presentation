@@ -110,6 +110,7 @@
   {
     "name": "I-City",
     "sector": "Commercial",
+    "img": "https://assets.theedgemarkets.com/MPLAN-181225-thumb-theedgemalaysia.jpg",
     "location": "Shah Alam",
     "year": "2025",
     "details": "185 mm² CU/XLPE/PVC BLACK CABLE - 800 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 210 m | 70 mm² CU/PVC GREEN CABLE - 140 m | 10 mm² CU/PVC GREEN CABLE - 1,000 m",
@@ -1128,6 +1129,7 @@
   {
     "name": "Menara Kuala Lumpur (KL Tower)",
     "sector": "Commercial",
+    "img": "https://images.says.com/uploads/story_source/source_image/1355288/133e.jpg",
     "year": "2025",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 832 m | 120 mm² CU/PVC GREEN CABLE - 89 m | 50 mm² CU/PVC GREEN CABLE - 13 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
@@ -1261,6 +1263,7 @@
   {
     "name": "Sepang International Circuit Driving Experience Centre",
     "sector": "Commercial",
+    "img": "https://driver61.com/wp-content/uploads/2019/08/SEPANG-CIRCUIT-GUIDE.jpg",
     "year": "2026",
     "details": "240 mm² x 1c CU/XLPE/AWA/PVC CABLE - 105 m | 120 mm² CU/PVC GREEN CABLE - 6 m | 95 mm² x 1c CU/XLPE/AWA/PVC CABLE - 732 m",
     "dealer": "EV CONNECTION SDN. BHD."
@@ -1323,7 +1326,7 @@
   },
   {
     "name": "Tropicana Gardens, Kota Damansara",
-    "sector": "Commercial",
+    "sector": "Residential",
     "year": "2019-2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 2,560 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 2,902 m | 120 mm² CU/PVC GREEN CABLE - 3,152 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 2,088 m | 35 mm² CU/XLPE/PVC BLACK CABLE - 8,523 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 13,637 m",
     "dealer": "SW ELECTRIC SDN BHD +1 more"
@@ -1331,6 +1334,7 @@
   {
     "name": "Urban Fresh, Ombak KLCC",
     "sector": "Commercial",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHvojER4kG8vC-KwrjD5oE3IYk4dbBoc2UeAZrrB42sj8s2vs4-Q3eBdI&s=10",
     "year": "2026",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 68 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 80 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 564 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 2,404 m | 16 mm² CU/PVC GREEN CABLE - 805 m | 10 mm² CU/PVC BLACK CABLE - 1,580 m",
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
@@ -2928,6 +2932,7 @@
   {
     "name": "Tun Razak Exchange (TRX)",
     "sector": "Commercial",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/2/28/The_Exchange_TRX_20231216_%282%29.jpg",
     "year": "2023",
     "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 680 m | 185 mm² CU/XLPE/PVC BLACK CABLE - 2,310 m | 95 mm² CU/PVC GREEN CABLE - 590 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 3,000 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 3,000 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 6,000 m",
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD.",
