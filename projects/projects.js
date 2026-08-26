@@ -2260,6 +2260,7 @@ window.PROJECTS =
   {
     "name": "Bangunan Sultan Abdul Samad",
     "sector": "Government",
+    "img": "https://nashaplaneta.net/asia/malaysia/kuala_gallery/kuala-lumpur-sultan-abdul-samad.jpg",
     "year": "2025",
     "details": "50 mm² CU/XLPE/PVC BLACK CABLE - 1,664 m | 25 mm² CU/PVC GREEN CABLE - 551 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 540 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 400 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 6,344 m | 10 mm² CU/PVC GREEN CABLE - 500 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD.",
@@ -2271,7 +2272,8 @@ window.PROJECTS =
   },
   {
     "name": "Central Bank Of Malaysia 2",
-    "sector": "Government"
+    "sector": "Government",
+    "img": "https://www.centralbanking.com/sites/default/files/styles/metatag_image_large_webp/public/2019-01/bank-negara-malaysia.jpg.webp?h=e44f2c5c&itok=7xAtFZb1"
   },
   {
     "name": "Dewan Camelia Majlis Bandaraya",
@@ -2363,6 +2365,7 @@ window.PROJECTS =
   {
     "name": "Istana Bukit Serene",
     "sector": "Government",
+    "img": "https://www.mbjb.gov.my/sites/default/files/2022-08/mahkota.png",
     "year": "2023",
     "details": "25 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,500 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,000 m",
     "dealer": "OKA MARKETING SDN. BHD.",
@@ -2480,6 +2483,7 @@ window.PROJECTS =
   {
     "name": "MCMC Centre Of Excellence",
     "sector": "Government",
+    "img": "https://www.businesstoday.com.my/wp-content/uploads/2022/06/mcmc-696x522.jpg",
     "year": "2026",
     "details": "300 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 40 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 48 m | 150 mm² CU/XLPE/PVC BLACK CABLE - 400 m | 70 mm² CU/PVC GREEN CABLE 100M - 1 coil | 35 mm² CU/XLPE/PVC BLACK CABLE - 400 m | 2.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE - 40 m",
     "dealer": "SINAR JAYA LETRIK & KABEL SDN. BHD."
@@ -2619,6 +2623,7 @@ window.PROJECTS =
   {
     "name": "Hospital Columbia ( Bukit Jalil )",
     "sector": "Healthcare",
+    "img": "https://assets.theedgemarkets.com/20240227_BLD_COLUMBIA%20ASIA%20HOSPITAL_BUKIT%20JALIL_3_LYY_20240227231405_theedgemalaysia.jpg",
     "year": "2025",
     "details": "4 mm² CU/PVC BLACK CABLE 100M - 15 coil | 4 mm² CU/PVC GREEN CABLE 100M - 5 coil | 2.5 mm² CU/PVC GREEN CABLE 100M - 43 coil | 2.5 mm² CU/PVC BLACK CABLE 100M - 31 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 20 coil | 1.5 mm² CU/PVC GREEN CABLE 100M - 10 coil",
     "dealer": "MT POWER ELECTRICAL & HARDWARE SUPPLIES"
@@ -2640,6 +2645,7 @@ window.PROJECTS =
   {
     "name": "Hospital Kuala Lumpur (Hkl)",
     "sector": "Healthcare",
+    "img": "https://themalaysianreserve.com/wp-content/uploads/2022/10/FW823450_KL09_070219_HKL-lpr.jpg",
     "year": "2026",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 45 coil | 4 mm² CU/PVC BLACK CABLE 100M - 45 coil | 4 mm² CU/PVC BLUE CABLE 100M - 30 coil | 4 mm² CU/PVC RED CABLE 100M - 30 coil | 4 mm² CU/PVC YELLOW CABLE 100M - 30 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 40 coil",
     "dealer": "PUISSANCE ENGINEERING SDN. BHD."
@@ -2713,6 +2719,7 @@ window.PROJECTS =
   {
     "name": "Hospital Sultan Abdul Aziz Shah, UPM Serdang",
     "sector": "Healthcare",
+    "img": "https://hsaas.upm.edu.my/summer-uploads/20230321091424blobid0.jpg",
     "year": "2025-2026",
     "details": "70 mm² CU/PVC BLACK CABLE - 860 m | 70 mm² CU/PVC BLACK CABLE 100M - 1 coil | 35 mm² CU/PVC BLACK CABLE - 830 m | 25 mm² CU/PVC BLACK CABLE - 2,450 m | 16 mm² CU/PVC BLACK CABLE - 3,365 m",
     "dealer": "ITEC ELECTRIC (MALACCA) SDN. BHD."
@@ -2742,6 +2749,7 @@ window.PROJECTS =
   {
     "name": "Island Hospital",
     "sector": "Healthcare",
+    "img": "https://www.buletinmutiara.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-11-at-11.36.09-AM.jpeg",
     "year": "2023",
     "details": "120 mm² CU/PVC GREEN CABLE - 87 m | 25 mm² CU/XLPE/PVC BLACK CABLE - 4,962 m | 16 mm² CU/PVC GREEN CABLE - 2,485 m | 10 mm² CU/PVC BLACK CABLE - 9,210 m | 10 mm² CU/PVC GREEN CABLE - 2,813 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 1,326 m",
     "dealer": "CHI-TAK ELECTRICAL SDN. BHD.",
