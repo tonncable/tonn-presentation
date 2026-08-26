@@ -3111,7 +3111,7 @@ window.PROJECTS =
   {
     "name": "Barry Callebaut Asia",
     "sector": "Industrial",
-    "img": "https://www.barry-callebaut.com/sites/default/files/styles/node_page_intro_fallback/public/2021-11/BC%20in%20Port%20Klang%20Malaysia_0.jpg?itok=ta2iDeVw",
+    "img": "https://mma.prnasia.com/media2/1771337/1_Barry_Callebaut_celebrates_official_opening_of_expanded_chocolate_factory_in_Australia.jpg?p=medium600",
     "year": "2026",
     "details": "via GENTLELITE ELECTRICAL TRADING SDN. BHD."
   },
@@ -3258,7 +3258,7 @@ window.PROJECTS =
   {
     "name": "Chuan Sin SDN BHD (Spritzer)",
     "sector": "Industrial",
-    "img": "https://manufacturermalaysia.com/wp-content/uploads/2024/12/story-bg2.jpg",
+    "img": "https://lenam.com.my/spritzer-factory/DCIM100MEDIADJI_0089.JPG",
     "year": "2023-2026",
     "details": "120 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 50 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 500 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 640 m | 10 mm² CU/PVC BLACK CABLE - 3,864 m | 10 mm² CU/XLPE/PVC BLACK CABLE - 1,252 m | 6 mm² CU/PVC GREEN CABLE - 1,280 m",
     "dealer": "SURELITE ELECTRICAL CO. SDN. BHD. +1 more"
@@ -3370,7 +3370,7 @@ window.PROJECTS =
   {
     "name": "Eco Business Park V (New Plant)",
     "sector": "Industrial",
-    "img": "https://assets.theedgemarkets.com/Paragon-Eco-Business-Park-7_BC_Thumb.jpg",
+    "img": "https://myindustrialspecialist.com/wp-content/uploads/2024/09/1-8-1170x785.jpg",
     "year": "2020-2026",
     "details": "95 mm² CU/XLPE/PVC BLACK CABLE - 800 m | 70 mm² CU/XLPE/PVC BLACK CABLE - 3,600 m | 70 mm² CU/PVC GREEN CABLE - 200 m | 50 mm² CU/PVC GREEN CABLE - 900 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD."
@@ -3484,7 +3484,7 @@ window.PROJECTS =
   {
     "name": "FGV Palm Industries SDN BHD",
     "sector": "Industrial",
-    "img": "https://themalaysianreserve.com/wp-content/uploads/2022/11/FGV-250x167.jpg",
+    "img": "https://www.malaymail.com/malaymail/uploads/images/2023/10/07/152885.jpg",
     "year": "2026",
     "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 1,980 m",
     "dealer": "PENTALITE ELECTRICAL SDN. BHD."
