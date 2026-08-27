@@ -120,6 +120,7 @@
     .expsec__tab:hover .tab-cnt{color:var(--fg)}
     .expsec__tab.on .tab-cnt{color:rgba(255,255,255,.85)}
     .expsec__picker{display:none}
+    .secblk__more-btn{display:none}
     /* mobile: sidebar becomes top horizontal scroll */
     @media (max-width: 900px) {
       .expsec__shell{grid-template-columns:1fr;gap:20px}
@@ -354,16 +355,25 @@
       .secblk__thumb figcaption b{font-size:12px;margin-bottom:2px;line-height:1.15}
       .secblk__thumb figcaption span{font-size:9px}
 
-      .secblk__idx__row{grid-template-columns:28px 1fr;gap:6px 10px;padding:12px 0}
-      .secblk__idx__no{font-size:12px;padding-top:3px}
-      .secblk__idx__name{font-size:14px}
-      .secblk__idx__name .chev{font-size:12px}
-      .secblk__idx__loc{grid-column:2/-1;text-align:left;font-size:12px;white-space:normal;padding-top:0}
-      .secblk__idx__detail{margin-top:10px;padding:12px 14px;font-size:12px}
+      /* project list as stacked cards */
+      .secblk__idx{display:flex;flex-direction:column;gap:10px}
+      .secblk__idx__row{grid-template-columns:34px 1fr auto;gap:4px 10px;padding:14px 14px !important;background:#fff;border:1px solid var(--hair);border-bottom:1px solid var(--hair);border-radius:12px;box-shadow:0 2px 6px rgba(20,10,20,.04);align-items:center;transition:box-shadow .18s,border-color .18s}
+      .secblk__idx__row.has-detail:hover,.secblk__idx__row.expanded{border-color:var(--magenta);box-shadow:0 4px 14px rgba(165,0,100,.1)}
+      .secblk__idx__no{font-size:12px;padding-top:0;background:var(--magenta);color:#fff;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;line-height:1;align-self:center}
+      .secblk__idx__name{font-size:14px;gap:2px}
+      .secblk__idx__name .nline{gap:6px}
+      .secblk__idx__name .chev{font-size:16px;color:var(--magenta);opacity:.6}
+      .secblk__idx__row.expanded .secblk__idx__name .chev{opacity:1}
+      .secblk__idx__loc{grid-column:2/-1;text-align:left;font-size:11px;color:var(--muted);white-space:normal;padding-top:0;background:#faf7fa;padding:2px 8px;border-radius:6px;display:inline-block;justify-self:start;width:auto;margin-top:2px}
+      .secblk__idx__detail{margin-top:12px;padding:12px 14px;font-size:12px;grid-column:1/-1}
       .secblk__idx__detail .yr{font-size:16px}
       .secblk__idx__detail .via{font-size:12px}
       .cbl-list{padding-left:18px}
       .cbl-list li{font-size:12px}
+      /* show-more collapse */
+      .secblk__idx.mcollapsed .secblk__idx__row:nth-child(n+11){display:none}
+      .secblk__more-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:12px 16px;background:#fff;border:1.5px solid var(--magenta);border-radius:12px;color:var(--magenta);font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all .18s}
+      .secblk__more-btn:hover,.secblk__more-btn:active{background:var(--magenta);color:#fff}
 
       /* hide side dot nav — too cramped */
       .secnav{display:none}
@@ -827,8 +837,9 @@
           const idxSource = sortItems(g.items, globalSort);
           const CAP = (tab === 'All') ? 8 : Infinity;
           const idxShown = idxSource.slice(0, CAP);
+          const needsCollapse = idxShown.length > 10;
           const idxHtml = `
-            <div class="secblk__idx">
+            <div class="secblk__idx${needsCollapse ? ' mcollapsed' : ''}">
               ${idxShown.map((p, i) => {
                 const n = String(i + 1).padStart(2, '0');
                 const hasDetail = !!(p.year || p.details || p.dealer);
@@ -861,7 +872,7 @@
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
                 return `<div class="${cls}" data-name="${p.name.replace(/"/g,'&quot;')}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span></span><span class="secblk__idx__loc">${rightInfo}</span>${detail}</div>`;
               }).join('')}
-            </div>`;
+            </div>${needsCollapse ? `<button class="secblk__more-btn" data-more type="button">Show all ${idxShown.length} projects</button>` : ''}`;
           // On specific-sector view (long list), fill the left column with more thumbnails
           const extras = (tab !== 'All') ? g.items.filter(p => hasVisibleImg(p) && p !== feat) : [];
           const extrasHtml = extras.length ? `
@@ -911,6 +922,15 @@
       // --- expandable project rows ---
       let currentTab = 'All';
       document.getElementById('expBody').addEventListener('click', e => {
+        const more = e.target.closest('.secblk__more-btn');
+        if (more) {
+          const list = more.previousElementSibling;
+          if (list && list.classList.contains('secblk__idx')) {
+            const collapsed = list.classList.toggle('mcollapsed');
+            more.textContent = collapsed ? `Show all ${list.children.length} projects` : 'Show less';
+          }
+          return;
+        }
         const row = e.target.closest('.secblk__idx__row.has-detail'); if (!row) return;
         row.classList.toggle('expanded');
       });
