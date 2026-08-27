@@ -314,7 +314,15 @@
       .expsec__shell{gap:12px;margin-top:12px}
       /* hide desktop pills; show custom modern picker on phone */
       .expsec__tabs{display:none !important}
-      .expsec__picker{display:block !important;position:relative}
+      .expsec__side{display:flex;align-items:center;gap:8px}
+      .expsec__picker{display:block !important;position:relative;flex:1;min-width:0}
+      /* move sort inline beside picker */
+      .expsec__main .expsec__toolbar{display:none}
+      .expsec__side .expsec__toolbar{display:flex;margin:0;flex-shrink:0}
+      .expsec__side .expsec__sort__btn{width:44px;height:44px;border-radius:12px;border:1.5px solid var(--hair);background:#fff}
+      .expsec__side .expsec__sort__btn svg{width:18px;height:18px}
+      .expsec__side .expsec__sort.open .expsec__sort__btn,.expsec__side .expsec__sort__btn:hover{border-color:var(--magenta)}
+      .expsec__side .expsec__sort__menu{right:0;top:calc(100% + 6px)}
       .expsec__picker__btn{width:100%;display:flex;align-items:center;gap:10px;padding:14px 16px;background:linear-gradient(135deg,#fff 0%,#fdf7fb 100%);border:1.5px solid var(--hair);border-radius:14px;cursor:pointer;font-family:inherit;text-align:left;transition:all .18s;box-shadow:0 2px 8px rgba(20,10,20,.04)}
       .expsec__picker__btn:hover,.expsec__picker.open .expsec__picker__btn{border-color:var(--magenta);box-shadow:0 4px 14px rgba(165,0,100,.14)}
       .expsec__picker__ico{width:26px;height:26px;display:flex;align-items:center;justify-content:center;background:var(--magenta);color:#fff;border-radius:8px;flex-shrink:0}
@@ -791,6 +799,21 @@
       document.addEventListener('click', e => {
         if (!e.target.closest('#expPicker')) expPicker.classList.remove('open');
       });
+      // On phone, move the sort toolbar next to the picker inside the sidebar
+      const mqPhone = window.matchMedia('(max-width: 640px)');
+      const toolbar = document.querySelector('.expsec__main .expsec__toolbar');
+      const sideEl = document.querySelector('.expsec__side');
+      function placeToolbar(){
+        if (!toolbar || !sideEl) return;
+        if (mqPhone.matches){
+          if (toolbar.parentElement !== sideEl) sideEl.appendChild(toolbar);
+        } else {
+          const main = document.querySelector('.expsec__main');
+          if (main && toolbar.parentElement !== main) main.insertBefore(toolbar, main.firstChild);
+        }
+      }
+      placeToolbar();
+      mqPhone.addEventListener('change', placeToolbar);
 
       // Global sort mode (single control for all sectors)
       let globalSort = 'year';
