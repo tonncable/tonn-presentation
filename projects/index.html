@@ -698,7 +698,7 @@
           <label class="addfld"><span>Year</span><input id="fYear" type="text" placeholder="e.g. 2025 or 2023-2025"></label>
           <label class="addfld"><span>Dealer / Reseller</span><input id="fDealer" type="text" placeholder="e.g. SUNTECH ELECTRICAL SUPPLY SDN. BHD."></label>
           <div class="addfld addfld--full">
-            <span>Cable type * <small class="fld-hint">pick from lists — no typing needed</small></span>
+            <span>Cable type * <small class="fld-hint">type to search suggestions · or free-type</small></span>
             <div class="cblbuilder" id="cblBuilder"></div>
             <button type="button" class="cblbuilder__add" id="cblAdd">+ Add another cable</button>
           </div>
@@ -759,16 +759,21 @@
     .addmodal__hint{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.6;padding:12px 14px;background:#faf7fa;border-radius:10px}
     .addmodal__hint b{color:var(--magenta);font-weight:800}
     .cblbuilder{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
-    .cblrow{display:grid;grid-template-columns:1fr 1fr 1.4fr 1fr 32px;gap:6px;align-items:center;padding:8px;background:#faf7fa;border:1px solid rgba(20,10,20,.06);border-radius:10px}
-    @media(max-width:640px){.cblrow{grid-template-columns:1fr 1fr;gap:6px;padding:10px 8px 30px;position:relative}.cblrow>select{font-size:12px !important;padding:8px 10px !important}.cblrow__x{position:absolute !important;top:6px;right:6px}}
-    .cblrow select{width:100%;padding:8px 10px;border:1px solid rgba(20,10,20,.1);border-radius:8px;font-family:inherit;font-size:13px;background:#fff;color:var(--fg);outline:none;font-weight:600;cursor:pointer}
-    .cblrow select:focus{border-color:var(--magenta)}
-    .cblrow__x{width:28px;height:28px;border-radius:50%;border:0;background:transparent;color:var(--muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .14s;padding:0}
+    .cblrow-auto{display:grid;grid-template-columns:1fr 32px;gap:6px;align-items:start}
+    .cblauto__wrap{position:relative}
+    .cblauto__input{width:100%;padding:11px 14px;border:1.5px solid rgba(20,10,20,.08);border-radius:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:var(--fg);background:#fff;outline:none;transition:all .15s}
+    .cblauto__input:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(165,0,100,.08)}
+    .cblauto__sugg{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:12px;box-shadow:0 12px 30px rgba(20,10,20,.14);padding:6px;z-index:20;max-height:260px;overflow-y:auto}
+    .cblauto__sugg[hidden]{display:none}
+    .cblauto__opt{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:9px 12px;border:0;background:transparent;border-radius:8px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:var(--fg);text-align:left;transition:all .14s}
+    .cblauto__opt:hover{background:linear-gradient(90deg,#faf7fa 0%,#fff 100%);transform:translateX(2px)}
+    .cblauto__opt mark{background:rgba(165,0,100,.14);color:var(--magenta);font-weight:800;padding:0 2px;border-radius:3px}
+    .cblauto__cnt{font-size:11px;font-weight:800;color:#fff;background:var(--magenta);padding:2px 8px;border-radius:99px;flex-shrink:0}
+    .cblauto__hint{padding:10px 12px;font-size:12px;color:var(--muted);font-style:italic;text-align:center}
+    .cblrow__x{width:38px;height:38px;border-radius:10px;border:0;background:transparent;color:var(--muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .14s;padding:0}
     .cblrow__x:hover{background:#ffe0e8;color:#c00040}
     .cblbuilder__add{padding:10px 14px;background:transparent;border:1.5px dashed rgba(165,0,100,.35);color:var(--magenta);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .16s;width:100%}
     .cblbuilder__add:hover{background:rgba(165,0,100,.05);border-color:var(--magenta);border-style:solid}
-    .cblrow__preview{grid-column:1/-1;font-size:11px;color:var(--magenta);font-weight:700;padding:6px 4px 0;font-family:ui-monospace,monospace;letter-spacing:.01em;line-height:1.4;word-break:break-word}
-    .cblrow__preview:empty{display:none}
   </style>
   <script>
   (function(){
@@ -809,51 +814,65 @@
     const fErr = document.getElementById('fErr');
     // (Sector field removed from form; admin assigns it. SECTORS kept only for internal use.)
 
-    // --- Cable-type structured builder ---
-    const CBL_SIZE = ['1.5','2.5','4','6','10','16','25','35,'.replace(/,$/,''),'35','50','70','95','120','150','185','240','300','400','500','630'].filter((v,i,a) => a.indexOf(v)===i);
-    const CBL_CORES = ['— single core —','2c','3c','4c','5c','7c','12c','19c'];
-    const CBL_CONSTR = ['CU/PVC','CU/XLPE/PVC','CU/XLPE/SWA/PVC','CU/MICA/PVC FR','CU/XLPE/AWA/PVC','ALU/XLPE/PVC','ALU/XLPE/SWA/PVC','CU/XLPE/DSTA/PVC','CU/PVC/PVC'];
-    const CBL_COLOUR = ['— none —','BLACK','RED','GREEN','BLUE','YELLOW','ORANGE','WHITE','GREY','BROWN','RD/YE/BU/BK','RD/YE/BU','BK/BK/BK/BK'];
+    // --- Cable-type autocomplete builder ---
     const cblBuilder = document.getElementById('cblBuilder');
     const cblAdd = document.getElementById('cblAdd');
-    function optsHtml(list, hint){
-      return `<option value="">${hint}</option>` + list.map(v => `<option>${v}</option>`).join('');
+    function getCableList(){ return (window.__cableList__ || []); }
+    function normalizeSpec(v){
+      return v.replace(/mm2/gi,'mm²').replace(/\s+/g,' ').trim();
+    }
+    function highlightMatch(label, tokens){
+      let out = label.replace(/</g,'&lt;');
+      tokens.forEach(t => {
+        if (!t) return;
+        const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'ig');
+        out = out.replace(re, '<mark>$1</mark>');
+      });
+      return out;
     }
     function makeRow(){
       const row = document.createElement('div');
-      row.className = 'cblrow';
+      row.className = 'cblrow-auto';
       row.innerHTML = `
-        <select class="cblrow__size">${optsHtml(CBL_SIZE, 'Size (mm²)')}</select>
-        <select class="cblrow__cores">${optsHtml(CBL_CORES, 'Cores')}</select>
-        <select class="cblrow__constr">${optsHtml(CBL_CONSTR, 'Construction')}</select>
-        <select class="cblrow__colour">${optsHtml(CBL_COLOUR, 'Colour')}</select>
-        <button type="button" class="cblrow__x" aria-label="Remove cable">×</button>
-        <div class="cblrow__preview"></div>`;
-      row.querySelectorAll('select').forEach(s => s.addEventListener('change', () => updatePreview(row)));
+        <div class="cblauto__wrap">
+          <input class="cblauto__input" type="text" placeholder="Type to search or freely enter cable (e.g. 10 mm² CU/PVC GREEN)" autocomplete="off">
+          <div class="cblauto__sugg" hidden></div>
+        </div>
+        <button type="button" class="cblrow__x" aria-label="Remove cable">×</button>`;
+      const input = row.querySelector('.cblauto__input');
+      const sugg = row.querySelector('.cblauto__sugg');
+      function renderSuggestions(){
+        const q = input.value.trim().toUpperCase();
+        if (!q){ sugg.hidden = true; sugg.innerHTML = ''; return; }
+        const tokens = q.split(/\s+/).filter(Boolean);
+        const list = getCableList().filter(c => {
+          const up = c.label.toUpperCase();
+          return tokens.every(t => up.includes(t));
+        }).slice(0, 8);
+        if (!list.length){ sugg.innerHTML = '<div class="cblauto__hint">No match — will submit as typed</div>'; sugg.hidden = false; return; }
+        sugg.innerHTML = list.map(c => `<button type="button" class="cblauto__opt" data-spec="${c.label.replace(/"/g,'&quot;')}"><span>${highlightMatch(c.label, tokens)}</span><span class="cblauto__cnt">${c.projectCount}</span></button>`).join('');
+        sugg.hidden = false;
+      }
+      input.addEventListener('input', renderSuggestions);
+      input.addEventListener('focus', renderSuggestions);
+      input.addEventListener('blur', () => setTimeout(() => sugg.hidden = true, 180));
+      sugg.addEventListener('mousedown', e => {
+        const opt = e.target.closest('.cblauto__opt'); if (!opt) return;
+        e.preventDefault();
+        input.value = opt.dataset.spec;
+        sugg.hidden = true;
+        input.focus();
+      });
       row.querySelector('.cblrow__x').addEventListener('click', () => { row.remove(); if (!cblBuilder.children.length) makeRow(); });
       cblBuilder.appendChild(row);
       return row;
     }
-    function buildCableStr(row){
-      const size = row.querySelector('.cblrow__size').value;
-      const cores = row.querySelector('.cblrow__cores').value;
-      const constr = row.querySelector('.cblrow__constr').value;
-      const colour = row.querySelector('.cblrow__colour').value;
-      if (!size || !constr) return '';
-      let s = `${size} mm²`;
-      if (cores && cores.startsWith('—') === false) s += ` x ${cores}`;
-      s += ` ${constr}`;
-      if (colour && colour.startsWith('—') === false) s += ` ${colour}`;
-      s += ' CABLE';
-      return s;
-    }
-    function updatePreview(row){
-      row.querySelector('.cblrow__preview').textContent = buildCableStr(row);
-    }
     function collectCables(){
-      return Array.from(cblBuilder.querySelectorAll('.cblrow')).map(buildCableStr).filter(Boolean);
+      return Array.from(cblBuilder.querySelectorAll('.cblauto__input'))
+        .map(i => normalizeSpec(i.value))
+        .filter(Boolean);
     }
-    cblAdd.addEventListener('click', () => makeRow());
+    cblAdd.addEventListener('click', () => { const r = makeRow(); r.querySelector('.cblauto__input').focus(); });
     if (!cblBuilder.children.length) makeRow();
 
     let submitterName = '';
@@ -1271,6 +1290,7 @@
         });
       });
       const cableList = Array.from(cableSpecs.values()).map(e => ({...e, projectCount: e.projects.size})).sort((a,b) => b.projectCount - a.projectCount);
+      window.__cableList__ = cableList;
       let searchTerm = '';
       let cameFromAll = false;
       let jumpedFromSector = null;
