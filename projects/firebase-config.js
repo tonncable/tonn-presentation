@@ -1,15 +1,14 @@
 // ============================================================
-// FIREBASE CONFIG — fill in the 6 fields below after creating
-// your Firebase project. See FIREBASE-SETUP.md for step-by-step.
+// FIREBASE CONFIG — filled in for tonn-references project.
 // ============================================================
 window.FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyB-8sy5zICD9TfgwJr15lTcNywokOYVhzU",
+  authDomain: "tonn-references.firebaseapp.com",
+  projectId: "tonn-references",
+  storageBucket: "tonn-references.firebasestorage.app",
+  messagingSenderId: "526431990751",
+  appId: "1:526431990751:web:8872964a8c8b02effeca6a"
 };
 
-// Emails allowed to approve/decline submissions (must match a Firebase Auth user)
+// Emails allowed to log in on admin.html and delete bad entries
 window.ADMIN_EMAILS = ["syazwalina@tonncable.com"];
