@@ -835,7 +835,8 @@
           const hasVisibleImg = p => p.img && !(p.imgIntlOnly && tab !== '__intl');
           const feat = g.items.find(p => p.hero && hasVisibleImg(p)) || g.items.find(hasVisibleImg);
           const idxSource = sortItems(g.items, globalSort);
-          const CAP = (tab === 'All') ? 8 : Infinity;
+          const isPhone = window.matchMedia('(max-width: 640px)').matches;
+          const CAP = (tab === 'All') ? (isPhone ? 5 : 8) : Infinity;
           const idxShown = idxSource.slice(0, CAP);
           const needsCollapse = idxShown.length > 10;
           const idxHtml = `
