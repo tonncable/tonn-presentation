@@ -792,8 +792,7 @@
     const fBack = document.getElementById('fBack');
     const fSubmit = document.getElementById('fSubmit');
     const fErr = document.getElementById('fErr');
-    const fSector = document.getElementById('fSector');
-    fSector.innerHTML = '<option value="">— select sector —</option>' + SECTORS.map(s => `<option>${s}</option>`).join('');
+    // (Sector field removed from form; admin assigns it. SECTORS kept only for internal use.)
 
     let submitterName = '';
 
