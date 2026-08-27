@@ -127,14 +127,6 @@
     "location": "Johor"
   },
   {
-    "name": "Sedenak Data Center Park",
-    "sector": "Data Centre",
-    "location": "Sedenak, Johor",
-    "year": "2020-2024",
-    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE - 754 m | 300 mm² AL/XLPE/PVC BLACK CABLE - 1,000 m",
-    "dealer": "TIEN YUAN ELECTRICAL SDN. BHD."
-  },
-  {
     "name": "Microsoft Data Centre",
     "sector": "Data Centre",
     "location": "Cyberjaya",
@@ -1492,10 +1484,10 @@
   {
     "name": "Sedenak Tech Park",
     "sector": "Data Centre",
-    "year": "2023-2026",
-    "details": "300 mm² CU/PVC GREEN CABLE - 5,000 m | 300 mm² CU/XLPE/PVC GREEN CABLE - 1,000 m | 6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 48,012 kg | 6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 13,358 kg | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 15,670 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 12,105 m",
-    "dealer": "YSE ELECTRIC (M) SDN. BHD. +2 more",
-    "location": "Kulai, Johor"
+    "year": "2020-2026",
+    "details": "300 mm² x 4c AL/XLPE/SWA/PVC CABLE - 754 m | 300 mm² AL/XLPE/PVC BLACK CABLE - 1,000 m | 300 mm² CU/PVC GREEN CABLE - 5,000 m | 300 mm² CU/XLPE/PVC GREEN CABLE - 1,000 m | 6 MM X 50 MM COPPER TAPE (METROD) 60KGS++ - 48,012 kg | 6 MM X 50 MM COPPER STRIP (METROD) 60KGS++ - 13,358 kg | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) WITH ANTI-TERMITE - 15,670 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE WITH ANTI-TERMITE CABLE - 12,105 m",
+    "dealer": "TIEN YUAN ELECTRICAL SDN. BHD.; YSE ELECTRIC (M) SDN. BHD. +2 more",
+    "location": "Sedenak / Kulai, Johor"
   },
   {
     "name": "Strateq Data Centre",
