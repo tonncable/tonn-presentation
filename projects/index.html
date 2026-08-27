@@ -1046,7 +1046,17 @@
       document.getElementById('reachSecs').innerHTML = bySectorSorted.map(g => `<span data-name="${lbl(g.sector)}" style="--pct:${Math.round(g.items.length/maxSec*100)}"><b>${g.items.length}</b></span>`).join('');
 
       // --- 2b · Beyond Malaysia country tiles ---
-      const orderedIntl = intlCountries.slice().sort((a,b) => projects.filter(p => p.country === b).length - projects.filter(p => p.country === a).length);
+      // Sort by project count desc; on ties, prefer countries WITH a visible image (Brunei/Mauritius have none → after)
+      const NO_IMG_COUNTRIES = ['Brunei','Mauritius'];
+      const orderedIntl = intlCountries.slice().sort((a,b) => {
+        const ca = projects.filter(p => p.country === a).length;
+        const cb = projects.filter(p => p.country === b).length;
+        if (ca !== cb) return cb - ca;
+        const aNoImg = NO_IMG_COUNTRIES.includes(a) ? 1 : 0;
+        const bNoImg = NO_IMG_COUNTRIES.includes(b) ? 1 : 0;
+        if (aNoImg !== bNoImg) return aNoImg - bNoImg;
+        return a.localeCompare(b);
+      });
       const intlCounts = orderedIntl.map(c => projects.filter(p => p.country === c).length);
       const maxIntl = Math.max(...intlCounts);
       document.getElementById('beyondGrid').innerHTML = orderedIntl.map((c, i) => {
