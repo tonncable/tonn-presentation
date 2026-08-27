@@ -54,19 +54,16 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Anyone can read approved projects (public site displays them)
+    // Anyone can read projects (public site displays them)
+    // Anyone can add a new project (password-gated in the app)
+    // Only admin can edit/delete existing entries
     match /live_projects/{id} {
       allow read: if true;
-      allow create, update, delete: if isAdmin();
-    }
-
-    // Anyone can submit a pending project. Only admin can read/delete pending.
-    match /pending_projects/{id} {
       allow create: if request.resource.data.name is string
                     && request.resource.data.name.size() > 0
                     && request.resource.data.location is string
                     && request.resource.data.details is string;
-      allow read, update, delete: if isAdmin();
+      allow update, delete: if isAdmin();
     }
 
     function isAdmin() {
@@ -76,6 +73,8 @@ service cloud.firestore {
   }
 }
 ```
+
+**Note:** direct-publish mode. Submissions go live instantly. The admin page is still available at `admin.html` (for signing in later to delete any bad or wrong entries).
 
 (If you add more admins in `firebase-config.js`, also add them to the `isAdmin()` list here.)
 

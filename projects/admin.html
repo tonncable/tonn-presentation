@@ -85,9 +85,10 @@
 
     <div id="dashboard" hidden>
       <div class="toolbar">
-        <h2>Pending submissions</h2>
+        <h2>User-submitted projects</h2>
         <div class="cnt" id="pendCnt"></div>
       </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px">These entries are already live on the site. Use this page to <b>delete</b> any that shouldn't be there.</p>
       <div id="list"></div>
     </div>
   </div>
@@ -141,12 +142,11 @@
         const cnt = document.getElementById('pendCnt');
         list.innerHTML = '<div class="empty">Loading…</div>';
         try {
-          const snap = await db.collection('pending_projects').orderBy('submittedAt','desc').get();
+          const snap = await db.collection('live_projects').orderBy('submittedAt','desc').get();
           const docs = snap.docs;
-          cnt.textContent = docs.length ? `${docs.length} awaiting your review` : '';
-          if (!docs.length){ list.innerHTML = '<div class="empty"><div class="ico">📭</div>All caught up! No pending submissions.</div>'; return; }
+          cnt.textContent = docs.length ? `${docs.length} user submission${docs.length!==1?'s':''} live` : '';
+          if (!docs.length){ list.innerHTML = '<div class="empty"><div class="ico">📭</div>No user submissions yet.</div>'; return; }
           list.innerHTML = docs.map(d => renderCard(d.id, d.data())).join('');
-          list.querySelectorAll('[data-approve]').forEach(b => b.addEventListener('click', () => approve(b.dataset.approve)));
           list.querySelectorAll('[data-decline]').forEach(b => b.addEventListener('click', () => decline(b.dataset.decline)));
         } catch(err){
           list.innerHTML = `<div class="err">Could not load: ${err.message}</div>`;
@@ -169,38 +169,20 @@
           <div class="row"><span><b>Country</b>${esc(d.country||'Malaysia')}</span><span><b>Location</b>${esc(d.location||'')}</span>${d.year ? `<span><b>Year</b>${esc(d.year)}</span>` : ''}${d.dealer ? `<span><b>Dealer</b>${esc(d.dealer)}</span>` : ''}</div>
           ${cables.length ? `<div class="cbls"><b>Cables (${cables.length})</b><ul>${cables.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}
           <div class="actions">
-            <button class="act act--ok" data-approve="${id}">✓ Approve & publish</button>
-            <button class="act act--no" data-decline="${id}">✕ Decline</button>
+            <button class="act act--no" data-decline="${id}">🗑 Delete from site</button>
           </div>
         </div>`;
       }
 
-      async function approve(id){
-        const card = document.querySelector(`.card[data-id="${id}"]`);
-        const btns = card.querySelectorAll('button'); btns.forEach(b => b.disabled = true);
-        try {
-          const doc = await db.collection('pending_projects').doc(id).get();
-          if (!doc.exists) throw new Error('Already gone');
-          const data = doc.data();
-          const secSel = card.querySelector('select[data-secfor]');
-          const finalSector = secSel ? secSel.value : data.sector;
-          const live = { ...data, sector: finalSector, approvedAt: firebase.firestore.FieldValue.serverTimestamp(), approvedBy: firebase.auth().currentUser.email };
-          delete live.submittedAt; // don't need the pending timestamp in live copy
-          await db.collection('live_projects').add(live);
-          await db.collection('pending_projects').doc(id).delete();
-          card.style.transition = 'opacity .3s'; card.style.opacity = 0;
-          setTimeout(loadPending, 320);
-        } catch(err){ alert('Approve failed: ' + err.message); btns.forEach(b => b.disabled = false); }
-      }
       async function decline(id){
-        if (!confirm('Decline and delete this submission? This cannot be undone.')) return;
+        if (!confirm('Delete this project from the public site? This cannot be undone.')) return;
         const card = document.querySelector(`.card[data-id="${id}"]`);
         const btns = card.querySelectorAll('button'); btns.forEach(b => b.disabled = true);
         try {
-          await db.collection('pending_projects').doc(id).delete();
+          await db.collection('live_projects').doc(id).delete();
           card.style.transition = 'opacity .3s'; card.style.opacity = 0;
           setTimeout(loadPending, 320);
-        } catch(err){ alert('Decline failed: ' + err.message); btns.forEach(b => b.disabled = false); }
+        } catch(err){ alert('Delete failed: ' + err.message); btns.forEach(b => b.disabled = false); }
       }
     }
   </script>

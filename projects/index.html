@@ -706,7 +706,7 @@
         <p class="addmodal__err" id="fErr" hidden></p>
         <div class="addmodal__row">
           <button class="addmodal__back" id="fBack" type="button">← Back</button>
-          <button class="addmodal__go" id="fSubmit" type="button">Submit for approval</button>
+          <button class="addmodal__go" id="fSubmit" type="button">Publish to site</button>
         </div>
       </div>
       <div class="addmodal__step" id="addStepDone" hidden>
@@ -714,8 +714,8 @@
         <p class="addmodal__sub">Send this snippet to the admin. Once approved, it goes live on the site.</p>
         <div class="addmodal__success">
           <div class="addmodal__check">✓</div>
-          <h4>Sent for approval</h4>
-          <p id="doneMsg">Your submission is now with the admin. It will appear on the site once approved.</p>
+          <h4>Published!</h4>
+          <p id="doneMsg">Your project is now on the site.</p>
         </div>
         <button class="addmodal__back" id="doneReset" type="button">Add another project</button>
       </div>
@@ -947,8 +947,8 @@
           submittedBy: submitterName,
           submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
         });
-        await firebase.firestore().collection('pending_projects').add(payload);
-        document.getElementById('doneMsg').innerHTML = `Thanks <b>${submitterName.replace(/</g,'&lt;')}</b> — your submission for <b>${entry.name.replace(/</g,'&lt;')}</b> is now with the admin. It will appear on the site once approved.`;
+        await firebase.firestore().collection('live_projects').add(payload);
+        document.getElementById('doneMsg').innerHTML = `Thanks <b>${submitterName.replace(/</g,'&lt;')}</b> — <b>${entry.name.replace(/</g,'&lt;')}</b> is now live on the site.`;
         showStep(stepDone);
       } catch (err){
         fErr.textContent = err.message || 'Could not send. Please try again.'; fErr.hidden = false;
