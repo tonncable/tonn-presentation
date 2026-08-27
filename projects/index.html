@@ -438,8 +438,15 @@
 
   <div class="pvframe" id="pvFrame" aria-hidden="true">
     <button class="pvframe__close" id="pvClose" type="button" aria-label="Close phone preview">×</button>
-    <div class="pvframe__phone">
-      <iframe id="pvIframe" title="Phone preview"></iframe>
+    <button class="pvframe__mode" id="pvMode" type="button" title="Switch layout" aria-label="Switch layout">
+      <svg class="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+      <svg class="ic-desk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+      <span class="pvmode__lbl">Desktop</span>
+    </button>
+    <div class="pvframe__phone" id="pvPhone">
+      <div class="pvframe__scaler" id="pvScaler">
+        <iframe id="pvIframe" title="Phone preview"></iframe>
+      </div>
     </div>
   </div>
   <style>
@@ -450,9 +457,23 @@
     .pvframe.open{display:flex}
     .pvframe__phone{width:390px;height:min(844px,92vh);background:#111;border-radius:38px;padding:12px;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative;border:2px solid #2a2a2f}
     .pvframe__phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:110px;height:22px;background:#000;border-radius:14px;z-index:2}
-    .pvframe__phone iframe{width:100%;height:100%;border:0;border-radius:28px;background:#fff;display:block}
-    .pvframe__close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.95);border:0;color:#15151c;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .pvframe__scaler{width:100%;height:100%;border-radius:28px;overflow:hidden;background:#fff;position:relative}
+    .pvframe__phone iframe{width:100%;height:100%;border:0;background:#fff;display:block;transform-origin:top left}
+    .pvframe.mode-desk .pvframe__phone{width:min(1400px,94vw);height:min(88vh,900px);border-radius:14px;padding:0;border:1.5px solid #2a2a2f;background:#0f0f12}
+    .pvframe.mode-desk .pvframe__phone::before{display:none}
+    .pvframe.mode-desk .pvframe__scaler{border-radius:12px}
+    .pvframe__close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.95);border:0;color:#15151c;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:3}
     .pvframe__close:hover{background:var(--magenta);color:#fff}
+    .pvframe__mode{position:absolute;top:18px;left:22px;height:44px;padding:0 18px;border-radius:22px;background:rgba(255,255,255,.95);border:0;color:#15151c;font-size:14px;font-weight:700;letter-spacing:.03em;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:3;font-family:inherit}
+    .pvframe__mode:hover{background:var(--magenta);color:#fff}
+    .pvframe__mode svg{width:18px;height:18px}
+    .pvframe__mode .ic-desk{display:none}
+    .pvframe.mode-desk .pvframe__mode .ic-phone{display:none}
+    .pvframe.mode-desk .pvframe__mode .ic-desk{display:inline-block}
+    .pvframe.mode-desk .pvframe__mode .pvmode__lbl::before{content:"Phone"}
+    .pvframe__mode .pvmode__lbl{font-size:13px}
+    .pvframe.mode-desk .pvframe__mode .pvmode__lbl{font-size:0}
+    .pvframe.mode-desk .pvframe__mode .pvmode__lbl::before{font-size:13px}
     @media(max-width:640px){.pvbtn{display:none}}
     @media(max-width:480px){.pvframe__phone{width:100%;height:100%;border-radius:20px;padding:6px}.pvframe__phone::before{display:none}.pvframe__phone iframe{border-radius:14px}}
   </style>
@@ -461,16 +482,38 @@
     var pvFrame = document.getElementById('pvFrame');
     var pvClose = document.getElementById('pvClose');
     var pvIframe = document.getElementById('pvIframe');
+    var pvMode = document.getElementById('pvMode');
+    var pvScaler = document.getElementById('pvScaler');
+    function applyScale(){
+      if (pvFrame.classList.contains('mode-desk')){
+        var rect = pvScaler.getBoundingClientRect();
+        var VW = 1400;
+        var scale = rect.width / VW;
+        pvIframe.style.width = VW + 'px';
+        pvIframe.style.height = (rect.height / scale) + 'px';
+        pvIframe.style.transform = 'scale(' + scale + ')';
+      } else {
+        pvIframe.style.width = '100%';
+        pvIframe.style.height = '100%';
+        pvIframe.style.transform = 'none';
+      }
+    }
     function openPv(){
       pvIframe.src = location.pathname + location.search + '#pv';
       pvFrame.classList.add('open');
       pvFrame.setAttribute('aria-hidden','false');
+      requestAnimationFrame(applyScale);
     }
     function closePv(){
       pvFrame.classList.remove('open');
       pvFrame.setAttribute('aria-hidden','true');
       pvIframe.src = 'about:blank';
     }
+    pvMode.addEventListener('click', function(){
+      pvFrame.classList.toggle('mode-desk');
+      requestAnimationFrame(applyScale);
+    });
+    window.addEventListener('resize', function(){ if (pvFrame.classList.contains('open')) applyScale(); });
     var pvBtnTop = document.getElementById('pvBtnTop');
     if (pvBtnTop) pvBtnTop.addEventListener('click', openPv);
     pvClose.addEventListener('click', closePv);
