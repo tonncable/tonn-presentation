@@ -631,8 +631,7 @@
       document.getElementById('reachSecs').innerHTML = bySectorSorted.map(g => `<span data-name="${lbl(g.sector)}" style="--pct:${Math.round(g.items.length/maxSec*100)}"><b>${g.items.length}</b></span>`).join('');
 
       // --- 2b · Beyond Malaysia country tiles ---
-      const COUNTRY_ORDER = ['Singapore','Myanmar','Cambodia','Maldives','Brunei','Vietnam'];
-      const orderedIntl = COUNTRY_ORDER.filter(c => intlCountries.includes(c)).concat(intlCountries.filter(c => !COUNTRY_ORDER.includes(c)));
+      const orderedIntl = intlCountries.slice().sort((a,b) => projects.filter(p => p.country === b).length - projects.filter(p => p.country === a).length);
       const intlCounts = orderedIntl.map(c => projects.filter(p => p.country === c).length);
       const maxIntl = Math.max(...intlCounts);
       document.getElementById('beyondGrid').innerHTML = orderedIntl.map((c, i) => {
