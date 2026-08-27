@@ -105,11 +105,6 @@ window.PROJECTS =
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN. BHD. +4 more"
   },
   {
-    "name": "Mydin Tunjong Mall",
-    "sector": "Retail",
-    "location": "Kota Bharu, Kelantan"
-  },
-  {
     "name": "I-City",
     "sector": "Commercial",
     "img": "https://assets.theedgemarkets.com/MPLAN-181225-thumb-theedgemalaysia.jpg",
@@ -1354,10 +1349,6 @@ window.PROJECTS =
     "details": "via SAMETECH SOLUTIONS SDN. BHD.",
     "location": "Shah Alam",
     "dealer": "SAMETECH SOLUTIONS SDN. BHD."
-  },
-  {
-    "name": "Xiao En Nilai Memorial Park",
-    "sector": "Religious"
   },
   {
     "name": "Zemart, Bandar Baru Enstek",
@@ -2654,7 +2645,7 @@ window.PROJECTS =
     "location": "Kelantan"
   },
   {
-    "name": "Hospital Kuala Lumpur (Hkl)",
+    "name": "Hospital Kuala Lumpur (HKL)",
     "sector": "Healthcare",
     "year": "2026",
     "details": "4 mm² CU/PVC GREEN CABLE 100M - 45 coil | 4 mm² CU/PVC BLACK CABLE 100M - 45 coil | 4 mm² CU/PVC BLUE CABLE 100M - 30 coil | 4 mm² CU/PVC RED CABLE 100M - 30 coil | 4 mm² CU/PVC YELLOW CABLE 100M - 30 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 40 coil",
@@ -4939,7 +4930,7 @@ window.PROJECTS =
     "dealer": "BUILDSOLVE INDUSTRIAL SDN. BHD."
   },
   {
-    "name": "Cure & Care Rehabilitation Centre ( Ccrc )",
+    "name": "Cure & Care Rehabilitation Centre (CCRC)",
     "sector": "Healthcare",
     "location": "Perlis"
   },
@@ -6379,14 +6370,6 @@ window.PROJECTS =
     "sector": "Retail"
   },
   {
-    "name": "Maydin Tunjung",
-    "sector": "Retail",
-    "year": "2019-2020",
-    "details": "1.5 mm² CU/PVC RED CABLE 100M - 276 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 276 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 226 coil | 1.5 mm² CU/PVC BLUE CABLE 100M - 226 coil | 1.5 mm² CU/PVC WHITE CABLE 100M - 176 coil",
-    "dealer": "SYARIKAT LETRIK KT UNION SDN BHD",
-    "location": "Kota Bharu"
-  },
-  {
     "name": "Merdeka Mall",
     "sector": "Retail",
     "year": "2020",
@@ -6404,14 +6387,10 @@ window.PROJECTS =
   {
     "name": "Mydin Hypermarket, Kota Bahru",
     "sector": "Retail",
-    "location": "Kelantan"
-  },
-  {
-    "name": "Mydin Mall Tunjang",
-    "sector": "Retail",
-    "year": "2020",
-    "details": "10 mm² CU/PVC GREEN CABLE - 1,000 m",
-    "dealer": "SYARIKAT LETRIK KT UNION SDN BHD"
+    "year": "2019-2020",
+    "details": "1.5 mm² CU/PVC RED CABLE 100M - 276 coil | 1.5 mm² CU/PVC BLACK CABLE 100M - 276 coil | 1.5 mm² CU/PVC YELLOW CABLE 100M - 226 coil | 1.5 mm² CU/PVC BLUE CABLE 100M - 226 coil | 1.5 mm² CU/PVC WHITE CABLE 100M - 176 coil",
+    "dealer": "SYARIKAT LETRIK KT UNION SDN BHD",
+    "location": "Kota Bharu, Kelantan"
   },
   {
     "name": "Naza Plaza In Kuala Lumpur",
