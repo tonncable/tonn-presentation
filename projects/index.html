@@ -498,7 +498,7 @@
       }
     }
     function openPv(){
-      pvIframe.src = location.pathname + location.search + '#pv';
+      pvIframe.src = location.pathname + '?pv=' + Date.now() + '#pv';
       pvFrame.classList.add('open');
       pvFrame.setAttribute('aria-hidden','false');
       requestAnimationFrame(applyScale);
