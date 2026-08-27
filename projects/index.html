@@ -530,6 +530,19 @@
 
   <nav class="secnav" id="secnav" aria-label="Section navigation"></nav>
 
+  <button class="fab-back" id="fabBack" type="button" hidden aria-label="Back to All sectors">
+    <span class="fab-back__arr">←</span>
+    <span class="fab-back__lbl">All sectors</span>
+  </button>
+  <style>
+    .fab-back{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(0);z-index:75;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--magenta) 0%,#7a0049 100%);color:#fff;border:0;padding:12px 20px;border-radius:99px;font-family:inherit;font-size:14px;font-weight:800;letter-spacing:.02em;cursor:pointer;box-shadow:0 12px 30px rgba(165,0,100,.4),0 2px 6px rgba(20,10,20,.15);transition:transform .28s cubic-bezier(.2,.9,.3,1.2),opacity .2s}
+    .fab-back:hover{transform:translateX(-50%) translateY(-2px)}
+    .fab-back.hidden-scroll{transform:translateX(-50%) translateY(90px);opacity:0;pointer-events:none}
+    .fab-back[hidden]{display:none}
+    .fab-back__arr{font-size:18px;line-height:1}
+    @media(max-width:640px){.fab-back{padding:10px 18px;font-size:13px;bottom:18px}}
+  </style>
+
   <div class="pvframe" id="pvFrame" aria-hidden="true">
     <button class="pvframe__close" id="pvClose" type="button" aria-label="Close phone preview">×</button>
     <button class="pvframe__mode" id="pvMode" type="button" title="Switch layout" aria-label="Switch layout">
@@ -904,6 +917,27 @@
         const cinline = e.target.closest('#searchClrInline'); if (!cinline) return;
         searchInput.value = ''; applySearch('');
       });
+      // --- floating back-to-All pill ---
+      const fabBack = document.getElementById('fabBack');
+      fabBack.addEventListener('click', () => {
+        cameFromAll = false;
+        const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
+        if (allTab) allTab.click();
+        const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
+        if (allOpt) allOpt.click();
+        const expsecEl2 = document.querySelector('.expsec');
+        if (expsecEl2) expsecEl2.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      let lastY = window.scrollY;
+      window.addEventListener('scroll', () => {
+        if (fabBack.hidden) return;
+        const y = window.scrollY;
+        const goingDown = y > lastY + 6;
+        const goingUp = y < lastY - 6;
+        if (goingDown) fabBack.classList.add('hidden-scroll');
+        else if (goingUp) fabBack.classList.remove('hidden-scroll');
+        lastY = y;
+      }, {passive:true});
       // On phone, move the sort toolbar next to the picker inside the sidebar
       const mqPhone = window.matchMedia('(max-width: 640px)');
       const toolbar = document.querySelector('.expsec__main .expsec__toolbar');
@@ -984,7 +1018,9 @@
         groups = groups.slice().sort((a, b) => b.items.length - a.items.length);
         const body = document.getElementById('expBody');
         const flag = '';
-        const backBtn = (cameFromAll && tab !== 'All' && !searchTerm) ? `<button class="back-all" id="backAll" type="button"><span>←</span> Show less · back to All sectors</button>` : '';
+        const backBtn = '';
+        const fabBackEl = document.getElementById('fabBack');
+        if (fabBackEl) fabBackEl.hidden = !(cameFromAll && tab !== 'All' && !searchTerm);
         if (!groups.length) { body.innerHTML = flag + '<p class="secblk__none">No projects match your search.</p>'; return; }
         body.innerHTML = backBtn + flag + groups.map(g => {
           // Items whose image should render in THIS view (imgIntlOnly hides thumbnail on sector tabs)
@@ -1091,15 +1127,6 @@
             const opt = document.querySelector('.expsec__picker__opt[data-tab="' + sector + '"]');
             if (opt) opt.click();
           }
-          return;
-        }
-        const back = e.target.closest('#backAll');
-        if (back) {
-          cameFromAll = false;
-          const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
-          if (allTab) allTab.click();
-          const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
-          if (allOpt) allOpt.click();
           return;
         }
         const more = e.target.closest('.secblk__more-btn');
