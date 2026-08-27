@@ -67,7 +67,11 @@
       .top__search input{padding:8px 30px 8px 32px;font-size:12px}
       .top__search__ico{left:11px;width:13px;height:13px}
     }
-    .top__pv{margin-left:10px;width:36px;height:36px;border-radius:50%;background:#fff;border:1.5px solid var(--hair);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s;padding:0}
+    .top__add{margin-left:10px;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;height:36px;border-radius:99px;background:var(--magenta);color:#fff;border:0;font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:transform .16s,box-shadow .16s}
+    .top__add:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(165,0,100,.28)}
+    .top__add svg{width:14px;height:14px}
+    @media(max-width:640px){.top__add{padding:6px 10px;font-size:12px;height:32px}.top__add svg{width:12px;height:12px}}
+    .top__pv{margin-left:6px;width:36px;height:36px;border-radius:50%;background:#fff;border:1.5px solid var(--hair);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s;padding:0}
     .top__pv:hover{border-color:var(--magenta);color:var(--magenta);transform:scale(1.06)}
     .top__pv svg{width:18px;height:18px}
     @media(max-width:640px){.top__pv{display:none}}
@@ -451,6 +455,10 @@
         <div class="top__search__sugg" id="topSearchSugg" role="listbox" hidden></div>
       </div>
       <span class="top__title">Project References</span>
+      <button class="top__add" id="addProjectBtn" type="button" title="Add a project reference" aria-label="Add project">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        <span>Add</span>
+      </button>
       <button class="top__pv" id="pvBtnTop" type="button" title="Phone preview" aria-label="Toggle phone preview">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
       </button>
@@ -665,6 +673,207 @@
       var tag = e.target && e.target.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
       if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFS(); }
+    });
+  })();
+  </script>
+
+  <div class="addmodal" id="addModal" hidden aria-modal="true" role="dialog" aria-labelledby="addTitle">
+    <div class="addmodal__card">
+      <button class="addmodal__x" id="addClose" type="button" aria-label="Close">×</button>
+      <div class="addmodal__step" id="addStepGate">
+        <h3 class="addmodal__t" id="addTitle">Verify to add a project</h3>
+        <p class="addmodal__sub">Enter your name and the shared access code.</p>
+        <label class="addfld"><span>Your name</span><input id="addName" type="text" placeholder="e.g. Nur Ashikin" autocomplete="name"></label>
+        <label class="addfld"><span>Access code</span><input id="addPass" type="password" placeholder="Access code" autocomplete="off"></label>
+        <p class="addmodal__err" id="addErr" hidden></p>
+        <button class="addmodal__go" id="addGate" type="button">Continue →</button>
+      </div>
+      <div class="addmodal__step" id="addStepForm" hidden>
+        <h3 class="addmodal__t">Project details</h3>
+        <p class="addmodal__sub">Fill in what you know. Fields marked * are required.</p>
+        <div class="addgrid">
+          <label class="addfld"><span>Project name *</span><input id="fName" type="text" placeholder="e.g. Merdeka 118"></label>
+          <label class="addfld"><span>Sector *</span><select id="fSector"></select></label>
+          <label class="addfld"><span>Country</span><select id="fCountry"><option value="Malaysia">Malaysia</option><option>Singapore</option><option>Myanmar</option><option>Cambodia</option><option>Maldives</option><option>Brunei</option><option>Vietnam</option><option>Pakistan</option><option>Indonesia</option><option>Iraq</option></select></label>
+          <label class="addfld"><span>Location *</span><input id="fLocation" type="text" placeholder="e.g. Kuala Lumpur"></label>
+          <label class="addfld"><span>Year</span><input id="fYear" type="text" placeholder="e.g. 2025 or 2023-2025"></label>
+          <label class="addfld"><span>Dealer / Reseller</span><input id="fDealer" type="text" placeholder="e.g. SUNTECH ELECTRICAL SUPPLY SDN. BHD."></label>
+          <label class="addfld addfld--full"><span>Image URL (optional)</span><input id="fImg" type="url" placeholder="https://..."></label>
+          <label class="addfld addfld--full"><span>Cable details (one per line — spec then qty, e.g. "10 mm² CU/PVC GREEN CABLE - 60 coil")</span><textarea id="fDetails" rows="5" placeholder="10 mm² CU/PVC GREEN CABLE - 60 coil&#10;2.5 mm² CU/PVC RED CABLE - 60 coil"></textarea></label>
+          <label class="addfld addfld--check"><input id="fHero" type="checkbox"><span>Feature this as the sector's hero image (only if image URL is provided)</span></label>
+        </div>
+        <p class="addmodal__err" id="fErr" hidden></p>
+        <div class="addmodal__row">
+          <button class="addmodal__back" id="fBack" type="button">← Back</button>
+          <button class="addmodal__go" id="fSubmit" type="button">Generate submission</button>
+        </div>
+      </div>
+      <div class="addmodal__step" id="addStepDone" hidden>
+        <h3 class="addmodal__t">Ready to send</h3>
+        <p class="addmodal__sub">Send this snippet to the admin. Once approved, it goes live on the site.</p>
+        <textarea id="doneJson" class="addmodal__json" readonly></textarea>
+        <div class="addmodal__actions">
+          <button class="addmodal__act addmodal__act--copy" id="doneCopy" type="button">📋 Copy snippet</button>
+          <a class="addmodal__act addmodal__act--wa" id="doneWA" href="#" target="_blank" rel="noopener">💬 Send via WhatsApp</a>
+          <a class="addmodal__act addmodal__act--em" id="doneEmail" href="#" rel="noopener">✉️ Send via Email</a>
+        </div>
+        <p class="addmodal__hint">Admin: <b>nurashikin@tonncable.com</b>. Once received, the admin will paste it into the projects list and it will appear here after the next site update.</p>
+        <button class="addmodal__back" id="doneReset" type="button">Add another project</button>
+      </div>
+    </div>
+  </div>
+  <style>
+    .addmodal{position:fixed;inset:0;background:rgba(20,20,26,.7);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:150;padding:20px;overflow-y:auto}
+    .addmodal[hidden]{display:none}
+    .addmodal__card{background:#fff;border-radius:20px;box-shadow:0 30px 80px rgba(20,10,20,.4);width:100%;max-width:640px;padding:32px;position:relative;max-height:calc(100vh - 40px);overflow-y:auto}
+    .addmodal__x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:#f5f3f6;border:0;font-size:22px;line-height:1;cursor:pointer;color:var(--fg);display:flex;align-items:center;justify-content:center}
+    .addmodal__x:hover{background:var(--magenta);color:#fff}
+    .addmodal__t{font-size:22px;font-weight:900;letter-spacing:-.01em;margin-bottom:6px;color:var(--fg)}
+    .addmodal__sub{font-size:13px;color:var(--muted);margin-bottom:20px;font-weight:600}
+    .addfld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+    .addfld>span{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .addfld input,.addfld select,.addfld textarea{width:100%;padding:11px 14px;border:1.5px solid var(--hair);border-radius:10px;font-family:inherit;font-size:14px;color:var(--fg);background:#fff;outline:none;transition:border-color .15s,box-shadow .15s;resize:vertical}
+    .addfld input:focus,.addfld select:focus,.addfld textarea:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(165,0,100,.08)}
+    .addfld--check{flex-direction:row;align-items:flex-start;gap:10px}
+    .addfld--check input{width:auto;margin-top:2px}
+    .addfld--check span{text-transform:none;letter-spacing:0;font-size:13px;font-weight:600;color:var(--fg);line-height:1.4}
+    .addgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+    .addgrid .addfld--full{grid-column:1/-1}
+    @media(max-width:640px){.addgrid{grid-template-columns:1fr}.addmodal__card{padding:22px;border-radius:16px}.addmodal__t{font-size:19px}}
+    .addmodal__err{color:#c00040;font-size:13px;font-weight:700;margin-bottom:10px}
+    .addmodal__go{width:100%;padding:13px;background:linear-gradient(135deg,var(--magenta),#7a0049);color:#fff;border:0;border-radius:10px;font-family:inherit;font-size:14px;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:transform .16s}
+    .addmodal__go:hover{transform:translateY(-1px)}
+    .addmodal__row{display:flex;gap:10px;margin-top:8px}
+    .addmodal__row .addmodal__go{flex:1}
+    .addmodal__back{padding:12px 18px;background:#fff;border:1.5px solid var(--hair);color:var(--fg);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .15s}
+    .addmodal__back:hover{border-color:var(--magenta);color:var(--magenta)}
+    .addmodal__json{width:100%;min-height:180px;padding:14px;background:#faf7fa;border:1px solid var(--hair);border-radius:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;color:var(--fg);resize:vertical;margin-bottom:16px;outline:none}
+    .addmodal__actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+    @media(max-width:640px){.addmodal__actions{grid-template-columns:1fr}}
+    .addmodal__act{display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 12px;border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .14s,box-shadow .14s;border:0}
+    .addmodal__act:hover{transform:translateY(-1px)}
+    .addmodal__act--copy{background:var(--fg);color:#fff}
+    .addmodal__act--wa{background:#25D366;color:#fff}
+    .addmodal__act--em{background:var(--magenta);color:#fff}
+    .addmodal__hint{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5}
+    .addmodal__hint b{color:var(--fg)}
+  </style>
+  <script>
+  (function(){
+    const ADMIN_EMAIL = 'nurashikin@tonncable.com';
+    const ADMIN_WA = ''; // e.g. '60123456789' — leave empty to hide WhatsApp option
+    const PASSWORD = 'tonn2025';
+    const SECTORS = ['Data Centre','Telecom','Infrastructure','Utility','Oil & Gas','Industrial','Commercial','Retail','Residential','Hospitality','Government','Healthcare','Education','Sports & Recreation','Religious'];
+
+    const modal = document.getElementById('addModal');
+    const btn = document.getElementById('addProjectBtn');
+    const closeBtn = document.getElementById('addClose');
+    const stepGate = document.getElementById('addStepGate');
+    const stepForm = document.getElementById('addStepForm');
+    const stepDone = document.getElementById('addStepDone');
+    const addName = document.getElementById('addName');
+    const addPass = document.getElementById('addPass');
+    const addErr = document.getElementById('addErr');
+    const addGate = document.getElementById('addGate');
+    const fBack = document.getElementById('fBack');
+    const fSubmit = document.getElementById('fSubmit');
+    const fErr = document.getElementById('fErr');
+    const fSector = document.getElementById('fSector');
+    fSector.innerHTML = '<option value="">— select sector —</option>' + SECTORS.map(s => `<option>${s}</option>`).join('');
+
+    let submitterName = '';
+
+    function showStep(el){
+      [stepGate, stepForm, stepDone].forEach(s => s.hidden = (s !== el));
+    }
+    function openModal(){
+      addErr.hidden = true; fErr.hidden = true;
+      addName.value = localStorage.getItem('tonn_add_name') || '';
+      addPass.value = '';
+      showStep(stepGate);
+      modal.hidden = false;
+      setTimeout(() => (addName.value ? addPass : addName).focus(), 30);
+    }
+    function closeModal(){ modal.hidden = true; }
+    btn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+    addGate.addEventListener('click', () => {
+      const name = addName.value.trim();
+      const pass = addPass.value;
+      if (!name){ addErr.textContent = 'Please enter your name.'; addErr.hidden = false; addName.focus(); return; }
+      if (pass !== PASSWORD){ addErr.textContent = 'Wrong access code.'; addErr.hidden = false; addPass.focus(); return; }
+      submitterName = name;
+      localStorage.setItem('tonn_add_name', name);
+      addErr.hidden = true;
+      showStep(stepForm);
+      setTimeout(() => document.getElementById('fName').focus(), 40);
+    });
+    addPass.addEventListener('keydown', e => { if (e.key === 'Enter') addGate.click(); });
+
+    fBack.addEventListener('click', () => showStep(stepGate));
+
+    function buildEntry(){
+      const name = document.getElementById('fName').value.trim();
+      const sector = document.getElementById('fSector').value;
+      const country = document.getElementById('fCountry').value;
+      const location = document.getElementById('fLocation').value.trim();
+      const year = document.getElementById('fYear').value.trim();
+      const dealer = document.getElementById('fDealer').value.trim();
+      const img = document.getElementById('fImg').value.trim();
+      const details = document.getElementById('fDetails').value.trim().split('\n').map(s => s.trim()).filter(Boolean).join(' | ');
+      const hero = document.getElementById('fHero').checked;
+      if (!name || !sector || !location){ throw new Error('Please fill in project name, sector, and location.'); }
+      const obj = { name, sector };
+      if (country && country !== 'Malaysia') obj.country = country;
+      if (hero && img) obj.hero = true;
+      if (img) obj.img = img;
+      if (year) obj.year = year;
+      if (details) obj.details = details;
+      if (dealer) obj.dealer = dealer;
+      obj.location = location;
+      return obj;
+    }
+    fSubmit.addEventListener('click', () => {
+      try {
+        const entry = buildEntry();
+        const stamp = new Date().toISOString().slice(0,10);
+        const header = `// Submitted by ${submitterName} on ${stamp}`;
+        const json = header + '\n' + JSON.stringify(entry, null, 2) + ',';
+        document.getElementById('doneJson').value = json;
+        const subject = encodeURIComponent(`[Project Reference] New submission: ${entry.name}`);
+        const body = encodeURIComponent(`Submitted by: ${submitterName}\nDate: ${stamp}\n\nPlease add the following entry to projects.json / projects.js:\n\n${json}`);
+        document.getElementById('doneEmail').href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
+        const waLink = document.getElementById('doneWA');
+        if (ADMIN_WA){
+          waLink.style.display = '';
+          waLink.href = `https://wa.me/${ADMIN_WA}?text=${body}`;
+        } else {
+          waLink.style.display = 'none';
+        }
+        fErr.hidden = true;
+        showStep(stepDone);
+      } catch (err){
+        fErr.textContent = err.message; fErr.hidden = false;
+      }
+    });
+
+    document.getElementById('doneCopy').addEventListener('click', () => {
+      const ta = document.getElementById('doneJson');
+      ta.select(); ta.setSelectionRange(0, 99999);
+      try { navigator.clipboard.writeText(ta.value); } catch(e) { document.execCommand('copy'); }
+      const btn = document.getElementById('doneCopy');
+      const orig = btn.textContent; btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = orig, 1600);
+    });
+    document.getElementById('doneReset').addEventListener('click', () => {
+      ['fName','fLocation','fYear','fDealer','fImg','fDetails'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('fSector').value = '';
+      document.getElementById('fCountry').value = 'Malaysia';
+      document.getElementById('fHero').checked = false;
+      showStep(stepForm);
     });
   })();
   </script>
