@@ -1309,7 +1309,14 @@
           e.projects.add(p.name);
         });
       });
-      const cableList = Array.from(cableSpecs.values()).map(e => ({...e, projectCount: e.projects.size})).sort((a,b) => b.projectCount - a.projectCount);
+      // Count using the SAME logic as the search filter (substring match on p.details)
+      // so the badge number equals the result count the user sees after clicking.
+      const cableList = Array.from(cableSpecs.values()).map(e => {
+        const q = e.label.toUpperCase();
+        let n = 0;
+        for (const p of projects){ if ((p.details || '').toUpperCase().includes(q)) n++; }
+        return {...e, projectCount: n};
+      }).sort((a,b) => b.projectCount - a.projectCount);
       window.__cableList__ = cableList;
       let searchTerm = '';
       let cameFromAll = false;
