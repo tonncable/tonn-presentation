@@ -706,17 +706,17 @@
         <p class="addmodal__err" id="fErr" hidden></p>
         <div class="addmodal__row">
           <button class="addmodal__back" id="fBack" type="button">← Back</button>
-          <button class="addmodal__go" id="fSubmit" type="button">Generate submission</button>
+          <button class="addmodal__go" id="fSubmit" type="button">Submit for approval</button>
         </div>
       </div>
       <div class="addmodal__step" id="addStepDone" hidden>
         <h3 class="addmodal__t">Ready to send</h3>
         <p class="addmodal__sub">Send this snippet to the admin. Once approved, it goes live on the site.</p>
-        <textarea id="doneJson" class="addmodal__json" readonly hidden></textarea>
-        <div class="addmodal__actions addmodal__actions--single">
-          <a class="addmodal__act addmodal__act--em" id="doneEmail" href="#" rel="noopener">✉️ Send via Email</a>
+        <div class="addmodal__success">
+          <div class="addmodal__check">✓</div>
+          <h4>Sent for approval</h4>
+          <p id="doneMsg">Your submission is now with the admin. It will appear on the site once approved.</p>
         </div>
-        <p class="addmodal__hint">The email will open in your mail app pre-filled to <b>syazwalina@tonncable.com</b>. Just click <b>Send</b>. Once received, the admin will publish it on the site.</p>
         <button class="addmodal__back" id="doneReset" type="button">Add another project</button>
       </div>
     </div>
@@ -758,6 +758,10 @@
     .addmodal__act--em:hover{box-shadow:0 8px 22px rgba(165,0,100,.36)}
     .addmodal__hint{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.6;padding:12px 14px;background:#faf7fa;border-radius:10px}
     .addmodal__hint b{color:var(--magenta);font-weight:800}
+    .addmodal__success{text-align:center;padding:12px 0 8px}
+    .addmodal__check{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C4B);color:#fff;font-size:36px;line-height:64px;margin:0 auto 16px;font-weight:800;box-shadow:0 8px 22px rgba(18,140,75,.3)}
+    .addmodal__success h4{font-size:20px;font-weight:900;margin-bottom:10px;color:var(--fg)}
+    .addmodal__success p{font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:20px}
     .cblbuilder{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
     .cblrow-auto{display:grid;grid-template-columns:1fr 32px;gap:6px;align-items:start}
     .cblauto__wrap{position:relative}
@@ -929,20 +933,27 @@
       obj.location = location;
       return obj;
     }
-    fSubmit.addEventListener('click', () => {
+    fSubmit.addEventListener('click', async () => {
+      fErr.hidden = true;
+      let entry;
+      try { entry = buildEntry(); }
+      catch (err){ fErr.textContent = err.message; fErr.hidden = false; return; }
+      fSubmit.disabled = true; fSubmit.textContent = 'Sending…';
       try {
-        const entry = buildEntry();
-        const stamp = new Date().toISOString().slice(0,10);
-        const header = `// Submitted by ${submitterName} on ${stamp}`;
-        const json = header + '\n' + JSON.stringify(entry, null, 2) + ',';
-        document.getElementById('doneJson').value = json;
-        const subject = encodeURIComponent(`[Project Reference] New submission: ${entry.name}`);
-        const body = encodeURIComponent(`Submitted by: ${submitterName}\nDate: ${stamp}\n\nPlease add the following entry to projects.json / projects.js:\n\n${json}`);
-        document.getElementById('doneEmail').href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
-        fErr.hidden = true;
+        if (!window.__fbReady){
+          throw new Error('Submissions are not set up yet. Please contact the admin.');
+        }
+        const payload = Object.assign({}, entry, {
+          submittedBy: submitterName,
+          submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+        await firebase.firestore().collection('pending_projects').add(payload);
+        document.getElementById('doneMsg').innerHTML = `Thanks <b>${submitterName.replace(/</g,'&lt;')}</b> — your submission for <b>${entry.name.replace(/</g,'&lt;')}</b> is now with the admin. It will appear on the site once approved.`;
         showStep(stepDone);
       } catch (err){
-        fErr.textContent = err.message; fErr.hidden = false;
+        fErr.textContent = err.message || 'Could not send. Please try again.'; fErr.hidden = false;
+      } finally {
+        fSubmit.disabled = false; fSubmit.textContent = 'Submit for approval';
       }
     });
 
@@ -957,15 +968,40 @@
 
   <footer class="foot">© Tonn Cable · Get Wired with Industry</footer>
 
+  <script src="firebase-config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script>
+    // Init Firebase only when config is filled in (fails silently otherwise so the site stays working)
+    window.__fbReady = false;
+    (function(){
+      const c = window.FIREBASE_CONFIG || {};
+      if (!c.apiKey || c.apiKey === 'YOUR_API_KEY') return;
+      try { firebase.initializeApp(c); window.__fbReady = true; } catch(e){ console.warn('Firebase init failed', e); }
+    })();
+    // Fetch approved (live) submissions from Firestore, if any
+    window.__fetchLiveProjects = async function(){
+      if (!window.__fbReady) return [];
+      try {
+        const snap = await firebase.firestore().collection('live_projects').get();
+        return snap.docs.map(d => d.data());
+      } catch(e){ console.warn('Cannot read live_projects', e); return []; }
+    };
+  </script>
   <script src="projects.js"></script>
   <script>
     (async function () {
       let projects = [];
-      if (window.PROJECTS) projects = window.PROJECTS;
+      if (window.PROJECTS) projects = window.PROJECTS.slice();
       else {
         try { const r = await fetch('projects.json'); projects = await r.json(); }
         catch { document.body.innerHTML += '<p style="padding:40px;color:red">Could not load projects.json — use projects.js or serve over http.</p>'; return; }
       }
+      // Merge in live (Firebase-approved) submissions
+      try {
+        const live = (typeof window.__fetchLiveProjects === 'function') ? await window.__fetchLiveProjects() : [];
+        if (live && live.length) projects = projects.concat(live);
+      } catch(e){ /* offline or not configured — silent */ }
 
       // Sector display order + optional icon
       const SECTOR_ORDER = ['Data Centre','Telecom','Infrastructure','Commercial','Retail','Government','Healthcare','Utility','Oil & Gas','Industrial','Residential','Education','Hospitality','Sports & Recreation','Religious'];
