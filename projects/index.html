@@ -252,9 +252,9 @@
     /* ============ PHONE / COMPACT ============ */
     @media (max-width: 640px) {
       body{padding-top:56px}
-      body>section{min-height:0;padding-top:56px;padding-bottom:56px;margin-top:14px;position:relative}
-      body>section.hero,body>section:first-of-type{margin-top:0}
-      body>section+section::before{content:"";position:absolute;top:0;left:16px;right:16px;height:2px;background:var(--magenta);opacity:.18;border-radius:2px}
+      body>section{min-height:0;padding:56px 0;margin:0;position:relative}
+      body>section+section{margin-top:32px !important;border-top:3px solid var(--magenta) !important;padding-top:56px !important}
+      body>section.hero{border-top:0 !important;margin-top:0 !important}
       body>section.hero{padding-top:56px}
       body>section.expsec{margin-top:20px;margin-bottom:40px;padding-top:40px;padding-bottom:24px}
 
