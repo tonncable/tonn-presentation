@@ -54,9 +54,9 @@
     .reach__secs{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;background:transparent}
     @media(max-width:800px){.reach__secs{grid-template-columns:1fr}}
     .reach__secs span{display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:16px;padding:26px 0;border-bottom:1px solid var(--hair);cursor:default}
-    .reach__secs span::before{content:attr(data-name);font-size:24px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
-    .reach__secs span::after{content:"";height:8px;background:var(--magenta);border-radius:4px;width:calc(var(--pct,0) * 1%);min-width:8px;opacity:.9;transition:width .5s ease}
-    .reach__secs span b{color:var(--fg);font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+    .reach__secs span::before{content:attr(data-name);grid-column:1;font-size:24px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
+    .reach__secs span::after{content:"";grid-column:2;height:8px;background:var(--magenta);border-radius:4px;width:calc(var(--pct,0) * 1%);min-width:8px;max-width:100%;opacity:.9;transition:width .5s ease;justify-self:start}
+    .reach__secs span b{grid-column:3;color:var(--fg);font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
 
     /* 2b · beyond malaysia */
     .beyond{max-width:1800px;margin:0 auto 80px;padding:0 6vw}
@@ -69,7 +69,7 @@
     @media(max-width:800px){.beyond__grid{grid-template-columns:1fr}}
     .ctry{display:grid;grid-template-columns:280px 1fr auto;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--hair);cursor:default}
     .ctry__name{font-size:22px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);margin:0}
-    .ctry__bar{height:8px;background:var(--magenta);border-radius:4px;width:calc(var(--pct,0) * 1%);min-width:8px;opacity:.85;transition:width .5s ease}
+    .ctry__bar{height:8px;background:var(--magenta);border-radius:4px;width:calc(var(--pct,0) * 1%);min-width:8px;max-width:100%;opacity:.85;transition:width .5s ease;justify-self:start}
     .ctry__num{color:var(--fg);font-weight:900;font-size:26px;font-variant-numeric:tabular-nums;min-width:44px;text-align:right;margin:0}
     .ctry__lbl{display:none}
 
