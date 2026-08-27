@@ -702,8 +702,9 @@
         if (k === '__intl') return 'International';
         return lbl(k);
       };
+      const sortedGroupTabs = grp => grp.tabs.filter(k => countFor(k) > 0 || k === 'All').sort((a,b) => countFor(b) - countFor(a));
       const tabsHtml = GROUPS.map(grp => {
-        const inner = grp.tabs.filter(k => countFor(k) > 0 || k === 'All').map(k => {
+        const inner = sortedGroupTabs(grp).map(k => {
           const on = (k === 'All') ? ' on' : '';
           return `<button class="expsec__tab${on}" data-tab="${k}"><span class="tab-ico">${iconFor(k)}</span><span class="tab-lbl">${labelFor(k)}</span><span class="tab-cnt">${countFor(k)}</span></button>`;
         }).join('');
@@ -713,7 +714,7 @@
       document.getElementById('expTabs').innerHTML = tabsHtml;
       // build mobile select dropdown mirroring the tabs
       const selectHtml = GROUPS.map(grp => {
-        const opts = grp.tabs.filter(k => countFor(k) > 0 || k === 'All').map(k => {
+        const opts = sortedGroupTabs(grp).map(k => {
           const sel = (k === 'All') ? ' selected' : '';
           return `<option value="${k}"${sel}>${labelFor(k)} (${countFor(k)})</option>`;
         }).join('');
