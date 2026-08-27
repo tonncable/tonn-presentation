@@ -67,10 +67,10 @@
       .top__search input{padding:8px 30px 8px 32px;font-size:12px}
       .top__search__ico{left:11px;width:13px;height:13px}
     }
-    .top__add{margin-left:10px;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;height:36px;border-radius:99px;background:var(--magenta);color:#fff;border:0;font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:transform .16s,box-shadow .16s}
+    .top__add{margin-left:10px;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--magenta);color:#fff;border:0;cursor:pointer;transition:transform .16s,box-shadow .16s;padding:0}
     .top__add:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(165,0,100,.28)}
-    .top__add svg{width:14px;height:14px}
-    @media(max-width:640px){.top__add{padding:6px 10px;font-size:12px;height:32px}.top__add svg{width:12px;height:12px}}
+    .top__add svg{width:16px;height:16px}
+    @media(max-width:640px){.top__add{width:32px;height:32px}.top__add svg{width:14px;height:14px}}
     .top__pv{margin-left:6px;width:36px;height:36px;border-radius:50%;background:#fff;border:1.5px solid var(--hair);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s;padding:0}
     .top__pv:hover{border-color:var(--magenta);color:var(--magenta);transform:scale(1.06)}
     .top__pv svg{width:18px;height:18px}
@@ -457,7 +457,6 @@
       <span class="top__title">Project References</span>
       <button class="top__add" id="addProjectBtn" type="button" title="Add a project reference" aria-label="Add project">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
-        <span>Add</span>
       </button>
       <button class="top__pv" id="pvBtnTop" type="button" title="Phone preview" aria-label="Toggle phone preview">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
