@@ -627,7 +627,8 @@
       }, {threshold: 0.3});
       io.observe(stTotal);
       const maxSec = Math.max(...bySector.map(g => g.items.length));
-      document.getElementById('reachSecs').innerHTML = bySector.map(g => `<span data-name="${lbl(g.sector)}" style="--pct:${Math.round(g.items.length/maxSec*100)}"><b>${g.items.length}</b></span>`).join('');
+      const bySectorSorted = bySector.slice().sort((a,b) => b.items.length - a.items.length);
+      document.getElementById('reachSecs').innerHTML = bySectorSorted.map(g => `<span data-name="${lbl(g.sector)}" style="--pct:${Math.round(g.items.length/maxSec*100)}"><b>${g.items.length}</b></span>`).join('');
 
       // --- 2b · Beyond Malaysia country tiles ---
       const COUNTRY_ORDER = ['Singapore','Myanmar','Cambodia','Maldives','Brunei','Vietnam'];
