@@ -119,7 +119,7 @@
     .expsec__tab .tab-cnt{font-size:11px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:0;margin-left:auto}
     .expsec__tab:hover .tab-cnt{color:var(--fg)}
     .expsec__tab.on .tab-cnt{color:rgba(255,255,255,.85)}
-    .expsec__select{display:none}
+    .expsec__picker{display:none}
     /* mobile: sidebar becomes top horizontal scroll */
     @media (max-width: 900px) {
       .expsec__shell{grid-template-columns:1fr;gap:20px}
@@ -311,11 +311,32 @@
       .expsec__eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:8px}
       .expsec__title{font-size:28px}
       .expsec__shell{gap:12px;margin-top:12px}
-      /* replace pills with native dropdown on phone */
+      /* hide desktop pills; show custom modern picker on phone */
       .expsec__tabs{display:none !important}
-      .expsec__select{display:block;width:100%;padding:12px 40px 12px 14px;border:1.5px solid var(--hair);border-radius:12px;background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23A50064' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 1l5 5 5-5'/></svg>") no-repeat right 14px center;font-family:inherit;font-size:14px;font-weight:700;color:var(--fg);appearance:none;-webkit-appearance:none;cursor:pointer;letter-spacing:.02em}
-      .expsec__select:focus{outline:none;border-color:var(--magenta)}
-      .expsec__select optgroup{font-weight:700;color:var(--muted)}
+      .expsec__picker{display:block !important;position:relative}
+      .expsec__picker__btn{width:100%;display:flex;align-items:center;gap:10px;padding:14px 16px;background:linear-gradient(135deg,#fff 0%,#fdf7fb 100%);border:1.5px solid var(--hair);border-radius:14px;cursor:pointer;font-family:inherit;text-align:left;transition:all .18s;box-shadow:0 2px 8px rgba(20,10,20,.04)}
+      .expsec__picker__btn:hover,.expsec__picker.open .expsec__picker__btn{border-color:var(--magenta);box-shadow:0 4px 14px rgba(165,0,100,.14)}
+      .expsec__picker__ico{width:26px;height:26px;display:flex;align-items:center;justify-content:center;background:var(--magenta);color:#fff;border-radius:8px;flex-shrink:0}
+      .expsec__picker__ico svg{width:15px;height:15px}
+      .expsec__picker__lbl{flex:1;font-size:15px;font-weight:800;color:var(--fg);letter-spacing:.01em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      .expsec__picker__cnt{font-size:12px;font-weight:800;color:#fff;background:var(--magenta);padding:3px 9px;border-radius:99px;font-variant-numeric:tabular-nums}
+      .expsec__picker__chev{width:12px;height:8px;color:var(--muted);transition:transform .2s;flex-shrink:0}
+      .expsec__picker.open .expsec__picker__chev{transform:rotate(180deg);color:var(--magenta)}
+      .expsec__picker__menu{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:14px;box-shadow:0 12px 32px rgba(20,10,20,.16);padding:8px;z-index:30;max-height:70vh;overflow-y:auto}
+      .expsec__picker.open .expsec__picker__menu{display:block}
+      .expsec__picker__grp{padding:8px 4px 4px}
+      .expsec__picker__grp:first-child{padding-top:2px}
+      .expsec__picker__grplbl{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 10px 6px}
+      .expsec__picker__opt{display:flex;align-items:center;gap:10px;padding:10px 10px;border-radius:10px;cursor:pointer;transition:background .12s;background:transparent;border:0;width:100%;font-family:inherit;text-align:left}
+      .expsec__picker__opt:hover{background:#faf7fa}
+      .expsec__picker__opt.on{background:var(--magenta);color:#fff}
+      .expsec__picker__opt .p-ico{width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted)}
+      .expsec__picker__opt.on .p-ico{color:#fff}
+      .expsec__picker__opt .p-ico svg{width:14px;height:14px}
+      .expsec__picker__opt .p-lbl{flex:1;font-size:14px;font-weight:700;color:var(--fg)}
+      .expsec__picker__opt.on .p-lbl{color:#fff}
+      .expsec__picker__opt .p-cnt{font-size:11px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+      .expsec__picker__opt.on .p-cnt{color:rgba(255,255,255,.9)}
 
       .secblk{margin-bottom:32px;padding-bottom:24px;scroll-margin-top:60px}
       .secblk__title{font-size:14px;letter-spacing:.14em;padding:10px 0 12px;top:56px;gap:8px}
@@ -415,7 +436,15 @@
     <div class="expsec__shell">
       <aside class="expsec__side">
         <div class="expsec__tabs" id="expTabs"></div>
-        <select class="expsec__select" id="expSelect" aria-label="Choose sector"></select>
+        <div class="expsec__picker" id="expPicker">
+          <button class="expsec__picker__btn" id="expPickerBtn" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="expsec__picker__ico" id="expPickerIco"></span>
+            <span class="expsec__picker__lbl" id="expPickerLbl">All</span>
+            <span class="expsec__picker__cnt" id="expPickerCnt">1114</span>
+            <svg class="expsec__picker__chev" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l5 5 5-5"/></svg>
+          </button>
+          <div class="expsec__picker__menu" id="expPickerMenu" role="listbox"></div>
+        </div>
       </aside>
       <div class="expsec__main">
     <div class="expsec__toolbar">
@@ -712,20 +741,43 @@
         return `<div class="expsec__group">${grp.label ? `<div class="expsec__grouplbl">${grp.label}</div>` : ''}<div class="expsec__grouprow">${inner}</div></div>`;
       }).join('');
       document.getElementById('expTabs').innerHTML = tabsHtml;
-      // build mobile select dropdown mirroring the tabs
-      const selectHtml = GROUPS.map(grp => {
+      // build custom modern picker (mobile)
+      const pickerHtml = GROUPS.map(grp => {
         const opts = sortedGroupTabs(grp).map(k => {
-          const sel = (k === 'All') ? ' selected' : '';
-          return `<option value="${k}"${sel}>${labelFor(k)} (${countFor(k)})</option>`;
+          const on = (k === 'All') ? ' on' : '';
+          return `<button class="expsec__picker__opt${on}" data-tab="${k}" role="option"><span class="p-ico">${iconFor(k)}</span><span class="p-lbl">${labelFor(k)}</span><span class="p-cnt">${countFor(k)}</span></button>`;
         }).join('');
         if (!opts) return '';
-        return grp.label ? `<optgroup label="${grp.label}">${opts}</optgroup>` : opts;
+        return `<div class="expsec__picker__grp">${grp.label ? `<div class="expsec__picker__grplbl">${grp.label}</div>` : ''}${opts}</div>`;
       }).join('');
-      const expSelect = document.getElementById('expSelect');
-      expSelect.innerHTML = selectHtml;
-      expSelect.addEventListener('change', e => {
-        const tabBtn = document.querySelector('.expsec__tab[data-tab="' + e.target.value + '"]');
+      const expPicker = document.getElementById('expPicker');
+      const expPickerBtn = document.getElementById('expPickerBtn');
+      const expPickerMenu = document.getElementById('expPickerMenu');
+      const expPickerIco = document.getElementById('expPickerIco');
+      const expPickerLbl = document.getElementById('expPickerLbl');
+      const expPickerCnt = document.getElementById('expPickerCnt');
+      expPickerMenu.innerHTML = pickerHtml;
+      expPickerIco.innerHTML = iconFor('All');
+      expPickerCnt.textContent = countFor('All');
+      expPickerBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        expPicker.classList.toggle('open');
+        expPickerBtn.setAttribute('aria-expanded', expPicker.classList.contains('open'));
+      });
+      expPickerMenu.addEventListener('click', e => {
+        const opt = e.target.closest('.expsec__picker__opt'); if (!opt) return;
+        const k = opt.dataset.tab;
+        expPickerMenu.querySelectorAll('.expsec__picker__opt').forEach(x => x.classList.toggle('on', x === opt));
+        expPickerIco.innerHTML = iconFor(k);
+        expPickerLbl.textContent = labelFor(k);
+        expPickerCnt.textContent = countFor(k);
+        expPicker.classList.remove('open');
+        expPickerBtn.setAttribute('aria-expanded','false');
+        const tabBtn = document.querySelector('.expsec__tab[data-tab="' + k + '"]');
         if (tabBtn) tabBtn.click();
+      });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('#expPicker')) expPicker.classList.remove('open');
       });
 
       // Global sort mode (single control for all sectors)
