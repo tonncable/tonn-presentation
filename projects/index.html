@@ -244,6 +244,106 @@
     .secnav a{width:10px;height:10px;border-radius:50%;background:rgba(0,0,0,.22);transition:background .25s,transform .25s;cursor:pointer}
     .secnav a:hover{background:var(--magenta);transform:scale(1.3)}
     .secnav a.on{background:var(--magenta);transform:scale(1.5);box-shadow:0 0 10px var(--magenta)}
+
+    /* ============ PHONE / COMPACT ============ */
+    @media (max-width: 640px) {
+      body{padding-top:56px}
+      body>section{min-height:0;padding-top:40px;padding-bottom:28px}
+      body>section.hero{padding-top:56px}
+      body>section.expsec{margin-top:20px;margin-bottom:40px;padding-top:40px;padding-bottom:24px}
+
+      /* top bar */
+      .top__in{padding:10px 16px;gap:10px}
+      .top__logo{height:22px}
+      .top__title{font-size:12px;letter-spacing:.14em}
+
+      /* hero */
+      .hero{padding:24px 16px 20px}
+      .hero__eyebrow{font-size:11px;letter-spacing:.22em;margin-bottom:10px}
+      .hero__title{font-size:28px;margin-bottom:14px}
+      .hero__sub{font-size:15px;font-weight:700}
+
+      /* reach + stats */
+      .reach{padding:0 16px;margin-bottom:20px}
+      .reach__stats{grid-template-columns:repeat(2,1fr);margin:20px 0 16px;border-radius:12px}
+      .hero .reach__stats{margin:24px 0 4px}
+      .rstat{padding:14px 8px}
+      .rstat__num{font-size:36px}
+      .rstat__label{font-size:10px;letter-spacing:.12em;margin-top:4px}
+      .reach__seceyebrow{font-size:12px;letter-spacing:.2em;margin-bottom:16px}
+      .reach__secs{grid-template-columns:1fr;gap:0}
+      .reach__secs span{grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:6px 12px;padding:12px 0}
+      .reach__secs span::before{font-size:13px;letter-spacing:.1em}
+      .reach__secs span b{font-size:18px;min-width:0}
+      .reach__secs span::after{grid-column:1/-1;height:5px}
+
+      /* beyond */
+      .beyond{padding:0 16px;margin-bottom:30px}
+      .beyond__eyebrow{font-size:12px;letter-spacing:.2em;margin-bottom:10px}
+      .beyond__title{font-size:28px;margin-bottom:12px}
+      .beyond__sub{font-size:15px;font-weight:700}
+      .beyond__grid{grid-template-columns:1fr;gap:0;margin-top:18px}
+      .ctry{grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:6px 12px;padding:12px 0}
+      .ctry__name{font-size:14px;letter-spacing:.1em}
+      .ctry__num{font-size:18px;min-width:0}
+      .ctry__bar{grid-column:1/-1;height:5px}
+
+      /* signature */
+      .sig{padding:0 16px;margin-bottom:36px}
+      .sig__head{margin-bottom:16px}
+      .sig__eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:8px}
+      .sig__title{font-size:28px}
+      .sig__grid{grid-template-columns:1fr 1fr;gap:10px}
+      .sig__body{padding:12px 12px}
+      .sig__name{font-size:14px}
+      .sig__loc{font-size:11px}
+      .sig__sec{padding:3px 8px;font-size:10px;margin-bottom:6px}
+
+      /* expsec */
+      .expsec{padding:0 16px;margin-bottom:40px}
+      .expsec__head{margin-bottom:16px}
+      .expsec__eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:8px}
+      .expsec__title{font-size:28px}
+      .expsec__shell{gap:12px;margin-top:12px}
+      .expsec__tabs{gap:8px;padding-bottom:6px}
+      .expsec__tab{padding:6px 10px;font-size:12px}
+      .expsec__tab .tab-cnt{font-size:10px}
+
+      .secblk{margin-bottom:32px;padding-bottom:24px;scroll-margin-top:60px}
+      .secblk__title{font-size:14px;letter-spacing:.14em;padding:10px 0 12px;top:56px;gap:8px}
+      .secblk__title .count{font-size:11px}
+      .secblk__layout{gap:16px}
+      .secblk__left{position:static;gap:10px}
+      .secblk__photo{aspect-ratio:4/3}
+      .secblk__photocap{padding:12px 14px}
+      .secblk__photocap .pname{font-size:16px}
+      .secblk__photocap .ploc{font-size:11px}
+      .secblk__thumb{aspect-ratio:4/3}
+      .secblk__thumb figcaption{padding:12px 14px}
+      .secblk__thumb figcaption b{font-size:15px}
+      .secblk__thumb figcaption span{font-size:11px}
+
+      .secblk__idx__row{grid-template-columns:28px 1fr;gap:6px 10px;padding:12px 0}
+      .secblk__idx__no{font-size:12px;padding-top:3px}
+      .secblk__idx__name{font-size:14px}
+      .secblk__idx__name .chev{font-size:12px}
+      .secblk__idx__loc{grid-column:2/-1;text-align:left;font-size:12px;white-space:normal;padding-top:0}
+      .secblk__idx__detail{margin-top:10px;padding:12px 14px;font-size:12px}
+      .secblk__idx__detail .yr{font-size:16px}
+      .secblk__idx__detail .via{font-size:12px}
+      .cbl-list{padding-left:18px}
+      .cbl-list li{font-size:12px}
+
+      /* hide side dot nav — too cramped */
+      .secnav{display:none}
+      .fsbtn{width:38px;height:38px;right:12px;bottom:12px}
+      .fsbtn svg{width:16px;height:16px}
+
+      .foot{padding:24px 16px;font-size:11px;letter-spacing:.1em}
+    }
+    @media (max-width: 380px){
+      .sig__grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
@@ -326,6 +426,56 @@
   </div>
 
   <nav class="secnav" id="secnav" aria-label="Section navigation"></nav>
+
+  <button class="pvbtn" id="pvBtn" type="button" title="Phone preview" aria-label="Toggle phone preview">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+  </button>
+  <div class="pvframe" id="pvFrame" aria-hidden="true">
+    <button class="pvframe__close" id="pvClose" type="button" aria-label="Close phone preview">×</button>
+    <div class="pvframe__phone">
+      <iframe id="pvIframe" title="Phone preview"></iframe>
+    </div>
+  </div>
+  <style>
+    .pvbtn{position:fixed;right:78px;bottom:22px;z-index:70;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);border:1.5px solid rgba(20,10,20,.12);color:#15151c;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 30px rgba(20,10,20,.15);transition:transform .2s,background .2s,color .2s;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .pvbtn:hover{background:var(--magenta);color:#fff;transform:scale(1.08)}
+    .pvbtn svg{width:20px;height:20px}
+    .pvframe{position:fixed;inset:0;background:rgba(20,20,26,.94);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:200;padding:24px}
+    .pvframe.open{display:flex}
+    .pvframe__phone{width:390px;height:min(844px,92vh);background:#111;border-radius:38px;padding:12px;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative;border:2px solid #2a2a2f}
+    .pvframe__phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:110px;height:22px;background:#000;border-radius:14px;z-index:2}
+    .pvframe__phone iframe{width:100%;height:100%;border:0;border-radius:28px;background:#fff;display:block}
+    .pvframe__close{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.95);border:0;color:#15151c;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .pvframe__close:hover{background:var(--magenta);color:#fff}
+    @media(max-width:640px){.pvbtn{display:none}}
+    @media(max-width:480px){.pvframe__phone{width:100%;height:100%;border-radius:20px;padding:6px}.pvframe__phone::before{display:none}.pvframe__phone iframe{border-radius:14px}}
+  </style>
+  <script>
+  (function(){
+    var pvBtn = document.getElementById('pvBtn');
+    var pvFrame = document.getElementById('pvFrame');
+    var pvClose = document.getElementById('pvClose');
+    var pvIframe = document.getElementById('pvIframe');
+    function openPv(){
+      pvIframe.src = location.pathname + location.search + '#pv';
+      pvFrame.classList.add('open');
+      pvFrame.setAttribute('aria-hidden','false');
+    }
+    function closePv(){
+      pvFrame.classList.remove('open');
+      pvFrame.setAttribute('aria-hidden','true');
+      pvIframe.src = 'about:blank';
+    }
+    pvBtn.addEventListener('click', openPv);
+    pvClose.addEventListener('click', closePv);
+    pvFrame.addEventListener('click', function(e){ if(e.target === pvFrame) closePv(); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && pvFrame.classList.contains('open')) closePv();
+    });
+    // Hide the toggle when this page IS the preview (inside iframe)
+    if (window.self !== window.top) { pvBtn.style.display = 'none'; }
+  })();
+  </script>
 
   <button class="fsbtn" id="fsBtn" type="button" title="Fullscreen (F)" aria-label="Toggle fullscreen">
     <svg class="fsbtn__on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V3h6"/><path d="M21 9V3h-6"/><path d="M3 15v6h6"/><path d="M21 15v6h-6"/></svg>
@@ -571,10 +721,10 @@
                 // Expanded detail: year + via header, bulleted cable list
                 const dealerFull = p.dealer || '';
                 const listHtml = cbls.map(c => {
-                  // Bold-magenta the trailing quantity (e.g. "- 2,500 m", "- 6 coil", "- 121 kg")
+                  // Strip trailing quantity (e.g. "- 2,500 m", "- 6 coil", "- 121 kg") — not shown
                   const m = c.match(/^(.*?)(\s+-\s*[\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i);
-                  if (m) return `<li>${esc(m[1])}<span class="qty">${esc(m[2])}</span></li>`;
-                  return `<li>${esc(c)}</li>`;
+                  const shown = m ? m[1] : c;
+                  return `<li>${esc(shown)}</li>`;
                 }).join('');
                 const detail = hasDetail ? `<div class="secblk__idx__detail">
                   ${(p.year || dealerFull) ? `<div class="dhead">
