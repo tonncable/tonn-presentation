@@ -530,9 +530,9 @@
 
   <nav class="secnav" id="secnav" aria-label="Section navigation"></nav>
 
-  <button class="fab-back" id="fabBack" type="button" hidden aria-label="Back to All sectors">
+  <button class="fab-back" id="fabBack" type="button" hidden aria-label="Back">
     <span class="fab-back__arr">←</span>
-    <span class="fab-back__lbl">All sectors</span>
+    <span class="fab-back__lbl">Back</span>
   </button>
   <style>
     .fab-back{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(0);z-index:75;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--magenta) 0%,#7a0049 100%);color:#fff;border:0;padding:12px 20px;border-radius:99px;font-family:inherit;font-size:14px;font-weight:800;letter-spacing:.02em;cursor:pointer;box-shadow:0 12px 30px rgba(165,0,100,.4),0 2px 6px rgba(20,10,20,.15);transition:transform .28s cubic-bezier(.2,.9,.3,1.2),opacity .2s}
@@ -920,29 +920,20 @@
       // --- floating back-to-All pill ---
       const fabBack = document.getElementById('fabBack');
       fabBack.addEventListener('click', () => {
-        const returnSector = jumpedFromSector;
+        const returnY = jumpedFromScrollY;
         cameFromAll = false;
         jumpedFromSector = null;
+        jumpedFromScrollY = 0;
+        // Prevent the smooth-scroll CSS from animating this jump
+        const html = document.documentElement;
+        const prevBehavior = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto';
         const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
         if (allTab) allTab.click();
         const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
         if (allOpt) allOpt.click();
-        // After render, scroll back to that sector's block in the All view
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          if (returnSector) {
-            const labelText = lbl(returnSector);
-            const blocks = document.querySelectorAll('#expBody .secblk');
-            for (const b of blocks) {
-              const t = b.querySelector('.secblk__title');
-              if (t && t.textContent.trim().toLowerCase().startsWith(labelText.toLowerCase())) {
-                b.scrollIntoView({behavior:'smooth', block:'start'});
-                return;
-              }
-            }
-          }
-          const expsecEl2 = document.querySelector('.expsec');
-          if (expsecEl2) expsecEl2.scrollIntoView({behavior:'smooth', block:'start'});
-        }));
+        window.scrollTo(0, returnY);
+        requestAnimationFrame(() => { window.scrollTo(0, returnY); html.style.scrollBehavior = prevBehavior; });
       });
       let lastY = window.scrollY;
       window.addEventListener('scroll', () => {
@@ -1016,6 +1007,7 @@
       let searchTerm = '';
       let cameFromAll = false;
       let jumpedFromSector = null;
+      let jumpedFromScrollY = 0;
       function projectMatchesSearch(p){
         if (!searchTerm) return true;
         const q = searchTerm.toUpperCase();
@@ -1139,6 +1131,7 @@
           const sector = lite.dataset.jump;
           cameFromAll = true;
           jumpedFromSector = sector;
+          jumpedFromScrollY = window.scrollY;
           const tabBtn = document.querySelector('.expsec__tab[data-tab="' + sector + '"]');
           if (tabBtn) {
             tabBtn.click();
