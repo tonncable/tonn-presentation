@@ -7306,5 +7306,11 @@ window.PROJECTS =
     "year": "2023",
     "details": "6 mm² x 2c CU/PVC/SWA/PVC CABLE (RD/BK) - 700 m | 4 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,450 m | 2.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,700 m | 2.5 mm² x 27c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,100 m | 1.5 mm² x 19c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,300 m",
     "dealer": "ENERWAVE LINK SDN. BHD."
+  },
+  {
+    "name": "Mauritius",
+    "sector": "Commercial",
+    "country": "Mauritius",
+    "location": "Mauritius"
   }
 ];
