@@ -120,6 +120,7 @@
     .expsec__tab.on .tab-cnt{color:rgba(255,255,255,.85)}
     .expsec__picker{display:none}
     .secblk__more-btn{display:none}
+    .secblk__more-lite{display:none}
     /* mobile: sidebar becomes top horizontal scroll */
     @media (max-width: 900px) {
       .expsec__shell{grid-template-columns:1fr;gap:20px}
@@ -383,6 +384,8 @@
       .secblk__idx.mcollapsed .secblk__idx__row:nth-child(n+11){display:none}
       .secblk__more-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:12px 16px;background:#fff;border:1.5px solid var(--magenta);border-radius:12px;color:var(--magenta);font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:all .18s}
       .secblk__more-btn:hover,.secblk__more-btn:active{background:var(--magenta);color:#fff}
+      .secblk__more-lite{display:block;margin:10px auto 0;padding:6px 10px;background:transparent;border:0;color:var(--muted);font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:color .15s}
+      .secblk__more-lite:hover,.secblk__more-lite:active{color:var(--magenta)}
 
       /* hide side dot nav — too cramped */
       .secnav{display:none}
@@ -892,7 +895,7 @@
                 const cls = 'secblk__idx__row' + (hasDetail ? ' has-detail' : '');
                 return `<div class="${cls}" data-name="${p.name.replace(/"/g,'&quot;')}"><span class="secblk__idx__no">${n}</span><span class="secblk__idx__name"><span class="nline">${p.name}${chev}</span></span><span class="secblk__idx__loc">${rightInfo}</span>${detail}</div>`;
               }).join('')}
-            </div>${needsCollapse ? `<button class="secblk__more-btn" data-more type="button">Show all ${idxShown.length} projects</button>` : ''}`;
+            </div>${needsCollapse ? `<button class="secblk__more-btn" data-more type="button">Show all ${idxShown.length} projects</button>` : ''}${(tab === 'All' && idxSource.length > idxShown.length) ? `<button class="secblk__more-lite" data-jump="${g.sector}" type="button">+${idxSource.length - idxShown.length} more →</button>` : ''}`;
           // On specific-sector view (long list), fill the left column with more thumbnails
           const extras = (tab !== 'All') ? g.items.filter(p => hasVisibleImg(p) && p !== feat) : [];
           const extrasHtml = extras.length ? `
@@ -942,6 +945,18 @@
       // --- expandable project rows ---
       let currentTab = 'All';
       document.getElementById('expBody').addEventListener('click', e => {
+        const lite = e.target.closest('.secblk__more-lite');
+        if (lite) {
+          const sector = lite.dataset.jump;
+          const tabBtn = document.querySelector('.expsec__tab[data-tab="' + sector + '"]');
+          if (tabBtn) {
+            tabBtn.click();
+            // sync mobile picker UI
+            const opt = document.querySelector('.expsec__picker__opt[data-tab="' + sector + '"]');
+            if (opt) opt.click();
+          }
+          return;
+        }
         const more = e.target.closest('.secblk__more-btn');
         if (more) {
           const list = more.previousElementSibling;
