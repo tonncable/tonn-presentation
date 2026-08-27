@@ -968,26 +968,6 @@
 
   <footer class="foot">© Tonn Cable · Get Wired with Industry</footer>
 
-  <script src="firebase-config.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-  <script>
-    // Init Firebase only when config is filled in (fails silently otherwise so the site stays working)
-    window.__fbReady = false;
-    (function(){
-      const c = window.FIREBASE_CONFIG || {};
-      if (!c.apiKey || c.apiKey === 'YOUR_API_KEY') return;
-      try { firebase.initializeApp(c); window.__fbReady = true; } catch(e){ console.warn('Firebase init failed', e); }
-    })();
-    // Fetch approved (live) submissions from Firestore, if any
-    window.__fetchLiveProjects = async function(){
-      if (!window.__fbReady) return [];
-      try {
-        const snap = await firebase.firestore().collection('live_projects').get();
-        return snap.docs.map(d => d.data());
-      } catch(e){ console.warn('Cannot read live_projects', e); return []; }
-    };
-  </script>
   <script src="projects.js"></script>
   <script>
     (async function () {
@@ -997,11 +977,6 @@
         try { const r = await fetch('projects.json'); projects = await r.json(); }
         catch { document.body.innerHTML += '<p style="padding:40px;color:red">Could not load projects.json — use projects.js or serve over http.</p>'; return; }
       }
-      // Merge in live (Firebase-approved) submissions
-      try {
-        const live = (typeof window.__fetchLiveProjects === 'function') ? await window.__fetchLiveProjects() : [];
-        if (live && live.length) projects = projects.concat(live);
-      } catch(e){ /* offline or not configured — silent */ }
 
       // Sector display order + optional icon
       const SECTOR_ORDER = ['Data Centre','Telecom','Infrastructure','Commercial','Retail','Government','Healthcare','Utility','Oil & Gas','Industrial','Residential','Education','Hospitality','Sports & Recreation','Religious'];
@@ -1387,10 +1362,7 @@
                   return `<li>${esc(shown)}</li>`;
                 }).join('');
                 const detail = hasDetail ? `<div class="secblk__idx__detail">
-                  ${(p.year || dealerFull) ? `<div class="dhead">
-                    ${p.year ? `<span class="yr">${p.year}</span>` : ''}
-                    ${dealerFull ? `<span class="via"><span class="dlbl">via</span> ${esc(dealerFull)}</span>` : ''}
-                  </div>` : ''}
+                  ${p.year ? `<div class="dhead"><span class="yr">${p.year}</span></div>` : ''}
                   ${listHtml ? `<ul class="cbl-list">${listHtml}</ul>` : ''}
                 </div>` : '';
                 const chev = hasDetail ? `<span class="chev">›</span>` : '';
