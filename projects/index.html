@@ -970,9 +970,9 @@
           const isPhone = window.matchMedia('(max-width: 640px)').matches;
           const CAP = (tab === 'All') ? (isPhone ? 5 : 8) : Infinity;
           const idxShown = idxSource.slice(0, CAP);
-          const needsCollapse = idxShown.length > 10;
+          const needsCollapse = false;
           const idxHtml = `
-            <div class="secblk__idx${needsCollapse ? ' mcollapsed' : ''}">
+            <div class="secblk__idx">
               ${idxShown.map((p, i) => {
                 const n = String(i + 1).padStart(2, '0');
                 const hasDetail = !!(p.year || p.details || p.dealer);
