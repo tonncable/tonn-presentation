@@ -27,6 +27,29 @@
     .top__back{font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--muted);display:flex;align-items:center;gap:6px;transition:color .2s}
     .top__back:hover{color:var(--magenta)}
     .top__title{font-size:20px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-left:auto;color:var(--magenta)}
+    .top__search{position:relative;flex:1;max-width:420px;min-width:200px}
+    .top__search__ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--muted);pointer-events:none}
+    .top__search input{width:100%;padding:9px 34px 9px 38px;border:1.5px solid var(--hair);border-radius:99px;background:#fff;font-size:13px;font-family:inherit;color:var(--fg);outline:none;transition:border-color .18s,box-shadow .18s}
+    .top__search input:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(165,0,100,.08)}
+    .top__search input::placeholder{color:var(--muted);font-weight:500}
+    .top__search__clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:0;background:var(--muted);color:#fff;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+    .top__search__clear:hover{background:var(--magenta)}
+    .top__search__sugg{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:12px;box-shadow:0 12px 32px rgba(20,10,20,.14);max-height:60vh;overflow-y:auto;z-index:80;padding:6px}
+    .top__search__sugg[hidden]{display:none}
+    .top__search__sugg .sopt{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--fg);font-weight:600;transition:background .12s}
+    .top__search__sugg .sopt:hover,.top__search__sugg .sopt.on{background:#faf7fa}
+    .top__search__sugg .sopt .scnt{font-size:11px;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums;background:#f5f3f6;padding:2px 8px;border-radius:99px}
+    .top__search__sugg .sempty{padding:16px 14px;font-size:13px;color:var(--muted);text-align:center;font-style:italic}
+    .search-flag{background:linear-gradient(180deg,rgba(165,0,100,.08),rgba(165,0,100,.03));border:1px solid rgba(165,0,100,.25);border-radius:12px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--fg);font-weight:600}
+    .search-flag b{color:var(--magenta);font-weight:800}
+    .search-flag .clr{margin-left:auto;background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:12px;font-weight:700;text-decoration:underline}
+    .search-flag .clr:hover{color:var(--magenta)}
+    @media(max-width:640px){
+      .top__search{order:3;flex-basis:100%;max-width:none;margin-top:0}
+      .top__in{flex-wrap:wrap;padding:8px 12px !important;gap:8px}
+      .top__search input{padding:8px 30px 8px 32px;font-size:12px}
+      .top__search__ico{left:11px;width:13px;height:13px}
+    }
     .top__pv{margin-left:10px;width:36px;height:36px;border-radius:50%;background:#fff;border:1.5px solid var(--hair);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .18s;padding:0}
     .top__pv:hover{border-color:var(--magenta);color:var(--magenta);transform:scale(1.06)}
     .top__pv svg{width:18px;height:18px}
@@ -404,6 +427,12 @@
   <header class="top">
     <div class="top__in">
       <img class="top__logo" src="../assets/img/tonn-logo.png" alt="Tonn Cable">
+      <div class="top__search" id="topSearch">
+        <svg class="top__search__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="topSearchInput" type="text" placeholder="Search cable (e.g. 10 mm² CU/PVC GREEN)" autocomplete="off">
+        <button class="top__search__clear" id="topSearchClear" type="button" aria-label="Clear search" hidden>×</button>
+        <div class="top__search__sugg" id="topSearchSugg" role="listbox" hidden></div>
+      </div>
       <span class="top__title">Project References</span>
       <button class="top__pv" id="pvBtnTop" type="button" title="Phone preview" aria-label="Toggle phone preview">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
@@ -796,6 +825,63 @@
       document.addEventListener('click', e => {
         if (!e.target.closest('#expPicker')) expPicker.classList.remove('open');
       });
+      // --- header search: suggestions + filter ---
+      const searchInput = document.getElementById('topSearchInput');
+      const searchClear = document.getElementById('topSearchClear');
+      const searchSugg = document.getElementById('topSearchSugg');
+      const expsecEl = document.querySelector('.expsec');
+      function showSuggestions(q){
+        const query = q.trim().toUpperCase();
+        let list;
+        if (!query) list = cableList.slice(0, 10);
+        else {
+          const tokens = query.split(/\s+/).filter(Boolean);
+          list = cableList.filter(c => {
+            const up = c.label.toUpperCase();
+            return tokens.every(t => up.includes(t));
+          }).slice(0, 12);
+        }
+        if (!list.length) {
+          searchSugg.innerHTML = '<div class="sempty">No matching cable found. Try another keyword.</div>';
+        } else {
+          searchSugg.innerHTML = list.map(c => `<div class="sopt" data-spec="${c.label.replace(/"/g,'&quot;')}"><span>${c.label}</span><span class="scnt">${c.projectCount} project${c.projectCount!==1?'s':''}</span></div>`).join('');
+        }
+        searchSugg.hidden = false;
+      }
+      function applySearch(term){
+        searchTerm = term.trim();
+        searchClear.hidden = !searchTerm;
+        searchSugg.hidden = true;
+        // Force All tab so results across sectors are visible
+        if (searchTerm) {
+          const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
+          if (allTab && !allTab.classList.contains('on')) allTab.click();
+          else renderExp(currentTab);
+          const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
+          if (allOpt) allOpt.click();
+          if (expsecEl) expsecEl.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          renderExp(currentTab);
+        }
+      }
+      searchInput.addEventListener('focus', () => showSuggestions(searchInput.value));
+      searchInput.addEventListener('input', () => showSuggestions(searchInput.value));
+      searchInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); applySearch(searchInput.value); }
+        if (e.key === 'Escape') { searchSugg.hidden = true; searchInput.blur(); }
+      });
+      searchSugg.addEventListener('click', e => {
+        const opt = e.target.closest('.sopt'); if (!opt) return;
+        const spec = opt.dataset.spec;
+        searchInput.value = spec;
+        applySearch(spec);
+      });
+      searchClear.addEventListener('click', () => { searchInput.value = ''; applySearch(''); });
+      document.addEventListener('click', e => { if (!e.target.closest('#topSearch')) searchSugg.hidden = true; });
+      document.addEventListener('click', e => {
+        const cinline = e.target.closest('#searchClrInline'); if (!cinline) return;
+        searchInput.value = ''; applySearch('');
+      });
       // On phone, move the sort toolbar next to the picker inside the sidebar
       const mqPhone = window.matchMedia('(max-width: 640px)');
       const toolbar = document.querySelector('.expsec__main .expsec__toolbar');
@@ -841,6 +927,27 @@
         return arr.sort((a,b) => { const ya=yearEnd(a.year), yb=yearEnd(b.year); if (ya!==yb) return yb-ya; return a.name.localeCompare(b.name); });
       };
 
+      // --- search index (unique cable specs across all projects, with counts) ---
+      const stripQty = s => { const m = s.match(/^(.*?)(\s+-\s*[\d,.]+\s*(?:m|coil|kg|drum|pcs?)\b.*)$/i); return (m ? m[1] : s).trim(); };
+      const cableSpecs = new Map();
+      projects.forEach(p => {
+        if (!p.details) return;
+        p.details.split('|').map(s => stripQty(s.trim())).filter(Boolean).forEach(spec => {
+          const key = spec.toUpperCase();
+          if (!cableSpecs.has(key)) cableSpecs.set(key, {label: spec, count: 0, projects: new Set()});
+          const e = cableSpecs.get(key);
+          e.count += 1;
+          e.projects.add(p.name);
+        });
+      });
+      const cableList = Array.from(cableSpecs.values()).map(e => ({...e, projectCount: e.projects.size})).sort((a,b) => b.projectCount - a.projectCount);
+      let searchTerm = '';
+      function projectMatchesSearch(p){
+        if (!searchTerm) return true;
+        const q = searchTerm.toUpperCase();
+        return (p.details || '').toUpperCase().includes(q);
+      }
+
       function renderExp(tab) {
         let groups;
         if (tab === '__intl') {
@@ -848,11 +955,14 @@
         } else {
           groups = tab === 'All' ? bySector.slice() : bySector.filter(g => g.sector === tab);
         }
+        // apply search filter
+        if (searchTerm) groups = groups.map(g => ({...g, items: g.items.filter(projectMatchesSearch)})).filter(g => g.items.length > 0);
         // Sort by count desc (most projects first)
         groups = groups.slice().sort((a, b) => b.items.length - a.items.length);
         const body = document.getElementById('expBody');
-        if (!groups.length) { body.innerHTML = '<p class="secblk__none">Nothing to show.</p>'; return; }
-        body.innerHTML = groups.map(g => {
+        const flag = searchTerm ? `<div class="search-flag">Showing projects that use <b>${searchTerm.replace(/</g,'&lt;')}</b><button class="clr" id="searchClrInline" type="button">Clear</button></div>` : '';
+        if (!groups.length) { body.innerHTML = flag + '<p class="secblk__none">No projects match your search.</p>'; return; }
+        body.innerHTML = flag + groups.map(g => {
           // Items whose image should render in THIS view (imgIntlOnly hides thumbnail on sector tabs)
           const hasVisibleImg = p => p.img && !(p.imgIntlOnly && tab !== '__intl');
           const feat = g.items.find(p => p.hero && hasVisibleImg(p)) || g.items.find(hasVisibleImg);
