@@ -119,6 +119,7 @@
     .expsec__tab .tab-cnt{font-size:11px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:0;margin-left:auto}
     .expsec__tab:hover .tab-cnt{color:var(--fg)}
     .expsec__tab.on .tab-cnt{color:rgba(255,255,255,.85)}
+    .expsec__select{display:none}
     /* mobile: sidebar becomes top horizontal scroll */
     @media (max-width: 900px) {
       .expsec__shell{grid-template-columns:1fr;gap:20px}
@@ -310,14 +311,11 @@
       .expsec__eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:8px}
       .expsec__title{font-size:28px}
       .expsec__shell{gap:12px;margin-top:12px}
-      /* tabs wrap neatly instead of horizontal scroll */
-      .expsec__tabs{flex-wrap:wrap !important;overflow:visible !important;gap:6px !important;padding-bottom:0}
-      .expsec__group{flex-wrap:wrap}
-      .expsec__grouprow{flex-wrap:wrap !important}
-      .expsec__tab{padding:6px 10px;font-size:11px;background:#faf7fa;border-radius:99px;flex-shrink:1}
-      .expsec__tab .tab-lbl{max-width:none}
-      .expsec__tab .tab-cnt{font-size:10px;margin-left:4px}
-      .expsec__tab .tab-ico{width:13px;height:13px}
+      /* replace pills with native dropdown on phone */
+      .expsec__tabs{display:none !important}
+      .expsec__select{display:block;width:100%;padding:12px 40px 12px 14px;border:1.5px solid var(--hair);border-radius:12px;background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23A50064' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 1l5 5 5-5'/></svg>") no-repeat right 14px center;font-family:inherit;font-size:14px;font-weight:700;color:var(--fg);appearance:none;-webkit-appearance:none;cursor:pointer;letter-spacing:.02em}
+      .expsec__select:focus{outline:none;border-color:var(--magenta)}
+      .expsec__select optgroup{font-weight:700;color:var(--muted)}
 
       .secblk{margin-bottom:32px;padding-bottom:24px;scroll-margin-top:60px}
       .secblk__title{font-size:14px;letter-spacing:.14em;padding:10px 0 12px;top:56px;gap:8px}
@@ -417,6 +415,7 @@
     <div class="expsec__shell">
       <aside class="expsec__side">
         <div class="expsec__tabs" id="expTabs"></div>
+        <select class="expsec__select" id="expSelect" aria-label="Choose sector"></select>
       </aside>
       <div class="expsec__main">
     <div class="expsec__toolbar">
@@ -712,6 +711,21 @@
         return `<div class="expsec__group">${grp.label ? `<div class="expsec__grouplbl">${grp.label}</div>` : ''}<div class="expsec__grouprow">${inner}</div></div>`;
       }).join('');
       document.getElementById('expTabs').innerHTML = tabsHtml;
+      // build mobile select dropdown mirroring the tabs
+      const selectHtml = GROUPS.map(grp => {
+        const opts = grp.tabs.filter(k => countFor(k) > 0 || k === 'All').map(k => {
+          const sel = (k === 'All') ? ' selected' : '';
+          return `<option value="${k}"${sel}>${labelFor(k)} (${countFor(k)})</option>`;
+        }).join('');
+        if (!opts) return '';
+        return grp.label ? `<optgroup label="${grp.label}">${opts}</optgroup>` : opts;
+      }).join('');
+      const expSelect = document.getElementById('expSelect');
+      expSelect.innerHTML = selectHtml;
+      expSelect.addEventListener('change', e => {
+        const tabBtn = document.querySelector('.expsec__tab[data-tab="' + e.target.value + '"]');
+        if (tabBtn) tabBtn.click();
+      });
 
       // Global sort mode (single control for all sectors)
       let globalSort = 'year';
