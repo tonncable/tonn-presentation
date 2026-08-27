@@ -686,17 +686,20 @@
         return `<div class="ctry" style="--pct:${Math.round(n/maxIntl*100)}"><div class="ctry__name">${c}</div><div class="ctry__bar"></div><div class="ctry__num">${n}</div></div>`;
       }).join('');
 
-      // --- 3 · signature ---
-      const sigList = SIGNATURE_NAMES.map(n => projects.find(p => p.name === n)).filter(Boolean);
-      document.getElementById('sigGrid').innerHTML = sigList.map(p => `
-        <figure class="sig__card" data-name="${p.name.replace(/"/g,'&quot;')}">
-          <div class="sig__img" style="background-image:url('${p.img || '../assets/img/factory.JPG'}')"></div>
-          <figcaption class="sig__body">
-            <div class="sig__name">${p.name}</div>
-            <div class="sig__loc">${[p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ')}</div>
-          </figcaption>
-        </figure>
-      `).join('');
+      // --- 3 · signature (section removed; keep name list for sort weighting) ---
+      const sigGrid = document.getElementById('sigGrid');
+      if (sigGrid) {
+        const sigList = SIGNATURE_NAMES.map(n => projects.find(p => p.name === n)).filter(Boolean);
+        sigGrid.innerHTML = sigList.map(p => `
+          <figure class="sig__card" data-name="${p.name.replace(/"/g,'&quot;')}">
+            <div class="sig__img" style="background-image:url('${p.img || '../assets/img/factory.JPG'}')"></div>
+            <figcaption class="sig__body">
+              <div class="sig__name">${p.name}</div>
+              <div class="sig__loc">${[p.location, p.country !== 'Malaysia' ? p.country : null].filter(Boolean).join(' · ')}</div>
+            </figcaption>
+          </figure>
+        `).join('');
+      }
 
       // --- 4 · sector tabs + blocks ---
       const totalCount = projects.length;
