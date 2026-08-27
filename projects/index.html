@@ -697,7 +697,11 @@
           <label class="addfld"><span>Location *</span><input id="fLocation" type="text" placeholder="e.g. Kuala Lumpur"></label>
           <label class="addfld"><span>Year</span><input id="fYear" type="text" placeholder="e.g. 2025 or 2023-2025"></label>
           <label class="addfld"><span>Dealer / Reseller</span><input id="fDealer" type="text" placeholder="e.g. SUNTECH ELECTRICAL SUPPLY SDN. BHD."></label>
-          <label class="addfld addfld--full"><span>Cable type * <small class="fld-hint">one cable per line</small></span><textarea id="fDetails" rows="5" placeholder="10 mm² CU/PVC GREEN CABLE - 60 coil&#10;2.5 mm² CU/PVC RED CABLE - 60 coil&#10;16 mm² CU/PVC BLACK CABLE"></textarea></label>
+          <div class="addfld addfld--full">
+            <span>Cable type * <small class="fld-hint">pick from lists — no typing needed</small></span>
+            <div class="cblbuilder" id="cblBuilder"></div>
+            <button type="button" class="cblbuilder__add" id="cblAdd">+ Add another cable</button>
+          </div>
         </div>
         <p class="addmodal__err" id="fErr" hidden></p>
         <div class="addmodal__row">
@@ -754,6 +758,17 @@
     .addmodal__act--em:hover{box-shadow:0 8px 22px rgba(165,0,100,.36)}
     .addmodal__hint{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.6;padding:12px 14px;background:#faf7fa;border-radius:10px}
     .addmodal__hint b{color:var(--magenta);font-weight:800}
+    .cblbuilder{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+    .cblrow{display:grid;grid-template-columns:1fr 1fr 1.4fr 1fr 32px;gap:6px;align-items:center;padding:8px;background:#faf7fa;border:1px solid rgba(20,10,20,.06);border-radius:10px}
+    @media(max-width:640px){.cblrow{grid-template-columns:1fr 1fr;gap:6px;padding:10px 8px 30px;position:relative}.cblrow>select{font-size:12px !important;padding:8px 10px !important}.cblrow__x{position:absolute !important;top:6px;right:6px}}
+    .cblrow select{width:100%;padding:8px 10px;border:1px solid rgba(20,10,20,.1);border-radius:8px;font-family:inherit;font-size:13px;background:#fff;color:var(--fg);outline:none;font-weight:600;cursor:pointer}
+    .cblrow select:focus{border-color:var(--magenta)}
+    .cblrow__x{width:28px;height:28px;border-radius:50%;border:0;background:transparent;color:var(--muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .14s;padding:0}
+    .cblrow__x:hover{background:#ffe0e8;color:#c00040}
+    .cblbuilder__add{padding:10px 14px;background:transparent;border:1.5px dashed rgba(165,0,100,.35);color:var(--magenta);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .16s;width:100%}
+    .cblbuilder__add:hover{background:rgba(165,0,100,.05);border-color:var(--magenta);border-style:solid}
+    .cblrow__preview{grid-column:1/-1;font-size:11px;color:var(--magenta);font-weight:700;padding:6px 4px 0;font-family:ui-monospace,monospace;letter-spacing:.01em;line-height:1.4;word-break:break-word}
+    .cblrow__preview:empty{display:none}
   </style>
   <script>
   (function(){
@@ -793,6 +808,53 @@
     const fSubmit = document.getElementById('fSubmit');
     const fErr = document.getElementById('fErr');
     // (Sector field removed from form; admin assigns it. SECTORS kept only for internal use.)
+
+    // --- Cable-type structured builder ---
+    const CBL_SIZE = ['1.5','2.5','4','6','10','16','25','35,'.replace(/,$/,''),'35','50','70','95','120','150','185','240','300','400','500','630'].filter((v,i,a) => a.indexOf(v)===i);
+    const CBL_CORES = ['— single core —','2c','3c','4c','5c','7c','12c','19c'];
+    const CBL_CONSTR = ['CU/PVC','CU/XLPE/PVC','CU/XLPE/SWA/PVC','CU/MICA/PVC FR','CU/XLPE/AWA/PVC','ALU/XLPE/PVC','ALU/XLPE/SWA/PVC','CU/XLPE/DSTA/PVC','CU/PVC/PVC'];
+    const CBL_COLOUR = ['— none —','BLACK','RED','GREEN','BLUE','YELLOW','ORANGE','WHITE','GREY','BROWN','RD/YE/BU/BK','RD/YE/BU','BK/BK/BK/BK'];
+    const cblBuilder = document.getElementById('cblBuilder');
+    const cblAdd = document.getElementById('cblAdd');
+    function optsHtml(list, hint){
+      return `<option value="">${hint}</option>` + list.map(v => `<option>${v}</option>`).join('');
+    }
+    function makeRow(){
+      const row = document.createElement('div');
+      row.className = 'cblrow';
+      row.innerHTML = `
+        <select class="cblrow__size">${optsHtml(CBL_SIZE, 'Size (mm²)')}</select>
+        <select class="cblrow__cores">${optsHtml(CBL_CORES, 'Cores')}</select>
+        <select class="cblrow__constr">${optsHtml(CBL_CONSTR, 'Construction')}</select>
+        <select class="cblrow__colour">${optsHtml(CBL_COLOUR, 'Colour')}</select>
+        <button type="button" class="cblrow__x" aria-label="Remove cable">×</button>
+        <div class="cblrow__preview"></div>`;
+      row.querySelectorAll('select').forEach(s => s.addEventListener('change', () => updatePreview(row)));
+      row.querySelector('.cblrow__x').addEventListener('click', () => { row.remove(); if (!cblBuilder.children.length) makeRow(); });
+      cblBuilder.appendChild(row);
+      return row;
+    }
+    function buildCableStr(row){
+      const size = row.querySelector('.cblrow__size').value;
+      const cores = row.querySelector('.cblrow__cores').value;
+      const constr = row.querySelector('.cblrow__constr').value;
+      const colour = row.querySelector('.cblrow__colour').value;
+      if (!size || !constr) return '';
+      let s = `${size} mm²`;
+      if (cores && cores.startsWith('—') === false) s += ` x ${cores}`;
+      s += ` ${constr}`;
+      if (colour && colour.startsWith('—') === false) s += ` ${colour}`;
+      s += ' CABLE';
+      return s;
+    }
+    function updatePreview(row){
+      row.querySelector('.cblrow__preview').textContent = buildCableStr(row);
+    }
+    function collectCables(){
+      return Array.from(cblBuilder.querySelectorAll('.cblrow')).map(buildCableStr).filter(Boolean);
+    }
+    cblAdd.addEventListener('click', () => makeRow());
+    if (!cblBuilder.children.length) makeRow();
 
     let submitterName = '';
 
@@ -834,8 +896,10 @@
       const location = document.getElementById('fLocation').value.trim();
       const year = document.getElementById('fYear').value.trim();
       const dealer = document.getElementById('fDealer').value.trim();
-      const details = document.getElementById('fDetails').value.trim().split('\n').map(s => s.trim()).filter(Boolean).join(' | ');
-      if (!name || !location || !details){ throw new Error('Please fill in project name, location, and cable type.'); }
+      const cables = collectCables();
+      const details = cables.join(' | ');
+      if (!name || !location){ throw new Error('Please fill in project name and location.'); }
+      if (!cables.length){ throw new Error('Please add at least one cable (size and construction are required).'); }
       // Auto-suggested sector for admin reference
       const guessed = (SECTOR_HINTS.find(([re]) => re.test(name)) || [null,'TBC — please assign'])[1];
       const obj = { name, sector: guessed };
@@ -864,8 +928,9 @@
     });
 
     document.getElementById('doneReset').addEventListener('click', () => {
-      ['fName','fLocation','fYear','fDealer','fDetails'].forEach(id => document.getElementById(id).value = '');
+      ['fName','fLocation','fYear','fDealer'].forEach(id => document.getElementById(id).value = '');
       document.getElementById('fCountry').value = 'Malaysia';
+      cblBuilder.innerHTML = ''; makeRow();
       showStep(stepForm);
     });
   })();
