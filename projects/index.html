@@ -1341,8 +1341,9 @@
             <div class="secblk__idx">
               ${idxShown.map((p, i) => {
                 const n = String(i + 1).padStart(2, '0');
-                const hasDetail = !!(p.year || p.details || p.dealer);
-                const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean);
+                const cblsCheck = (p.details || '').split('|').map(s => s.trim()).filter(Boolean).filter(s => !/^via\b/i.test(s));
+                const hasDetail = !!(p.year || cblsCheck.length);
+                const cbls = (p.details || '').split('|').map(s => s.trim()).filter(Boolean).filter(s => !/^via\b/i.test(s));
                 const esc = s => s.replace(/</g,'&lt;').replace(/>/g,'&gt;');
                 // Right-side info: location, else country (default Malaysia)
                 let rightInfo = '';
