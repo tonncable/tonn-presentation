@@ -51,6 +51,9 @@
     .search-flag b{color:var(--magenta);font-weight:800}
     .search-flag .clr{margin-left:auto;background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:12px;font-weight:700;text-decoration:underline}
     .search-flag .clr:hover{color:var(--magenta)}
+    .back-all{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--hair);color:var(--fg);padding:8px 14px;border-radius:99px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:18px;transition:all .18s;letter-spacing:.01em}
+    .back-all:hover{border-color:var(--magenta);color:var(--magenta);transform:translateX(-2px)}
+    .back-all span{font-size:16px;color:var(--magenta);font-weight:800}
     @media(max-width:640px){
       .top__search{order:3;flex-basis:100%;max-width:none;margin-top:0}
       .top__in{flex-wrap:wrap;padding:8px 12px !important;gap:8px}
@@ -953,6 +956,7 @@
       });
       const cableList = Array.from(cableSpecs.values()).map(e => ({...e, projectCount: e.projects.size})).sort((a,b) => b.projectCount - a.projectCount);
       let searchTerm = '';
+      let cameFromAll = false;
       function projectMatchesSearch(p){
         if (!searchTerm) return true;
         const q = searchTerm.toUpperCase();
@@ -972,8 +976,9 @@
         groups = groups.slice().sort((a, b) => b.items.length - a.items.length);
         const body = document.getElementById('expBody');
         const flag = searchTerm ? `<div class="search-flag">Showing projects that use <b>${searchTerm.replace(/</g,'&lt;')}</b><button class="clr" id="searchClrInline" type="button">Clear</button></div>` : '';
+        const backBtn = (cameFromAll && tab !== 'All' && !searchTerm) ? `<button class="back-all" id="backAll" type="button"><span>←</span> Show less · back to All sectors</button>` : '';
         if (!groups.length) { body.innerHTML = flag + '<p class="secblk__none">No projects match your search.</p>'; return; }
-        body.innerHTML = flag + groups.map(g => {
+        body.innerHTML = backBtn + flag + groups.map(g => {
           // Items whose image should render in THIS view (imgIntlOnly hides thumbnail on sector tabs)
           const hasVisibleImg = p => p.img && !(p.imgIntlOnly && tab !== '__intl');
           const feat = g.items.find(p => p.hero && hasVisibleImg(p)) || g.items.find(hasVisibleImg);
@@ -1058,8 +1063,10 @@
       renderExp('All');
       document.getElementById('expTabs').addEventListener('click', e => {
         const btn = e.target.closest('.expsec__tab'); if (!btn) return;
+        if (!e.isTrusted === false) {} // no-op marker
         document.querySelectorAll('.expsec__tab').forEach(x => x.classList.toggle('on', x === btn));
         currentTab = btn.dataset.tab;
+        if (e.isTrusted) cameFromAll = false;
         renderExp(currentTab);
       });
 
@@ -1069,13 +1076,22 @@
         const lite = e.target.closest('.secblk__more-lite');
         if (lite) {
           const sector = lite.dataset.jump;
+          cameFromAll = true;
           const tabBtn = document.querySelector('.expsec__tab[data-tab="' + sector + '"]');
           if (tabBtn) {
             tabBtn.click();
-            // sync mobile picker UI
             const opt = document.querySelector('.expsec__picker__opt[data-tab="' + sector + '"]');
             if (opt) opt.click();
           }
+          return;
+        }
+        const back = e.target.closest('#backAll');
+        if (back) {
+          cameFromAll = false;
+          const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
+          if (allTab) allTab.click();
+          const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
+          if (allOpt) allOpt.click();
           return;
         }
         const more = e.target.closest('.secblk__more-btn');
