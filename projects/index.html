@@ -1185,8 +1185,7 @@
         if (!list.length) {
           searchSugg.innerHTML = '<div class="sempty"><span class="sempty__ico">🔍</span>No cable matches <b>' + q.trim().replace(/</g,'&lt;') + '</b><br><span class="sempty__hint">try a shorter keyword like "10 mm" or "GREEN"</span></div>';
         } else {
-          const cableIco = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-4 3-6 8-6s8 2 8 6-3 6-8 6-8-2-8-6Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>';
-          searchSugg.innerHTML = '<div class="sugg__hdr"><span>' + list.length + ' cable match' + (list.length!==1?'es':'') + '</span></div>' + list.map(c => `<button class="sopt" data-spec="${c.label.replace(/"/g,'&quot;')}" type="button"><span class="sopt__ico">${cableIco}</span><span class="sopt__lbl">${highlight(c.label, tokens)}</span><span class="scnt">${c.projectCount}</span></button>`).join('');
+          searchSugg.innerHTML = '<div class="sugg__hdr"><span>' + list.length + ' cable match' + (list.length!==1?'es':'') + '</span></div>' + list.map(c => `<button class="sopt" data-spec="${c.label.replace(/"/g,'&quot;')}" type="button"><span class="sopt__lbl">${highlight(c.label, tokens)}</span><span class="scnt">${c.projectCount}</span></button>`).join('');
         }
         searchSugg.hidden = false;
       }
