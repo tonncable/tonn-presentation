@@ -204,11 +204,6 @@
     "dealer": "OON BROTHERS ELECTRICAL TRADING CO SDN. BHD."
   },
   {
-    "name": "Handal Indah Tebrau Depot",
-    "sector": "Infrastructure",
-    "location": "JB, Johor"
-  },
-  {
     "name": "Istana Kubang Kerian",
     "sector": "Government",
     "location": "Kota Bharu, Kelantan",
@@ -6708,8 +6703,8 @@
     "name": "KLIA",
     "sector": "Infrastructure",
     "year": "2024",
-    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 222 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 257 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 858 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,093 m | 1.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,385 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,898 m",
-    "dealer": "SME ELECTRIC SDN. BHD.",
+    "details": "240 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 222 m | 185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,120 m | 95 mm² CU/PVC GREEN CABLE - 1,125 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,890 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 257 m | 35 mm² CU/PVC GREEN CABLE - 2,890 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 858 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 1,500 m | 10 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 3,750 m | 2.5 mm² x 4c CU/PVC/SWA/PVC CABLE (RD/YE/BU/BK) - 2,093 m | 1.5 mm² x 12c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 2,385 m | 1.5 mm² x 7c CU/PVC/SWA/PVC MULTICORE CABLE BS6346 - 1,898 m",
+    "dealer": "SME ELECTRIC SDN. BHD.; KVC INDUSTRIAL SUPPLIES SDN. BHD.",
     "location": "Sepang, Selangor"
   },
   {
@@ -6726,13 +6721,6 @@
     "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE - 415 m | 150 mm² x 4c CU/XLPE/SWA/PVC CABLE - 510 m | 120 mm² x 4c CU/XLPE/SWA/PVC CABLE - 3,275 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE - 2,390 m | 50 mm² x 4c CU/XLPE/SWA/PVC CABLE - 575 m | 10 mm² x 4c CU/PVC/SWA/PVC CABLE - 1,002 m",
     "dealer": "GENTLELITE ELECTRICAL TRADING SDN BHD",
     "location": "Terengganu"
-  },
-  {
-    "name": "Kuala Lumpur International Airport (KLIA)",
-    "sector": "Infrastructure",
-    "year": "2024",
-    "details": "185 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,120 m | 95 mm² CU/PVC GREEN CABLE - 1,125 m | 70 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/BK) - 2,890 m | 35 mm² CU/PVC GREEN CABLE - 2,890 m | 16 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 1,500 m | 10 mm² x 4c CU/XLPE/SWA/PVC CABLE (RD/YE/BU/GY) - 3,750 m",
-    "dealer": "KVC INDUSTRIAL SUPPLIES SDN. BHD."
   },
   {
     "name": "Kuala Lumpur Mass RAPID Transit V4 Project",
