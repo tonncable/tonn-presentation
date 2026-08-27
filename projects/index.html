@@ -34,12 +34,19 @@
     .top__search input::placeholder{color:var(--muted);font-weight:500}
     .top__search__clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:0;background:var(--muted);color:#fff;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
     .top__search__clear:hover{background:var(--magenta)}
-    .top__search__sugg{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:12px;box-shadow:0 12px 32px rgba(20,10,20,.14);max-height:60vh;overflow-y:auto;z-index:80;padding:6px}
+    .top__search__sugg{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid rgba(20,10,20,.06);border-radius:16px;box-shadow:0 20px 60px rgba(20,10,20,.16),0 4px 12px rgba(20,10,20,.04);max-height:60vh;overflow-y:auto;z-index:80;padding:8px;animation:suggFade .18s ease-out}
     .top__search__sugg[hidden]{display:none}
-    .top__search__sugg .sopt{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--fg);font-weight:600;transition:background .12s}
-    .top__search__sugg .sopt:hover,.top__search__sugg .sopt.on{background:#faf7fa}
-    .top__search__sugg .sopt .scnt{font-size:11px;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums;background:#f5f3f6;padding:2px 8px;border-radius:99px}
-    .top__search__sugg .sempty{padding:16px 14px;font-size:13px;color:var(--muted);text-align:center;font-style:italic}
+    @keyframes suggFade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    .top__search__sugg .sugg__hdr{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:6px 12px 8px}
+    .top__search__sugg .sopt{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:10px 12px;border:0;border-radius:10px;cursor:pointer;font-size:13px;color:var(--fg);font-weight:600;transition:all .14s;background:transparent;font-family:inherit;text-align:left}
+    .top__search__sugg .sopt:hover,.top__search__sugg .sopt.on{background:linear-gradient(90deg,#faf7fa 0%,#fff 100%);transform:translateX(2px)}
+    .top__search__sugg .sopt__lbl{flex:1;min-width:0;line-height:1.35}
+    .top__search__sugg .sopt__lbl mark{background:rgba(165,0,100,.14);color:var(--magenta);font-weight:800;padding:0 2px;border-radius:3px}
+    .top__search__sugg .sopt .scnt{font-size:11px;color:#fff;font-weight:800;font-variant-numeric:tabular-nums;background:var(--magenta);padding:3px 9px;border-radius:99px;flex-shrink:0;min-width:24px;text-align:center}
+    .top__search__sugg .sempty{padding:20px 16px;font-size:13px;color:var(--muted);text-align:center;line-height:1.5}
+    .top__search__sugg .sempty__ico{display:block;font-size:24px;margin-bottom:8px;opacity:.5}
+    .top__search__sugg .sempty b{color:var(--fg);font-weight:800}
+    .top__search__sugg .sempty__hint{display:block;margin-top:8px;font-size:12px;opacity:.8;font-style:italic}
     .search-flag{background:linear-gradient(180deg,rgba(165,0,100,.08),rgba(165,0,100,.03));border:1px solid rgba(165,0,100,.25);border-radius:12px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--fg);font-weight:600}
     .search-flag b{color:var(--magenta);font-weight:800}
     .search-flag .clr{margin-left:auto;background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:12px;font-weight:700;text-decoration:underline}
@@ -830,21 +837,26 @@
       const searchClear = document.getElementById('topSearchClear');
       const searchSugg = document.getElementById('topSearchSugg');
       const expsecEl = document.querySelector('.expsec');
+      function highlight(label, tokens){
+        let out = label.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        tokens.forEach(t => {
+          const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'ig');
+          out = out.replace(re, '<mark>$1</mark>');
+        });
+        return out;
+      }
       function showSuggestions(q){
         const query = q.trim().toUpperCase();
-        let list;
-        if (!query) list = cableList.slice(0, 10);
-        else {
-          const tokens = query.split(/\s+/).filter(Boolean);
-          list = cableList.filter(c => {
-            const up = c.label.toUpperCase();
-            return tokens.every(t => up.includes(t));
-          }).slice(0, 12);
-        }
+        if (!query){ searchSugg.hidden = true; searchSugg.innerHTML = ''; return; }
+        const tokens = query.split(/\s+/).filter(Boolean);
+        const list = cableList.filter(c => {
+          const up = c.label.toUpperCase();
+          return tokens.every(t => up.includes(t));
+        }).slice(0, 12);
         if (!list.length) {
-          searchSugg.innerHTML = '<div class="sempty">No matching cable found. Try another keyword.</div>';
+          searchSugg.innerHTML = '<div class="sempty"><span class="sempty__ico">🔍</span>No cable matches <b>' + q.trim().replace(/</g,'&lt;') + '</b><br><span class="sempty__hint">try a shorter keyword like "10 mm" or "GREEN"</span></div>';
         } else {
-          searchSugg.innerHTML = list.map(c => `<div class="sopt" data-spec="${c.label.replace(/"/g,'&quot;')}"><span>${c.label}</span><span class="scnt">${c.projectCount} project${c.projectCount!==1?'s':''}</span></div>`).join('');
+          searchSugg.innerHTML = '<div class="sugg__hdr">' + list.length + ' cable match' + (list.length!==1?'es':'') + '</div>' + list.map(c => `<button class="sopt" data-spec="${c.label.replace(/"/g,'&quot;')}" type="button"><span class="sopt__lbl">${highlight(c.label, tokens)}</span><span class="scnt">${c.projectCount}</span></button>`).join('');
         }
         searchSugg.hidden = false;
       }
@@ -864,7 +876,6 @@
           renderExp(currentTab);
         }
       }
-      searchInput.addEventListener('focus', () => showSuggestions(searchInput.value));
       searchInput.addEventListener('input', () => showSuggestions(searchInput.value));
       searchInput.addEventListener('keydown', e => {
         if (e.key === 'Enter') { e.preventDefault(); applySearch(searchInput.value); }
