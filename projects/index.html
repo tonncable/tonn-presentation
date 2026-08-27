@@ -920,13 +920,29 @@
       // --- floating back-to-All pill ---
       const fabBack = document.getElementById('fabBack');
       fabBack.addEventListener('click', () => {
+        const returnSector = jumpedFromSector;
         cameFromAll = false;
+        jumpedFromSector = null;
         const allTab = document.querySelector('.expsec__tab[data-tab="All"]');
         if (allTab) allTab.click();
         const allOpt = document.querySelector('.expsec__picker__opt[data-tab="All"]');
         if (allOpt) allOpt.click();
-        const expsecEl2 = document.querySelector('.expsec');
-        if (expsecEl2) expsecEl2.scrollIntoView({behavior:'smooth', block:'start'});
+        // After render, scroll back to that sector's block in the All view
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          if (returnSector) {
+            const labelText = lbl(returnSector);
+            const blocks = document.querySelectorAll('#expBody .secblk');
+            for (const b of blocks) {
+              const t = b.querySelector('.secblk__title');
+              if (t && t.textContent.trim().toLowerCase().startsWith(labelText.toLowerCase())) {
+                b.scrollIntoView({behavior:'smooth', block:'start'});
+                return;
+              }
+            }
+          }
+          const expsecEl2 = document.querySelector('.expsec');
+          if (expsecEl2) expsecEl2.scrollIntoView({behavior:'smooth', block:'start'});
+        }));
       });
       let lastY = window.scrollY;
       window.addEventListener('scroll', () => {
@@ -999,6 +1015,7 @@
       const cableList = Array.from(cableSpecs.values()).map(e => ({...e, projectCount: e.projects.size})).sort((a,b) => b.projectCount - a.projectCount);
       let searchTerm = '';
       let cameFromAll = false;
+      let jumpedFromSector = null;
       function projectMatchesSearch(p){
         if (!searchTerm) return true;
         const q = searchTerm.toUpperCase();
@@ -1121,6 +1138,7 @@
         if (lite) {
           const sector = lite.dataset.jump;
           cameFromAll = true;
+          jumpedFromSector = sector;
           const tabBtn = document.querySelector('.expsec__tab[data-tab="' + sector + '"]');
           if (tabBtn) {
             tabBtn.click();
