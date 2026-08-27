@@ -47,10 +47,12 @@
     .top__search__sugg .sempty__ico{display:block;font-size:24px;margin-bottom:8px;opacity:.5}
     .top__search__sugg .sempty b{color:var(--fg);font-weight:800}
     .top__search__sugg .sempty__hint{display:block;margin-top:8px;font-size:12px;opacity:.8;font-style:italic}
-    .search-flag{background:linear-gradient(180deg,rgba(165,0,100,.08),rgba(165,0,100,.03));border:1px solid rgba(165,0,100,.25);border-radius:12px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--fg);font-weight:600}
-    .search-flag b{color:var(--magenta);font-weight:800}
-    .search-flag .clr{margin-left:auto;background:transparent;border:0;color:var(--muted);cursor:pointer;font-size:12px;font-weight:700;text-decoration:underline}
-    .search-flag .clr:hover{color:var(--magenta)}
+    .search-chip{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--magenta) 0%,#7a0049 100%);color:#fff;padding:8px 8px 8px 14px;border-radius:99px;margin-bottom:24px;box-shadow:0 6px 18px rgba(165,0,100,.28);font-size:13px;max-width:100%}
+    .search-chip svg{width:14px;height:14px;flex-shrink:0;opacity:.85}
+    .search-chip .sc-lbl{font-weight:800;letter-spacing:.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+    .search-chip .sc-cnt{background:rgba(255,255,255,.22);padding:2px 10px;border-radius:99px;font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;flex-shrink:0}
+    .search-chip .sc-x{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.18);border:0;color:#fff;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s;flex-shrink:0}
+    .search-chip .sc-x:hover{background:rgba(255,255,255,.35)}
     .back-all{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--hair);color:var(--fg);padding:8px 14px;border-radius:99px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:18px;transition:all .18s;letter-spacing:.01em}
     .back-all:hover{border-color:var(--magenta);color:var(--magenta);transform:translateX(-2px)}
     .back-all span{font-size:16px;color:var(--magenta);font-weight:800}
@@ -975,7 +977,8 @@
         // Sort by count desc (most projects first)
         groups = groups.slice().sort((a, b) => b.items.length - a.items.length);
         const body = document.getElementById('expBody');
-        const flag = searchTerm ? `<div class="search-flag">Showing projects that use <b>${searchTerm.replace(/</g,'&lt;')}</b><button class="clr" id="searchClrInline" type="button">Clear</button></div>` : '';
+        const totalMatches = searchTerm ? groups.reduce((s,g) => s + g.items.length, 0) : 0;
+        const flag = searchTerm ? `<div class="search-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sc-lbl">${searchTerm.replace(/</g,'&lt;')}</span><span class="sc-cnt">${totalMatches} match${totalMatches!==1?'es':''}</span><button class="sc-x" id="searchClrInline" type="button" aria-label="Clear filter">×</button></div>` : '';
         const backBtn = (cameFromAll && tab !== 'All' && !searchTerm) ? `<button class="back-all" id="backAll" type="button"><span>←</span> Show less · back to All sectors</button>` : '';
         if (!groups.length) { body.innerHTML = flag + '<p class="secblk__none">No projects match your search.</p>'; return; }
         body.innerHTML = backBtn + flag + groups.map(g => {
@@ -1023,7 +1026,7 @@
               }).join('')}
             </div>${needsCollapse ? `<button class="secblk__more-btn" data-more type="button">Show all ${idxShown.length} projects</button>` : ''}${(tab === 'All' && idxSource.length > idxShown.length) ? `<button class="secblk__more-lite" data-jump="${g.sector}" type="button">+${idxSource.length - idxShown.length} more →</button>` : ''}`;
           // On specific-sector view (long list), fill the left column with more thumbnails
-          const extras = (tab !== 'All') ? g.items.filter(p => hasVisibleImg(p) && p !== feat) : [];
+          const extras = (!searchTerm && tab !== 'All') ? g.items.filter(p => hasVisibleImg(p) && p !== feat) : [];
           const extrasHtml = extras.length ? `
             <div class="secblk__extras">
               ${extras.map(p => `
@@ -1036,7 +1039,7 @@
                 </figure>
               `).join('')}
             </div>` : '';
-          const leftCol = feat ? `
+          const leftCol = (feat && !searchTerm) ? `
             <div class="secblk__left">
               <figure class="secblk__photo" data-name="${feat.name.replace(/"/g,'&quot;')}">
                 <div class="photoimg" style="background-image:url('${feat.img}')"></div>
@@ -1047,11 +1050,11 @@
               </figure>
               ${extrasHtml}
             </div>` : '';
-          const layoutHtml = (tab !== 'All' && feat) ? `
+          const layoutHtml = (!searchTerm && tab !== 'All' && feat) ? `
             <div class="secblk__layout">
               ${leftCol}
               ${idxHtml}
-            </div>` : (feat ? `<div class="secblk__layout">${leftCol}${idxHtml}</div>` : idxHtml);
+            </div>` : ((!searchTerm && feat) ? `<div class="secblk__layout">${leftCol}${idxHtml}</div>` : idxHtml);
           return `
             <div class="secblk">
               <div class="secblk__title">${lbl(g.sector)} <span class="count">${g.items.length} project${g.items.length!==1?'s':''}</span></div>
