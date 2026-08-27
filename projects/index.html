@@ -438,14 +438,6 @@
     <div class="beyond__grid" id="beyondGrid"></div>
   </section>
 
-  <!-- 3 · SIGNATURE PROJECTS -->
-  <section class="sig">
-    <div class="sig__head">
-      <div class="sig__eyebrow">Signature projects</div>
-      <h2 class="sig__title">The landmarks Tonn Cable <em>powers.</em></h2>
-    </div>
-    <div class="sig__grid" id="sigGrid"></div>
-  </section>
 
   <!-- 4 · EXPERIENCE BY SECTOR -->
   <section class="expsec">
@@ -1020,7 +1012,7 @@
     if(!sections.length) return;
 
     var nav = document.getElementById('secnav');
-    var labels = ['Overview','Sectors','Beyond Malaysia','Signature','By Sector'];
+    var labels = ['Overview','Sectors','Beyond Malaysia','By Sector'];
     sections.forEach(function(s, i){
       var a = document.createElement('a');
       a.title = labels[i] || ('Section '+(i+1));
