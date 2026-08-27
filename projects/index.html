@@ -53,10 +53,10 @@
     .reach__seceyebrow{font-size:20px;letter-spacing:.32em;text-transform:uppercase;color:var(--magenta);font-weight:900;margin-bottom:32px}
     .reach__secs{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 48px;background:transparent}
     @media(max-width:800px){.reach__secs{grid-template-columns:1fr}}
-    .reach__secs span{display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:16px;padding:26px 0;border-bottom:1px solid var(--hair);cursor:default}
-    .reach__secs span::before{content:attr(data-name);grid-column:1;font-size:24px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
-    .reach__secs span::after{content:"";grid-column:2;height:8px;background:var(--magenta);border-radius:4px;width:calc(var(--pct,0) * 1%);min-width:8px;max-width:100%;opacity:.9;transition:width .5s ease;justify-self:start}
-    .reach__secs span b{grid-column:3;color:var(--fg);font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+    .reach__secs span{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:26px 0;border-bottom:1px solid var(--hair);cursor:default}
+    .reach__secs span::before{content:attr(data-name);font-size:24px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--fg)}
+    .reach__secs span::after{display:none}
+    .reach__secs span b{color:var(--fg);font-weight:900;font-size:28px;font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
 
     /* 2b · beyond malaysia */
     .beyond{max-width:1800px;margin:0 auto 80px;padding:0 6vw}
@@ -278,10 +278,9 @@
       .rstat__label{font-size:10px;letter-spacing:.12em;margin-top:4px}
       .reach__seceyebrow{font-size:12px;letter-spacing:.2em;margin-bottom:16px}
       .reach__secs{grid-template-columns:1fr;gap:0}
-      .reach__secs span{grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:6px 12px;padding:12px 0}
+      .reach__secs span{grid-template-columns:1fr auto;gap:12px;padding:12px 0}
       .reach__secs span::before{font-size:13px;letter-spacing:.1em}
       .reach__secs span b{font-size:18px;min-width:0}
-      .reach__secs span::after{grid-column:1/-1;height:5px}
 
       /* beyond */
       .beyond{padding:0 16px;margin-bottom:30px}
