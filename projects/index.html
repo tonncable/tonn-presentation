@@ -385,20 +385,20 @@
       .expsec__picker__cnt{font-size:11px;font-weight:800;color:#fff;background:var(--magenta);padding:2px 7px;border-radius:99px;font-variant-numeric:tabular-nums}
       .expsec__picker__chev{width:10px;height:7px;color:var(--muted);transition:transform .2s;flex-shrink:0}
       .expsec__picker.open .expsec__picker__chev{transform:rotate(180deg);color:var(--magenta)}
-      .expsec__picker__menu{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:14px;box-shadow:0 12px 32px rgba(20,10,20,.16);padding:8px;z-index:30;max-height:70vh;overflow-y:auto}
+      .expsec__picker__menu{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid var(--hair);border-radius:12px;box-shadow:0 12px 32px rgba(20,10,20,.16);padding:5px;z-index:30;max-height:70vh;overflow-y:auto}
       .expsec__picker.open .expsec__picker__menu{display:block}
-      .expsec__picker__grp{padding:8px 4px 4px}
-      .expsec__picker__grp:first-child{padding-top:2px}
-      .expsec__picker__grplbl{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 10px 6px}
-      .expsec__picker__opt{display:flex;align-items:center;gap:10px;padding:10px 10px;border-radius:10px;cursor:pointer;transition:background .12s;background:transparent;border:0;width:100%;font-family:inherit;text-align:left}
+      .expsec__picker__grp{padding:4px 2px 2px}
+      .expsec__picker__grp:first-child{padding-top:1px}
+      .expsec__picker__grplbl{font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:0 8px 3px}
+      .expsec__picker__opt{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:8px;cursor:pointer;transition:background .12s;background:transparent;border:0;width:100%;font-family:inherit;text-align:left}
       .expsec__picker__opt:hover{background:#faf7fa}
       .expsec__picker__opt.on{background:var(--magenta);color:#fff}
-      .expsec__picker__opt .p-ico{width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted)}
+      .expsec__picker__opt .p-ico{width:18px;height:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted)}
       .expsec__picker__opt.on .p-ico{color:#fff}
-      .expsec__picker__opt .p-ico svg{width:14px;height:14px}
-      .expsec__picker__opt .p-lbl{flex:1;font-size:14px;font-weight:700;color:var(--fg)}
+      .expsec__picker__opt .p-ico svg{width:12px;height:12px}
+      .expsec__picker__opt .p-lbl{flex:1;font-size:12.5px;font-weight:700;color:var(--fg)}
       .expsec__picker__opt.on .p-lbl{color:#fff}
-      .expsec__picker__opt .p-cnt{font-size:11px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+      .expsec__picker__opt .p-cnt{font-size:10px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
       .expsec__picker__opt.on .p-cnt{color:rgba(255,255,255,.9)}
 
       .secblk{margin-bottom:32px;padding-bottom:24px;scroll-margin-top:60px}
@@ -1088,7 +1088,7 @@
         'Healthcare':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"/></svg>',
         'Education':        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10 12 5l10 5-10 5L2 10Z"/><path d="M6 12v5a6 3 0 0 0 12 0v-5"/></svg>',
         'Sports & Recreation':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3a6 6 0 0 1-12 0Z"/><path d="M4 6H2v2a2 2 0 0 0 2 2M20 6h2v2a2 2 0 0 1-2 2M10 15v3a2 2 0 0 1-2 2H8v1h8v-1h0a2 2 0 0 1-2-2v-3"/></svg>',
-        'Religious':        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M10 5h4M5 21V12a7 7 0 0 1 14 0v9M5 21h14M9 21v-6h6v6"/></svg>',
+        'Religious':        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V13a8 8 0 0 1 16 0v8"/><path d="M4 21h16M10 21v-5a2 2 0 0 1 4 0v5"/></svg>',
         '__intl':           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
       };
       const iconFor = k => ICONS[k] || ICONS['All'];
