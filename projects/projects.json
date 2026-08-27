@@ -7270,5 +7270,13 @@
     "sector": "Commercial",
     "country": "Mauritius",
     "location": "Mauritius"
+  },
+  {
+    "name": "Rapid Bus Depot, MRT Kajang",
+    "sector": "Infrastructure",
+    "year": "2026",
+    "details": "400 mm² CU/XLPE/PVC BLACK CABLE - 3,032 m | 240 mm² CU/XLPE/PVC BLACK CABLE - 4,072 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 914 m | 95 mm² CU/PVC BLACK FLEXIBLE CABLE (600/1000V) CLASS 6 - 1,140 m | 50 mm² CU/PVC GREEN FLEXIBLE CABLE (600/1000V) CLASS 6 - 346 m | 1.5 mm² x 2c CU/PVC/PVC CABLE (RD/BK) (600/1000V) - 945 m",
+    "dealer": "SWICHTEC POWER SYSTEMS SDN. BHD.",
+    "location": "Kajang, Selangor"
   }
 ]
