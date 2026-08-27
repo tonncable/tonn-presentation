@@ -774,12 +774,6 @@ window.PROJECTS =
     "location": "Aljunied / Hougang"
   },
   {
-    "name": "Valley Condominium",
-    "sector": "Residential",
-    "country": "Singapore",
-    "location": "Singapore"
-  },
-  {
     "name": "Kan Choo Bin Landed Property",
     "sector": "Residential",
     "country": "Singapore",
@@ -6477,6 +6471,7 @@ window.PROJECTS =
   {
     "name": "Starhill Gallery",
     "sector": "Retail",
+    "hero": true,
     "img": "https://world-architects.com/images/Projects/57/98/17/8e16dc0829dc4a73ad8a5c477399f48a/8e16dc0829dc4a73ad8a5c477399f48a.6e7b65d0.jpg",
     "year": "2020",
     "details": "240 mm² CU/XLPE/PVC BLACK CABLE - 150 m | 120 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 95 mm² CU/XLPE/PVC BLACK CABLE - 320 m | 16 mm² CU/XLPE/PVC BLACK CABLE - 5,280 m | 10 mm² CU/PVC BLACK CABLE - 25,179 m | 10 mm² CU/PVC GREEN CABLE - 9,610 m",
