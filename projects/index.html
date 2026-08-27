@@ -29,11 +29,16 @@
     .top__title{font-size:20px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-left:auto;color:var(--magenta)}
     .top__search{position:relative;flex:1;max-width:420px;min-width:200px}
     .top__search__ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--muted);pointer-events:none}
-    .top__search input{width:100%;padding:9px 34px 9px 38px;border:1.5px solid var(--hair);border-radius:99px;background:#fff;font-size:13px;font-family:inherit;color:var(--fg);outline:none;transition:border-color .18s,box-shadow .18s}
+    .top__search input{width:100%;padding:9px 34px 9px 38px;border:1.5px solid var(--hair);border-radius:99px;background:#fff;font-size:13px;font-family:inherit;color:var(--fg);outline:none;transition:all .2s}
     .top__search input:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(165,0,100,.08)}
     .top__search input::placeholder{color:var(--muted);font-weight:500}
-    .top__search__clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:0;background:var(--muted);color:#fff;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+    .top__search.active input{background:linear-gradient(135deg,var(--magenta) 0%,#7a0049 100%);border-color:transparent;color:#fff;font-weight:800;box-shadow:0 6px 18px rgba(165,0,100,.28)}
+    .top__search.active input::placeholder{color:rgba(255,255,255,.7)}
+    .top__search.active .top__search__ico{color:#fff;opacity:.9}
+    .top__search__clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:0;background:var(--muted);color:#fff;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:background .15s}
     .top__search__clear:hover{background:var(--magenta)}
+    .top__search.active .top__search__clear{background:rgba(255,255,255,.25)}
+    .top__search.active .top__search__clear:hover{background:rgba(255,255,255,.4)}
     .top__search__sugg{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid rgba(20,10,20,.06);border-radius:16px;box-shadow:0 20px 60px rgba(20,10,20,.16),0 4px 12px rgba(20,10,20,.04);max-height:60vh;overflow-y:auto;z-index:80;padding:8px;animation:suggFade .18s ease-out}
     .top__search__sugg[hidden]{display:none}
     @keyframes suggFade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
@@ -868,6 +873,7 @@
       function applySearch(term){
         searchTerm = term.trim();
         searchClear.hidden = !searchTerm;
+        document.getElementById('topSearch').classList.toggle('active', !!searchTerm);
         searchSugg.hidden = true;
         // Force All tab so results across sectors are visible
         if (searchTerm) {
