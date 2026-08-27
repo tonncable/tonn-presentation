@@ -692,15 +692,12 @@
         <h3 class="addmodal__t">Project details</h3>
         <p class="addmodal__sub">Fill in what you know. Fields marked * are required.</p>
         <div class="addgrid">
-          <label class="addfld"><span>Project name *</span><input id="fName" type="text" placeholder="e.g. Merdeka 118"></label>
-          <label class="addfld"><span>Sector *</span><select id="fSector"></select></label>
+          <label class="addfld addfld--full"><span>Project name *</span><input id="fName" type="text" placeholder="e.g. Merdeka 118" autocomplete="off"></label>
+          <label class="addfld"><span>Sector * <small id="fSectorHint" class="fld-hint" hidden>· auto-suggested</small></span><select id="fSector"></select></label>
           <label class="addfld"><span>Country</span><select id="fCountry"><option value="Malaysia">Malaysia</option><option>Singapore</option><option>Myanmar</option><option>Cambodia</option><option>Maldives</option><option>Brunei</option><option>Vietnam</option><option>Pakistan</option><option>Indonesia</option><option>Iraq</option></select></label>
           <label class="addfld"><span>Location *</span><input id="fLocation" type="text" placeholder="e.g. Kuala Lumpur"></label>
           <label class="addfld"><span>Year</span><input id="fYear" type="text" placeholder="e.g. 2025 or 2023-2025"></label>
-          <label class="addfld"><span>Dealer / Reseller</span><input id="fDealer" type="text" placeholder="e.g. SUNTECH ELECTRICAL SUPPLY SDN. BHD."></label>
-          <label class="addfld addfld--full"><span>Image URL (optional)</span><input id="fImg" type="url" placeholder="https://..."></label>
-          <label class="addfld addfld--full"><span>Cable details (one per line — spec then qty, e.g. "10 mm² CU/PVC GREEN CABLE - 60 coil")</span><textarea id="fDetails" rows="5" placeholder="10 mm² CU/PVC GREEN CABLE - 60 coil&#10;2.5 mm² CU/PVC RED CABLE - 60 coil"></textarea></label>
-          <label class="addfld addfld--check"><input id="fHero" type="checkbox"><span>Feature this as the sector's hero image (only if image URL is provided)</span></label>
+          <label class="addfld addfld--full"><span>Dealer / Reseller</span><input id="fDealer" type="text" placeholder="e.g. SUNTECH ELECTRICAL SUPPLY SDN. BHD."></label>
         </div>
         <p class="addmodal__err" id="fErr" hidden></p>
         <div class="addmodal__row">
@@ -711,13 +708,11 @@
       <div class="addmodal__step" id="addStepDone" hidden>
         <h3 class="addmodal__t">Ready to send</h3>
         <p class="addmodal__sub">Send this snippet to the admin. Once approved, it goes live on the site.</p>
-        <textarea id="doneJson" class="addmodal__json" readonly></textarea>
-        <div class="addmodal__actions">
-          <button class="addmodal__act addmodal__act--copy" id="doneCopy" type="button">📋 Copy snippet</button>
-          <a class="addmodal__act addmodal__act--wa" id="doneWA" href="#" target="_blank" rel="noopener">💬 Send via WhatsApp</a>
+        <textarea id="doneJson" class="addmodal__json" readonly hidden></textarea>
+        <div class="addmodal__actions addmodal__actions--single">
           <a class="addmodal__act addmodal__act--em" id="doneEmail" href="#" rel="noopener">✉️ Send via Email</a>
         </div>
-        <p class="addmodal__hint">Admin: <b>nurashikin@tonncable.com</b>. Once received, the admin will paste it into the projects list and it will appear here after the next site update.</p>
+        <p class="addmodal__hint">The email will open in your mail app pre-filled to <b>syazwalina@tonncable.com</b>. Just click <b>Send</b>. Once received, the admin will publish it on the site.</p>
         <button class="addmodal__back" id="doneReset" type="button">Add another project</button>
       </div>
     </div>
@@ -749,6 +744,8 @@
     .addmodal__back:hover{border-color:var(--magenta);color:var(--magenta)}
     .addmodal__json{width:100%;min-height:180px;padding:14px;background:#faf7fa;border:1px solid var(--hair);border-radius:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;color:var(--fg);resize:vertical;margin-bottom:16px;outline:none}
     .addmodal__actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+    .addmodal__actions--single{grid-template-columns:1fr}
+    .fld-hint{font-weight:600;letter-spacing:0;text-transform:none;color:var(--magenta);font-size:11px;margin-left:4px}
     @media(max-width:640px){.addmodal__actions{grid-template-columns:1fr}}
     .addmodal__act{display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 12px;border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .14s,box-shadow .14s;border:0}
     .addmodal__act:hover{transform:translateY(-1px)}
@@ -760,9 +757,26 @@
   </style>
   <script>
   (function(){
-    const ADMIN_EMAIL = 'nurashikin@tonncable.com';
-    const ADMIN_WA = ''; // e.g. '60123456789' — leave empty to hide WhatsApp option
+    const ADMIN_EMAIL = 'syazwalina@tonncable.com';
     const PASSWORD = 'tonn2025';
+    // Sector auto-suggest keywords (project-name → sector)
+    const SECTOR_HINTS = [
+      [/\b(hospital|klinik|clinic|medical|pusat kesihatan|healthcare)\b/i, 'Healthcare'],
+      [/\b(school|sekolah|kolej|college|university|universiti|academy|institute|kampus|campus|smk|sk\b|sr\b|kindergarten|tadika)\b/i, 'Education'],
+      [/\b(hotel|resort|villa|inn|suites|guest\s*house)\b/i, 'Hospitality'],
+      [/\b(mall|plaza|shopping|retail|outlet|mart|market|pasar|kompleks membeli)\b/i, 'Retail'],
+      [/\b(mosque|masjid|surau|church|temple|kuil|tokong|gurdwara|kelenteng)\b/i, 'Religious'],
+      [/\b(stadium|sports|recreation|arena|kolam renang|padang|gymnasium|court)\b/i, 'Sports & Recreation'],
+      [/\b(data\s*cent(er|re)|dc\b|server\s*farm|hyperscale)\b/i, 'Data Centre'],
+      [/\b(telecom|telco|tower|celcom|maxis|digi|umobile|tm\s|base\s*station|fibre|fiber|bts|isp)\b/i, 'Telecom'],
+      [/\b(oil|gas|petronas|refinery|petrochemical|lng|lpg|offshore|onshore|upstream)\b/i, 'Oil & Gas'],
+      [/\b(power|substation|tnb|electric|tenaga|utility|water treatment|swm|reservoir)\b/i, 'Utility'],
+      [/\b(mrt|lrt|monorail|airport|klia|bridge|jambatan|highway|lebuhraya|port|pelabuhan|terminal|jkr|infra)\b/i, 'Infrastructure'],
+      [/\b(factory|plant|kilang|manufactur|refin|industri|industrial|warehouse|gudang|assembly)\b/i, 'Industrial'],
+      [/\b(condo|condominium|apartment|apartmen|residence|residensi|villa\s|house\s|home\s|kondominium|pangsapuri|kediaman|landed)\b/i, 'Residential'],
+      [/\b(office|corporate|tower|complex|kompleks|hq|headquarter|building|bangunan|centre|center)\b/i, 'Commercial'],
+      [/\b(ministry|kementerian|jabatan|government|kerajaan|parliament|parlimen|istana|jkr|majlis|city hall|dewan|balai)\b/i, 'Government'],
+    ];
     const SECTORS = ['Data Centre','Telecom','Infrastructure','Utility','Oil & Gas','Industrial','Commercial','Retail','Residential','Hospitality','Government','Healthcare','Education','Sports & Recreation','Religious'];
 
     const modal = document.getElementById('addModal');
@@ -822,20 +836,30 @@
       const location = document.getElementById('fLocation').value.trim();
       const year = document.getElementById('fYear').value.trim();
       const dealer = document.getElementById('fDealer').value.trim();
-      const img = document.getElementById('fImg').value.trim();
-      const details = document.getElementById('fDetails').value.trim().split('\n').map(s => s.trim()).filter(Boolean).join(' | ');
-      const hero = document.getElementById('fHero').checked;
       if (!name || !sector || !location){ throw new Error('Please fill in project name, sector, and location.'); }
       const obj = { name, sector };
       if (country && country !== 'Malaysia') obj.country = country;
-      if (hero && img) obj.hero = true;
-      if (img) obj.img = img;
       if (year) obj.year = year;
-      if (details) obj.details = details;
       if (dealer) obj.dealer = dealer;
       obj.location = location;
       return obj;
     }
+    // Auto-suggest sector when user types the project name
+    const fNameInput = () => document.getElementById('fName');
+    const fSectorHint = document.getElementById('fSectorHint');
+    document.addEventListener('input', e => {
+      if (e.target.id !== 'fName') return;
+      const nm = e.target.value;
+      const sectorSel = document.getElementById('fSector');
+      // don't override if user picked one manually
+      if (sectorSel.dataset.userpick === '1') return;
+      const match = SECTOR_HINTS.find(([re]) => re.test(nm));
+      if (match){ sectorSel.value = match[1]; fSectorHint.hidden = false; }
+      else { sectorSel.value = ''; fSectorHint.hidden = true; }
+    });
+    document.addEventListener('change', e => {
+      if (e.target.id === 'fSector'){ e.target.dataset.userpick = '1'; fSectorHint.hidden = true; }
+    });
     fSubmit.addEventListener('click', () => {
       try {
         const entry = buildEntry();
@@ -846,13 +870,6 @@
         const subject = encodeURIComponent(`[Project Reference] New submission: ${entry.name}`);
         const body = encodeURIComponent(`Submitted by: ${submitterName}\nDate: ${stamp}\n\nPlease add the following entry to projects.json / projects.js:\n\n${json}`);
         document.getElementById('doneEmail').href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
-        const waLink = document.getElementById('doneWA');
-        if (ADMIN_WA){
-          waLink.style.display = '';
-          waLink.href = `https://wa.me/${ADMIN_WA}?text=${body}`;
-        } else {
-          waLink.style.display = 'none';
-        }
         fErr.hidden = true;
         showStep(stepDone);
       } catch (err){
@@ -860,19 +877,12 @@
       }
     });
 
-    document.getElementById('doneCopy').addEventListener('click', () => {
-      const ta = document.getElementById('doneJson');
-      ta.select(); ta.setSelectionRange(0, 99999);
-      try { navigator.clipboard.writeText(ta.value); } catch(e) { document.execCommand('copy'); }
-      const btn = document.getElementById('doneCopy');
-      const orig = btn.textContent; btn.textContent = '✓ Copied!';
-      setTimeout(() => btn.textContent = orig, 1600);
-    });
     document.getElementById('doneReset').addEventListener('click', () => {
-      ['fName','fLocation','fYear','fDealer','fImg','fDetails'].forEach(id => document.getElementById(id).value = '');
-      document.getElementById('fSector').value = '';
+      ['fName','fLocation','fYear','fDealer'].forEach(id => document.getElementById(id).value = '');
+      const sec = document.getElementById('fSector');
+      sec.value = ''; delete sec.dataset.userpick;
       document.getElementById('fCountry').value = 'Malaysia';
-      document.getElementById('fHero').checked = false;
+      document.getElementById('fSectorHint').hidden = true;
       showStep(stepForm);
     });
   })();
