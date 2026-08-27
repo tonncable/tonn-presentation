@@ -310,23 +310,30 @@
       .expsec__eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:8px}
       .expsec__title{font-size:28px}
       .expsec__shell{gap:12px;margin-top:12px}
-      .expsec__tabs{gap:8px;padding-bottom:6px}
-      .expsec__tab{padding:6px 10px;font-size:12px}
-      .expsec__tab .tab-cnt{font-size:10px}
+      /* tabs wrap neatly instead of horizontal scroll */
+      .expsec__tabs{flex-wrap:wrap !important;overflow:visible !important;gap:6px !important;padding-bottom:0}
+      .expsec__group{flex-wrap:wrap}
+      .expsec__grouprow{flex-wrap:wrap !important}
+      .expsec__tab{padding:6px 10px;font-size:11px;background:#faf7fa;border-radius:99px;flex-shrink:1}
+      .expsec__tab .tab-lbl{max-width:none}
+      .expsec__tab .tab-cnt{font-size:10px;margin-left:4px}
+      .expsec__tab .tab-ico{width:13px;height:13px}
 
       .secblk{margin-bottom:32px;padding-bottom:24px;scroll-margin-top:60px}
       .secblk__title{font-size:14px;letter-spacing:.14em;padding:10px 0 12px;top:56px;gap:8px}
       .secblk__title .count{font-size:11px}
-      .secblk__layout{gap:16px}
-      .secblk__left{position:static;gap:10px}
-      .secblk__photo{aspect-ratio:4/3}
-      .secblk__photocap{padding:12px 14px}
-      .secblk__photocap .pname{font-size:16px}
-      .secblk__photocap .ploc{font-size:11px}
-      .secblk__thumb{aspect-ratio:4/3}
-      .secblk__thumb figcaption{padding:12px 14px}
-      .secblk__thumb figcaption b{font-size:15px}
-      .secblk__thumb figcaption span{font-size:11px}
+      .secblk__layout{gap:14px}
+      .secblk__left{position:static;gap:8px;flex-direction:row;flex-wrap:wrap}
+      .secblk__photo{aspect-ratio:16/9;max-height:180px;flex:1 1 100%}
+      .secblk__photocap{padding:10px 12px}
+      .secblk__photocap .pname{font-size:14px;margin-bottom:2px}
+      .secblk__photocap .ploc{font-size:10px}
+      /* extras: small landscape thumbs, 2-col grid */
+      .secblk__extras{display:grid !important;grid-template-columns:1fr 1fr;gap:8px;flex-direction:unset}
+      .secblk__thumb{aspect-ratio:16/10;max-height:120px}
+      .secblk__thumb figcaption{padding:8px 10px}
+      .secblk__thumb figcaption b{font-size:12px;margin-bottom:2px;line-height:1.15}
+      .secblk__thumb figcaption span{font-size:9px}
 
       .secblk__idx__row{grid-template-columns:28px 1fr;gap:6px 10px;padding:12px 0}
       .secblk__idx__no{font-size:12px;padding-top:3px}
