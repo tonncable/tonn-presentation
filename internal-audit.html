@@ -449,6 +449,7 @@
       }).catch(function(){ /* ignore — localStorage keeps it */ });
     } catch(e){}
   }
+  function keyOf(r){ return (r.name||'').trim().toLowerCase() + '|' + (r.dept||'').trim().toLowerCase() + '|' + String(r.ts).slice(0,16); }
   function syncPull(){
     fetch(SYNC_URL, { method:'GET' })
       .then(function(r){ return r.json(); })
@@ -458,8 +459,19 @@
           .filter(function(r){ return r && r.name; })
           .map(function(r){
             return { name:String(r.name), dept:String(r.dept||''), sig:String(r.sig||''), ts: new Date(r.ts).toISOString() };
-          })
-          .sort(function(a,b){ return new Date(a.ts) - new Date(b.ts); });
+          });
+
+        // Rescue: push any local entries that are missing from the cloud
+        var cloudKeys = {};
+        cloudRows.forEach(function(r){ cloudKeys[keyOf(r)] = 1; });
+        var orphans = rows.filter(function(r){ return !cloudKeys[keyOf(r)]; });
+        if (orphans.length){
+          orphans.forEach(function(r){ syncPush(r); cloudRows.push(r); });
+          if (orphans.length === 1) toast('Synced 1 local entry to the cloud');
+          else toast('Synced '+orphans.length+' local entries to the cloud');
+        }
+
+        cloudRows.sort(function(a,b){ return new Date(a.ts) - new Date(b.ts); });
         var changed = JSON.stringify(cloudRows) !== JSON.stringify(rows);
         if (changed){
           rows = cloudRows;
