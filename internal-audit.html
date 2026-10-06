@@ -513,23 +513,30 @@
     if(!rows.length) return;
     var today = new Date();
     var dateStr = today.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    function fmtStamp(iso){
+      var d = new Date(iso);
+      var dd = String(d.getDate()).padStart(2,'0');
+      var mm = String(d.getMonth()+1).padStart(2,'0');
+      var yy = d.getFullYear();
+      var hh = String(d.getHours()).padStart(2,'0');
+      var mi = String(d.getMinutes()).padStart(2,'0');
+      return dd+'/'+mm+'/'+yy+' '+hh+':'+mi;
+    }
     var head =
-      '<tr style="background:#1a0612;color:#ffffff;font-weight:bold">' +
-        '<th style="padding:8px;border:1px solid #333">No</th>' +
-        '<th style="padding:8px;border:1px solid #333">Name</th>' +
-        '<th style="padding:8px;border:1px solid #333">Department</th>' +
-        '<th style="padding:8px;border:1px solid #333">Signature</th>' +
-        '<th style="padding:8px;border:1px solid #333">Time</th>' +
-        '<th style="padding:8px;border:1px solid #333">Date</th>' +
+      '<tr style="background:#9a1750;color:#ffffff">' +
+        '<th style="padding:10px 8px;border:1px solid #333;width:50px">No</th>' +
+        '<th style="padding:10px 8px;border:1px solid #333;width:220px">Name</th>' +
+        '<th style="padding:10px 8px;border:1px solid #333;width:220px">Department</th>' +
+        '<th style="padding:10px 8px;border:1px solid #333;width:180px">Sign</th>' +
+        '<th style="padding:10px 8px;border:1px solid #333;width:150px">Timestamp</th>' +
       '</tr>';
     var body = rows.map(function(r,i){
-      return '<tr>' +
-        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+(i+1)+'</td>' +
-        '<td style="border:1px solid #ccc;padding:6px">'+esc(r.name)+'</td>' +
-        '<td style="border:1px solid #ccc;padding:6px">'+esc(r.dept)+'</td>' +
-        '<td style="border:1px solid #ccc;padding:6px;text-align:center"><img src="'+r.sig+'" width="140" height="50"/></td>' +
-        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+fmtTs(r.ts)+'</td>' +
-        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+fmtDate(r.ts)+'</td>' +
+      return '<tr style="height:60px">' +
+        '<td style="border:1px solid #999;padding:6px;text-align:center;vertical-align:middle">'+(i+1)+'</td>' +
+        '<td style="border:1px solid #999;padding:6px 10px;vertical-align:middle">'+esc(r.name)+'</td>' +
+        '<td style="border:1px solid #999;padding:6px 10px;vertical-align:middle">'+esc(r.dept)+'</td>' +
+        '<td style="border:1px solid #999;padding:4px;text-align:center;vertical-align:middle"><img src="'+r.sig+'" width="160" height="55"/></td>' +
+        '<td style="border:1px solid #999;padding:6px;text-align:center;vertical-align:middle">'+fmtStamp(r.ts)+'</td>' +
       '</tr>';
     }).join('');
     var html =
@@ -539,9 +546,12 @@
       '<x:Name>Attendance</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions>' +
       '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->' +
       '</head><body style="font-family:Calibri,Arial,sans-serif">' +
-      '<table><tr><td colspan="6" style="font-size:20px;font-weight:bold;padding:10px 0;color:#1a0612">Tonn Cable — Internal Audit Attendance</td></tr>' +
-      '<tr><td colspan="6" style="padding:4px 0 14px;color:#555">Venue: Level 1 Meeting Room &nbsp;·&nbsp; '+dateStr+'</td></tr></table>' +
-      '<table style="border-collapse:collapse;font-size:12px">'+head+body+'</table>' +
+      '<table style="border-collapse:collapse;margin-bottom:14px">' +
+        '<tr><td colspan="5" style="font-size:20px;font-weight:bold;padding:10px 0;color:#9a1750">TONN CABLE — INTERNAL AUDIT</td></tr>' +
+        '<tr><td colspan="5" style="padding:2px 0;color:#333;font-size:12px"><b>Venue:</b> Level 1 Meeting Room</td></tr>' +
+        '<tr><td colspan="5" style="padding:2px 0 10px;color:#333;font-size:12px"><b>Date:</b> '+dateStr+'</td></tr>' +
+      '</table>' +
+      '<table style="border-collapse:collapse;font-size:12px;border:2px solid #333">'+head+body+'</table>' +
       '</body></html>';
     try{
       var blob = new Blob(['﻿'+html],{type:'application/vnd.ms-excel'});
