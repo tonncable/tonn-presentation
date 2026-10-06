@@ -348,9 +348,6 @@
 
   var now = new Date();
   document.getElementById('todayDate').textContent = now.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
-  document.getElementById('startedTime').textContent = new Date(sessionStart).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}) + ' hrs';
-  document.getElementById('recYear').textContent = String(now.getFullYear());
-  document.getElementById('recId').textContent = 'IA-' + now.toISOString().slice(0,10).replace(/-/g,'');
 
   var $rows = document.getElementById('rows');
   var $foot = document.getElementById('foot');
