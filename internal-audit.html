@@ -268,7 +268,7 @@
       Last entry <b id="footLatest">—</b>
     </div>
     <div class="foot__btns">
-      <button class="lnk" id="exportBtn">Export CSV</button>
+      <button class="lnk" id="exportBtn">Export Excel</button>
       <button class="lnk" id="printBtn">Print</button>
       <button class="lnk lnk--danger" id="clearBtn">Clear register</button>
     </div>
@@ -474,13 +474,42 @@
   });
   document.getElementById('exportBtn').addEventListener('click', function(){
     if(!rows.length) return;
-    var csv = 'No,Name,Department,Time,Date\n' + rows.map(function(r,i){
-      return [i+1, '"'+r.name.replace(/"/g,'""')+'"', '"'+r.dept.replace(/"/g,'""')+'"', fmtTs(r.ts), fmtDate(r.ts)].join(',');
-    }).join('\n');
-    var blob = new Blob([csv],{type:'text/csv'});
+    var today = new Date();
+    var dateStr = today.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    var head =
+      '<tr style="background:#1a0612;color:#ffffff;font-weight:bold">' +
+        '<th style="padding:8px;border:1px solid #333">No</th>' +
+        '<th style="padding:8px;border:1px solid #333">Name</th>' +
+        '<th style="padding:8px;border:1px solid #333">Department</th>' +
+        '<th style="padding:8px;border:1px solid #333">Signature</th>' +
+        '<th style="padding:8px;border:1px solid #333">Time</th>' +
+        '<th style="padding:8px;border:1px solid #333">Date</th>' +
+      '</tr>';
+    var body = rows.map(function(r,i){
+      return '<tr>' +
+        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+(i+1)+'</td>' +
+        '<td style="border:1px solid #ccc;padding:6px">'+esc(r.name)+'</td>' +
+        '<td style="border:1px solid #ccc;padding:6px">'+esc(r.dept)+'</td>' +
+        '<td style="border:1px solid #ccc;padding:6px;text-align:center"><img src="'+r.sig+'" width="140" height="50"/></td>' +
+        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+fmtTs(r.ts)+'</td>' +
+        '<td style="border:1px solid #ccc;padding:6px;text-align:center">'+fmtDate(r.ts)+'</td>' +
+      '</tr>';
+    }).join('');
+    var html =
+      '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">' +
+      '<head><meta charset="utf-8">' +
+      '<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>' +
+      '<x:Name>Attendance</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions>' +
+      '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->' +
+      '</head><body style="font-family:Calibri,Arial,sans-serif">' +
+      '<table><tr><td colspan="6" style="font-size:20px;font-weight:bold;padding:10px 0;color:#1a0612">Tonn Cable — Internal Audit Attendance</td></tr>' +
+      '<tr><td colspan="6" style="padding:4px 0 14px;color:#555">Venue: Level 1 Meeting Room &nbsp;·&nbsp; '+dateStr+'</td></tr></table>' +
+      '<table style="border-collapse:collapse;font-size:12px">'+head+body+'</table>' +
+      '</body></html>';
+    var blob = new Blob(['﻿'+html],{type:'application/vnd.ms-excel'});
     var a=document.createElement('a');
     a.href=URL.createObjectURL(blob);
-    a.download='tonn-internal-audit-'+new Date().toISOString().slice(0,10)+'.csv';
+    a.download='tonn-internal-audit-'+today.toISOString().slice(0,10)+'.xls';
     a.click();
   });
   document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
