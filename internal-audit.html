@@ -365,6 +365,7 @@
 
 <script>
 (function(){
+  var SYNC_URL = 'https://script.google.com/macros/s/AKfycbzPW22GCbqUB2cM1tDQqPcE8efbroJgqXR5Ahv0mvHrXrX7XkgvLVUmdBJ1L4SA8qAibA/exec';
   var KEY = 'tonn.audit.attendees.v1';
   var rows = JSON.parse(localStorage.getItem(KEY) || '[]');
   var sessionStart = localStorage.getItem('tonn.audit.started');
@@ -437,6 +438,40 @@
     $foot.style.display = 'flex';
   }
   function save(){ localStorage.setItem(KEY, JSON.stringify(rows)); render(); }
+
+  // --- Cloud sync (Google Sheets via Apps Script) ---
+  function syncPush(entry){
+    try{
+      fetch(SYNC_URL, {
+        method:'POST',
+        mode:'no-cors',
+        body: JSON.stringify(entry)
+      }).catch(function(){ /* ignore — localStorage keeps it */ });
+    } catch(e){}
+  }
+  function syncPull(){
+    fetch(SYNC_URL, { method:'GET' })
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if (!Array.isArray(data)) return;
+        var cloudRows = data
+          .filter(function(r){ return r && r.name; })
+          .map(function(r){
+            return { name:String(r.name), dept:String(r.dept||''), sig:String(r.sig||''), ts: new Date(r.ts).toISOString() };
+          })
+          .sort(function(a,b){ return new Date(a.ts) - new Date(b.ts); });
+        var changed = JSON.stringify(cloudRows) !== JSON.stringify(rows);
+        if (changed){
+          rows = cloudRows;
+          localStorage.setItem(KEY, JSON.stringify(rows));
+          render();
+        }
+      })
+      .catch(function(){ /* offline — keep local */ });
+  }
+  syncPull();
+  setInterval(syncPull, 15000);
+
   render();
 
   // Sig lightbox
@@ -501,8 +536,9 @@
     if(!name){ $name.focus(); return; }
     if(!dept){ $dept.focus(); return; }
     if(!hasInk){ toast('A signature is required'); return; }
-    rows.push({ name:name, dept:dept, sig:$canvas.toDataURL('image/png'), ts:new Date().toISOString() });
-    save(); closeModal();
+    var entry = { name:name, dept:dept, sig:$canvas.toDataURL('image/png'), ts:new Date().toISOString() };
+    rows.push(entry);
+    save(); syncPush(entry); closeModal();
     toast(name.split(/\s+/)[0] + ' entered in the register');
   });
 
