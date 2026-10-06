@@ -7,7 +7,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23120A12'/%3E%3Ccircle cx='16' cy='16' r='11' fill='%23CB0A7C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#e8e6e3;        /* warm light grey */
@@ -82,7 +82,7 @@
   .empty__s{font-size:14px;color:var(--muted);max-width:400px;margin:0 auto}
 
   /* ---------- LEDGER TABLE ---------- */
-  .ledger{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+  .ledger{width:100%;border-collapse:collapse;border-top:1px solid var(--ink);font-family:'Google Sans Text','Inter',system-ui,sans-serif}
   .ledger thead th{
     font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
     font-weight:500;color:var(--muted);text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);
@@ -94,7 +94,7 @@
   .ledger tbody td{padding:20px 16px 20px 0;border-bottom:1px solid var(--rule-soft);vertical-align:middle}
   .ledger tbody td:first-child{padding-left:0}
   .l-no{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;width:48px}
-  .l-name{font-family:'Fraunces',serif;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.15;color:var(--ink)}
+  .l-name{font-family:'Google Sans Text','Inter',system-ui,sans-serif;font-size:17px;font-weight:500;letter-spacing:-.005em;line-height:1.2;color:var(--ink)}
   .l-dept{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);font-weight:500}
   .l-dept::before{content:"";width:7px;height:7px;background:var(--dept-dot,var(--accent));display:inline-block;border-radius:50%}
   .l-sig{width:160px}
@@ -103,6 +103,13 @@
   .l-sig__frame img{max-width:100%;max-height:100%}
   .l-ts{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap}
   .l-ts b{color:var(--ink);font-weight:600;display:block;font-size:13px}
+  .l-del{width:36px;text-align:right}
+  .l-del button{
+    background:transparent;border:1px solid transparent;color:var(--muted);
+    width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;line-height:1;
+    display:inline-flex;align-items:center;justify-content:center;transition:all .15s;font-family:inherit;
+  }
+  .l-del button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
   /* department dot colors (muted earth tones, not neon) */
   .d-qc{--dept-dot:#9a1750}
@@ -386,13 +393,14 @@
           '<td><span class="l-dept '+cls+'">'+esc(r.dept)+'</span></td>' +
           '<td class="l-sig"><div class="l-sig__frame" data-sig="'+r.sig+'"><img src="'+r.sig+'" alt="signature"></div></td>' +
           '<td class="l-ts"><b>'+fmtTs(r.ts)+'</b>'+fmtDate(r.ts)+'</td>' +
+          '<td class="l-del"><button type="button" data-del="'+i+'" title="Remove '+esc(r.name)+'" aria-label="Remove">×</button></td>' +
         '</tr>';
     }).join('');
 
     $rows.innerHTML =
       '<table class="ledger">' +
         '<thead><tr>' +
-          '<th>Entry</th><th>Name</th><th>Department</th><th>Signature</th><th>Time</th>' +
+          '<th>Entry</th><th>Name</th><th>Department</th><th>Signature</th><th>Time</th><th></th>' +
         '</tr></thead>' +
         '<tbody>'+body+'</tbody>' +
       '</table>';
@@ -407,6 +415,16 @@
   // Sig lightbox
   var $lb = document.getElementById('lb'); var $lbImg = document.getElementById('lbImg');
   $rows.addEventListener('click', function(e){
+    var del = e.target.closest('[data-del]');
+    if (del){
+      var idx = parseInt(del.getAttribute('data-del'),10);
+      var r = rows[idx];
+      if (confirm('Remove '+r.name+' from the register?')){
+        rows.splice(idx,1); save();
+        toast(r.name.split(/\s+/)[0] + ' removed');
+      }
+      return;
+    }
     var sig = e.target.closest('.l-sig__frame');
     if (sig){ $lbImg.src = sig.getAttribute('data-sig'); $lb.classList.add('open'); }
   });
