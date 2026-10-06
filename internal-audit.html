@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&family=DM+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <style>
   :root{
     --paper:#e8e6e3;        /* warm light grey */
@@ -299,6 +301,7 @@
     </div>
     <div class="foot__btns">
       <button class="lnk" id="exportBtn">Export Excel</button>
+      <button class="lnk" id="pdfBtn">Download PDF</button>
       <button class="lnk" id="printBtn">Print</button>
       <button class="lnk lnk--danger" id="clearBtn">Clear register</button>
     </div>
@@ -555,6 +558,78 @@
     }
   });
   document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+
+  document.getElementById('pdfBtn').addEventListener('click', function(){
+    if(!rows.length) return;
+    if (!window.jspdf || !window.jspdf.jsPDF){
+      alert('PDF library did not load. Check your internet connection and try again.');
+      return;
+    }
+    try{
+      var jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF({unit:'pt', format:'a4'});
+      var pageW = doc.internal.pageSize.getWidth();
+      var today = new Date();
+      var dateStr = today.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+      // Title block
+      doc.setFont('helvetica','bold');
+      doc.setFontSize(18);
+      doc.setTextColor(154,23,80);
+      doc.text('TONN CABLE — INTERNAL AUDIT', 40, 50);
+
+      doc.setFont('helvetica','normal');
+      doc.setFontSize(10);
+      doc.setTextColor(60,60,60);
+      doc.text('Venue: Level 1 Meeting Room', 40, 70);
+      doc.text('Date: '+dateStr, 40, 85);
+      doc.setDrawColor(154,23,80);
+      doc.setLineWidth(1);
+      doc.line(40, 95, pageW-40, 95);
+
+      function fmtStamp(iso){
+        var d = new Date(iso);
+        var p=function(n){return String(n).padStart(2,'0');};
+        return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes());
+      }
+
+      var body = rows.map(function(r,i){
+        return [String(i+1), r.name, r.dept, '', fmtStamp(r.ts)];
+      });
+
+      doc.autoTable({
+        startY: 110,
+        head: [['No','Name','Department','Sign','Timestamp']],
+        body: body,
+        theme: 'grid',
+        styles: { font:'helvetica', fontSize:10, cellPadding:6, valign:'middle', textColor:[30,30,30], lineColor:[150,150,150] },
+        headStyles: { fillColor:[154,23,80], textColor:[255,255,255], fontStyle:'bold', halign:'center' },
+        columnStyles: {
+          0: { halign:'center', cellWidth:30 },
+          1: { cellWidth:130 },
+          2: { cellWidth:150 },
+          3: { halign:'center', cellWidth:110, minCellHeight:40 },
+          4: { halign:'center', cellWidth:95 }
+        },
+        didDrawCell: function(data){
+          if (data.section==='body' && data.column.index===3){
+            var r = rows[data.row.index];
+            if (r && r.sig){
+              var pad = 3;
+              var w = data.cell.width - pad*2;
+              var h = data.cell.height - pad*2;
+              try { doc.addImage(r.sig, 'PNG', data.cell.x+pad, data.cell.y+pad, w, h); } catch(e){}
+            }
+          }
+        }
+      });
+
+      doc.save('tonn-internal-audit-'+today.toISOString().slice(0,10)+'.pdf');
+      toast('PDF downloaded ('+rows.length+' entries)');
+    } catch(err){
+      alert('PDF generation failed: '+err.message);
+    }
+  });
 })();
 </script>
 </body>
