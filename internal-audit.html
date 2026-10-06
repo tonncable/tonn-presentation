@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tonn Cable — Internal Audit Attendance</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23120A12'/%3E%3Ccircle cx='16' cy='16' r='11' fill='%23CB0A7C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f1ea;
+    --paper-2:#ede8dd;
+    --ink:#161512;
+    --ink-2:#3d3a34;
+    --muted:#7a756b;
+    --rule:#d8d2c3;
+    --rule-soft:#e6e0d1;
+    --accent:#9a1750;  /* deep burgundy, calmer than magenta */
+    --accent-ink:#5e0e32;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 500px at 50% -200px, rgba(0,0,0,.04), transparent 60%),
+      var(--paper);
+    padding:28px 24px 80px;
+    background-attachment:fixed;
+  }
+  /* subtle paper grain */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 .06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+
+  /* ---------- MASTHEAD ---------- */
+  .mast{padding:28px 0 20px;border-bottom:1px solid var(--ink);display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .mast__left{display:flex;align-items:center;gap:14px}
+  .mast__mark{width:34px;height:34px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;color:var(--paper);font-family:'Fraunces',serif;font-weight:900;font-size:17px;font-style:italic;letter-spacing:-.02em}
+  .mast__name{font-family:'Fraunces',serif;font-weight:700;font-size:19px;letter-spacing:.01em}
+  .mast__name span{font-weight:400;font-style:italic;color:var(--muted)}
+  .mast__right{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;text-align:right}
+  .mast__right b{color:var(--ink);font-weight:600}
+
+  /* ---------- TITLE BLOCK ---------- */
+  .title{padding:48px 0 36px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+  .title__eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .title__eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+  .title__h{font-family:'Fraunces',serif;font-size:clamp(52px,8vw,104px);line-height:.92;letter-spacing:-.035em;font-weight:500;color:var(--ink)}
+  .title__h em{font-style:italic;font-weight:400;color:var(--accent-ink)}
+  .title__h .amp{font-style:italic;font-weight:400;color:var(--muted);padding:0 .05em}
+  .title__num{font-family:'Fraunces',serif;font-size:14px;color:var(--muted);font-style:italic;text-align:right;line-height:1.5;max-width:200px}
+  .title__num b{color:var(--ink);font-style:normal;font-weight:600;display:block;font-size:48px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+
+  /* ---------- META ROW ---------- */
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;border-bottom:1px solid var(--rule);padding:0}
+  .meta__cell{padding:20px 24px 20px 0;border-right:1px solid var(--rule-soft)}
+  .meta__cell:last-child{border-right:0}
+  .meta__k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:500}
+  .meta__v{font-family:'Fraunces',serif;font-size:19px;font-weight:500;color:var(--ink);letter-spacing:-.005em;line-height:1.3}
+  .meta__v--mono{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:400}
+
+  /* ---------- RECORD HEAD ---------- */
+  .rec-head{display:flex;justify-content:space-between;align-items:baseline;padding:40px 0 16px;flex-wrap:wrap;gap:16px}
+  .rec-head__t{font-family:'Fraunces',serif;font-size:22px;font-weight:500;letter-spacing:-.01em}
+  .rec-head__t em{font-style:italic;color:var(--muted);font-weight:400}
+  .rec-head__add{
+    appearance:none;background:var(--ink);color:var(--paper);
+    border:0;padding:11px 20px 11px 16px;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;
+    letter-spacing:.02em;cursor:pointer;display:inline-flex;align-items:center;gap:10px;
+    transition:background .15s;
+  }
+  .rec-head__add:hover{background:var(--accent)}
+  .rec-head__add span{font-family:'Fraunces',serif;font-style:italic;font-size:18px;line-height:1;font-weight:400}
+
+  /* ---------- EMPTY ---------- */
+  .empty{padding:80px 20px;text-align:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+  .empty__t{font-family:'Fraunces',serif;font-size:24px;font-style:italic;color:var(--muted);font-weight:400;margin-bottom:6px}
+  .empty__s{font-size:14px;color:var(--muted);max-width:400px;margin:0 auto}
+
+  /* ---------- LEDGER TABLE ---------- */
+  .ledger{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+  .ledger thead th{
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    font-weight:500;color:var(--muted);text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);
+    background:transparent;
+  }
+  .ledger thead th:first-child{padding-left:0;width:48px}
+  .ledger tbody tr{transition:background .12s}
+  .ledger tbody tr:hover{background:rgba(154,23,80,.04)}
+  .ledger tbody td{padding:20px 16px 20px 0;border-bottom:1px solid var(--rule-soft);vertical-align:middle}
+  .ledger tbody td:first-child{padding-left:0}
+  .l-no{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;width:48px}
+  .l-name{font-family:'Fraunces',serif;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.15;color:var(--ink)}
+  .l-dept{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);font-weight:500}
+  .l-dept::before{content:"";width:7px;height:7px;background:var(--dept-dot,var(--accent));display:inline-block;border-radius:50%}
+  .l-sig{width:160px}
+  .l-sig__frame{width:140px;height:52px;background:#fdfbf5;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:zoom-in;transition:border-color .15s}
+  .l-sig__frame:hover{border-color:var(--ink)}
+  .l-sig__frame img{max-width:100%;max-height:100%}
+  .l-ts{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .l-ts b{color:var(--ink);font-weight:600;display:block;font-size:13px}
+
+  /* department dot colors (muted earth tones, not neon) */
+  .d-qc{--dept-dot:#9a1750}
+  .d-prod{--dept-dot:#b06b1c}
+  .d-op{--dept-dot:#3b4a7a}
+  .d-sales{--dept-dot:#2d6a4a}
+  .d-store{--dept-dot:#8a6a2a}
+  .d-fin{--dept-dot:#1f5a7a}
+
+  /* ---------- FOOT TOOLBAR ---------- */
+  .foot{display:flex;justify-content:space-between;align-items:center;padding:24px 0;flex-wrap:wrap;gap:16px;border-top:1px solid var(--rule);margin-top:-1px}
+  .foot__meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .foot__meta b{color:var(--ink);font-weight:600}
+  .foot__btns{display:flex;gap:8px;flex-wrap:wrap}
+  .lnk{
+    background:transparent;color:var(--ink);border:1px solid var(--ink);padding:9px 16px;
+    font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;
+    cursor:pointer;text-transform:uppercase;transition:background .15s, color .15s;
+  }
+  .lnk:hover{background:var(--ink);color:var(--paper)}
+  .lnk--danger{border-color:var(--rule);color:var(--muted)}
+  .lnk--danger:hover{background:var(--accent);color:var(--paper);border-color:var(--accent)}
+
+  /* ---------- COLOPHON ---------- */
+  .colophon{padding:48px 0 0;border-top:1px solid var(--ink);margin-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .colophon em{font-family:'Fraunces',serif;font-style:italic;text-transform:none;letter-spacing:0;color:var(--ink-2);font-size:12px}
+
+  /* ---------- MODAL ---------- */
+  .modal{position:fixed;inset:0;background:rgba(22,21,18,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100;backdrop-filter:blur(3px);animation:fade .15s ease}
+  .modal.open{display:flex}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .mcard{background:var(--paper);width:100%;max-width:520px;max-height:95vh;overflow-y:auto;border:1px solid var(--ink);box-shadow:12px 12px 0 rgba(22,21,18,.08);animation:pop .22s ease}
+  @keyframes pop{from{transform:translate(-6px,-6px);opacity:0}to{transform:none;opacity:1}}
+  .mhead{padding:28px 32px 20px;border-bottom:1px solid var(--rule)}
+  .mkick{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .mtitle{font-family:'Fraunces',serif;font-size:34px;letter-spacing:-.02em;font-weight:500;line-height:1}
+  .mtitle em{font-style:italic;color:var(--muted);font-weight:400}
+  .mbody{padding:24px 32px}
+
+  .fld{margin-bottom:22px}
+  .fld__l{display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;margin-bottom:8px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
+  .fld__hint{color:var(--muted);text-transform:none;letter-spacing:0;font-family:'Fraunces',serif;font-style:italic;font-size:12px;font-weight:400}
+  .fld__i{
+    width:100%;padding:10px 2px;border:0;border-bottom:1px solid var(--ink);
+    font-family:'Fraunces',serif;font-size:22px;font-weight:500;letter-spacing:-.01em;
+    background:transparent;outline:none;color:var(--ink);transition:border-color .15s;
+  }
+  .fld__i::placeholder{color:#c7c0b0;font-style:italic;font-weight:400}
+  .fld__i:focus{border-bottom-color:var(--accent);border-bottom-width:2px;padding-bottom:9px}
+  select.fld__i{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'><path fill='%23161512' d='M5 7L0 0h10z'/></svg>");background-repeat:no-repeat;background-position:right 4px center;padding-right:28px;cursor:pointer}
+
+  .sigbox{border:1px solid var(--ink);background:#fdfbf5;padding:6px;position:relative;margin-top:4px}
+  .sigpad{width:100%;height:170px;cursor:crosshair;touch-action:none;display:block;background:transparent}
+  .sigbox__guide{position:absolute;left:40px;right:40px;bottom:28px;height:1px;background:var(--rule);pointer-events:none}
+  .sigbox__x{position:absolute;left:28px;bottom:22px;font-family:'Fraunces',serif;font-size:18px;color:var(--muted);pointer-events:none}
+  .sigbox__hint{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#c7c0b0;font-family:'Caveat',cursive;font-size:30px;pointer-events:none}
+  .sigbox.has-ink .sigbox__hint{display:none}
+  .sigtools{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .sigtools__note{font-family:'Fraunces',serif;font-style:italic;font-size:12px;color:var(--muted)}
+  .sigtools__clear{background:none;border:0;padding:4px 0;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:600;cursor:pointer;border-bottom:1px solid var(--ink)}
+  .sigtools__clear:hover{color:var(--accent);border-color:var(--accent)}
+
+  .mfoot{display:flex;gap:12px;justify-content:flex-end;padding:16px 32px 24px;border-top:1px solid var(--rule)}
+  .mbtn{padding:12px 22px;border:0;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background .15s, color .15s}
+  .mbtn--cancel{background:transparent;color:var(--muted);border:1px solid var(--rule)}
+  .mbtn--cancel:hover{color:var(--ink);border-color:var(--ink)}
+  .mbtn--save{background:var(--ink);color:var(--paper)}
+  .mbtn--save:hover{background:var(--accent)}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;background:rgba(22,21,18,.9);display:none;align-items:center;justify-content:center;z-index:200;padding:30px;cursor:zoom-out}
+  .lb.open{display:flex}
+  .lb img{max-width:90vw;max-height:85vh;background:#fdfbf5;padding:36px;border:1px solid var(--rule)}
+
+  /* toast */
+  .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--ink);color:var(--paper);padding:12px 20px;font-family:'Fraunces',serif;font-size:15px;font-style:italic;opacity:0;transition:opacity .25s, transform .25s;z-index:300;pointer-events:none;letter-spacing:.005em}
+  .toast::before{content:"— ";color:var(--muted)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:720px){
+    body{padding:20px 18px 60px}
+    .title{grid-template-columns:1fr;gap:20px;padding:32px 0 24px}
+    .title__num{text-align:left}
+    .title__num b{font-size:36px}
+    .meta__cell{border-right:0;border-bottom:1px solid var(--rule-soft);padding:14px 0}
+    .meta__cell:last-child{border-bottom:0}
+    .ledger thead{display:none}
+    .ledger tbody td{display:block;padding:4px 0;border:0}
+    .ledger tbody tr{display:block;padding:20px 0;border-bottom:1px solid var(--rule-soft)}
+    .l-sig{width:auto}
+    .l-no{font-size:11px;margin-bottom:4px}
+    .l-sig__frame{width:160px;height:52px;margin-top:8px}
+    .mcard{box-shadow:none}
+    .mhead,.mbody,.mfoot{padding-left:22px;padding-right:22px}
+    .mtitle{font-size:28px}
+  }
+
+  @media print{
+    body{background:#fff;padding:0}
+    body::before{display:none}
+    .rec-head__add,.foot,.lnk{display:none}
+    .ledger tbody tr:hover{background:transparent}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- MASTHEAD -->
+  <header class="mast">
+    <div class="mast__left">
+      <div class="mast__mark">T</div>
+      <div class="mast__name">Tonn Cable <span>— Sdn Bhd</span></div>
+    </div>
+    <div class="mast__right">
+      Record <b id="recId">—</b> &nbsp;·&nbsp; <b id="recYear">—</b>
+    </div>
+  </header>
+
+  <!-- TITLE -->
+  <section class="title">
+    <div>
+      <div class="title__eyebrow">Attendance Register · Vol. I</div>
+      <h1 class="title__h">Internal <em>Audit</em></h1>
+    </div>
+    <div class="title__num">
+      <b id="statTotal">00</b>
+      attendees<br>on this day
+    </div>
+  </section>
+
+  <!-- META -->
+  <section class="meta">
+    <div class="meta__cell">
+      <div class="meta__k">Venue</div>
+      <div class="meta__v">Level 1 Meeting Room</div>
+    </div>
+    <div class="meta__cell">
+      <div class="meta__k">Date</div>
+      <div class="meta__v" id="todayDate">—</div>
+    </div>
+    <div class="meta__cell">
+      <div class="meta__k">Session opened</div>
+      <div class="meta__v meta__v--mono" id="startedTime">—</div>
+    </div>
+    <div class="meta__cell">
+      <div class="meta__k">Departments</div>
+      <div class="meta__v meta__v--mono"><span id="statDepts">0</span> <span style="color:var(--muted);font-size:13px">/ 6</span></div>
+    </div>
+  </section>
+
+  <!-- RECORD HEAD -->
+  <div class="rec-head">
+    <div class="rec-head__t">The record <em>— signed by hand.</em></div>
+    <button class="rec-head__add" id="addBtn"><span>+</span> Sign in</button>
+  </div>
+
+  <!-- LIST -->
+  <div id="rows">
+    <div class="empty">
+      <div class="empty__t">No one has signed in yet.</div>
+      <div class="empty__s">The first attendee's name will appear here. Press <b>Sign in</b> above to add an entry.</div>
+    </div>
+  </div>
+
+  <!-- FOOT TOOLBAR -->
+  <div class="foot" id="foot" style="display:none">
+    <div class="foot__meta">
+      Last entry <b id="footLatest">—</b>
+    </div>
+    <div class="foot__btns">
+      <button class="lnk" id="exportBtn">Export CSV</button>
+      <button class="lnk" id="printBtn">Print</button>
+      <button class="lnk lnk--danger" id="clearBtn">Clear register</button>
+    </div>
+  </div>
+
+  <!-- COLOPHON -->
+  <footer class="colophon">
+    <div>Tonn Cable Sdn Bhd &nbsp;·&nbsp; Internal use</div>
+    <div><em>Kept in confidence.</em></div>
+  </footer>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="mcard">
+    <div class="mhead">
+      <div class="mkick">New entry</div>
+      <h2 class="mtitle">Sign <em>in.</em></h2>
+    </div>
+    <div class="mbody">
+      <div class="fld">
+        <label class="fld__l" for="fName">Full name</label>
+        <input class="fld__i" id="fName" type="text" placeholder="Ahmad bin Ali" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label class="fld__l" for="fDept">Department</label>
+        <select class="fld__i" id="fDept">
+          <option value="">Select department</option>
+          <option>QC</option>
+          <option>Production</option>
+          <option>Operation and Business Development</option>
+          <option>Sales</option>
+          <option>Store</option>
+          <option>Finance</option>
+        </select>
+      </div>
+      <div class="fld">
+        <label class="fld__l">Signature <span class="fld__hint">Mouse or finger</span></label>
+        <div class="sigbox" id="sigbox">
+          <canvas class="sigpad" id="sigpad"></canvas>
+          <div class="sigbox__guide"></div>
+          <div class="sigbox__x">×</div>
+          <span class="sigbox__hint">Sign here</span>
+        </div>
+        <div class="sigtools">
+          <span class="sigtools__note">Timestamp is affixed on save.</span>
+          <button class="sigtools__clear" id="sigClear" type="button">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="mbtn mbtn--cancel" id="cancelBtn">Cancel</button>
+      <button class="mbtn mbtn--save" id="saveBtn">Enter in register</button>
+    </div>
+  </div>
+</div>
+
+<div class="lb" id="lb"><img id="lbImg" alt="signature"></div>
+<div class="toast" id="toast">Signed in</div>
+
+<script>
+(function(){
+  var KEY = 'tonn.audit.attendees.v1';
+  var rows = JSON.parse(localStorage.getItem(KEY) || '[]');
+  var sessionStart = localStorage.getItem('tonn.audit.started');
+  if (!sessionStart){ sessionStart = new Date().toISOString(); localStorage.setItem('tonn.audit.started', sessionStart); }
+
+  var DEPT_CLASS = {
+    'QC':'d-qc',
+    'Production':'d-prod',
+    'Operation and Business Development':'d-op',
+    'Sales':'d-sales',
+    'Store':'d-store',
+    'Finance':'d-fin'
+  };
+
+  var now = new Date();
+  document.getElementById('todayDate').textContent = now.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+  document.getElementById('startedTime').textContent = new Date(sessionStart).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}) + ' hrs';
+  document.getElementById('recYear').textContent = String(now.getFullYear());
+  document.getElementById('recId').textContent = 'IA-' + now.toISOString().slice(0,10).replace(/-/g,'');
+
+  var $rows = document.getElementById('rows');
+  var $foot = document.getElementById('foot');
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function fmtTs(iso){
+    var d = new Date(iso);
+    return d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  }
+  function fmtDate(iso){
+    var d = new Date(iso);
+    return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+  }
+  function esc(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  function render(){
+    document.getElementById('statTotal').textContent = pad(rows.length);
+    var depts = {}; rows.forEach(function(r){ depts[r.dept]=1; });
+    document.getElementById('statDepts').textContent = Object.keys(depts).length;
+
+    if (!rows.length){
+      $rows.innerHTML =
+        '<div class="empty">' +
+          '<div class="empty__t">No one has signed in yet.</div>' +
+          '<div class="empty__s">The first attendee\'s name will appear here. Press <b>Sign in</b> above to add an entry.</div>' +
+        '</div>';
+      $foot.style.display = 'none';
+      return;
+    }
+
+    var body = rows.map(function(r,i){
+      var cls = DEPT_CLASS[r.dept] || 'd-qc';
+      return '' +
+        '<tr>' +
+          '<td class="l-no">№ '+pad(i+1)+'</td>' +
+          '<td><div class="l-name">'+esc(r.name)+'</div></td>' +
+          '<td><span class="l-dept '+cls+'">'+esc(r.dept)+'</span></td>' +
+          '<td class="l-sig"><div class="l-sig__frame" data-sig="'+r.sig+'"><img src="'+r.sig+'" alt="signature"></div></td>' +
+          '<td class="l-ts"><b>'+fmtTs(r.ts)+'</b>'+fmtDate(r.ts)+'</td>' +
+        '</tr>';
+    }).join('');
+
+    $rows.innerHTML =
+      '<table class="ledger">' +
+        '<thead><tr>' +
+          '<th>Entry</th><th>Name</th><th>Department</th><th>Signature</th><th>Time</th>' +
+        '</tr></thead>' +
+        '<tbody>'+body+'</tbody>' +
+      '</table>';
+
+    var last = rows[rows.length-1];
+    document.getElementById('footLatest').textContent = last.name + ' · ' + fmtTs(last.ts);
+    $foot.style.display = 'flex';
+  }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(rows)); render(); }
+  render();
+
+  // Sig lightbox
+  var $lb = document.getElementById('lb'); var $lbImg = document.getElementById('lbImg');
+  $rows.addEventListener('click', function(e){
+    var sig = e.target.closest('.l-sig__frame');
+    if (sig){ $lbImg.src = sig.getAttribute('data-sig'); $lb.classList.add('open'); }
+  });
+  $lb.addEventListener('click', function(){ $lb.classList.remove('open'); });
+
+  // Toast
+  var $toast = document.getElementById('toast'); var toastT;
+  function toast(msg){ $toast.textContent = msg; $toast.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(function(){ $toast.classList.remove('show'); }, 2400); }
+
+  // Modal + signature
+  var $modal = document.getElementById('modal');
+  var $name = document.getElementById('fName');
+  var $dept = document.getElementById('fDept');
+  var $sigbox = document.getElementById('sigbox');
+  var $canvas = document.getElementById('sigpad');
+  var ctx = $canvas.getContext('2d');
+  var drawing=false, hasInk=false, last=null;
+
+  function sizeCanvas(){
+    var rect = $canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio||1;
+    $canvas.width = rect.width*dpr; $canvas.height = rect.height*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.strokeStyle='#161512'; ctx.lineWidth=2.2; ctx.lineCap='round'; ctx.lineJoin='round';
+  }
+  function clearSig(){ ctx.clearRect(0,0,$canvas.width,$canvas.height); hasInk=false; $sigbox.classList.remove('has-ink'); }
+  function getPt(e){ var r=$canvas.getBoundingClientRect(); var p=e.touches?e.touches[0]:e; return {x:p.clientX-r.left,y:p.clientY-r.top}; }
+  function startDraw(e){ e.preventDefault(); drawing=true; last=getPt(e); hasInk=true; $sigbox.classList.add('has-ink'); }
+  function moveDraw(e){ if(!drawing) return; e.preventDefault(); var p=getPt(e); ctx.beginPath(); ctx.moveTo(last.x,last.y); ctx.lineTo(p.x,p.y); ctx.stroke(); last=p; }
+  function endDraw(){ drawing=false; last=null; }
+  $canvas.addEventListener('mousedown',startDraw);
+  window.addEventListener('mousemove',moveDraw);
+  window.addEventListener('mouseup',endDraw);
+  $canvas.addEventListener('touchstart',startDraw,{passive:false});
+  $canvas.addEventListener('touchmove',moveDraw,{passive:false});
+  $canvas.addEventListener('touchend',endDraw);
+  document.getElementById('sigClear').addEventListener('click',clearSig);
+
+  function openModal(){ $name.value=''; $dept.value=''; $modal.classList.add('open'); setTimeout(function(){ sizeCanvas(); clearSig(); $name.focus(); },60); }
+  function closeModal(){ $modal.classList.remove('open'); }
+  document.getElementById('addBtn').addEventListener('click', openModal);
+  document.getElementById('cancelBtn').addEventListener('click', closeModal);
+  $modal.addEventListener('click', function(e){ if(e.target===$modal) closeModal(); });
+
+  document.getElementById('saveBtn').addEventListener('click', function(){
+    var name=$name.value.trim(), dept=$dept.value.trim();
+    if(!name){ $name.focus(); return; }
+    if(!dept){ $dept.focus(); return; }
+    if(!hasInk){ toast('A signature is required'); return; }
+    rows.push({ name:name, dept:dept, sig:$canvas.toDataURL('image/png'), ts:new Date().toISOString() });
+    save(); closeModal();
+    toast(name.split(/\s+/)[0] + ' entered in the register');
+  });
+
+  // Toolbar
+  document.getElementById('clearBtn').addEventListener('click', function(){
+    if(!rows.length) return;
+    if(confirm('Clear all '+rows.length+' entries from the register? This cannot be undone.')){
+      rows=[]; localStorage.removeItem('tonn.audit.started'); save();
+    }
+  });
+  document.getElementById('exportBtn').addEventListener('click', function(){
+    if(!rows.length) return;
+    var csv = 'No,Name,Department,Time,Date\n' + rows.map(function(r,i){
+      return [i+1, '"'+r.name.replace(/"/g,'""')+'"', '"'+r.dept.replace(/"/g,'""')+'"', fmtTs(r.ts), fmtDate(r.ts)].join(',');
+    }).join('\n');
+    var blob = new Blob([csv],{type:'text/csv'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='tonn-internal-audit-'+new Date().toISOString().slice(0,10)+'.csv';
+    a.click();
+  });
+  document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+})();
+</script>
+</body>
+</html>
