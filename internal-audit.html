@@ -10,38 +10,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#1a0612;        /* deep magenta-black */
-    --paper-2:#260a1c;
-    --ink:#f3e4ec;          /* warm off-white text */
-    --ink-2:#d9c3cf;
-    --muted:#9a7e8d;
-    --rule:#3d1a2c;
-    --rule-soft:#2a0f1e;
-    --accent:#ff6ab0;       /* luminous pink */
-    --accent-ink:#ffb3d9;
+    --paper:#e8e6e3;        /* warm light grey */
+    --paper-2:#d8d6d2;
+    --ink:#1a1a1c;
+    --ink-2:#3a3a3d;
+    --muted:#78787c;
+    --rule:#c6c4c0;
+    --rule-soft:#d8d6d2;
+    --accent:#9a1750;       /* deep burgundy accent */
+    --accent-ink:#5e0e32;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
   body{
     min-height:100vh;
     background:
-      radial-gradient(1000px 500px at 20% -10%, rgba(255,106,176,.18), transparent 60%),
-      radial-gradient(900px 600px at 100% 110%, rgba(203,10,124,.22), transparent 60%),
+      radial-gradient(1200px 500px at 50% -200px, rgba(0,0,0,.05), transparent 60%),
       var(--paper);
     padding:28px 24px 80px;
     background-attachment:fixed;
   }
   /* subtle grain */
   body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;mix-blend-mode:screen;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 .7 0 0 0 0 .85 0 0 0 .08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 .06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   }
   .wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
 
   /* ---------- MASTHEAD ---------- */
   .mast{padding:28px 0 20px;border-bottom:1px solid var(--ink);display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
   .mast__left{display:flex;align-items:center;gap:16px}
-  .mast__logo{height:40px;width:auto;display:block}
+  .mast__logo{height:40px;width:auto;display:block;filter:brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3534%) hue-rotate(316deg) brightness(85%) contrast(103%)}
   .mast__name{font-family:'Fraunces',serif;font-weight:700;font-size:17px;letter-spacing:.01em;color:var(--muted);font-style:italic}
   .mast__right{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;text-align:right}
   .mast__right b{color:var(--ink);font-weight:600}
@@ -216,7 +215,7 @@
   <!-- MASTHEAD -->
   <header class="mast">
     <div class="mast__left">
-      <img class="mast__logo" src="assets/img/tonn-logo-white.png" alt="Tonn Cable">
+      <img class="mast__logo" src="assets/img/tonn-logo.png" alt="Tonn Cable">
     </div>
   </header>
 
