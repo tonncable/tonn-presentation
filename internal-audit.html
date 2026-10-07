@@ -678,7 +678,14 @@
       var doc = new jsPDF({unit:'pt', format:'a4'});
       var pageW = doc.internal.pageSize.getWidth();
       var today = new Date();
-      var dateStr = today.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+      // Default to the date of the first visible entry; let the user override
+      var baseDate = pdfRows[0] ? new Date(pdfRows[0].ts) : today;
+      var pIso = function(n){ return String(n).padStart(2,'0'); };
+      var defaultIso = baseDate.getFullYear()+'-'+pIso(baseDate.getMonth()+1)+'-'+pIso(baseDate.getDate());
+      var picked = prompt('Date to print on the PDF (YYYY-MM-DD):', defaultIso);
+      if (picked === null) return; // user cancelled
+      var parsed = /^\d{4}-\d{2}-\d{2}$/.test(picked.trim()) ? new Date(picked.trim()+'T00:00:00') : baseDate;
+      var dateStr = parsed.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
       // Title block
       doc.setFont('helvetica','bold');
