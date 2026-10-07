@@ -385,6 +385,10 @@
         <input class="fld__i" id="dlDate" type="date">
       </div>
       <div class="fld">
+        <label class="fld__l" for="dlStart">Start time <span class="fld__hint">shifts every entry by the same amount</span></label>
+        <input class="fld__i" id="dlStart" type="time">
+      </div>
+      <div class="fld">
         <label class="dl-opt"><input type="checkbox" id="dlSig" checked> <span>Include signatures</span></label>
       </div>
     </div>
@@ -651,10 +655,10 @@
   }
   var pendingDlOpts = null;
   function askDateAndSig(){ return pendingDlOpts; }
-  function withDate(iso, dateOverride){
+  function withDate(iso, dateOverride, minuteDelta){
     var orig = new Date(iso);
     var d = new Date(dateOverride);
-    d.setHours(orig.getHours(), orig.getMinutes(), orig.getSeconds(), 0);
+    d.setHours(orig.getHours(), orig.getMinutes()+(minuteDelta||0), orig.getSeconds(), 0);
     return d;
   }
   function doExcelExport(){
@@ -671,7 +675,7 @@
     if (!opts) return;
     var dateStr = opts.date.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
     function fmtStamp(iso){
-      var d = withDate(iso, opts.date);
+      var d = withDate(iso, opts.date, opts.minuteDelta);
       var dd = p(d.getDate());
       var mm = p(d.getMonth()+1);
       var yy = p(d.getFullYear()%100);
@@ -746,7 +750,7 @@
       doc.line(40, 95, pageW-40, 95);
 
       function fmtStamp(iso){
-        var d = withDate(iso, opts.date);
+        var d = withDate(iso, opts.date, opts.minuteDelta);
         var p=function(n){return String(n).padStart(2,'0');};
         return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+p(d.getFullYear()%100)+' '+p(d.getHours())+':'+p(d.getMinutes());
       }
@@ -769,7 +773,7 @@
         body: body,
         theme: 'grid',
         showHead: 'firstPage',
-        styles: { font:'helvetica', fontSize:9, cellPadding:3, valign:'middle', textColor:[0,0,0], lineColor:[0,0,0], lineWidth:0.5 },
+        styles: { font:'helvetica', fontSize:9, cellPadding:6, valign:'middle', textColor:[0,0,0], lineColor:[0,0,0], lineWidth:0.5 },
         headStyles: { fillColor:[255,255,255], textColor:[0,0,0], fontStyle:'bold', halign:'center', lineColor:[0,0,0], lineWidth:0.5 },
         columnStyles: opts.withSig ? {
           0: { halign:'center', cellWidth:30 },
@@ -811,6 +815,7 @@
     var base = new Date(r[0].ts);
     var p = function(n){ return String(n).padStart(2,'0'); };
     document.getElementById('dlDate').value = base.getFullYear()+'-'+p(base.getMonth()+1)+'-'+p(base.getDate());
+    document.getElementById('dlStart').value = p(base.getHours())+':'+p(base.getMinutes());
     document.getElementById('dlSig').checked = true;
     document.querySelector('input[name="dlFmt"][value="pdf"]').checked = true;
     $dlModal.classList.add('open');
@@ -821,9 +826,18 @@
     var dateVal = document.getElementById('dlDate').value;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(dateVal)){ alert('Please pick a date.'); return; }
     var fmt = (document.querySelector('input[name="dlFmt"]:checked')||{}).value || 'pdf';
+    var r = currentRows();
+    var base = new Date(r[0].ts);
+    var minuteDelta = 0;
+    var timeVal = document.getElementById('dlStart').value;
+    if (/^\d{2}:\d{2}$/.test(timeVal)){
+      var parts = timeVal.split(':');
+      minuteDelta = (parseInt(parts[0],10)*60 + parseInt(parts[1],10)) - (base.getHours()*60 + base.getMinutes());
+    }
     pendingDlOpts = {
       date: new Date(dateVal+'T00:00:00'),
-      withSig: document.getElementById('dlSig').checked
+      withSig: document.getElementById('dlSig').checked,
+      minuteDelta: minuteDelta
     };
     $dlModal.classList.remove('open');
     try { if (fmt === 'excel') doExcelExport(); else doPdfExport(); }
