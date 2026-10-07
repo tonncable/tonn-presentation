@@ -707,15 +707,8 @@
       var sigMap = [];
       var curDate = '';
       var dayN = 0;
-      pdfRows.forEach(function(r){
-        var k = pdfDateKey(r.ts);
-        if (k !== curDate){
-          body.push([{content: pdfDateLabel(r.ts).toUpperCase(), colSpan:5, styles:{fillColor:[232,230,227], textColor:[26,26,28], fontStyle:'bold', halign:'left'}}]);
-          sigMap.push(null);
-          curDate = k; dayN = 0;
-        }
-        dayN++;
-        body.push([String(dayN), r.name, r.dept, '', fmtStamp(r.ts)]);
+      pdfRows.forEach(function(r,idx){
+        body.push([String(idx+1), r.name, r.dept, '', fmtStamp(r.ts)]);
         sigMap.push(r);
       });
 
