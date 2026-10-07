@@ -305,8 +305,7 @@
     </div>
     <div class="foot__btns">
       <button class="lnk" id="todayBtn">Today only</button>
-      <button class="lnk" id="exportBtn">Export Excel</button>
-      <button class="lnk" id="pdfBtn">Download PDF</button>
+      <button class="lnk" id="downloadBtn">Download</button>
       <button class="lnk" id="printBtn">Print</button>
       <button class="lnk lnk--danger" id="clearBtn">Clear register</button>
     </div>
@@ -633,7 +632,7 @@
     d.setHours(orig.getHours(), orig.getMinutes(), orig.getSeconds(), 0);
     return d;
   }
-  document.getElementById('exportBtn').addEventListener('click', function(){
+  function doExcelExport(){
     var exportRows = currentRows();
     if(!exportRows.length) return;
     if (typeof XLSX === 'undefined'){
@@ -681,10 +680,10 @@
     } catch(err){
       alert('Download failed: '+err.message);
     }
-  });
+  }
   document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
 
-  document.getElementById('pdfBtn').addEventListener('click', function(){
+  function doPdfExport(){
     var pdfRows = currentRows();
     if(!pdfRows.length) return;
     if (!window.jspdf || !window.jspdf.jsPDF){
@@ -769,6 +768,16 @@
     } catch(err){
       alert('PDF generation failed: '+err.message);
     }
+  }
+
+  document.getElementById('downloadBtn').addEventListener('click', function(){
+    if (!currentRows().length) return;
+    var fmt = prompt('Download as — type PDF or EXCEL:', 'PDF');
+    if (fmt === null) return;
+    fmt = fmt.trim().toLowerCase();
+    if (fmt === 'pdf' || fmt === 'p') doPdfExport();
+    else if (fmt === 'excel' || fmt === 'xlsx' || fmt === 'e') doExcelExport();
+    else alert('Please type PDF or EXCEL.');
   });
 })();
 </script>
