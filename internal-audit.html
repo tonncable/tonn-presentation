@@ -680,20 +680,24 @@
       return dd+'/'+mm+'/'+yy+' '+hh+':'+mi;
     }
     try{
+      var header = opts.withSig ? ['No','Name','Department','Sign','Timestamp'] : ['No','Name','Department','Timestamp'];
       var aoa = [
         ['TONN CABLE — INTERNAL AUDIT'],
         ['Venue:', 'Level 1 Meeting Room'],
         ['Date:', dateStr],
         [],
-        ['No','Name','Department','Sign','Timestamp']
+        header
       ];
       exportRows.forEach(function(r,i){
-        aoa.push([i+1, r.name, r.dept, opts.withSig ? 'SIGNED' : '', fmtStamp(r.ts)]);
+        if (opts.withSig) aoa.push([i+1, r.name, r.dept, 'SIGNED', fmtStamp(r.ts)]);
+        else aoa.push([i+1, r.name, r.dept, fmtStamp(r.ts)]);
       });
 
       var ws = XLSX.utils.aoa_to_sheet(aoa);
-      ws['!cols'] = [{wch:6},{wch:28},{wch:34},{wch:12},{wch:20}];
-      ws['!merges'] = [{s:{r:0,c:0},e:{r:0,c:4}}];
+      ws['!cols'] = opts.withSig
+        ? [{wch:6},{wch:28},{wch:34},{wch:12},{wch:20}]
+        : [{wch:6},{wch:28},{wch:34},{wch:20}];
+      ws['!merges'] = [{s:{r:0,c:0},e:{r:0,c:header.length-1}}];
       // row heights
       ws['!rows'] = [{hpt:24}];
 
@@ -737,8 +741,8 @@
       doc.setTextColor(60,60,60);
       doc.text('Venue: Level 1 Meeting Room', 40, 70);
       doc.text('Date: '+dateStr, 40, 85);
-      doc.setDrawColor(154,23,80);
-      doc.setLineWidth(1);
+      doc.setDrawColor(0,0,0);
+      doc.setLineWidth(0.5);
       doc.line(40, 95, pageW-40, 95);
 
       function fmtStamp(iso){
@@ -754,24 +758,30 @@
       var curDate = '';
       var dayN = 0;
       pdfRows.forEach(function(r,idx){
-        body.push([String(idx+1), r.name, r.dept, '', fmtStamp(r.ts)]);
+        if (opts.withSig) body.push([String(idx+1), r.name, r.dept, '', fmtStamp(r.ts)]);
+        else body.push([String(idx+1), r.name, r.dept, fmtStamp(r.ts)]);
         sigMap.push(r);
       });
 
       doc.autoTable({
         startY: 110,
-        head: [['No','Name','Department','Sign','Timestamp']],
+        head: [opts.withSig ? ['No','Name','Department','Sign','Timestamp'] : ['No','Name','Department','Timestamp']],
         body: body,
         theme: 'grid',
         showHead: 'firstPage',
-        styles: { font:'helvetica', fontSize:9, cellPadding:3, valign:'middle', textColor:[30,30,30], lineColor:[150,150,150] },
+        styles: { font:'helvetica', fontSize:9, cellPadding:3, valign:'middle', textColor:[0,0,0], lineColor:[0,0,0], lineWidth:0.5 },
         headStyles: { fillColor:[255,255,255], textColor:[0,0,0], fontStyle:'bold', halign:'center', lineColor:[0,0,0], lineWidth:0.5 },
-        columnStyles: {
+        columnStyles: opts.withSig ? {
           0: { halign:'center', cellWidth:30 },
           1: { cellWidth:110 },
           2: { cellWidth:200 },
           3: { halign:'center', cellWidth:90, minCellHeight:22 },
           4: { halign:'center', cellWidth:85 }
+        } : {
+          0: { halign:'center', cellWidth:35 },
+          1: { cellWidth:140 },
+          2: { cellWidth:240 },
+          3: { halign:'center', cellWidth:100 }
         },
         didDrawCell: function(data){
           if (!opts.withSig) return;
