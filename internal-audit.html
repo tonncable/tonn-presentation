@@ -385,10 +385,6 @@
         <input class="fld__i" id="dlDate" type="date">
       </div>
       <div class="fld">
-        <label class="fld__l" for="dlStart">Start time <span class="fld__hint">shifts every entry by the same amount</span></label>
-        <input class="fld__i" id="dlStart" type="time">
-      </div>
-      <div class="fld">
         <label class="dl-opt"><input type="checkbox" id="dlSig" checked> <span>Include signatures</span></label>
       </div>
     </div>
@@ -815,7 +811,6 @@
     var base = new Date(r[0].ts);
     var p = function(n){ return String(n).padStart(2,'0'); };
     document.getElementById('dlDate').value = base.getFullYear()+'-'+p(base.getMonth()+1)+'-'+p(base.getDate());
-    document.getElementById('dlStart').value = p(base.getHours())+':'+p(base.getMinutes());
     document.getElementById('dlSig').checked = true;
     document.querySelector('input[name="dlFmt"][value="pdf"]').checked = true;
     $dlModal.classList.add('open');
@@ -826,18 +821,9 @@
     var dateVal = document.getElementById('dlDate').value;
     if (!/^\d{4}-\d{2}-\d{2}$/.test(dateVal)){ alert('Please pick a date.'); return; }
     var fmt = (document.querySelector('input[name="dlFmt"]:checked')||{}).value || 'pdf';
-    var r = currentRows();
-    var base = new Date(r[0].ts);
-    var minuteDelta = 0;
-    var timeVal = document.getElementById('dlStart').value;
-    if (/^\d{2}:\d{2}$/.test(timeVal)){
-      var parts = timeVal.split(':');
-      minuteDelta = (parseInt(parts[0],10)*60 + parseInt(parts[1],10)) - (base.getHours()*60 + base.getMinutes());
-    }
     pendingDlOpts = {
       date: new Date(dateVal+'T00:00:00'),
-      withSig: document.getElementById('dlSig').checked,
-      minuteDelta: minuteDelta
+      withSig: document.getElementById('dlSig').checked
     };
     $dlModal.classList.remove('open');
     try { if (fmt === 'excel') doExcelExport(); else doPdfExport(); }
