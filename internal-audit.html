@@ -619,6 +619,20 @@
       var d=new Date(r.ts); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()) === tk;
     });
   }
+  function askDateAndSig(defaultIso){
+    var picked = prompt('Date to print (YYYY-MM-DD). Timestamps in the file will use this date too.', defaultIso);
+    if (picked === null) return null;
+    var parsed = /^\d{4}-\d{2}-\d{2}$/.test(picked.trim()) ? new Date(picked.trim()+'T00:00:00') : null;
+    if (!parsed) { alert('Invalid date — expected YYYY-MM-DD.'); return null; }
+    var withSig = confirm('Include signatures?\n\nOK = include signatures\nCancel = leave the Sign column blank');
+    return { date: parsed, withSig: withSig };
+  }
+  function withDate(iso, dateOverride){
+    var orig = new Date(iso);
+    var d = new Date(dateOverride);
+    d.setHours(orig.getHours(), orig.getMinutes(), orig.getSeconds(), 0);
+    return d;
+  }
   document.getElementById('exportBtn').addEventListener('click', function(){
     var exportRows = currentRows();
     if(!exportRows.length) return;
@@ -626,15 +640,19 @@
       alert('Excel library did not load. Check your internet connection and try again.');
       return;
     }
-    var today = new Date();
-    var dateStr = today.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    var base = exportRows[0] ? new Date(exportRows[0].ts) : new Date();
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    var defaultIso = base.getFullYear()+'-'+p(base.getMonth()+1)+'-'+p(base.getDate());
+    var opts = askDateAndSig(defaultIso);
+    if (!opts) return;
+    var dateStr = opts.date.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
     function fmtStamp(iso){
-      var d = new Date(iso);
-      var dd = String(d.getDate()).padStart(2,'0');
-      var mm = String(d.getMonth()+1).padStart(2,'0');
-      var yy = String(d.getFullYear()%100).padStart(2,'0');
-      var hh = String(d.getHours()).padStart(2,'0');
-      var mi = String(d.getMinutes()).padStart(2,'0');
+      var d = withDate(iso, opts.date);
+      var dd = p(d.getDate());
+      var mm = p(d.getMonth()+1);
+      var yy = p(d.getFullYear()%100);
+      var hh = p(d.getHours());
+      var mi = p(d.getMinutes());
       return dd+'/'+mm+'/'+yy+' '+hh+':'+mi;
     }
     try{
@@ -646,7 +664,7 @@
         ['No','Name','Department','Sign','Timestamp']
       ];
       exportRows.forEach(function(r,i){
-        aoa.push([i+1, r.name, r.dept, 'SIGNED', fmtStamp(r.ts)]);
+        aoa.push([i+1, r.name, r.dept, opts.withSig ? 'SIGNED' : '', fmtStamp(r.ts)]);
       });
 
       var ws = XLSX.utils.aoa_to_sheet(aoa);
@@ -678,14 +696,12 @@
       var doc = new jsPDF({unit:'pt', format:'a4'});
       var pageW = doc.internal.pageSize.getWidth();
       var today = new Date();
-      // Default to the date of the first visible entry; let the user override
       var baseDate = pdfRows[0] ? new Date(pdfRows[0].ts) : today;
       var pIso = function(n){ return String(n).padStart(2,'0'); };
       var defaultIso = baseDate.getFullYear()+'-'+pIso(baseDate.getMonth()+1)+'-'+pIso(baseDate.getDate());
-      var picked = prompt('Date to print on the PDF (YYYY-MM-DD):', defaultIso);
-      if (picked === null) return; // user cancelled
-      var parsed = /^\d{4}-\d{2}-\d{2}$/.test(picked.trim()) ? new Date(picked.trim()+'T00:00:00') : baseDate;
-      var dateStr = parsed.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+      var opts = askDateAndSig(defaultIso);
+      if (!opts) return;
+      var dateStr = opts.date.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 
       // Title block
       doc.setFont('helvetica','bold');
@@ -703,7 +719,7 @@
       doc.line(40, 95, pageW-40, 95);
 
       function fmtStamp(iso){
-        var d = new Date(iso);
+        var d = withDate(iso, opts.date);
         var p=function(n){return String(n).padStart(2,'0');};
         return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+p(d.getFullYear()%100)+' '+p(d.getHours())+':'+p(d.getMinutes());
       }
@@ -735,6 +751,7 @@
           4: { halign:'center', cellWidth:85 }
         },
         didDrawCell: function(data){
+          if (!opts.withSig) return;
           if (data.section==='body' && data.column.index===3){
             var r = sigMap[data.row.index];
             if (r && r.sig){
