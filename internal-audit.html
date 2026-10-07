@@ -304,6 +304,7 @@
       Last entry <b id="footLatest">—</b>
     </div>
     <div class="foot__btns">
+      <button class="lnk" id="todayBtn">Today only</button>
       <button class="lnk" id="exportBtn">Export Excel</button>
       <button class="lnk" id="pdfBtn">Download PDF</button>
       <button class="lnk" id="printBtn">Print</button>
@@ -401,18 +402,29 @@
   }
   function esc(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 
+  var todayOnly = localStorage.getItem('tonn.audit.todayOnly') !== '0';
+  function todayKey(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
   function render(){
-    document.getElementById('statTotal').textContent = pad(rows.length);
-    var depts = {}; rows.forEach(function(r){ depts[r.dept]=1; });
+    var allRows = rows;
+    var tk = todayKey();
+    var visibleRows = todayOnly ? allRows.filter(function(r){
+      var d=new Date(r.ts); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()) === tk;
+    }) : allRows;
+
+    document.getElementById('statTotal').textContent = pad(visibleRows.length);
+    var depts = {}; visibleRows.forEach(function(r){ depts[r.dept]=1; });
     document.getElementById('statDepts').textContent = Object.keys(depts).length;
 
-    if (!rows.length){
+    var $todayBtn = document.getElementById('todayBtn');
+    if ($todayBtn) $todayBtn.textContent = todayOnly ? 'Show all dates' : 'Today only';
+
+    if (!visibleRows.length){
       $rows.innerHTML =
         '<div class="empty">' +
-          '<div class="empty__t">No one has signed in yet.</div>' +
-          '<div class="empty__s">The first attendee\'s name will appear here. Press <b>Sign in</b> above to add an entry.</div>' +
+          '<div class="empty__t">'+(todayOnly ? 'No entries today yet.' : 'No one has signed in yet.')+'</div>' +
+          '<div class="empty__s">'+(todayOnly ? 'Switch to <b>Show all dates</b> below to see earlier entries.' : 'The first attendee\'s name will appear here. Press <b>Sign in</b> above to add an entry.')+'</div>' +
         '</div>';
-      $foot.style.display = 'none';
+      $foot.style.display = (allRows.length ? 'flex' : 'none');
       return;
     }
 
@@ -423,12 +435,13 @@
     }
     var currentDate = '';
     var dayCount = 0;
-    var body = rows.map(function(r,i){
+    var body = visibleRows.map(function(r){
+      var i = allRows.indexOf(r);
       var cls = DEPT_CLASS[r.dept] || 'd-qc';
       var k = dateKey(r.ts);
       var header = '';
       if (k !== currentDate){
-        var dayRows = rows.filter(function(x){ return dateKey(x.ts)===k; }).length;
+        var dayRows = visibleRows.filter(function(x){ return dateKey(x.ts)===k; }).length;
         header = '<tr class="l-datehdr"><td colspan="6"><div class="l-datehdr__t">'+esc(dateLabel(r.ts))+'<span>'+dayRows+(dayRows===1?' entry':' entries')+'</span></div></td></tr>';
         currentDate = k;
         dayCount = 0;
@@ -453,7 +466,7 @@
         '<tbody>'+body+'</tbody>' +
       '</table>';
 
-    var last = rows[rows.length-1];
+    var last = visibleRows[visibleRows.length-1];
     document.getElementById('footLatest').textContent = last.name + ' · ' + fmtTs(last.ts);
     $foot.style.display = 'flex';
   }
@@ -588,14 +601,27 @@
   });
 
   // Toolbar
+  document.getElementById('todayBtn').addEventListener('click', function(){
+    todayOnly = !todayOnly;
+    localStorage.setItem('tonn.audit.todayOnly', todayOnly ? '1' : '0');
+    render();
+  });
   document.getElementById('clearBtn').addEventListener('click', function(){
     if(!rows.length) return;
     if(confirm('Clear all '+rows.length+' entries from the register? This cannot be undone.')){
       rows=[]; localStorage.removeItem('tonn.audit.started'); save();
     }
   });
+  function currentRows(){
+    if (!todayOnly) return rows.slice();
+    var tk = todayKey();
+    return rows.filter(function(r){
+      var d=new Date(r.ts); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()) === tk;
+    });
+  }
   document.getElementById('exportBtn').addEventListener('click', function(){
-    if(!rows.length) return;
+    var exportRows = currentRows();
+    if(!exportRows.length) return;
     if (typeof XLSX === 'undefined'){
       alert('Excel library did not load. Check your internet connection and try again.');
       return;
@@ -619,7 +645,7 @@
         [],
         ['No','Name','Department','Sign','Timestamp']
       ];
-      rows.forEach(function(r,i){
+      exportRows.forEach(function(r,i){
         aoa.push([i+1, r.name, r.dept, 'SIGNED', fmtStamp(r.ts)]);
       });
 
@@ -633,7 +659,7 @@
       XLSX.utils.book_append_sheet(wb, ws, 'Attendance');
       var filename = 'tonn-internal-audit-'+today.toISOString().slice(0,10)+'.xlsx';
       XLSX.writeFile(wb, filename);
-      toast('Excel downloaded ('+rows.length+' entries)');
+      toast('Excel downloaded ('+exportRows.length+' entries)');
     } catch(err){
       alert('Download failed: '+err.message);
     }
@@ -641,7 +667,8 @@
   document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
 
   document.getElementById('pdfBtn').addEventListener('click', function(){
-    if(!rows.length) return;
+    var pdfRows = currentRows();
+    if(!pdfRows.length) return;
     if (!window.jspdf || !window.jspdf.jsPDF){
       alert('PDF library did not load. Check your internet connection and try again.');
       return;
@@ -674,8 +701,22 @@
         return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear()+' '+p(d.getHours())+':'+p(d.getMinutes());
       }
 
-      var body = rows.map(function(r,i){
-        return [String(i+1), r.name, r.dept, '', fmtStamp(r.ts)];
+      function pdfDateKey(iso){ var d=new Date(iso); var p=function(n){return String(n).padStart(2,'0');}; return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate()); }
+      function pdfDateLabel(iso){ return new Date(iso).toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}); }
+      var body = [];
+      var sigMap = [];
+      var curDate = '';
+      var dayN = 0;
+      pdfRows.forEach(function(r){
+        var k = pdfDateKey(r.ts);
+        if (k !== curDate){
+          body.push([{content: pdfDateLabel(r.ts).toUpperCase(), colSpan:5, styles:{fillColor:[232,230,227], textColor:[26,26,28], fontStyle:'bold', halign:'left'}}]);
+          sigMap.push(null);
+          curDate = k; dayN = 0;
+        }
+        dayN++;
+        body.push([String(dayN), r.name, r.dept, '', fmtStamp(r.ts)]);
+        sigMap.push(r);
       });
 
       doc.autoTable({
@@ -694,7 +735,7 @@
         },
         didDrawCell: function(data){
           if (data.section==='body' && data.column.index===3){
-            var r = rows[data.row.index];
+            var r = sigMap[data.row.index];
             if (r && r.sig){
               var pad = 3;
               var w = data.cell.width - pad*2;
@@ -706,7 +747,7 @@
       });
 
       doc.save('tonn-internal-audit-'+today.toISOString().slice(0,10)+'.pdf');
-      toast('PDF downloaded ('+rows.length+' entries)');
+      toast('PDF downloaded ('+pdfRows.length+' entries)');
     } catch(err){
       alert('PDF generation failed: '+err.message);
     }
