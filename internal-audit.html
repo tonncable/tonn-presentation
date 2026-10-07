@@ -526,6 +526,7 @@
       var r = rows[idx];
       if (confirm('Remove '+r.name+' from the register?')){
         addTomb(r);
+        syncPush({ action:'delete', name:r.name, dept:r.dept, ts:r.ts });
         rows.splice(idx,1); save();
         toast(r.name.split(/\s+/)[0] + ' removed');
       }
