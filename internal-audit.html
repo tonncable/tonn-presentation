@@ -306,7 +306,6 @@
     <div class="foot__btns">
       <button class="lnk" id="todayBtn">Today only</button>
       <button class="lnk" id="downloadBtn">Download</button>
-      <button class="lnk" id="printBtn">Print</button>
       <button class="lnk lnk--danger" id="clearBtn">Clear register</button>
     </div>
   </div>
@@ -681,7 +680,6 @@
       alert('Download failed: '+err.message);
     }
   }
-  document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
 
   function doPdfExport(){
     var pdfRows = currentRows();
