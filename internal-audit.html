@@ -450,15 +450,26 @@
     } catch(e){}
   }
   function keyOf(r){ return (r.name||'').trim().toLowerCase() + '|' + (r.dept||'').trim().toLowerCase() + '|' + String(r.ts).slice(0,16); }
+  var TOMB_KEY = 'tonn.audit.tombstones';
+  function getTombs(){ try{ return JSON.parse(localStorage.getItem(TOMB_KEY)||'{}'); }catch(e){ return {}; } }
+  function addTomb(r){ var t=getTombs(); t[keyOf(r)]=1; localStorage.setItem(TOMB_KEY, JSON.stringify(t)); }
   function syncPull(){
     fetch(SYNC_URL, { method:'GET' })
       .then(function(r){ return r.json(); })
       .then(function(data){
         if (!Array.isArray(data)) return;
+        var tombs = getTombs();
+        var seen = {};
         var cloudRows = data
           .filter(function(r){ return r && r.name; })
           .map(function(r){
             return { name:String(r.name), dept:String(r.dept||''), sig:String(r.sig||''), ts: new Date(r.ts).toISOString() };
+          })
+          .filter(function(r){
+            var k = keyOf(r);
+            if (tombs[k]) return false;      // deleted locally — stay deleted
+            if (seen[k]) return false;        // dedupe cloud duplicates
+            seen[k] = 1; return true;
           });
 
         // Rescue: push any local entries that are missing from the cloud
@@ -494,6 +505,7 @@
       var idx = parseInt(del.getAttribute('data-del'),10);
       var r = rows[idx];
       if (confirm('Remove '+r.name+' from the register?')){
+        addTomb(r);
         rows.splice(idx,1); save();
         toast(r.name.split(/\s+/)[0] + ' removed');
       }
