@@ -50,10 +50,10 @@
 
   /* ---------- TITLE BLOCK ---------- */
   .title{padding:48px 0 36px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
-  .title__eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-  .title__eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
-  .title__h{font-family:'Fraunces',serif;font-size:clamp(52px,8vw,104px);line-height:.92;letter-spacing:-.035em;font-weight:500;color:var(--ink)}
-  .title__h em{font-style:italic;font-weight:400;color:var(--accent-ink)}
+  .title__eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .title__eyebrow::before{content:"";width:24px;height:1px;background:var(--ink)}
+  .title__h{font-family:'Fraunces',serif;font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:-.025em;font-weight:500;color:var(--ink)}
+  .title__h em{font-style:italic;font-weight:400;color:var(--ink)}
   .title__h .amp{font-style:italic;font-weight:400;color:var(--muted);padding:0 .05em}
   .title__num{font-family:'Fraunces',serif;font-size:14px;color:var(--muted);font-style:italic;text-align:right;line-height:1.5;max-width:200px}
   .title__num b{color:var(--ink);font-style:normal;font-weight:600;display:block;font-size:48px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
@@ -227,8 +227,8 @@
     .mast__logo{filter:none !important;height:30px}
     .title{padding:16px 0 12px;grid-template-columns:1fr auto;gap:16px}
     .title__h{font-size:48px;color:#000}
-    .title__h em{color:#9a1750}
-    .title__eyebrow{color:#9a1750}
+    .title__h em{color:#000}
+    .title__eyebrow{color:#000}
     .meta{grid-template-columns:repeat(3,1fr) !important}
     .meta__cell{padding:10px 16px 10px 0;border-right:1px solid #ccc}
     .meta__v{font-size:14px;color:#000}
@@ -683,7 +683,7 @@
       // Title block
       doc.setFont('helvetica','bold');
       doc.setFontSize(18);
-      doc.setTextColor(154,23,80);
+      doc.setTextColor(0,0,0);
       doc.text('TONN CABLE — INTERNAL AUDIT', 40, 50);
 
       doc.setFont('helvetica','normal');
