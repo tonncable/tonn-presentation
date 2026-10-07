@@ -146,6 +146,9 @@
   .colophon em{font-family:'Fraunces',serif;font-style:italic;text-transform:none;letter-spacing:0;color:var(--ink-2);font-size:12px}
 
   /* ---------- MODAL ---------- */
+  .dl-opts{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+  .dl-opt{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;color:var(--ink);padding:6px 0}
+  .dl-opt input{accent-color:var(--ink);width:16px;height:16px}
   .modal{position:fixed;inset:0;background:rgba(22,21,18,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:100;backdrop-filter:blur(3px);animation:fade .15s ease}
   .modal.open{display:flex}
   @keyframes fade{from{opacity:0}to{opacity:1}}
@@ -359,6 +362,35 @@
     <div class="mfoot">
       <button class="mbtn mbtn--cancel" id="cancelBtn">Cancel</button>
       <button class="mbtn mbtn--save" id="saveBtn">Enter in register</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="dlModal">
+  <div class="mcard">
+    <div class="mhead">
+      <div class="mkick">Download</div>
+      <h2 class="mtitle">Export <em>register.</em></h2>
+    </div>
+    <div class="mbody">
+      <div class="fld">
+        <label class="fld__l">Format</label>
+        <div class="dl-opts">
+          <label class="dl-opt"><input type="radio" name="dlFmt" value="pdf" checked> <span>PDF</span></label>
+          <label class="dl-opt"><input type="radio" name="dlFmt" value="excel"> <span>Excel</span></label>
+        </div>
+      </div>
+      <div class="fld">
+        <label class="fld__l" for="dlDate">Date to print</label>
+        <input class="fld__i" id="dlDate" type="date">
+      </div>
+      <div class="fld">
+        <label class="dl-opt"><input type="checkbox" id="dlSig" checked> <span>Include signatures</span></label>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="mbtn mbtn--cancel" id="dlCancel">Cancel</button>
+      <button class="mbtn mbtn--save" id="dlOk">Download</button>
     </div>
   </div>
 </div>
@@ -617,14 +649,8 @@
       var d=new Date(r.ts); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()) === tk;
     });
   }
-  function askDateAndSig(defaultIso){
-    var picked = prompt('Date to print (YYYY-MM-DD). Timestamps in the file will use this date too.', defaultIso);
-    if (picked === null) return null;
-    var parsed = /^\d{4}-\d{2}-\d{2}$/.test(picked.trim()) ? new Date(picked.trim()+'T00:00:00') : null;
-    if (!parsed) { alert('Invalid date — expected YYYY-MM-DD.'); return null; }
-    var withSig = confirm('Include signatures?\n\nOK = include signatures\nCancel = leave the Sign column blank');
-    return { date: parsed, withSig: withSig };
-  }
+  var pendingDlOpts = null;
+  function askDateAndSig(){ return pendingDlOpts; }
   function withDate(iso, dateOverride){
     var orig = new Date(iso);
     var d = new Date(dateOverride);
@@ -768,14 +794,30 @@
     }
   }
 
+  var $dlModal = document.getElementById('dlModal');
   document.getElementById('downloadBtn').addEventListener('click', function(){
-    if (!currentRows().length) return;
-    var fmt = prompt('Download as — type PDF or EXCEL:', 'PDF');
-    if (fmt === null) return;
-    fmt = fmt.trim().toLowerCase();
-    if (fmt === 'pdf' || fmt === 'p') doPdfExport();
-    else if (fmt === 'excel' || fmt === 'xlsx' || fmt === 'e') doExcelExport();
-    else alert('Please type PDF or EXCEL.');
+    var r = currentRows();
+    if (!r.length) return;
+    var base = new Date(r[0].ts);
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    document.getElementById('dlDate').value = base.getFullYear()+'-'+p(base.getMonth()+1)+'-'+p(base.getDate());
+    document.getElementById('dlSig').checked = true;
+    document.querySelector('input[name="dlFmt"][value="pdf"]').checked = true;
+    $dlModal.classList.add('open');
+  });
+  document.getElementById('dlCancel').addEventListener('click', function(){ $dlModal.classList.remove('open'); });
+  $dlModal.addEventListener('click', function(e){ if (e.target === $dlModal) $dlModal.classList.remove('open'); });
+  document.getElementById('dlOk').addEventListener('click', function(){
+    var dateVal = document.getElementById('dlDate').value;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateVal)){ alert('Please pick a date.'); return; }
+    var fmt = (document.querySelector('input[name="dlFmt"]:checked')||{}).value || 'pdf';
+    pendingDlOpts = {
+      date: new Date(dateVal+'T00:00:00'),
+      withSig: document.getElementById('dlSig').checked
+    };
+    $dlModal.classList.remove('open');
+    try { if (fmt === 'excel') doExcelExport(); else doPdfExport(); }
+    finally { pendingDlOpts = null; }
   });
 })();
 </script>
