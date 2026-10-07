@@ -98,6 +98,10 @@
   .ledger tbody td{padding:20px 16px 20px 0;border-bottom:1px solid var(--rule-soft);vertical-align:middle}
   .ledger tbody td:first-child{padding-left:0}
   .l-no{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums;width:48px}
+  .ledger tr.l-datehdr td{padding:22px 0 10px;border-bottom:1px solid var(--ink);background:transparent}
+  .ledger tr.l-datehdr:hover{background:transparent}
+  .l-datehdr__t{font-family:'Fraunces',serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);display:flex;align-items:baseline;gap:14px}
+  .l-datehdr__t span{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--muted);font-weight:400;text-transform:uppercase}
   .l-name{font-family:'Google Sans Text','DM Sans','Inter',system-ui,sans-serif;font-size:17px;font-weight:500;letter-spacing:-.005em;line-height:1.2;color:var(--ink)}
   .l-dept{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2);font-weight:500}
   .l-dept::before{content:"";width:7px;height:7px;background:var(--dept-dot,var(--accent));display:inline-block;border-radius:50%}
@@ -412,11 +416,27 @@
       return;
     }
 
+    function dateKey(iso){ var d=new Date(iso); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+    function dateLabel(iso){
+      var d=new Date(iso);
+      return d.toLocaleDateString('en-GB',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+    }
+    var currentDate = '';
+    var dayCount = 0;
     var body = rows.map(function(r,i){
       var cls = DEPT_CLASS[r.dept] || 'd-qc';
-      return '' +
+      var k = dateKey(r.ts);
+      var header = '';
+      if (k !== currentDate){
+        var dayRows = rows.filter(function(x){ return dateKey(x.ts)===k; }).length;
+        header = '<tr class="l-datehdr"><td colspan="6"><div class="l-datehdr__t">'+esc(dateLabel(r.ts))+'<span>'+dayRows+(dayRows===1?' entry':' entries')+'</span></div></td></tr>';
+        currentDate = k;
+        dayCount = 0;
+      }
+      dayCount++;
+      return header +
         '<tr>' +
-          '<td class="l-no">№ '+pad(i+1)+'</td>' +
+          '<td class="l-no">№ '+pad(dayCount)+'</td>' +
           '<td><div class="l-name">'+esc(r.name)+'</div></td>' +
           '<td><span class="l-dept '+cls+'">'+esc(r.dept)+'</span></td>' +
           '<td class="l-sig"><div class="l-sig__frame" data-sig="'+r.sig+'"><img src="'+r.sig+'" alt="signature"></div></td>' +
